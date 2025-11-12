@@ -1,0 +1,69 @@
+\usepackage{color}
+\usepackage{framed}
+\setlength{\fboxsep}{.8em}
+
+\usepackage{tcolorbox}
+
+\tcbset{
+  mystyle/.style={
+    before skip=-10pt, % Adjust this value
+    after skip=-10pt   % Adjust this value
+  }
+}
+\newtcolorbox{mynoteblock}[1][]{mystyle, #1}
+
+\newtcolorbox{blackbox}{
+  colback=black,
+  colframe=orange,
+  coltext=white,
+  boxsep=5pt,
+  arc=4pt}
+  
+\newtcolorbox{ltbluebox}{
+  colback=blue!5!white,
+  colframe=blue!75!black,
+  boxsep=5pt,
+  arc=4pt}
+  
+\newtcolorbox{ltgreenbox}{
+  colback=green!5!white,
+  colframe=blue!75!black,
+  boxsep=5pt,
+  arc=4pt}
+  
+\newtcolorbox{ltpurplebox}{
+  colback=purple!5!white,
+  colframe=blue!75!black,
+  boxsep=5pt,
+  arc=4pt}
+  
+
+
+\newenvironment{cols}[1][]{}{}
+
+\newenvironment{col}[1]{\begin{minipage}[t]{#1}\ignorespaces\vspace{0pt}}{%
+\end{minipage}
+\ifhmode\unskip\fi
+\aftergroup\useignorespacesandallpars}
+
+\def\useignorespacesandallpars#1\ignorespaces\fi{%
+#1\fi\ignorespacesandallpars}
+
+\makeatletter
+\def\ignorespacesandallpars{%
+  \@ifnextchar\par
+    {\expandafter\ignorespacesandallpars\@gobble}%
+    {}%
+}
+\makeatother
+
+\usepackage{awesomebox}
+\setlength{\aweboxvskip}{1mm}
+
+
+\pagenumbering{gobble}
+
+\usepackage{enumitem}
+\setlist{itemsep=1pt, parsep=0pt} %# Adjust vertical spacing
+\setlist[itemize,1]{leftmargin=*, labelsep=0.3em} %# Adjust horizontal spacing
+
