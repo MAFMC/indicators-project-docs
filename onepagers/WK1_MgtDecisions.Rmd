@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-# Management Decisions
+# Management Decisions: Examples for Discussion
 
 Drawn from Mid-Atlantic FMPs. Decisions are made through specifications, frameworks, SSC, amendment and other processes.
 
