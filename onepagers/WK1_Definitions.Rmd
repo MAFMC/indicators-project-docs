@@ -41,7 +41,8 @@ An *indicator* tells us something about where we are relative to our goals or to
 a <- ecodata::plot_stock_status(report = "MidAtlantic")
 
 stock <- a$p + ggplot2::coord_cartesian(xlim=c(0,2), ylim=c(0,2)) +
-  ggplot2::theme(legend.position = "none") #+
+  ggplot2::theme(legend.position = "none") +
+  ggplot2::ggtitle("2024 Mid-Atlantic Stock Status")
   #ggplot2::annotation_custom(gridExtra::tableGrob(a$unknown,
   #                           theme = gridExtra::ttheme_default(base_size = 5), 
   #                           rows=NULL), 
