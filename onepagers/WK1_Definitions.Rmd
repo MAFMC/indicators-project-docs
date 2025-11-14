@@ -1,0 +1,100 @@
+---
+title: |
+output:
+  pdf_document:
+    keep_tex: true
+    includes:
+      in_header: latex/boxescolumns.tex
+  html_document:
+    css: columns.css
+    df_print: paged
+geometry: margin = 0.5in
+link-citations: true
+urlcolor: blue
+---
+
+\vspace{-1cm}
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      warning = FALSE,
+                      message = FALSE)
+
+library(patchwork)
+
+# can I set up 2 columns with highlight boxes in each? yes
+
+```
+
+# MAFMC Indicators Project: Definitions
+
+## What is an ecosystem indicator? 
+
+::: {.noteblock data-latex=""}
+An *indicator* tells us something about where we are relative to our goals or to limits, or about the context we are working within that may affect achieving our goals.
+:::
+
+```{r soefigs,  fig.width=10, fig.asp = 0.45, out.width="100%"}
+#, fig.width = 7.5, fig.asp = 0.5
+#stock-status, fig.cap = paste0("Summary of single species status for ",council_abbr," and jointly federally managed stocks (Goosefish and Spiny dogfish). Stocks in green are below the biomass threshold (overfished), stocks in orange are above the biomass threshold but below the biomass target, and stocks in purple are above the biomass target. Only one stock, Atlantic mackerel, has fishing mortality above the limit (subject to overfishing).")
+#code = readLines("https://raw.githubusercontent.com/NOAA-EDAB/ecodata/master/chunk-scripts/human_dimensions_MAB.Rmd-stock-status.R"),
+
+a <- ecodata::plot_stock_status(report = "MidAtlantic")
+
+stock <- a$p + ggplot2::coord_cartesian(xlim=c(0,2), ylim=c(0,2)) +
+  ggplot2::theme(legend.position = "none") #+
+  #ggplot2::annotation_custom(gridExtra::tableGrob(a$unknown,
+  #                           theme = gridExtra::ttheme_default(base_size = 5), 
+  #                           rows=NULL), 
+  #                           xmin=0.8, xmax=1.8, ymin=1.5, ymax=2)
+
+
+commrev <- ecodata::plot_comdat(report="MidAtlantic", varName="revenue") +
+  ggplot2::ggtitle("Mid-Atlantic Commercial Revenue")
+
+receff <- ecodata::plot_recdat(report = "MidAtlantic", varName = "effort")
+
+scallhab <- magick::image_read("https://github.com/NOAA-EDAB/ecodata/raw/master/data-raw/workshop/images/bottom_temp_threshold_17_19_Elephant_Trunk.png") |> magick::image_ggplot() +
+  ggplot2::ggtitle("2023 Stressful Bottom Temp. Days") +
+  ggplot2::theme(plot.title = ggplot2::element_text(size=9))
+
+stock + commrev / receff + scallhab
+
+```
+
+## What is a SMART indicator?
+
+::: {.noteblock data-latex=""}
+* **Specific**: clearly defined, describing exactly what is measured at what scale and how the indicator is calculated so that methods can be repeated. The indicator can be directly linked to a management process objective.
+:::
+
+::: {.noteblock data-latex=""}
+* **Measurable**: appropriate quantitative or qualitative data are available to evaluate change over time or in space. Tied to measurable management process objective. 
+:::
+
+::: {.noteblock data-latex=""}
+* **Achievable**: responses to changes in management are detectable within the management time frame--objectives tied to the indicator must be achievable. 
+:::
+
+::: {.noteblock data-latex=""}
+* **Relevant**: accurately reflects changes in the underlying process of concern. The indicator can be directly linked to a management process objective. 
+:::
+
+::: {.noteblock data-latex=""}
+* **Time-bound**: how often is indicator measured and does this align with the process of concern, and the management process?
+:::
+
+SMART indicators are Specific, Measurable, Achievable, Relevant, and Timely for the priority Council decisions. A SMART indicator for one process won't necessarily be SMART for another.
+
+::: {.ltgreenbox data-latex=""}
+## What is Operational? *In use or ready for use*  
+
+Components of an operational process:
+
+*  Clear articulation of management objectives (use)
+
+*  Standardized information updates on a regular reporting schedule
+
+*  Feedbacks from the management system and adjustments to achieve management objectives
+
+"Operationalizing" is an iterative process within a specific context
+:::

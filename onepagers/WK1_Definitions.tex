@@ -1,0 +1,249 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage[margin = 0.5in]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{color}
+\usepackage{framed}
+\setlength{\fboxsep}{.8em}
+
+\usepackage{tcolorbox}
+
+\tcbset{
+  mystyle/.style={
+    before skip=-10pt, % Adjust this value
+    after skip=-10pt   % Adjust this value
+  }
+}
+\newtcolorbox{mynoteblock}[1][]{mystyle, #1}
+
+\newtcolorbox{blackbox}{
+  colback=black,
+  colframe=orange,
+  coltext=white,
+  boxsep=5pt,
+  arc=4pt}
+  
+\newtcolorbox{ltbluebox}{
+  colback=blue!5!white,
+  colframe=blue!75!black,
+  boxsep=5pt,
+  arc=4pt}
+  
+\newtcolorbox{ltgreenbox}{
+  colback=green!5!white,
+  colframe=blue!75!black,
+  boxsep=5pt,
+  arc=4pt}
+  
+\newtcolorbox{ltpurplebox}{
+  colback=purple!5!white,
+  colframe=blue!75!black,
+  boxsep=5pt,
+  arc=4pt}
+  
+
+
+\newenvironment{cols}[1][]{}{}
+
+\newenvironment{col}[1]{\begin{minipage}[t]{#1}\ignorespaces\vspace{0pt}}{%
+\end{minipage}
+\ifhmode\unskip\fi
+\aftergroup\useignorespacesandallpars}
+
+\def\useignorespacesandallpars#1\ignorespaces\fi{%
+#1\fi\ignorespacesandallpars}
+
+\makeatletter
+\def\ignorespacesandallpars{%
+  \@ifnextchar\par
+    {\expandafter\ignorespacesandallpars\@gobble}%
+    {}%
+}
+\makeatother
+
+\usepackage{awesomebox}
+\setlength{\aweboxvskip}{1mm}
+
+
+\pagenumbering{gobble}
+
+\usepackage{enumitem}
+\setlist{itemsep=1pt, parsep=0pt} %# Adjust vertical spacing
+\setlist[itemize,1]{leftmargin=*, labelsep=0.3em} %# Adjust horizontal spacing
+
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  colorlinks=true,
+  linkcolor={Maroon},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+
+\vspace{-1cm}
+
+\section{MAFMC Indicators Project:
+Definitions}\label{mafmc-indicators-project-definitions}
+
+\subsection{What is an ecosystem
+indicator?}\label{what-is-an-ecosystem-indicator}
+
+\begin{noteblock}
+An \emph{indicator} tells us something about where we are relative to
+our goals or to limits, or about the context we are working within that
+may affect achieving our goals.
+
+\end{noteblock}
+
+\includegraphics[width=1\linewidth]{WK1_Definitions_files/figure-latex/soefigs-1}
+
+\subsection{What is a SMART indicator?}\label{what-is-a-smart-indicator}
+
+\begin{noteblock}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Specific}: clearly defined, describing exactly what is
+  measured at what scale and how the indicator is calculated so that
+  methods can be repeated. The indicator can be directly linked to a
+  management process objective.
+\end{itemize}
+
+\end{noteblock}
+
+\begin{noteblock}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Measurable}: appropriate quantitative or qualitative data are
+  available to evaluate change over time or in space. Tied to measurable
+  management process objective.
+\end{itemize}
+
+\end{noteblock}
+
+\begin{noteblock}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Achievable}: responses to changes in management are detectable
+  within the management time frame--objectives tied to the indicator
+  must be achievable.
+\end{itemize}
+
+\end{noteblock}
+
+\begin{noteblock}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Relevant}: accurately reflects changes in the underlying
+  process of concern. The indicator can be directly linked to a
+  management process objective.
+\end{itemize}
+
+\end{noteblock}
+
+\begin{noteblock}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Time-bound}: how often is indicator measured and does this
+  align with the process of concern, and the management process?
+\end{itemize}
+
+\end{noteblock}
+
+SMART indicators are Specific, Measurable, Achievable, Relevant, and
+Timely for the priority Council decisions. A SMART indicator for one
+process won't necessarily be SMART for another.
+
+\begin{ltgreenbox}
+
+\subsection{\texorpdfstring{What is Operational? \emph{In use or ready
+for
+use}}{What is Operational? In use or ready for use}}\label{what-is-operational-in-use-or-ready-for-use}
+
+Components of an operational process:
+
+\begin{itemize}
+\item
+  Clear articulation of management objectives (use)
+\item
+  Standardized information updates on a regular reporting schedule
+\item
+  Feedbacks from the management system and adjustments to achieve
+  management objectives
+\end{itemize}
+
+``Operationalizing'' is an iterative process within a specific context
+
+\end{ltgreenbox}
+
+\end{document}
