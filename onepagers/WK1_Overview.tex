@@ -1,0 +1,203 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage[margin = 0.5in]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{color}
+\usepackage{framed}
+\setlength{\fboxsep}{.8em}
+
+\usepackage{tcolorbox}
+
+\tcbset{
+  mystyle/.style={
+    before skip=-10pt, % Adjust this value
+    after skip=-10pt   % Adjust this value
+  }
+}
+\newtcolorbox{mynoteblock}[1][]{mystyle, #1}
+
+\newtcolorbox{blackbox}{
+  colback=black,
+  colframe=orange,
+  coltext=white,
+  boxsep=5pt,
+  arc=4pt}
+  
+\newtcolorbox{ltbluebox}{
+  colback=blue!5!white,
+  colframe=blue!75!black,
+  boxsep=5pt,
+  arc=4pt}
+  
+\newtcolorbox{ltgreenbox}{
+  colback=green!5!white,
+  colframe=blue!75!black,
+  boxsep=5pt,
+  arc=4pt}
+  
+\newtcolorbox{ltpurplebox}{
+  colback=purple!5!white,
+  colframe=blue!75!black,
+  boxsep=5pt,
+  arc=4pt}
+  
+
+
+\newenvironment{cols}[1][]{}{}
+
+\newenvironment{col}[1]{\begin{minipage}[t]{#1}\ignorespaces\vspace{0pt}}{%
+\end{minipage}
+\ifhmode\unskip\fi
+\aftergroup\useignorespacesandallpars}
+
+\def\useignorespacesandallpars#1\ignorespaces\fi{%
+#1\fi\ignorespacesandallpars}
+
+\makeatletter
+\def\ignorespacesandallpars{%
+  \@ifnextchar\par
+    {\expandafter\ignorespacesandallpars\@gobble}%
+    {}%
+}
+\makeatother
+
+\usepackage{awesomebox}
+\setlength{\aweboxvskip}{1mm}
+
+
+\pagenumbering{gobble}
+
+\usepackage{enumitem}
+\setlist{itemsep=1pt, parsep=0pt} %# Adjust vertical spacing
+\setlist[itemize,1]{leftmargin=*, labelsep=0.3em} %# Adjust horizontal spacing
+
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  colorlinks=true,
+  linkcolor={Maroon},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+
+\vspace{-1cm}
+
+\section{MAFMC Indicators Project: Workshop 1
+Overview}\label{mafmc-indicators-project-workshop-1-overview}
+
+Workshop objective: Identify and prioritize Council management decisions
+that could be supported or improved by operational use of ecosystem
+indicators.
+
+\subsection{Introduction}\label{introduction}
+
+\begin{noteblock}
+
+\begin{itemize}
+\item
+  A quick
+  \href{https://www.mafmc.org/s/Project-5_IRA-Project-Brief.pdf}{project
+  overview} for background
+\item
+  \emph{Definitions} of terms so we are all on the same page
+\item
+  Example indicator uses in management, followed by a preliminary list
+  of example management decisions
+\end{itemize}
+
+\end{noteblock}
+
+\begin{ltgreenbox}
+
+\subsection{Discussions}\label{discussions}
+
+What management objectives are associated with each of the decisions?
+
+Which management decisions should this project focus on? Why?
+
+Which of the gathered indicators look useful to address the priority
+management decisions?
+
+\end{ltgreenbox}
+
+\begin{cols}
+
+\begin{col}{0.49\textwidth}
+Some text about the project
+
+\end{col}
+
+\begin{col}{0.02\textwidth}
+~
+
+\end{col}
+
+\begin{col}{0.49\textwidth}
+\includegraphics[width=1\linewidth]{WK1_Overview_files/figure-latex/projectoutline-1}
+
+\end{col}
+
+\end{cols}
+
+\end{document}

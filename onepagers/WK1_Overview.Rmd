@@ -49,8 +49,28 @@ Which management decisions should this project focus on? Why?
 Which of the gathered indicators look useful to address the priority management decisions?
 :::
 
-```{r projectoutline, out.width="50%"}
+
+:::::: {.cols data-latex=""}
+
+::: {.col data-latex="{0.49\textwidth}"}
+
+Some text about the project
+:::
+
+::: {.col data-latex="{0.02\textwidth}"}
+\ 
+<!-- an empty Div (with a white space), serving as
+a column separator -->
+:::
+
+::: {.col data-latex="{0.49\textwidth}"}
+
+
+```{r projectoutline, out.width="100%"}
 magick::image_read("https://github.com/sgaichas/HSpresentations/raw/main/docs/images/indicatorsproject.png")
 ```
+:::
+
+::::::
 
 
