@@ -1,0 +1,56 @@
+---
+title: |
+output:
+  pdf_document:
+    keep_tex: true
+    includes:
+      in_header: latex/boxescolumns.tex
+  html_document:
+    css: columns.css
+    df_print: paged
+geometry: margin = 0.5in
+link-citations: true
+urlcolor: blue
+---
+
+\vspace{-1cm}
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      warning = FALSE,
+                      message = FALSE)
+
+library(patchwork)
+
+# can I set up 2 columns with highlight boxes in each? yes
+
+```
+
+# MAFMC Indicators Project: Workshop 1 Overview
+
+Workshop objective: Identify and prioritize Council management decisions that could be supported or improved by operational use of ecosystem indicators.
+
+## Introduction 
+
+::: {.noteblock data-latex=""}
+*  A quick [project overview](https://www.mafmc.org/s/Project-5_IRA-Project-Brief.pdf) for background  
+
+*  *Definitions* of terms so we are all on the same page  
+
+*  Example indicator uses in management, followed by a preliminary list of example management decisions
+:::
+
+::: {.ltgreenbox data-latex=""}
+## Discussions
+
+What management objectives are associated with each of the decisions?
+
+Which management decisions should this project focus on? Why?
+
+Which of the gathered indicators look useful to address the priority management decisions?
+:::
+
+```{r projectoutline, out.width="50%"}
+magick::image_read("https://github.com/sgaichas/HSpresentations/raw/main/docs/images/indicatorsproject.png")
+```
+
+
