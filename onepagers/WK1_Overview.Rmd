@@ -29,32 +29,51 @@ library(patchwork)
 
 Workshop objective: Identify and prioritize Council management decisions that could be supported or improved by operational use of ecosystem indicators.
 
-## Introduction 
+## Workshop Introduction 
 
 ::: {.noteblock data-latex=""}
-*  A quick [project overview](https://www.mafmc.org/s/Project-5_IRA-Project-Brief.pdf) for background  
+Presentations:  
 
-*  *Definitions* of terms so we are all on the same page  
+1. A quick [project overview](https://www.mafmc.org/s/Project-5_IRA-Project-Brief.pdf) for background  
 
-*  Example indicator uses in management, followed by a preliminary list of example management decisions
+2. *Definitions* of terms so we are all on the same page  
+
+3. Example indicator uses in management, followed by a preliminary list of example management decisions
 :::
 
 ::: {.ltgreenbox data-latex=""}
-## Discussions
+## Workshop Discussions and Desired Outcomes 
 
-What management objectives are associated with each of the decisions?
+**Goal:** Which management decisions should this project focus on? Why? 
 
-Which management decisions should this project focus on? Why?
+**Discussion 1:** Review the preliminary list of decisions 
 
-Which of the gathered indicators look useful to address the priority management decisions?
+**Discussion 2:** Identify priority decisions 
+
+**Discussion 3:** Identify key information for priority decisions
 :::
 
 
 :::::: {.cols data-latex=""}
 
 ::: {.col data-latex="{0.49\textwidth}"}
+*Things to think about...*
 
-Some text about the project
+## Discussion 1
+*  Are there Council decisions that should be added to the list of those presented?  
+*  Which decisions are unclear to you?   
+*  Can anything be removed?  
+*  *Key Question: What management objectives are associated with each of the decisions?*
+
+## Discussion 2
+*  Which management decisions most often require additional information?  
+*  What would a better decision look like? e.g., Reduce uncertainty? Increase consideration of tradeoffs? Prevent perverse incentives? Provide more flexibility or a wider range of options for participants?  
+*  Given the objectives for each decision type, would ecosystem information help make better decisions?  
+*  *Key Question: Which management decisions should this project focus on? Why?*
+
+## Discussion 3
+*  Which of the gathered indicators look useful to address the priority management decisions?   
+*  Are there priority decision points that don’t appear to be supported by gathered indicators?  
 :::
 
 ::: {.col data-latex="{0.02\textwidth}"}
@@ -65,12 +84,20 @@ a column separator -->
 
 ::: {.col data-latex="{0.49\textwidth}"}
 
+*Project Steps: This workshop focuses on Management Objectives and Decisions, but notes linkages to other steps*
 
 ```{r projectoutline, out.width="100%"}
 magick::image_read("https://github.com/sgaichas/HSpresentations/raw/main/docs/images/indicatorsproject.png")
 ```
+
+::: {.ltbluebox data-latex=""}
+*This workshop addresses project goals:*  
+*  Review and assess existing indicators and evaluate their utility to support management objectives  
+*  Identify and develop priority ecosystem and habitat indicators, including associated targets and thresholds as appropriate, and identify specific pathways for incorporation into Council management processes 
+:::
 :::
 
 ::::::
+
 
 

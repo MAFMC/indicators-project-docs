@@ -89,10 +89,12 @@ a column separator -->
 ::: {.ltpurplebox data-latex=""}
 ## Occasional and Strategic: more complex Council process
 
-*  FMP development and amendment  
-*  Stock definition  
-*  “Measures contained within this [Framework] list that require significant departures from previously contemplated measures or that are otherwise introducing new concepts may require amendment of the FMP instead of a framework adjustment.”  
-*  Consulting/commenting on other ocean activities  
+*  FMP development and amendment 
+*  Stock definition 
+*  Research priority development and review
+*  Ecosystem Approach to Fisheries Management (EAFM) guidance
+*  “Measures contained within this [Framework] list that require significant departures from previously contemplated measures or that are otherwise introducing new concepts may require amendment of the FMP instead of a framework adjustment.” 
+*  Policy development on other ocean activities  
 :::
 
 
