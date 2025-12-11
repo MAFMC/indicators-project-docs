@@ -1,0 +1,303 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage[margin = 0.5in]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{color}
+\usepackage{framed}
+\setlength{\fboxsep}{.8em}
+
+\usepackage{tcolorbox}
+
+\tcbset{
+  mystyle/.style={
+    before skip=-10pt, % Adjust this value
+    after skip=-10pt   % Adjust this value
+  }
+}
+\newtcolorbox{mynoteblock}[1][]{mystyle, #1}
+
+\newtcolorbox{blackbox}{
+  colback=black,
+  colframe=orange,
+  coltext=white,
+  boxsep=5pt,
+  arc=4pt}
+  
+\newtcolorbox{ltbluebox}{
+  colback=blue!5!white,
+  colframe=blue!75!black,
+  boxsep=5pt,
+  arc=4pt}
+  
+\newtcolorbox{ltgreenbox}{
+  colback=green!5!white,
+  colframe=blue!75!black,
+  boxsep=5pt,
+  arc=4pt}
+  
+\newtcolorbox{ltpurplebox}{
+  colback=purple!5!white,
+  colframe=blue!75!black,
+  boxsep=5pt,
+  arc=4pt}
+  
+
+
+\newenvironment{cols}[1][]{}{}
+
+\newenvironment{col}[1]{\begin{minipage}[t]{#1}\ignorespaces\vspace{0pt}}{%
+\end{minipage}
+\ifhmode\unskip\fi
+\aftergroup\useignorespacesandallpars}
+
+\def\useignorespacesandallpars#1\ignorespaces\fi{%
+#1\fi\ignorespacesandallpars}
+
+\makeatletter
+\def\ignorespacesandallpars{%
+  \@ifnextchar\par
+    {\expandafter\ignorespacesandallpars\@gobble}%
+    {}%
+}
+\makeatother
+
+\usepackage{awesomebox}
+\setlength{\aweboxvskip}{1mm}
+
+
+\pagenumbering{gobble}
+
+\usepackage{enumitem}
+\setlist{itemsep=1pt, parsep=0pt} %# Adjust vertical spacing
+\setlist[itemize,1]{leftmargin=*, labelsep=0.3em} %# Adjust horizontal spacing
+
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  colorlinks=true,
+  linkcolor={Maroon},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+
+\vspace{-1cm}
+
+\section{MAFMC Indicators Project: Workshop 1
+Results}\label{mafmc-indicators-project-workshop-1-results}
+
+Workshop objective: Identify and prioritize Council management decisions
+that could be supported or improved by operational use of ecosystem
+indicators.
+
+\subsection{December 10, 2025 Workshop Attendance: 40
+total}\label{december-10-2025-workshop-attendance-40-total}
+
+\begin{noteblock}
+\emph{In person:} 13 participants from the Council, Council Advisory
+Panels, Scientific and Statistical Committee, Council staff, and
+Atlantic States Marine Fisheries Commission staff, plus 4 from the
+project team.
+
+\emph{Online:} 21 participants from the Council, Council Advisory
+Panels, Council staff, Northeast Fisheries Science Center staff, and
+Project Oversight Team, plus 2 from the project team.
+
+\end{noteblock}
+
+\begin{ltgreenbox}
+
+\subsection{Overview of Workshop Discussions and
+Outcomes}\label{overview-of-workshop-discussions-and-outcomes}
+
+\textbf{Goal:} Which management decisions should this project focus on?
+Why?
+
+\textbf{Discussion 1:} Reviewed and updated the list of management
+decisions
+
+\textbf{Discussion 2:} Identified 4 priority decisions
+
+\textbf{Discussion 3:} Provided initial feedback on SMART indicator
+review for further development
+
+\end{ltgreenbox}
+
+\begin{cols}
+
+\begin{col}{0.60\textwidth}
+
+\subsection{Discussion 1: Clarify
+Decisions}\label{discussion-1-clarify-decisions}
+
+\begin{itemize}
+\tightlist
+\item
+  Frame management decisions to reflect both restriction and
+  liberalization
+\item
+  Consider distinctions between:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Pre-season and inseason decisions
+  \item
+    Short term and longer term planning horizons
+  \item
+    Routine and emergency contexts
+  \end{itemize}
+\item
+  Consider tradeoffs between objectives in decisions
+\item
+  Consider uncertainty: indicators should reduce it
+\item
+  Consider stages in the process where information is most useful
+\item
+  Additions: Quota management, Decisions regarding emerging fisheries,
+  MMPA and ESA objective interactions with EFH, Strategic planning and
+  Annual Action Plan, Shared governance
+\end{itemize}
+
+\begin{ltgreenbox}
+
+\subsection{Discussion 2: Priority
+Decisions}\label{discussion-2-priority-decisions}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Risk policy:} consider risk indicators in addition to stock
+  status
+\item
+  \textbf{Catch/quota setting:} communicate information available/used
+  throughout the process. Consider Assessment, SSC ABC, Monitoring
+  Committee, and Council processes
+\item
+  \textbf{Setting measures:} consider multispecies and multifleet
+  context in the specifications process. Objective: maximize
+  opportunities across multiple management bodies.
+\item
+  \textbf{Spatial management measures:} consider changing distributions
+  of fish and fleets within the framework process
+\end{itemize}
+
+\paragraph{For all selected
+decisions:}\label{for-all-selected-decisions}
+
+\begin{itemize}
+\tightlist
+\item
+  Evaluate performance of current management against stated objectives
+  to aid indicator selection
+\item
+  Evaluate impact of data availability or degradation on uncertainty and
+  indicator performance
+\end{itemize}
+
+\end{ltgreenbox}
+
+\subsection{Discussion 3: Indicator
+Tools}\label{discussion-3-indicator-tools}
+
+\begin{itemize}
+\tightlist
+\item
+  SMART Indicator framework and tools a promising approach
+\item
+  Add information on state level surveys and other information used in
+  Habitat Assessment
+\item
+  Design indicator explorer tools to bring information into many
+  different Council products and processes\\
+\end{itemize}
+
+\end{col}
+
+\begin{col}{0.02\textwidth}
+~
+
+\end{col}
+
+\begin{col}{0.38\textwidth}
+
+\emph{Project Steps: This workshop focused on Management Objectives and
+Decisions, and outlined additional steps}
+
+\includegraphics[width=1\linewidth]{WK1_Results_files/figure-latex/projectoutline-1}
+
+\begin{ltbluebox}
+\emph{This workshop addressed project goals:}\\
+* Review and assess existing indicators and evaluate their utility to
+support management objectives\\
+* Identify and develop priority ecosystem and habitat indicators,
+including associated targets and thresholds as appropriate, and identify
+specific pathways for incorporation into Council management processes
+
+\end{ltbluebox}
+
+\end{col}
+
+\end{cols}
+
+\end{document}
