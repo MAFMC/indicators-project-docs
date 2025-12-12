@@ -1,10 +1,11 @@
 ---
-title: |
+title:
 output:
   pdf_document:
     keep_tex: true
     includes:
       in_header: latex/boxescolumns.tex
+  word_document: default
   html_document:
     css: columns.css
     df_print: paged
@@ -27,14 +28,14 @@ library(patchwork)
 
 # MAFMC Indicators Project: Workshop 1 Results
 
-Workshop objective: Identify and prioritize Council management decisions that could be supported or improved by operational use of ecosystem indicators.
+Workshop objective: Identify and prioritize Council management decisions that could be supported or improved by operational use of ecosystem indicators. Workshop materials: https://www.mafmc.org/council-events/2025/dec-10/indicators-workshop
 
 ## December 10, 2025 Workshop Attendance: 40 total
 
 ::: {.noteblock data-latex=""}
-*In person:* 13 participants from the Council, Council Advisory Panels, Scientific and Statistical Committee, Council staff, and Atlantic States Marine Fisheries Commission staff, plus 4 from the project team. 
+*In person:* 13 participants from the Council, Council Advisory Panels, Scientific and Statistical Committee (SSC), Council staff, and Atlantic States Marine Fisheries Commission staff, plus 4 from the project team. 
 
-*Online:* 21 participants from the Council, Council Advisory Panels, Council staff, Northeast Fisheries Science Center staff, and Project Oversight Team, plus 2 from the project team. 
+*Online:* 21 participants from the Council, Council Advisory Panels, SSC, Council staff, Northeast Fisheries Science Center staff, Project Oversight Team, and other observers, plus 2 from the project team. 
 :::
 
 ::: {.ltgreenbox data-latex=""}
@@ -42,11 +43,11 @@ Workshop objective: Identify and prioritize Council management decisions that co
 
 **Goal:** Which management decisions should this project focus on? Why? 
 
-**Discussion 1:** Reviewed and updated the list of management decisions 
+**Discussion 1:** Reviewed, clarified, and updated the [initial list of management decisions](https://www.mafmc.org/s/3_WK1_MgtDecisions.pdf) 
 
-**Discussion 2:** Identified 4 priority decisions 
+**Discussion 2:** Identified 4 priority decisions for indicator development by the project team 
 
-**Discussion 3:** Provided initial feedback on SMART indicator review for further development
+**Discussion 3:** Provided initial feedback on [SMART indicator review](https://mafmc.github.io/SMARTindicatorsData/) documents and tools for refinement
 :::
 
 
