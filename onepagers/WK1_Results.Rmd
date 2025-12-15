@@ -63,13 +63,13 @@ Workshop objective: Identify and prioritize Council management decisions that co
 *  Consider tradeoffs between objectives in decisions 
 *  Consider uncertainty: indicators should reduce it 
 *  Consider stages in the process where information is most useful 
-*  Additions:  Quota management, Decisions regarding emerging fisheries, MMPA and ESA objective interactions with EFH, Strategic planning and Annual Action Plan, Shared governance 
+*  Additions:  Quota management, Decisions regarding emerging fisheries, MMPA and ESA objective interactions with EFH, Strategic planning and Annual Action Plan, Cross-jurisdictional management 
 
 ::: {.ltgreenbox data-latex=""}
 ## Discussion 2: Priority Decisions
 *  **Risk policy:**  consider risk indicators in addition to stock status 
 *  **Catch/quota setting:** communicate information available/used throughout the process. Consider Assessment, SSC ABC, Monitoring Committee, and Council processes 
-*  **Setting measures:** consider multispecies and multifleet context in the specifications process. Objective: maximize opportunities across multiple management bodies. 
+*  **Measures setting:** consider multispecies and multifleet context in the specifications process. Objective: maximize opportunities across multiple species and fisheries. 
 *  **Spatial management measures:** consider changing distributions of fish and fleets within the framework process  
 
 #### For all selected decisions:
