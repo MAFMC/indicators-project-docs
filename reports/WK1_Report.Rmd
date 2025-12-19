@@ -1,0 +1,11 @@
+---
+title: "MAFMC Indicators Project Workshop 1 Report"
+author: "Sarah Gaichas"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
