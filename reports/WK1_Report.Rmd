@@ -39,7 +39,7 @@ The workshop included introductory presentations from the project team, followed
 *  Evaluate impact of data availability or degradation on uncertainty and indicator performance 
 
 ## Discussion 3: Indicator Tools
-*  SMART Indicator framework and tools a promising approach 
+*  The SMART Indicator framework and tools represent a promising approach for indicator evaluation
 *  Add information on state level surveys and other information used in Habitat Assessment
 *  Design indicator explorer tools to bring information into many different Council products and processes 
 
@@ -61,9 +61,36 @@ The MAFMC Indicators Project addresses three Council objectives:
 
 To address these objectives, the project team has been conducting a comprehensive review of existing indicators, has developed a framework for evaluating the indicators (described below), and organized an initial workshop to identify and prioritize Council management decisions that could be supported or improved by operational use of ecosystem indicators. This report summarizes the presentations, discussions, and outcomes of the workshop.
 
-The workshop was held on December 10, 2025 in Baltimore, MD, with an option for online attendance. Workshop materials are posted at https://www.mafmc.org/council-events/2025/dec-10/indicators-workshop.
+While the workshop was a [public meeting](https://www.federalregister.gov/documents/2025/11/18/2025-20056/mid-atlantic-fishery-management-council-mafmc-public-meeting) open to all interested participants, some Council, Advisory Panel, Scientific and Statistical Committee, and Council staff members were specifically invited to participate based on their prior experience with Council ecosystem and habitat indicators, and to encourage participation across a full range of stakeholder groups.
+
+The workshop was held on December 10, 2025 in Baltimore, MD, with an option for online attendance. Workshop materials are posted at https://www.mafmc.org/council-events/2025/dec-10/indicators-workshop. 
+
+The workshop was well-attended. A total of 40 people attended the workshop. In-person attendees include 13 participants from the Council, Council Advisory Panels, Scientific and Statistical Committee (SSC), Council staff, and Atlantic States Marine Fisheries Commission staff, plus 4 from the project team. Online attendees included 21 participants from the Council, Council Advisory Panels, SSC, Council staff, Northeast Fisheries Science Center staff, Project Oversight Team, and other observers, plus 2 from the project team.
+
+The workshop Agenda is included as Appendix 1 and the list of attendees is included as Appendix 2. The remaining workshop materials are included as Appendices 3-5. Presentations shown during are linked below. 
+
+A 1-page Workshop Summary was also developed and is included as Appendix 6. 
 
 # Workshop Presentation Summary
+
+The workshop began with a round of introductions, followed by 3 introductory presentations. The [first presentation](https://sgaichas.github.io/HSpresentations/20250929_ProjectOverview_Gaichas.html) reviewed the overall MAFMC Indicators Project goals and objectives, timeline, current progress, and planned activities.  
+
+The [second presentation](https://sgaichas.github.io/HSpresentations/20250929_Definitions_Gaichas.html) briefly defined terms to ensure clear communication. An *indicator* tells us something about where we are relative to our goals or to limits, or about the context we are working within that may affect achieving our goals. Examples of indicators currently reviewed by the Council include stock status indicators of fishing mortality relative to the mortality limit and stock biomass relative to target biomass. Other indicators can include measures of total commercial revenue or recreational effort that directly address broad management objectives, and contextual indicators of habitat conditions or other ocean uses that are not controlled by Council decisiosn but may indirectly affect Council decisions.
+
+Indicator evaluation is using SMART criteria, where indicator attributes are defined as:
+
+* **Specific**: clearly defined, describing exactly what is measured at what scale and how the indicator is calculated so that methods can be repeated. The indicator can be directly linked to a management process objective.
+
+* **Measurable**: appropriate quantitative or qualitative data are available to evaluate change over time or in space. Tied to measurable management process objective. 
+
+* **Achievable**: responses to changes in management are detectable within the management time frame--objectives tied to the indicator must be achievable. 
+
+* **Relevant**: accurately reflects changes in the underlying process of concern. The indicator can be directly linked to a management process objective. 
+
+* **Time-bound**: how often is indicator measured and does this align with the process of concern, and the management process?
+
+SMART indicators are Specific, Measurable, Achievable, Relevant, and Timely for the priority Council decisions. A SMART indicator for one process won't necessarily be SMART for another.
+
 
 
 # Workshop Discussion Summary
