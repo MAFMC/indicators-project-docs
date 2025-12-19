@@ -69,7 +69,7 @@ Workshop objective: Identify and prioritize Council management decisions that co
 ## Discussion 2: Priority Decisions
 *  **Risk policy:**  consider risk indicators in addition to stock status 
 *  **Catch/quota setting:** communicate information available/used throughout the process. Consider Assessment, SSC ABC, Monitoring Committee, and Council processes 
-*  **Measures setting:** consider multispecies and multifleet context in the specifications process. Objective: maximize opportunities across multiple species and fisheries. 
+*  **Measures setting:** consider multispecies and multifleet context and tradeoffs in the specifications process 
 *  **Spatial management measures:** consider changing distributions of fish and fleets within the framework process  
 
 #### For all selected decisions:
