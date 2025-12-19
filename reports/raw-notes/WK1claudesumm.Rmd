@@ -1,0 +1,442 @@
+# MAFMC Ecosystem Indicators Workshop - Comprehensive Summary
+
+## Workshop Overview
+
+This workshop focused on identifying and prioritizing management decisions that could be supported or improved by operational ecosystem indicators for the Mid-Atlantic Fishery Management Council (MAFMC). The project aims to review existing indicators, develop new priority indicators, and create communication tools for regular updates over a 2-year period.
+
+## Key Project Objectives
+
+1. **Review and assess existing ecosystem indicators** - Create a SMART format catalog and indicator search tool
+2. **Identify and develop priority ecosystem and habitat indicators** - Including target threshold development and simulation testing
+3. **Create workflow and communication tools** - Build infrastructure for regular updates using GitHub, visualization tools, and dashboards
+
+## Major Discussion Themes
+
+### Definition and Framework
+
+**What is an Indicator?**
+- Tells us where we are relative to goals or limits
+- Provides context for management decisions
+- Can measure stock status, fishing mortality, revenue, effort
+- Should be SMART: Specific, Measurable, Achievable, Relevant, Time-bound
+
+**Types of Management Decisions:**
+- **Strategic**: Long-term goals and planning
+- **Tactical**: Short-term operational decisions
+- **Routine**: Annual or regular decisions (catch limits, seasons, possession limits)
+- **Occasional**: Less frequent decisions (FMP amendments, allocation changes)
+
+### Current State of MAFMC Ecosystem Indicator Use
+
+The Council already uses ecosystem indicators in several ways:
+- Bottom temperature incorporated in black sea bass assessments
+- Ecosystem and Socioeconomic Profiles inform decision-making
+- EAFM Framework includes risk assessment across multiple elements
+- Risk elements include commercial fishery resilience, fleet diversity, and fleet count
+
+### Current Challenges Identified
+
+**Major Risks Facing Fisheries:**
+- Declining seafood production
+- Historically low revenue
+- Declining range of recreational opportunity
+- High climate vulnerability in fishing communities
+
+**Data and Survey Concerns:**
+- Potential loss of survey data due to offshore wind development
+- Large areas may become unsurveyable
+- Uncertainty in how to manage with data gaps
+- Concerns about MRIP recreational data uncertainty
+
+## Discussion 1: Management Decision List
+
+### Additions to Management Decisions
+
+**New Decision Types:**
+- Exempted Fishing Permits (though GARFO decides, Council comments)
+- Emerging fisheries (forage species, mantis shrimp, etc.)
+- Spatial opening or closing based on productivity indicators
+- Bycatch measures/caps informed by spatial-temporal conditions
+- Seasonal or regional allocation
+- Emergency regulations with established triggers
+- Mechanisms for action (Categorical exclusions, Supplemental Information Reports)
+- NEPA analyses
+- Council advice/consultation/comment processes
+- Data collection standards
+- Management units and stock definitions
+- Safety at sea considerations
+- Regional alignment of recreational management
+- Shared governance issues related to changing species distributions
+
+**Process Considerations:**
+- Pre-season vs in-season decisions
+- Regular vs emergency decisions
+- Short vs long-term planning horizons
+- Evaluating performance of current management measures
+- Understanding when to involve Council in fisheries they don't currently manage
+
+### Removals or Clarifications
+
+- Vessel size and horsepower restrictions (less relevant today)
+- Change "restrictions" language to "requirements" or "measures" throughout
+- Emphasize bidirectional decision-making rather than restrictive focus
+- Distinguish between bycatch (commercial) and discards (recreational)
+
+### Key Considerations for All Decisions
+
+**Uncertainty Management:**
+- Scientists need to better understand what's most useful for management
+- Need better interpretation of uncertainty and its management implications
+- Indicators should reduce uncertainty, not add to it
+- Too many indicators can allow cherry-picking
+
+**Communication and Timing:**
+- Information needs to reach Council early enough to influence decisions
+- During meetings is too late - people have already decided
+- Council members have limited time to digest briefing materials
+- Need frequent communication between managers and scientists
+
+**Contextual Factors:**
+- State agency folks generally think longer term
+- Fishery stakeholders focused more on immediate impacts
+- Different stakeholders prioritize objectives differently
+- Indicators should help people get on the same page about facts, even if they disagree on tradeoffs
+
+## Discussion 2: Priority Decisions and Information Needs
+
+### Top Priority Decision Areas (Consensus)
+
+1. **Catch/Quota Setting**
+   - Council is constrained by SSC's ABC recommendation
+   - Can only set ACL equal to or below ABC
+   - Indicators would be most useful at SSC or assessment level
+   - SSC Terms of Reference could include consideration of indicators and thresholds
+   - Multi-year specifications decisions could be informed by indicators
+   - Monitoring committee feedback also constrains decisions
+
+2. **Setting Measures** (Seasons, bag limits, size limits, possession limits)
+   - Objective: Maximize fishing opportunities across species and fleets
+   - Need information on what else is open when and where
+   - Requires information from multiple management bodies (NEFMC, ASMFC, HMS, states)
+   - Consider overlapping opportunities to avoid excessive pressure on single species
+   - Evaluate tradeoffs between risks and opportunities
+   - Changed through specifications process
+
+3. **Spatial Management**
+   - Need to evaluate effectiveness of current spatial measures
+   - Track overlap of fisheries and species distributions
+   - Assess user conflicts between different gear types
+   - Consider changing distributions due to environmental factors
+   - Changed through framework process
+   - Set for longer periods with less frequent review
+
+4. **Risk Policy**
+   - Current policy largely based on biomass relative to target
+   - Could incorporate additional indicators beyond stock status
+   - Need to consider other factors informing acceptable risk levels
+   - Should be periodically reconsidered given changing ocean conditions
+
+### Cross-Cutting Themes for Better Decisions
+
+**Performance Evaluation:**
+- Need retrospective look at past decisions
+- Compare goals to actual performance
+- Hindcasting to validate predictions and models
+- Look at frequency of overfishing relative to risk policy
+- Assess which indicators might have helped in past emergencies
+
+**What Makes a "Better Decision":**
+- More responsive and timely
+- Based on solid evidence with appropriate lag time
+- Considers tradeoffs explicitly across objectives
+- Reduces uncertainty where possible
+- Provides more flexibility for participants
+- Prevents perverse incentives
+- Has appropriate intensity relative to confidence in data
+- Can be reversed if conditions change
+
+**Multi-species and Multi-fleet Considerations:**
+- Moving away from single species management
+- Need indicators for multi-species interactions
+- Commercial and recreational interactions
+- Fleet diversity and overlap considerations
+- Bycatch and discards becoming more common issue
+- Would be valuable to manage recreational species as a complex
+
+### Socioeconomic Information Needs
+
+**Critical Gaps Identified:**
+- Need better data on fleet diversity and operations
+- Crew size and demographics per fishery
+- Employment data (may be available through EPA)
+- Processing and distribution information
+- Community vulnerability and dependence metrics
+- Economic factors in allocation decisions
+
+**Allocation Challenges:**
+- Very politically sensitive issue
+- Intertwined with equity considerations
+- No one wants to be bound to metrics, but metrics could inform decisions
+- Recent NOAA guidance on allocation metrics not well received
+- Economics and politics often outweigh science
+- Historical reference periods (1990, 2001) were somewhat arbitrary
+
+### Specific Management Decision Examples
+
+**Emerging Fisheries:**
+- Need indicators for when Council should get involved
+- Examples: forage species, mantis shrimp, cobia, wahoo
+- Governance questions about fisheries Council doesn't currently manage
+- Risk assessment for new fishery entry
+
+**Bycatch Management:**
+- River herring and shad avoidance
+- Need real-time or near-real-time distribution information
+- Habitat suitability mapping
+- Industry self-regulation tools
+- Gear modifications (e.g., scup gear restrictions to avoid dogfish)
+- Species distribution models for bycatch caps
+
+**Stock Assessment Integration:**
+- Use indicators to constrain terminal year recruitment estimates
+- Better ground-truthing of observations
+- Understand when to change assessment assumptions
+- Incorporate body condition and other productivity indicators
+- Address management uncertainty buffers
+
+## Permitting Decisions - Special Consideration
+
+Extensive discussion revealed that **permitting should be lower priority or separate analysis**:
+
+**Concerns:**
+- Permits are foundation of financial decisions in fishing industry
+- Permitting is usually stable in an otherwise unstable industry
+- Past attempts to use ecosystem indicators for permitting have created winners and losers
+- Could devalue existing permits and permit holders
+- Very different across regions and gear types
+- Some permits part of infrastructure not actively fished
+- Industry participants can determine which fisheries to prosecute without indicator help
+
+**If Addressed:**
+- Would need comprehensive analysis of permitting structure across regions
+- Consider community vulnerability indicators
+- Understand historical catch patterns
+- Address equity and distributional effects
+
+## Indicator Development Considerations
+
+### Existing MAFMC Processes Using Indicators
+
+- **Ecosystem and Socioeconomic Profiles (ESPs)**: Good place for stock-specific indicators
+- **State of the Ecosystem (SOE) Reports**: Many indicators not brought forward in later species-specific discussions
+- **Fishery Performance Reports**: Could integrate indicators or explain indicator trends
+- **Risk Tables**: Already use contextual indicators
+- **Stock Assessments**: Could better systematize indicator use
+
+### Desired Indicator Characteristics
+
+**Forecasting vs Observation:**
+- Predictive indicators generally more difficult than observational
+- Need sufficient lead time for decisions (several months minimum)
+- Regional and seasonal projections much harder than global
+- Current conditions often more reliable than forecasts
+- Both hindcasting and forecasting valuable for different purposes
+
+**Data Sources Beyond Surveys:**
+- Observer data
+- Port sampling data  
+- Satellite data
+- Vessel Monitoring System (VMS) data
+- Industry observations and local ecological knowledge
+- Multiple data streams can compensate for survey gaps
+
+**Specific Indicator Examples Discussed:**
+- Cold pool location and projections
+- Bottom temperature
+- Fish condition factor
+- Recruitment indicators
+- Surplus production time series
+- Recreational effort metrics
+- Habitat suitability maps
+- Fleet diversity metrics
+- Revenue and landings trends
+- Port and community resilience indicators
+
+### Indicator Testing and Validation
+
+**Critical Requirements:**
+- Must be operational and regularly updated
+- Need feedback loop: availability → use → effectiveness evaluation
+- Test for responsiveness and sensitivity
+- Understand relationships between indicators
+- Avoid indicators that are too noisy or unreliable
+- Simulation testing to ensure robustness
+- Performance evaluation against past decisions
+
+**Avoiding Problems:**
+- Indicators that work initially may fail later (example: butterfish thermal habitat)
+- Don't create more uncertainty than they resolve
+- Must clearly support decision process objectives
+- Should not be triggered by sampling variability alone
+- Need proportional responses that can be reversed
+
+## Implementation Considerations
+
+### Process and Timing
+
+**When Indicators Enter Process:**
+- Earlier is better - before or during stock assessments
+- SSC review critical decision point
+- Monitoring Committee input
+- Advisory Panel input valuable but needs systematization
+- Include in decision memos and briefing materials
+- Consider in fishery performance reports
+
+**Flexibility Needs:**
+- More opportunities for adjustments
+- In-season adjustment authorities (like NEFMC has)
+- Categorical exclusions and supplemental information reports
+- Emergency action triggers
+- Balance between nimbleness and stability
+
+### Communication Strategies
+
+**To Council:**
+- Show how ecosystem issues were considered in earlier processes
+- Explain SSC reasoning related to indicators
+- Present context with indicators - what's driving trends
+- Avoid information overload
+- Make tradeoffs more explicit
+
+**To Industry:**
+- Provide guidance even if not regulatory
+- Early warning of trends and conditions
+- On-the-water feedback loop
+- Ground-truthing of model predictions
+- Examples: distribution trends of bycatch species
+
+### Coordination Needs
+
+**Across Processes:**
+- Climate change scenario planning
+- EAFM framework implementation
+- Research track Terms of Reference (defined years in advance)
+- Implementation plans and annual priorities
+- Multiple jurisdictions (councils, commissions, states, HMS)
+
+**Information Sharing:**
+- Staff should review SOE indicators when preparing documents
+- Use indicators in appropriate committee meetings
+- Cross-reference across species discussions
+- Coordinate with other regional efforts
+
+## Technical Products in Development
+
+### SMART Indicator Catalog
+- Comprehensive documentation of existing indicators
+- Categories assigned to each indicator
+- Descriptions, plots, and uncertainty metrics
+- Code availability and testing information
+- Scored on SMART criteria
+- Will link indicators to specific decisions
+
+### Interactive Dashboard (Prototype)
+- Filter by SMART score
+- Filter by time series length
+- Filter by geographic area
+- Filter by management decision (future)
+- Shows which indicators match selected criteria
+- Public-facing tool for exploration
+
+**Suggested Additions:**
+- Finer time scale filters for in-season decisions
+- Indicator descriptions/definitions
+- State survey data integration
+- Cross-walk with demand for specific indicators
+- Links to more detailed documentation
+
+### Broader Context - FAO and Global Indicators
+
+**Reviewed for Potential Adaptation:**
+- Sustainable Development Goals (SDG) framework
+- SDG 14 ocean-related indicators
+- Strategic compass rather than day-to-day tool
+- Focus on socioeconomic indicators
+- Example: prevalence of undernourishment (food security)
+
+**Considerations:**
+- Not suggesting direct adoption
+- Learn from established frameworks
+- Scale appropriately to regional context
+- Recognize differences between commercial and recreational contexts
+- Not always apples-to-apples comparisons
+
+## Next Steps and Future Work
+
+### Immediate (Phase 1)
+- Summarize workshop discussions
+- Distribute summary to participants before holidays
+- Finalize priority decision list
+- Continue SMART indicator catalog development
+- Refine dashboard prototype
+
+### Upcoming (Phase 2)
+- Mini workshop for target and threshold development
+- Performance metrics development
+- Stress testing of indicators
+- Simulation testing
+- In-person workshop reviewing indicators and uncertainties
+- Identify optimal uses and when not to use indicators
+
+### Long-term (Phase 3)
+- Create infrastructure for ongoing updates
+- Develop workflow and communication tools
+- Engage students and early career scientists
+- Build visualization tools
+- Ensure coordination with climate scenario planning and other initiatives
+
+## Key Tensions and Debates
+
+### Restriction vs Opportunity
+Strong concern that indicators would only be used for restrictive measures rather than liberalization. Consensus that language should emphasize bidirectional decision-making and that indicators could support opening areas, increasing limits, or expanding opportunities when conditions are favorable.
+
+### Data Reliability vs Action
+Tension between waiting for perfect data and acting on best available information. General agreement that decisions should be proportional to confidence in data, with intensity of action reflecting certainty level.
+
+### Specificity vs Flexibility  
+Discussion of whether very specific prescriptive management ties councils in knots versus giving appropriate guidance. Balance needed between clear direction and maintaining flexibility for changing conditions.
+
+### Short-term vs Long-term
+State agencies and conservation interests generally think longer term, while industry must focus on immediate viability. Indicators need to serve both timeframes.
+
+### Single Species vs Ecosystem
+Movement toward ecosystem and multi-species considerations while acknowledging that much of current structure is single-species. Need indicators that bridge both approaches.
+
+## Considerations for Commercial Fishing Protection
+
+Multiple policy documents establish commercial fishing as important use:
+- MA Risk Policy (2016): Formal policy minimizing adverse impacts
+- MAFMC definition of commercial fishing as foundational activity
+- Habitat Amendment (2018): Mitigating impacts to fisheries
+- Omnibus Amendment (2018): Fishing defined as important use
+- Deep Sea Coral Amendment considerations
+
+Food security and health of commercial fisheries should be primary considerations in management decisions.
+
+## Summary of Priority Focus Areas
+
+Based on extensive discussion, the workshop identified these priorities for ecosystem indicator development:
+
+1. **SSC/ABC Setting Process** - Where most flexibility exists for catch-related decisions
+2. **Seasonal and Spatial Management** - Need for responsive, timely decisions with ecosystem information
+3. **Risk Policy** - Opportunity to incorporate indicators beyond just biomass
+4. **Setting Measures for Opportunity Maximization** - Multispecies, multifleet context
+5. **Performance Evaluation** - Systematic review of past decision outcomes
+6. **Stock Definitions and Management Units** - Especially important with changing distributions
+
+All priority areas should include:
+- Performance evaluation against objectives
+- Uncertainty analysis and data quality assessment
+- Tradeoff analysis across objectives
+- Multi-species and multi-fleet interactions
+- Appropriate socioeconomic context

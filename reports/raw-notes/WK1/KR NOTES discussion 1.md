@@ -1,0 +1,42 @@
+**DISUCSSION 1 \- GROUP 2**
+
+- Gear restrictions \- move to gear modifications/requirements (escapement)  
+- Occasional and strategic \- developing a strategic plan, council takes in alot of information, SOE reports/assessments, good place for indicators to be integrated   
+- Action plan to feeds out of that \- all part of overarching strategic policy   
+- Strategic planning \- is this operational development? Yes but some can be species specific (e.g., integrate local ecological knowledge), everything comes off of the action plan   
+- Spatial management \- add management units   
+- How does the council wrangle uncertainty?   
+- Set priorities relative to surveys, interact with the science center   
+- Risk policy is in place already (mainly to stock size, but there is some management uncertainty)  
+- Social /economic metrics \- fair equitable decision making determined by the Council   
+- Enforceability or performance of regulations   
+- Safety at sea \- lots of council decisions in this space, affects transfers between states, some allowances for bad weather, sometimes actual metrics go into these decisions but council not always aware of what exists   
+- Vessel power and horsepower restrictions \- move this to requirements (not as relevant today, theres fewer operators now), make the existing fleet more efficient   
+- Change this throughout (requirements)  
+- Bycatch associated with commercial not recreational (we use discards for the rec fleet); discard relevant here too because of culling but Mag act doesnt have a specific definition here   
+- Reducing discards for rec fishery \- council constantly evaluating pathways for this (bycatch not related to rec)  
+- Captured rec and commercial correctly and ensure its inclusive (some of the decisions apply to all species not a subset)  
+- Decisions made regarding access, input controls (effort, how much you can fish and where) then output controls (what you can harvest, how many)  
+- Subcategories under routine are needed   
+- Enforceability of anything theyre using as a measure is key, law enforcement has a say here depending on what they can take to court   
+- Monitoring vs enforcement \- distinction here?   
+- We’re working on an honor system, dont have the resources or the data at a fine enough scale   
+- Metrics not the best for really getting a handle on monitoring and enforcement, many things open for interpretation   
+- Accountability measures \- annual catch limits, build into the FMP if the ACL is exceeded in a given year   
+  - Proactive measures \- trigger 80% of ACL then possession level changes   
+  - All built around not going over your catch limit   
+  - Individual jurisdictions are held to separate accountability measures   
+- Protected species e.g. new gear requirements tied to sturgeon   
+- How you take action to address a decision is definitely council not noaa   
+- Example \- spiny dogfish, gillnet fisheries were taking alot more sturgeon than they have in the past, reduce mesh size other requirements (noaa has to agree to the end decision point)  
+- Using the suite of tools at their disposal, pop esa and mmpa under EFH, same general bundle, driven with a different law but council has to tactically make decisions relative to it   
+- Most reports on enforcements have to do with speed violations coming from coast guard   
+- Coast guard provides reports to council   
+- Review gillnet rules if coast guard reports a specific amount of violations (this is contextual, when it would trigger an action is subject to specifics), but this would still be useful to include on a dashboard  
+- Vessels have different requirements \- some might be pinging (vessel tracking) at different times for speed regulations   
+- Everything the council does is tied directly to operation, if a measure is not serving this purpose it will likely be removed under this administration   
+- open/close season green box \- council has other in season adjustments (e.g. possession or trip limits that can be tweaked in season)  
+- Season expansion \- some have trimesters which breaks the quota across seasons (tied to equity), more flexibility in season management, could be tied to specific gears or states to separate out the catch (mainly commercial)   
+- Climate folded into habitat types \- climate vulnerability assessments, factors into efh consultation process, cold pool in there for quahog (context that is being added)   
+- JSDMs process, interactions with other species   
+  
