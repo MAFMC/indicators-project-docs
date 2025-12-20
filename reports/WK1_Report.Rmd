@@ -89,7 +89,9 @@ Indicator evaluation is using SMART criteria, where indicator attributes are def
 
 * **Time-bound**: how often is indicator measured and does this align with the process of concern, and the management process?
 
-SMART indicators are Specific, Measurable, Achievable, Relevant, and Timely for the priority Council decisions. A SMART indicator for one process won't necessarily be SMART for another.
+SMART indicators should be Specific, Measurable, Achievable, Relevant, and Timely for the priority Council decisions. A SMART indicator for one process won't necessarily be SMART for another.
+
+An **Operational** indicator is in use or ready for use. Components of an operational process include clear articulation of management objectives, standardized information updates on a regular reporting schedule, and feedbacks from the management system and adjustments to achieve management objectives. "Operationalizing" is an iterative process within a specific context.
 
 
 
