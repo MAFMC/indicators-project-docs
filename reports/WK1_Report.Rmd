@@ -228,7 +228,6 @@ An online "mini-workshop" will review the gathered information in late winter/ea
 **Suggested Additions:**
 - Finer time scale filters for in-season decisions
 - Indicator descriptions/definitions
-- State survey data integration
 - Cross-walk with demand for specific indicators
 
 

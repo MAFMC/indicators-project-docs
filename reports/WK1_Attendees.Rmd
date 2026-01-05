@@ -1,0 +1,34 @@
+---
+title: "Workshop 1 Attendees List"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+
+The Mid-Atlantic Fishery Management Council Inflation Reduction Act Project 5, "Operationalizing Ecosystem and Habitat Indicators to Support Climate-Ready Fisheries Management in the Mid-Atlantic" (MAFMC Indicators Project) held a hybrid workshop on December 10, 2025 in Baltimore, MD and online. The workshop objective was to identify and prioritize Council management decisions that could be supported or improved by operational use of ecosystem indicators. Workshop materials are posted at https://www.mafmc.org/council-events/2025/dec-10/indicators-workshop.
+
+A total of 40 people attended the workshop. In-person attendees include 13 participants from the Council, Council Advisory Panels, Scientific and Statistical Committee (SSC), Council staff, and Atlantic States Marine Fisheries Commission staff, plus 4 from the project team. Online attendees included 21 participants from the Council, Council Advisory Panels, SSC, Council staff, Northeast Fisheries Science Center staff, Project Oversight Team, and other observers, plus 2 from the project team. 
+
+## Workshop Attendees:
+
+```{r nametable, message=FALSE, warning=FALSE}
+
+attendees <- readr::read_csv(here::here("reports/attendeestab.csv"), 
+                             col_select = c("Name", "In Person", "Role"), 
+                             skip_empty_rows = TRUE) |>
+  dplyr::filter(!is.na(Name)) |>
+  dplyr::mutate(Attendance = ifelse(`In Person` == 0, "Online", "In Person")) |>
+  dplyr::select(Name, Role, Attendance) |>
+  dplyr::arrange(Attendance)
+
+flextable::flextable(attendees) |>
+  flextable::width(width = c(2,2,2))
+
+```
+
