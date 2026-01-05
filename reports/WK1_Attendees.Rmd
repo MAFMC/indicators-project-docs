@@ -29,6 +29,15 @@ attendees <- readr::read_csv(here::here("reports/attendeestab.csv"),
 
 flextable::flextable(attendees) |>
   flextable::width(width = c(2,2,2)) |>
+  flextable::set_header_labels(Name = "Name",
+                               Role = "Role",
+                               Attendance = "Attendance") |>
+  flextable::bold(bold = TRUE, part = "header") |>
+  flextable::bg(bg = "lightgray", part = "header") |>
+  flextable::hline_top(border = flextable::fp_border_default(width = 0), 
+            part = "header") |>
+  flextable::hline_bottom(border = flextable::fp_border_default(width = 0), 
+            part = "header") |>
   flextable::line_spacing(space = 0,
                           part = "body")
 
