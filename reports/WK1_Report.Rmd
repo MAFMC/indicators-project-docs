@@ -1,8 +1,14 @@
 ---
 title: "MAFMC Indicators Project Workshop 1 Report"
-author: "Sarah Gaichas"
+author: "Sarah Gaichas, Gavin Fay, Kelsey Roberts, Sophie Wulfing, Connor Coscino, and Sarah Hope"
 date: "`r Sys.Date()`"
-output: pdf_document
+output:
+  pdf_document: default
+  word_document: default
+csl: plos.csl
+bibliography: operationalSOE.bib
+link-citations: true
+urlcolor: blue
 ---
 
 ```{r setup, include=FALSE}
@@ -63,11 +69,11 @@ To address these objectives, the project team has been conducting a comprehensiv
 
 While the workshop was a [public meeting](https://www.federalregister.gov/documents/2025/11/18/2025-20056/mid-atlantic-fishery-management-council-mafmc-public-meeting) open to all interested participants, some Council, Advisory Panel, Scientific and Statistical Committee, and Council staff members were specifically invited to participate based on their prior experience with Council ecosystem and habitat indicators, and to encourage participation across a full range of stakeholder groups.
 
-The workshop was held on December 10, 2025 in Baltimore, MD, with an option for online attendance. Workshop materials are posted at https://www.mafmc.org/council-events/2025/dec-10/indicators-workshop. 
+The in-person workshop was held on December 10, 2025 in Baltimore, MD, with an option for online attendance. Workshop materials are posted at https://www.mafmc.org/council-events/2025/dec-10/indicators-workshop. 
 
 The workshop was well-attended. A total of 40 people attended the workshop. In-person attendees include 13 participants from the Council, Council Advisory Panels, Scientific and Statistical Committee (SSC), Council staff, and Atlantic States Marine Fisheries Commission staff, plus 4 from the project team. Online attendees included 21 participants from the Council, Council Advisory Panels, SSC, Council staff, Northeast Fisheries Science Center staff, Project Oversight Team, and other observers, plus 2 from the project team.
 
-The workshop Agenda is included as Appendix 1 and the list of attendees is included as Appendix 2. The remaining workshop materials are included as Appendices 3-5. Presentations shown during are linked below. 
+The workshop Agenda is included as Appendix 1 and the list of attendees is included as Appendix 2. The remaining workshop materials are included as Appendices 3-5. Presentations shown during the workshop are linked below. 
 
 A 1-page Workshop Summary was also developed and is included as Appendix 6. 
 
@@ -75,9 +81,9 @@ A 1-page Workshop Summary was also developed and is included as Appendix 6.
 
 The workshop began with a round of introductions, followed by 3 introductory presentations. The [first presentation](https://sgaichas.github.io/HSpresentations/20250929_ProjectOverview_Gaichas.html) reviewed the overall MAFMC Indicators Project goals and objectives, timeline, current progress, and planned activities.  
 
-The [second presentation](https://sgaichas.github.io/HSpresentations/20250929_Definitions_Gaichas.html) briefly defined terms to ensure clear communication. An *indicator* tells us something about where we are relative to our goals or to limits, or about the context we are working within that may affect achieving our goals. Examples of indicators currently reviewed by the Council include stock status indicators of fishing mortality relative to the mortality limit and stock biomass relative to target biomass. Other indicators can include measures of total commercial revenue or recreational effort that directly address broad management objectives, and contextual indicators of habitat conditions or other ocean uses that are not controlled by Council decisiosn but may indirectly affect Council decisions.
+The [second presentation](https://sgaichas.github.io/HSpresentations/20250929_Definitions_Gaichas.html) briefly defined terms to ensure clear communication. An *indicator* tells us something about where we are relative to our goals or to limits, or about the context we are working within that may affect achieving our goals. Examples of indicators currently reviewed by the Council include stock status indicators of fishing mortality relative to the mortality limit and stock biomass relative to target biomass. Other indicators can include measures of total commercial revenue or recreational effort that directly address broad management objectives, and contextual indicators of habitat conditions or other ocean uses that are not controlled by Council decisions but may indirectly affect Council decisions.
 
-Indicator evaluation is using SMART criteria, where indicator attributes are defined as:
+Indicator evaluation is using SMART criteria [@belcher_indicators_2024], where indicator attributes are defined as:
 
 * **Specific**: clearly defined, describing exactly what is measured at what scale and how the indicator is calculated so that methods can be repeated. The indicator can be directly linked to a management process objective.
 
@@ -93,23 +99,104 @@ SMART indicators should be Specific, Measurable, Achievable, Relevant, and Timel
 
 An **Operational** indicator is in use or ready for use. Components of an operational process include clear articulation of management objectives, standardized information updates on a regular reporting schedule, and feedbacks from the management system and adjustments to achieve management objectives. "Operationalizing" is an iterative process within a specific context.
 
+The [third presentation](https://sgaichas.github.io/HSpresentations/20251104_Decisions_Gaichas.html) provided an overview of current uses of ecosystem indicators in the MAFMC management process, outlined general types of management decisions, and set the context for the workshop discussions and decisions to follow. Ecosystem indicators and information are currently used in the stock assessment process, in the SSC's determination of assessment uncertainty (overfishing limit coefficient of variation or "OFL CV" process), and in the MAFMC Ecosystem Approach to Fishery Management (EAFM) process. 
+
+Stock assessments consider ecosystem information as a routine part of a research track assessment. Information approved for use in the research track assessment can then be used in management track assessments. Recent research track assessments in the Mid-Atlantic have included Ecosystem and Socioeconomic Profiles (ESPs) to address ecosystem factors important to the stock. Based on an ESP [@tabandera_black_2024], the Black Sea Bass management track assessment includes an ecosystem indicator (winter bottom temperature in the northern region) that reduces uncertainty in recruitment. When an ecosystem indicator is included in a stock assessment, the usual Council decisions proceed as they would for any assessment; no change to Council management decisions are required when using ecosystem information within an assessment. 
+
+The [SSC's OFL CV process](https://www.mafmc.org/s/Final-OFL-CV-guidance-document_06_24.pdf) evaluates assessment uncertainty using a set of criteria for data quality, assessment model performance, ecosystem factors, comparisons with empirical estimates, and appropriate treatment of recruitment patterns.  The SSC routinely includes the results of the Northeast Climate Vulnerability Analysis [@hare_vulnerability_2016] as part of its evaluation of ecosystem factors that may affect assessment uncertainty. 
+
+The [Council's EAFM process](https://www.mafmc.org/eafm) includes a structured decision framework [@gaichas_framework_2016] using ecosystem indicators from the annual Northeast Fisheries Science Center (NEFSC) [State of the Ecosystem report](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) [@gaichas_state_2025] to inform an ecosystem-level risk assessment, where indicator trends or status translate to risk levels using Council-derived criteria [@gaichas_implementing_2018]. The Council has used its EAFM framework to develop a conceptual model of risks to the summer flounder fishery based on risk assessment results [@depiper_learning_2021]. The Council used the conceptual model to select a management issue for further analysis using management strategy evaluation (MSE) [@muffley_there_2021]. The summer flounder recreational discards MSE found several management strategies that could improve angler welfare no change to stock status. In addition, the model developed for the MSE is now used operationally in annual recreational specification setting. 
+
+The remainder of the presentation outlined categories of Council management decisions to help frame workshop discussions. Categories included Routine, Occasional, Tactical, and Strategic decisions. Routine and Occasional refer to timing of decisions. **Routine** decisions are made or reviewed annually or more often across all the managed stocks, while **Occasional** decisions are made as needed to address issues. Tactical and Strategic refer to scope of decisions. **Strategic** decisions consider long term, high level goals and objectives, while **Tactical** decisions implement the strategies in the short term. 
+
+Finally, an example of a decision process that could be improved using SMART indicators was presented.
+
+Workshop participants then referred to the list of management decisions compiled by the project and project oversight teams (Appendix 5) as the basis for Discussions 1 and 2.
 
 
 # Workshop Discussion Summary
 
-## Discussion 1
+Discussions made up the majority of the workshop. In-person participants joined small group (~ 5 people) discussions where participants were assigned to one of three discussion subgroups for Discussions 1 and 2. Online participants joined a single online discussion subgroup. Each subgroup had a discussion facilitator from the project team and a note taker. After each small group discussion (~1 hour), participants reviewed the results from all groups in a plenary session. Notes from all discussions were reviewed and combined into this summary. Discussion 3 was conducted in plenary with all participants. 
+
+## Discussion 1: Management Decision List Review
 
 
 
-## Discussion 2
+## Discussion 2: Identify Priority Management Decisions
 
 
 
-## Discussion 3
+## Discussion 3: Progress on Indicator Review
 
 
 
 # Next Steps
+
+## Revised List of Management Decisions
+
+The list of management decisions has been revised here to emphasize that both restriction and liberalization of management are possible based on ecosystem conditions. Some decisions were added to the list and one was removed based on group discussions. 
+
+### Routine/Tactical: Specifications
+
+*  Catch limits and targets (OFL, ABC, OY, ACL, ACT)  
+*  Landings limits (commercial quotas, recreational harvest limits, total allowable landings limits, etc.)  
+*  Minimum fish sizes (commercial and/or recreational - maximum sizes can also be specified for a few species/sectors)  
+*  Trip/possession limits (commercial and/or recreational)  
+*  Gear requirements (e.g., commercial minimum mesh sizes, pot/trap escape vent size requirements)  
+*  Open/closed seasons (recreational; commercial fisheries can close in-season if the quota is met before the end of the season)  
+*  Reporting requirements specific to each FMP  
+*  Commercial bycatch or recreational discard caps (apply to only a subset of MAFMC species)  
+
+### Routine/Tactical: SSC
+
+*  Best scientific information determination (includes scientific working group and review panel judgement)
+
+### Occasional, Tactical or Strategic: Framework Adjustment
+
+*  ABC control rules  
+*  Risk policy  
+*  Accountability measures  
+*  Permitting requirements (could require amendment) 
+*  Exempted Fishing Permits (though GARFO decides, Council comments)
+*  Essential Fish Habitat (EFH) and HAPCs  
+*  Vessel Monitoring System (VMS) requirements  
+*  Spatial management areas (e.g., closed areas, gear requirement areas, exemption areas)  
+*  Commercial quota allocations  
+*  Commercial/recreational allocations (for some FMPs)  
+*  Seasonal or regional allocation
+*  Onboard observer requirement (for some FMPs)  
+*  Changes to Standardized Bycatch Reporting Method  
+*  Deep Sea Coral Protection Zone boundaries and regulations
+*  Emergency regulations
+
+### Occasional and Strategic: more complex Council process
+
+*  FMP development and amendment 
+*  Management units and stock definitions
+*  Emerging fisheries (forage species, mantis shrimp, etc.)
+*  Research priority development and review
+*  Data collection standards
+*  Ecosystem Approach to Fisheries Management (EAFM) guidance
+*  “Measures contained within this [Framework] list that require significant departures from previously contemplated measures or that are otherwise introducing new concepts may require amendment of the FMP instead of a framework adjustment.” 
+*  Policy development on other ocean activities  
+*  Shared governance issues related to changing species distributions
+*  Council advice/consultation/comment processes
+*  Mechanisms for action (Categorical exclusions, Supplemental Information Reports)
+*  NEPA analyses
+
+
+## Identifying Potential Indicators for Priority Decisions
+
+The project team will next identify existing indicators and/or promising data sources to inform the priority management decisions. The team will also identify available tools for evaluating both performance of current management, and performance of management with new proposed indicators for each of the decisions. 
+
+For example, evaluating current performance of the risk policy would involve a similar analysis as was done to develop the risk policy, with population models based on MAFMC stock assessments and many simulated iterations of risk-policy based catch limits over time for multiple stocks at multiple levels of data quality and process uncertainty. Additional information from ESPs on key ecosystem influences for stocks could be included in the population models both to test impacts on current risk policy performance, and to evaluate whether including ecosystem information explicitly in the risk policy improves performance relative to management objectives. This type of analysis could rely on existing indicators from ESPs or the SOE, or might require new indicator development.
+
+In contrast, evaluating performance of spatial measures setting involves a more spatially explicit model and spatially explicit ecosystem and fishery information, as well as information on spatial distribution over time for both fish and fisheries. Spatially explicit data and modeling frameworks are available for the Mid-Atlantic region. 
+
+An online "mini-workshop" will review the gathered information in late winter/early spring 2026 and outline further work. 
+
+## Continue Development of Indicator Tools
+
 
 
 
@@ -121,4 +208,7 @@ An **Operational** indicator is in use or ready for use. Components of an operat
 1. Definitions 1-pager
 1. Management Decisions 1-pager
 1. Workshop Results 1-pager
+
+# References
+
 
