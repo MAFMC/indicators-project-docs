@@ -3,8 +3,8 @@ title: "MAFMC Indicators Project Workshop 1 Report"
 author: "Sarah Gaichas, Gavin Fay, Kelsey Roberts, Sophie Wulfing, Connor Coscino, and Sarah Hope"
 date: "`r Sys.Date()`"
 output:
-  pdf_document: default
   word_document: default
+  pdf_document: default
 csl: plos.csl
 bibliography: operationalSOE.bib
 link-citations: true
@@ -120,14 +120,38 @@ Discussions made up the majority of the workshop. In-person participants joined 
 
 ## Discussion 1: Management Decision List Review
 
+*[to be fleshed out]*
 
+*  Frame management decisions to reflect both restriction and liberalization 
+*  Consider distinctions between: 
+   +  Pre-season and inseason decisions 
+   +  Short term and longer term planning horizons 
+   +  Routine and emergency contexts 
+*  Consider tradeoffs between objectives in decisions 
+*  Consider uncertainty: indicators should reduce it 
+*  Consider stages in the process where information is most useful 
+*  Additions:  Quota management, Decisions regarding emerging fisheries, MMPA and ESA objective interactions with EFH, Strategic planning and Annual Action Plan, Cross-jurisdictional management 
 
 ## Discussion 2: Identify Priority Management Decisions
 
+*[to be fleshed out]*
 
+*  **Risk policy:**  consider risk indicators in addition to stock status 
+*  **Catch/quota setting:** communicate information available/used throughout the process. Consider Assessment, SSC ABC, Monitoring Committee, and Council processes 
+*  **Measures setting:** consider multispecies and multifleet context and tradeoffs in the specifications process 
+*  **Spatial management measures:** consider changing distributions of fish and fleets within the framework process  
+
+### For all selected decisions:
+*  Evaluate performance of current management against stated objectives to aid indicator selection 
+*  Evaluate impact of data availability or degradation on uncertainty and indicator performance 
 
 ## Discussion 3: Progress on Indicator Review
 
+*[to be fleshed out]*
+
+*  The SMART Indicator framework and tools represent a promising approach for indicator evaluation
+*  Add information on state level surveys and other information used in Habitat Assessment
+*  Design indicator explorer tools to bring information into many different Council products and processes 
 
 
 # Next Steps
@@ -138,14 +162,14 @@ The list of management decisions has been revised here to emphasize that both re
 
 ### Routine/Tactical: Specifications
 
-*  Catch limits and targets (OFL, ABC, OY, ACL, ACT)  
-*  Landings limits (commercial quotas, recreational harvest limits, total allowable landings limits, etc.)  
-*  Minimum fish sizes (commercial and/or recreational - maximum sizes can also be specified for a few species/sectors)  
-*  Trip/possession limits (commercial and/or recreational)  
-*  Gear requirements (e.g., commercial minimum mesh sizes, pot/trap escape vent size requirements)  
-*  Open/closed seasons (recreational; commercial fisheries can close in-season if the quota is met before the end of the season)  
-*  Reporting requirements specific to each FMP  
-*  Commercial bycatch or recreational discard caps (apply to only a subset of MAFMC species)  
+*  Catch limits and targets (OFL, ABC, OY, ACL, ACT)
+*  Landings limits (commercial quotas, recreational harvest limits, total allowable landings limits, etc.)
+*  Minimum fish sizes (commercial and/or recreational - maximum sizes can also be specified for a few species/sectors)
+*  Trip/possession limits (commercial and/or recreational)
+*  Gear requirements (e.g., commercial minimum mesh sizes, pot/trap escape vent size requirements)
+*  Open/closed seasons (recreational; commercial fisheries can close in-season if the quota is met before the end of the season)
+*  Reporting requirements specific to each FMP
+*  Commercial bycatch or recreational discard caps (apply to only a subset of MAFMC species)
 
 ### Routine/Tactical: SSC
 
@@ -153,19 +177,19 @@ The list of management decisions has been revised here to emphasize that both re
 
 ### Occasional, Tactical or Strategic: Framework Adjustment
 
-*  ABC control rules  
-*  Risk policy  
-*  Accountability measures  
-*  Permitting requirements (could require amendment) 
+*  ABC control rules
+*  Risk policy
+*  Accountability measures
+*  Permitting requirements (could require amendment)
 *  Exempted Fishing Permits (though GARFO decides, Council comments)
-*  Essential Fish Habitat (EFH) and HAPCs  
-*  Vessel Monitoring System (VMS) requirements  
-*  Spatial management areas (e.g., closed areas, gear requirement areas, exemption areas)  
-*  Commercial quota allocations  
-*  Commercial/recreational allocations (for some FMPs)  
+*  Essential Fish Habitat (EFH) and HAPCs 
+*  Vessel Monitoring System (VMS) requirements
+*  Spatial management areas (e.g., closed areas, gear requirement areas, exemption areas) 
+*  Commercial quota allocations 
+*  Commercial/recreational allocations (for some FMPs)
 *  Seasonal or regional allocation
-*  Onboard observer requirement (for some FMPs)  
-*  Changes to Standardized Bycatch Reporting Method  
+*  Onboard observer requirement (for some FMPs)
+*  Changes to Standardized Bycatch Reporting Method 
 *  Deep Sea Coral Protection Zone boundaries and regulations
 *  Emergency regulations
 
@@ -178,25 +202,34 @@ The list of management decisions has been revised here to emphasize that both re
 *  Data collection standards
 *  Ecosystem Approach to Fisheries Management (EAFM) guidance
 *  “Measures contained within this [Framework] list that require significant departures from previously contemplated measures or that are otherwise introducing new concepts may require amendment of the FMP instead of a framework adjustment.” 
-*  Policy development on other ocean activities  
+*  Policy development on other ocean activities
 *  Shared governance issues related to changing species distributions
 *  Council advice/consultation/comment processes
 *  Mechanisms for action (Categorical exclusions, Supplemental Information Reports)
 *  NEPA analyses
 
 
-## Identifying Potential Indicators for Priority Decisions
+## Identifying Potential Information Sources for Priority Decisions
 
 The project team will next identify existing indicators and/or promising data sources to inform the priority management decisions. The team will also identify available tools for evaluating both performance of current management, and performance of management with new proposed indicators for each of the decisions. 
 
 For example, evaluating current performance of the risk policy would involve a similar analysis as was done to develop the risk policy, with population models based on MAFMC stock assessments and many simulated iterations of risk-policy based catch limits over time for multiple stocks at multiple levels of data quality and process uncertainty. Additional information from ESPs on key ecosystem influences for stocks could be included in the population models both to test impacts on current risk policy performance, and to evaluate whether including ecosystem information explicitly in the risk policy improves performance relative to management objectives. This type of analysis could rely on existing indicators from ESPs or the SOE, or might require new indicator development.
 
-In contrast, evaluating performance of spatial measures setting involves a more spatially explicit model and spatially explicit ecosystem and fishery information, as well as information on spatial distribution over time for both fish and fisheries. Spatially explicit data and modeling frameworks are available for the Mid-Atlantic region. 
+In contrast, evaluating performance of spatial measures setting involves a more spatially explicit model and spatially explicit ecosystem and fishery information, as well as information on spatial distribution over time for both fish and fisheries. Spatially explicit data and modeling frameworks are available for the Mid-Atlantic region. The project team will assemble a list of information sources relevant to each priority decision over the coming months.
 
-An online "mini-workshop" will review the gathered information in late winter/early spring 2026 and outline further work. 
+An online "mini-workshop" will review the gathered information in late winter/early spring 2026 to review the information and outline further work. 
 
 ## Continue Development of Indicator Tools
 
+*[to be fleshed out]*
+
+*  Add information on state level surveys and other information used in Habitat Assessment
+*  Design indicator explorer tools to bring information into many different Council products and processes 
+**Suggested Additions:**
+- Finer time scale filters for in-season decisions
+- Indicator descriptions/definitions
+- State survey data integration
+- Cross-walk with demand for specific indicators
 
 
 
