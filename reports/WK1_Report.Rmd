@@ -105,7 +105,7 @@ Stock assessments consider ecosystem information as a routine part of a research
 
 The [SSC's OFL CV process](https://www.mafmc.org/s/Final-OFL-CV-guidance-document_06_24.pdf) evaluates assessment uncertainty using a set of criteria for data quality, assessment model performance, ecosystem factors, comparisons with empirical estimates, and appropriate treatment of recruitment patterns.  The SSC routinely includes the results of the Northeast Climate Vulnerability Analysis [@hare_vulnerability_2016] as part of its evaluation of ecosystem factors that may affect assessment uncertainty. 
 
-The [Council's EAFM process](https://www.mafmc.org/eafm) includes a structured decision framework [@gaichas_framework_2016] using ecosystem indicators from the annual Northeast Fisheries Science Center (NEFSC) [State of the Ecosystem report](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) [@gaichas_state_2025] to inform an ecosystem-level risk assessment, where indicator trends or status translate to risk levels using Council-derived criteria [@gaichas_implementing_2018]. The Council has used its EAFM framework to develop a conceptual model of risks to the summer flounder fishery based on risk assessment results [@depiper_learning_2021]. The Council used the conceptual model to select a management issue for further analysis using management strategy evaluation (MSE) [@muffley_there_2021]. The summer flounder recreational discards MSE found several management strategies that could improve angler welfare no change to stock status. In addition, the model developed for the MSE is now used operationally in annual recreational specification setting. 
+The [Council's EAFM process](https://www.mafmc.org/eafm) includes a structured decision framework [@gaichas_framework_2016] using ecosystem indicators from the annual Northeast Fisheries Science Center (NEFSC) [State of the Ecosystem report](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) [@gaichas_state_2025] to inform an ecosystem-level risk assessment, where indicator trends or status translate to risk levels using Council-derived criteria [@gaichas_implementing_2018]. The Council has used its EAFM framework to develop a conceptual model of risks to the summer flounder fishery based on risk assessment results [@depiper_learning_2021]. The Council used the conceptual model to select a management issue for further analysis using management strategy evaluation (MSE) [@muffley_there_2021]. The summer flounder recreational discards MSE found several management strategies that could improve angler welfare with no change to stock status. In addition, the model developed for the MSE is now used operationally in annual recreational specification setting. 
 
 The remainder of the presentation outlined categories of Council management decisions to help frame workshop discussions. Categories included Routine, Occasional, Tactical, and Strategic decisions. Routine and Occasional refer to timing of decisions. **Routine** decisions are made or reviewed annually or more often across all the managed stocks, while **Occasional** decisions are made as needed to address issues. Tactical and Strategic refer to scope of decisions. **Strategic** decisions consider long term, high level goals and objectives, while **Tactical** decisions implement the strategies in the short term. 
 
@@ -180,12 +180,15 @@ Permitting decisions were discussed by the full group. While there could be bene
 
 ## Discussion 3: Progress on Indicator Review
 
-*[to be fleshed out]*
+A brief overview of progress to date on the comprehensive indicator review (the project's first objective) was presented to close the workshop. This overview included demonstrations of an online SMART Indicator Report and a prototype online interactive SMART Indicators Summary Tool, as well as a summary of investigations into indicator frameworks used by other organizations. 
 
-*  The SMART Indicator framework and tools represent a promising approach for indicator evaluation
-*  Add information on state level surveys and other information used in Habitat Assessment
-*  Design indicator explorer tools to bring information into many different Council products and processes 
+The online [SMART Indicator Report](https://mafmc.github.io/SMARTindicatorsData/) includes information on the attributes of each existing indicator to facilitate evaluation against SMART criteria. The format of the report was developed in consultation with the project oversight team from the beginning of the project to ensure that indicator information was captured in one place to both describe indicators and their potential for operational use. The report is built using reproducible methods and publically available code at https://github.com/MAFMC/SMARTindicatorsData so that it can be updated by Council staff after this project is complete. For existing indicators, the report can pull in available data, documentation, and descriptions. For example, NEFSC State of the Ecosystem indicators are described using information drawn from the publically available ecodata dataset, online indicator catalog, and online technical documentation. There are also methods to enter information for indicators that are documented differently so that they can be evaluated in the same format. The report includes a preliminary framework to evaluate each indicator against SMART criteria, based on the information found in online indicator documentation. This evaluation is not yet specific to management decisions, so it looks at more generic indicator attributes such as the existence and availability of source data, documentation of methods, inclusion of clear units, etc. There are currently over 60 indicators included in this report.
 
+Using the preliminary evaluations in the SMART Indicator Report, a prototype [SMART Indicator Summary Tool](https://sgaichas.shinyapps.io/SMARTindicatorsDashboard/) has been developed to explore and filter the indicators that might be most useful for a particular management application. At present, preliminary SMART criteria scores for  indicators in each category can be summarized in the tool. There are plans to include the ability to filter by area, minimum time series length, SMART score, or management decision type. This is a very new tool, still under construction, and the project team welcomed any feedback on how to structure the interface to make it most useful for Council purposes. 
+
+A final brief presentation looked beyond the Northeast US region to explore indicator frameworks used in other contexts. The United Nations Fisheries and Agriculture Organizations (UN FAO) indicator framework to evaluate progress against Sustainable Development Goals (SDG) was presented as an operational indicator framework. It was not suggested that MAFMC could directly use indicators in this framework, but rather that there may be aspects of the framework or its use that could assist the Council in developing its own approaches. The indicators presented meet SMART criteria, and focused on socioeconomic information and how it is used to track progress against the SDG on global food security as a demonstration of how the framework is used.
+
+Workshop participants had many constructive comments and suggestions for further development of the indicator review and tools by the project team. Overall, they found that the SMART Indicator framework and tools represented a promising approach for indicator evaluation. There were several suggestions for additions of indicator data, in particular the state surveys and other information integrated into the Northeast Regional Habitat Assessment. Overall there was a desire to design the tools with enough flexibility to be used in multiple different Council products and processes, by Council Staff and others involved in analysis and decisions. In addition, the importance of including socioeconomic indicators and data in Council decision processes was emphasized.
 
 # Next Steps
 
@@ -274,11 +277,11 @@ Work on the SMART Indicator tools will continue on the MAFMC's public GitHub org
 
 # List of Appendices
 
-1. Workshop Agenda
+1. Workshop [Agenda](https://www.mafmc.org/s/Workshop-1-Final-Agenda.pdf)
 1. Workshop Attendees
-1. Workshop Overview 1-pager
-1. Definitions 1-pager
-1. Management Decisions 1-pager
+1. Workshop Overview [1-pager](https://www.mafmc.org/s/1_WK1_Overview.pdf)
+1. Definitions [1-pager](https://www.mafmc.org/s/2_WK1_Definitions.pdf)
+1. Management Decisions [1-pager](https://www.mafmc.org/s/3_WK1_MgtDecisions.pdf)
 1. Workshop Results 1-pager
 
 # References
