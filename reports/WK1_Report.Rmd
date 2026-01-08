@@ -257,14 +257,18 @@ An online "mini-workshop" will review the gathered information in late winter/ea
 
 ## Continue Development of Indicator Tools
 
-*[to be fleshed out]*
+Workshop participants had several constructive suggestions for continued development of the indicator tools that the team will address over the coming months. Improvements will strive to provide indicator information for as many different Council products and processes as possible. 
+Planned adjustments and improvements to the SMART Indicator Review web catalog:  
+*  Add information on state level survey indicators and other survey information currently included in the Habitat Assessment
+*  Continue to bring in other data sources from MARCO, EPA, and individual states
 
-*  Add information on state level surveys and other information used in Habitat Assessment
-*  Design indicator explorer tools to bring information into many different Council products and processes 
-**Suggested Additions:**
-- Finer time scale filters for in-season decisions
-- Indicator descriptions/definitions
-- Cross-walk with demand for specific indicators
+Planned adjustments and improvements to the SMART Indicator Summary Tool:  
+*  Include brief indicator descriptions and link back to the fuller set of indicator information found in the SMART Indicator Review page for each indicator
+*  Include additional indicators as they are added to the SMART Indicator Review
+*  Allow for filtering to time scales appropriate to in-season decisions (months, weeks or days instead of years)
+*  Include methods to evaluate demand for specific indicators linked to specific processes
+
+Work on the SMART Indicator tools will continue on the MAFMC's public GitHub organization (https://github.com/MAFMC) in consultation with the project oversight team and any other interested parties. 
 
 
 
