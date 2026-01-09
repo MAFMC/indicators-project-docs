@@ -58,12 +58,14 @@ The next steps for the project are:
 # Introduction
 
 The Mid-Atlantic Fishery Management Council Inflation Reduction Act Project 5, "Operationalizing Ecosystem and Habitat Indicators to Support Climate-Ready Fisheries Management in the Mid-Atlantic" (MAFMC Indicators Project) has been designed to address the Council's April 2025 request to 
-> (1) conduct a comprehensive review of ecosystem and habitat indicators that will support management objectives, and (2) identify management processes, documents, and/or actions where ecosystem and habitat indicators can be integrated to inform management decisions.
 
-The MAFMC Indicators Project addresses three Council objectives:
-1. Review and assess existing ecosystem and habitat indicators in the Northeast and evaluate their utility to support management objectives.
-2. Identify and develop priority ecosystem and habitat indicators, including associated targets and thresholds as appropriate, and identify specific pathways for incorporation into Council management processes, documents, or actions.
-3. Create workflow and communication tools to support regular updates of indicators and that enhance usability of indicators in the management process.
+> "(1) conduct a comprehensive review of ecosystem and habitat indicators that will support management objectives, and (2) identify management processes, documents, and/or actions where ecosystem and habitat indicators can be integrated to inform management decisions."
+
+The MAFMC Indicators Project addresses three Council objectives: 
+
+1.  Review and assess existing ecosystem and habitat indicators in the Northeast and evaluate their utility to support management objectives. 
+1.  Identify and develop priority ecosystem and habitat indicators, including associated targets and thresholds as appropriate, and identify specific pathways for incorporation into Council management processes, documents, or actions. 
+1.  Create workflow and communication tools to support regular updates of indicators and that enhance usability of indicators in the management process. 
 
 To address these objectives, the project team has been conducting a comprehensive review of existing indicators, has developed a framework for evaluating the indicators (described below), and organized an initial workshop to identify and prioritize Council management decisions that could be supported or improved by operational use of ecosystem indicators. This report summarizes the presentations, discussions, and outcomes of the workshop.
 
@@ -157,7 +159,8 @@ Workshop participants made several specific additions to the management decision
 *  Mechanisms for action (Categorical exclusions, Supplemental Information Reports)
 *  NEPA analyses
 
-One item was removed from the Occasional, tactical or strategic: framework adjustment category: Vessel size and horsepower restrictions
+One item was removed from the Occasional, tactical or strategic: framework adjustment category: Vessel size and horsepower restrictions.
+
 An updated list is included in the Revised List of Management Decisions section under Next Steps below). 
 
 ## Discussion 2: Identify Priority Management Decisions
@@ -261,6 +264,7 @@ An online "mini-workshop" will review the gathered information in late winter/ea
 ## Continue Development of Indicator Tools
 
 Workshop participants had several constructive suggestions for continued development of the indicator tools that the team will address over the coming months. Improvements will strive to provide indicator information for as many different Council products and processes as possible. 
+
 Planned adjustments and improvements to the SMART Indicator Review web catalog:  
 
 *  Add information on state level survey indicators and other survey information currently included in the Habitat Assessment 
