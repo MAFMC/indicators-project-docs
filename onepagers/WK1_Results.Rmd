@@ -63,7 +63,7 @@ Workshop objective: Identify and prioritize Council management decisions that co
 *  Consider tradeoffs between objectives in decisions 
 *  Consider uncertainty: indicators should reduce it 
 *  Consider stages in the process where information is most useful 
-*  Additions:  Quota management, Decisions regarding emerging fisheries, MMPA and ESA objective interactions with EFH, Strategic planning and Annual Action Plan, Cross-jurisdictional management 
+*  Additions:  Quota management, Decisions regarding emerging fisheries, MMPA and ESA objective interactions with EFH, Strategic planning and Annual Implementation Plan, Cross-jurisdictional management 
 
 ::: {.ltgreenbox data-latex=""}
 ## Discussion 2: Priority Decisions
