@@ -1,5 +1,5 @@
 ---
-title: "MAFMC Indicators Project Workshop 1 DRAFT Report"
+title: "MAFMC Indicators Project Workshop 1 Report"
 author: "Sarah Gaichas, Gavin Fay, Kelsey Roberts, Sophie Wulfing, Connor Coscino, and Sarah Hope"
 date: "`r Sys.Date()`"
 output:
@@ -32,7 +32,7 @@ The workshop included introductory presentations from the project team, followed
 *  Consider tradeoffs between objectives in decisions 
 *  Consider uncertainty: indicators should reduce it 
 *  Consider stages in the process where information is most useful 
-*  Additions:  Quota management, Decisions regarding emerging fisheries, MMPA and ESA objective interactions with EFH, Strategic planning and Annual Action Plan, Cross-jurisdictional management 
+*  Additions:  Quota management, Decisions regarding emerging fisheries, MMPA and ESA objective interactions with EFH, Strategic planning and Annual Implementation Plan, Cross-jurisdictional management 
 
 ## Discussion 2: Priority Decisions
 *  **Risk policy:**  consider risk indicators in addition to stock status 
@@ -69,11 +69,11 @@ The MAFMC Indicators Project addresses three Council objectives:
 
 To address these objectives, the project team has been conducting a comprehensive review of existing indicators, has developed a framework for evaluating the indicators (described below), and organized an initial workshop to identify and prioritize Council management decisions that could be supported or improved by operational use of ecosystem indicators. This report summarizes the presentations, discussions, and outcomes of the workshop.
 
-While the workshop was a [public meeting](https://www.federalregister.gov/documents/2025/11/18/2025-20056/mid-atlantic-fishery-management-council-mafmc-public-meeting) open to all interested participants, some Council, Advisory Panel, Scientific and Statistical Committee, and Council staff members were specifically invited to participate based on their prior experience with Council ecosystem and habitat indicators, and to encourage participation across a full range of stakeholder groups.
+While the workshop was a [public meeting](https://www.federalregister.gov/documents/2025/11/18/2025-20056/mid-atlantic-fishery-management-council-mafmc-public-meeting) open to all interested participants, some Council, Advisory Panel, Scientific and Statistical Committee, and Atlantic States Marine Fisheries Commission (ASMFC) and Council staff members were specifically invited to participate based on their prior experience with Council ecosystem and habitat indicators, and to encourage participation across a full range of stakeholder groups.
 
 The in-person workshop was held on December 10, 2025 in Baltimore, MD, with an option for online attendance. Workshop materials are posted at https://www.mafmc.org/council-events/2025/dec-10/indicators-workshop. 
 
-The workshop was well-attended. A total of 40 people attended the workshop. In-person attendees include 13 participants from the Council, Council Advisory Panels, Scientific and Statistical Committee (SSC), Council staff, and Atlantic States Marine Fisheries Commission staff, plus 4 from the project team. Online attendees included 21 participants from the Council, Council Advisory Panels, SSC, Council staff, Northeast Fisheries Science Center staff, Project Oversight Team, and other observers, plus 2 from the project team.
+The workshop was well-attended. A total of 40 people attended the workshop. In-person attendees include 13 participants from the Council, Council Advisory Panels, Scientific and Statistical Committee (SSC), Council staff, and ASMFC staff, plus 4 from the project team. Online attendees included 21 participants from the Council, Council Advisory Panels, SSC, Council staff, Northeast Fisheries Science Center staff, Project Oversight Team, and other observers, plus 2 from the project team.
 
 The workshop Agenda is included as Appendix 1 and the list of attendees is included as Appendix 2. The remaining workshop materials are included as Appendices 3-5. Presentations shown during the workshop are linked below. 
 
@@ -83,7 +83,7 @@ A 1-page Workshop Summary was also developed and is included as Appendix 6.
 
 The workshop began with a round of introductions, followed by 3 introductory presentations. The [first presentation](https://sgaichas.github.io/HSpresentations/20250929_ProjectOverview_Gaichas.html) reviewed the overall MAFMC Indicators Project goals and objectives, timeline, current progress, and planned activities.  
 
-The [second presentation](https://sgaichas.github.io/HSpresentations/20250929_Definitions_Gaichas.html) briefly defined terms to ensure clear communication. An *indicator* tells us something about where we are relative to our goals or to limits, or about the context we are working within that may affect achieving our goals. Examples of indicators currently reviewed by the Council include stock status indicators of fishing mortality relative to the mortality limit and stock biomass relative to target biomass. Other indicators can include measures of total commercial revenue or recreational effort that directly address broad management objectives, and contextual indicators of habitat conditions or other ocean uses that are not controlled by Council decisions but may indirectly affect Council decisions.
+The [second presentation](https://sgaichas.github.io/HSpresentations/20250929_Definitions_Gaichas.html) briefly defined terms to ensure clear communication. An **indicator** tells us something about where we are relative to our goals or to limits, or about the context we are working within that may affect achieving our goals. Examples of indicators currently reviewed by the Council include stock status indicators of fishing mortality relative to the mortality limit and stock biomass relative to target biomass. Other indicators can include measures of total commercial revenue or recreational effort that directly address broad management objectives, and contextual indicators of habitat conditions or other ocean uses that are not controlled by Council decisions but may indirectly affect Council decisions.
 
 Indicator evaluation is using SMART criteria [@belcher_indicators_2024], where indicator attributes are defined as:
 
@@ -95,9 +95,9 @@ Indicator evaluation is using SMART criteria [@belcher_indicators_2024], where i
 
 * **Relevant**: accurately reflects changes in the underlying process of concern. The indicator can be directly linked to a management process objective. 
 
-* **Time-bound**: how often is indicator measured and does this align with the process of concern, and the management process?
+* **Time-bound**: how often is the indicator measured, and does this align with the process of concern, and the management process?
 
-SMART indicators should be Specific, Measurable, Achievable, Relevant, and Timely for the priority Council decisions. A SMART indicator for one process won't necessarily be SMART for another.
+SMART indicators should be Specific, Measurable, Achievable, Relevant, and Time-bound for the priority Council decisions. A SMART indicator for one process won't necessarily be SMART for another.
 
 An **Operational** indicator is in use or ready for use. Components of an operational process include clear articulation of management objectives, standardized information updates on a regular reporting schedule, and feedbacks from the management system and adjustments to achieve management objectives. "Operationalizing" is an iterative process within a specific context.
 
@@ -107,7 +107,7 @@ Stock assessments consider ecosystem information as a routine part of a research
 
 The [SSC's OFL CV process](https://www.mafmc.org/s/Final-OFL-CV-guidance-document_06_24.pdf) evaluates assessment uncertainty using a set of criteria for data quality, assessment model performance, ecosystem factors, comparisons with empirical estimates, and appropriate treatment of recruitment patterns.  The SSC routinely includes the results of the Northeast Climate Vulnerability Analysis [@hare_vulnerability_2016] as part of its evaluation of ecosystem factors that may affect assessment uncertainty. 
 
-The [Council's EAFM process](https://www.mafmc.org/eafm) includes a structured decision framework [@gaichas_framework_2016] using ecosystem indicators from the annual Northeast Fisheries Science Center (NEFSC) [State of the Ecosystem report](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) [@gaichas_state_2025] to inform an ecosystem-level risk assessment, where indicator trends or status translate to risk levels using Council-derived criteria [@gaichas_implementing_2018]. The Council has used its EAFM framework to develop a conceptual model of risks to the summer flounder fishery based on risk assessment results [@depiper_learning_2021]. The Council used the conceptual model to select a management issue for further analysis using management strategy evaluation (MSE) [@muffley_there_2021]. The summer flounder recreational discards MSE found several management strategies that could improve angler welfare with no change to stock status. In addition, the model developed for the MSE is now used operationally in annual recreational specification setting. 
+The [Council's EAFM process](https://www.mafmc.org/eafm) includes a structured decision framework [@gaichas_framework_2016] using ecosystem indicators from the annual Northeast Fisheries Science Center (NEFSC) [State of the Ecosystem report](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) [@gaichas_state_2025] to inform an ecosystem-level risk assessment, where indicator trends or status translate to risk levels using Council-derived criteria [@gaichas_implementing_2018]. The Council has used its EAFM framework to develop a conceptual model of risks to the summer flounder fishery based on risk assessment results [@depiper_learning_2021]. The Council used the conceptual model to select a management issue for further analysis using management strategy evaluation (MSE) [@muffley_there_2021]. The summer flounder recreational discards MSE found several management strategies that could improve angler welfare with no change to stock status. In addition, a model developed for the MSE is now used operationally in annual recreational specification setting. 
 
 The remainder of the presentation outlined categories of Council management decisions to help frame workshop discussions. Categories included Routine, Occasional, Tactical, and Strategic decisions. Routine and Occasional refer to timing of decisions. **Routine** decisions are made or reviewed annually or more often across all the managed stocks, while **Occasional** decisions are made as needed to address issues. Tactical and Strategic refer to scope of decisions. **Strategic** decisions consider long term, high level goals and objectives, while **Tactical** decisions implement the strategies in the short term. 
 
@@ -136,30 +136,32 @@ Considering a range of management objectives and identifying potential conflicts
 
 Uncertainty was raised repeatedly as a challenge for management decision making. Many sources of uncertainty arise throughout the management process, from data collection through analyses and assessments to monitoring outcomes of decisions. Ideally, indicators would help explain sources of uncertainty, ultimately reducing uncertainty in the decision process. Indicators adding uncertainty to the decision process would be counterproductive. Therefore, it will be important for the project to account for changes in uncertainty due to the inclusion of indicators in priority decisions. 
 
-Finally, an overarching consideration for the operational use of indicators is identifying where in the decision process indicator information is most useful. For example, some indicators may be best evaluated prior to conducting stock assessments and included in an assessment after review by the scientific working group. Other indicators may be needed for inseason decisions by the Council, so would need to be available well before a Council meeting and included in briefing materials to be considered. Presentation at the meeting would be too late for an informed decision. The timeline for priority management decisions will need to be specified with information needs at each step for effective decision making.
+Finally, an overarching consideration for the operational use of indicators is identifying where in the decision process indicator information is most useful. For example, some indicators may be best evaluated prior to conducting stock assessments and included in an assessment after review by the scientific working group. Other indicators may be needed for decisions by the Council, so would need to be available well before a Council meeting and included in briefing materials related to the decision to be considered. The timeline for priority management decisions will need to be specified with information needs at each step for effective decision making.
 
 Workshop participants made several specific additions to the management decision list. In addition to changing language to reflect bi-directional decision making, the following items were added in each category:  
 
 ### Routine/Tactical: Specifications  
 *  Commercial, state-level quota management
 
-### Occasional, Tactical or Strategic: Framework Adjustment  
+### Occasional, Tactical or Strategic: Framework Action  
 *  Exempted Fishing Permits (though GARFO decides, Council comments)
 *  Seasonal or regional allocation
 *  Emergency regulations
 
-### Occasional and Strategic: more complex Council process  
+### Occasional and Strategic: Other Processes  
 *  Management units and stock definitions
 *  Emerging fisheries (forage species, mantis shrimp, etc.)
-*  Strategic planning and Annual Action Plan
+*  Strategic planning and Annual Implementation Plan
 *  Data collection standards
 *  Interactions and tradeoffs among fisheries, essential fish habitat, endangered species, and marine mammal objectives
 *  Cross-jurisdictional management; shared governance issues related to changing species distributions
 *  Council advice/consultation/comment processes
+
+The group also suggested adding routine documents because there was possibly capacity for including indicators: 
 *  Mechanisms for action (Categorical exclusions, Supplemental Information Reports)
 *  NEPA analyses
 
-One item was removed from the Occasional, tactical or strategic: framework adjustment category: Vessel size and horsepower restrictions.
+One item was removed from the Occasional, tactical or strategic: framework adjustment category: Vessel size and horsepower restrictions. The group felt this type of decision would not be improved with the use of indicators. 
 
 An updated list is included in the Revised List of Management Decisions section under Next Steps below). 
 
@@ -169,13 +171,13 @@ Four priority management decisions were identified at the workshop, representing
 
 Workshop participants noted that for the selected priority management decisions, the project should evaluate performance of current management against stated objectives to aid in indicator selection, and also evaluate the impacts of data availability or degradation on uncertainty and indicator performance. Initial performance metrics for the project were also discussed in general terms of defining a good decision. Good decisions were defined as those that were responsive and timely, incorporating new information as it becomes available, providing more flexible opportunities for fishing, and that involved a clear description of tradeoffs involved in the decision. In particular, participants highlighted the need to identify tradeoffs between objectives for different species and fleets in each of the priority decisions.
 
-Council risk policy is currently designed to reduce the risk of overfishing below the maximum permissible level depending on stock biomass status (B/Bmsy). This policy has been simulation tested for performance relative to the single risk indicator of B/Bmsy across multiple life history types representative of MAFMC stocks. While stock status is an important indicator, there may be other factors that affect the Council's ability to optimize yield from fisheries while maintaining fishing mortality within legal limits. For example, stock productivity may be maintained across a wider range of B/Bmsy than currently recognized when habitat conditions are favorable. Conversely, a rapid decline in habitat conditions may reduce productivity for a stock that is well above its Bmsy. Identifying relationships between selected indicators and stock biomass status will be important for the performance of the risk policy for the target stock, as well as potential implications between stocks. Evaluating both current performance of the risk policy, and tradeoffs across multiple objectives beyond individual stock biomass and mortality objectives were also emphasized in discussion.
+The Council risk policy is currently designed to reduce the risk of overfishing below the maximum permissible level depending on stock biomass status (B/Bmsy). This policy has been simulation tested for performance relative to the single risk indicator of B/Bmsy across multiple life history types representative of MAFMC stocks. While stock status is an important indicator, there may be other factors that affect the Council's ability to optimize yield from fisheries while maintaining fishing mortality within legal limits. For example, stock productivity may be maintained across a wider range of B/Bmsy than currently recognized when habitat conditions are favorable. Conversely, a rapid decline in habitat conditions may reduce productivity for a stock that is well above its Bmsy. Identifying relationships between selected indicators and stock biomass status will be important for the performance of the risk policy for the target stock, as well as potential implications between stocks. Evaluating both current performance of the risk policy, and tradeoffs across multiple objectives beyond individual stock biomass and mortality objectives were also emphasized in discussion.
 
-For catch and quota setting, participants identified a clear need to first describe the entire process along with information available and used at each step. Analysis would consider assessment, SSC, Monitoring Committee, and Council decision processes. Because the SSC ABC decision constrains later decisions (ABC cannot be exceeded), it was noted that evaluating options for the use of indicators in the assessment process and by the SSC would be beneficial. In particular, indicators addressing, explaining, or ideally reducing key ABC uncertainties would be most useful. However, indicators might be useful beyond SSC decisions by facilitating Council decisions on specifications when multiple options for ABC are available (e.g. multi-year specifications based on an averaged constant ABC or individual year ABCs from the SSC). Further, indicators presented to the Council could provide context for SSC decisions and help clarify Council decisions. Finally, indicators of performance across multiple objectives for catch/quotas could be useful in Council consideration of tradeoffs. Other Councils are developing processes to use indicators in their catch and quota setting processes, which can also be reviewed by the project. 
+For catch and quota setting, participants identified a clear need to first describe the entire process along with information available and used at each step. Analysis would consider assessment, SSC, Monitoring Committee, and Council decision processes. Because the SSC ABC decision constrains later decisions (ABC cannot be exceeded), it was noted that evaluating options for the use of indicators in the assessment process and by the SSC would be beneficial. In particular, indicators addressing, explaining, or ideally reducing key ABC uncertainties would be most useful. However, indicators might be useful beyond SSC decisions by facilitating Council decisions on specifications when multiple options for ABC are available (e.g. multi-year specifications based on an averaged constant ABC or varying annual ABCs from the SSC). Further, indicators presented to the Council could provide context for SSC decisions and help clarify Council decisions. Finally, indicators of performance across multiple objectives for catch/quotas could be useful in Council consideration of tradeoffs. Other Councils are developing processes to use indicators in their catch and quota setting processes, which can also be reviewed by the project. 
 
 While catch/quota setting decisions specify how much to fish, measures setting decisions specify how to fish in terms of timing, areas, sizes, etc. Participants noted the challenges associated with setting measures for individual stocks when these decisions can have side effects on other stocks available to multispecies, multifleet fisheries. Constraining measures for one species when only a few others are available may result in an unintentional increase in fishing pressure on the other species. Ideally, information would be available across stocks within a region so that measures to reduce fishing risk for individual species might be considered alongside an objective to maintain as broad a set of fishing opportunities as possible. Indicators of the number and diversity of fishing opportunities available to a particular fleet sector in a given time and area may help evaluate these tradeoffs. 
 
-Spatial management was recognized as a subset of measures setting, but one that participants noted had good potential to use ecosystem information on distributions and habitat conditions that could be derived from multiple data sources. Evaluating the effectiveness of current spatial measures and robust indicator testing before use was emphasized in all discussion groups. Many participants identified needs for both near-real time observational indicators and projections of conditions such as temperature, or of seasonal habitats such as the cold pool for different spatial management decisions. Some spatial indicators could achieve management objectives for e.g. bycatch reduction if appropriate indicator information were made available to fishery participants so that they could decide how to avoid bycatch, rather than the Council setting measures (similar to the [Turtlewatch](https://oceanwatch.pifsc.noaa.gov/turtlewatch.html) approach in the Pacific as opposed to time-area bycatch closures [@vanwert_hawaiis_2025]). For other decisions such as habitat conservation areas, Council decisions could consider changing distributions of fish and fleets within the framework process.
+Spatial management was recognized as a subset of measures setting, but one that participants noted had good potential to use ecosystem information on distributions and habitat conditions that could be derived from multiple data sources. Evaluating the effectiveness of current spatial measures and robust indicator testing before use was emphasized in all discussion groups. Many participants identified needs for both near-real time observational indicators and projections of conditions such as temperature, or of seasonal habitats such as the cold pool for different spatial management decisions. Some spatial indicators could achieve management objectives for bycatch reduction if appropriate indicator information were made available to fishery participants so that they could decide how to avoid bycatch, rather than the Council setting measures (for example, the newly developed [River Herring Avoidance Program Forecast (RHAPCAST)](https://www.rhapcast.org/index.html) for the Northeast US is similar to the [Turtlewatch](https://oceanwatch.pifsc.noaa.gov/turtlewatch.html) approach in the Pacific as opposed to time-area bycatch closures [@vanwert_hawaiis_2025]). For other decisions such as habitat conservation areas, Council decisions could consider changing distributions of fish and fleets within the framework process.
 
 Additional management decisions that were discussed but ultimately not moved forward as priorities for analysis included the annual priority setting process and permitting decisions. The annual priority setting process is high level and strategic, and could possibly be informed by contextual indicators. However, it was suggested that a brand new suite of indicators may not be necessary for this process, and that operationalizing the contextual use of indicators in a process this broad may provide fewer benefits for the Council than some of the other proposed priority decisions.
 
@@ -215,7 +217,7 @@ The list of management decisions has been revised here to emphasize that both re
 
 *  Best scientific information determination (includes scientific working group and review panel judgement)
 
-### Occasional, Tactical or Strategic: Framework Adjustment
+### Occasional, Tactical or Strategic: Framework Action
 
 *  ABC control rules
 *  Risk policy
@@ -233,7 +235,7 @@ The list of management decisions has been revised here to emphasize that both re
 *  Deep Sea Coral Protection Zone boundaries and regulations
 *  Emergency regulations
 
-### Occasional and Strategic: more complex Council process
+### Occasional and Strategic: Other Processes
 
 *  FMP development and amendment 
 *  Management units and stock definitions
@@ -247,9 +249,10 @@ The list of management decisions has been revised here to emphasize that both re
 *  Interactions and tradeoffs among fisheries, essential fish habitat, endangered species, and marine mammal objectives
 *  Cross-jurisdictional management; shared governance issues related to changing species distributions
 *  Council advice/consultation/comment processes
+
+The group also suggested adding routine documents because there was possibly capacity for including indicators: 
 *  Mechanisms for action (Categorical exclusions, Supplemental Information Reports)
 *  NEPA analyses
-
 
 ## Identifying Potential Information Sources for Priority Decisions
 
@@ -259,7 +262,7 @@ For example, evaluating current performance of the risk policy would involve a s
 
 In contrast, evaluating performance of spatial measures setting involves a more spatially explicit model and spatially explicit ecosystem and fishery information, as well as information on spatial distribution over time for both fish and fisheries. Spatially explicit data and modeling frameworks are available for the Mid-Atlantic region. The project team will assemble a list of information sources relevant to each priority decision over the coming months.
 
-An online "mini-workshop" will review the gathered information in late winter/early spring 2026 to review the information and outline further work. 
+An online "mini-workshop" will review the gathered information in late winter/early spring 2026 and outline further work. 
 
 ## Continue Development of Indicator Tools
 
