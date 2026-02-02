@@ -291,7 +291,7 @@ Work on the SMART Indicator tools will continue on the MAFMC's public GitHub org
 1. Workshop Overview [1-pager](https://www.mafmc.org/s/1_WK1_Overview.pdf)
 1. Definitions [1-pager](https://www.mafmc.org/s/2_WK1_Definitions.pdf)
 1. Management Decisions [1-pager](https://www.mafmc.org/s/3_WK1_MgtDecisions.pdf)
-1. Workshop Results 1-pager
+1. Workshop Results [1-pager](https://www.mafmc.org/s/WK1_Results-Summary.pdf)
 
 # References
 
