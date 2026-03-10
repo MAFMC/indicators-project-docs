@@ -1,0 +1,83 @@
+---
+title: |
+output:
+  pdf_document:
+    keep_tex: true
+    includes:
+      in_header: latex/boxescolumns.tex
+  html_document:
+    css: columns.css
+    df_print: paged
+geometry: margin = 0.5in
+link-citations: true
+urlcolor: blue
+---
+
+\vspace{-1cm}
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      warning = FALSE,
+                      message = FALSE)
+
+library(patchwork)
+
+# can I set up 2 columns with highlight boxes in each? yes
+
+```
+
+# Decision: Potential Indicators and Pathways
+
+::: {.noteblock data-latex=""}
+Define the decision briefly with any links to materials 
+:::
+
+**Key question: What additional indicators could inform <this decision>? Could <X type or Y type indicators> in addition to <current information> improve the process?** 
+
+## Scope 
+
+::: {.ltgreenbox data-latex=""}
+Questions for consideration to adjust the scope
+(e.g. demo for one species or develop a more general approach/process for all?)
+:::
+
+
+:::::: {.cols data-latex=""}
+
+::: {.col data-latex="{0.49\textwidth}"}
+## What information is used now for the decision?
+
+Sources by scope?
+
+Outline the process
+
+Outline specific info for species level decision
+
+:::
+
+::: {.col data-latex="{0.02\textwidth}"}
+\ 
+<!-- an empty Div (with a white space), serving as
+a column separator -->
+:::
+
+::: {.col data-latex="{0.49\textwidth}"}
+
+## Information sources to develop indicators
+
+List current info sources from google doc
+
+:::
+
+::::::
+
+::: {.ltpurplebox data-latex=""}
+## Information gaps 
+
+What is missing and/or would be a lot of work
+
+::: 
+
+
+
+
+
