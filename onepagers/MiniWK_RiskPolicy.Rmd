@@ -28,16 +28,13 @@ library(patchwork)
 # Risk Policy: Potential Indicators and Pathways
 
 ::: {.noteblock data-latex=""}
-Risk policy is a Council-level decision. Current [risk policy](http://www.mafmc.org/s/MAFMC-ABC-Control-Rule-White-Paper.pdf) uses stock status as the only indicator of when to adjust risk tolerance. Low stock status results in much more risk averse probability of overfishing and lower ABC relative to OFL, high stock status (>1.5 B/Bmsy) is as risk tolerant as allowed by law with ABC close to OFL. 
+Risk policy is a Council-level decision. Current [Risk Policy](https://www.federalregister.gov/documents/2020/12/15/2020-27562/fisheries-of-the-northeastern-united-states-omnibus-framework-adjustment-to-modify-the-mid-atlantic) uses stock status as the only indicator of when to adjust risk tolerance. Low stock status (B/Bmsy < 1) results in much more risk averse probability of overfishing and lower ABC relative to OFL, high stock status (>1.5 B/Bmsy) is as risk tolerant as allowed by law with ABC close to OFL. 
 :::
 
-**Key question: What additional indicators could inform Council risk tolerance? Could habitat conditions or socioeconomic indicators in addition to stock status tell us whether we can be more or less risky?** 
-
-## Scope 
-
 ::: {.ltgreenbox data-latex=""}
-Questions for consideration to adjust the scope
-(e.g. demo for one species or develop a more general approach/process for all?)
+*  **Key question: What additional indicators could inform Council risk tolerance? Could habitat conditions or socioeconomic indicators in addition to stock status tell us whether we can be more or less risky?** 
+  
+*  **Scope:  Should we develop a general process for using indicators in the risk policy, or focus on a specific application for a single species? Which species?**
 :::
 
 
@@ -46,11 +43,61 @@ Questions for consideration to adjust the scope
 ::: {.col data-latex="{0.49\textwidth}"}
 ## What information is used now for the decision?
 
-Sources by scope?
+The current Risk Policy was finalized by the Council in [December 2020](https://www.federalregister.gov/documents/2020/12/15/2020-27562/fisheries-of-the-northeastern-united-states-omnibus-framework-adjustment-to-modify-the-mid-atlantic). It is based on a [management strategy evaluation](https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/5e56e0f286208b151ba4f55d/1582752007474/S1_Fine+tuning+the+ABC+control+rule+for+Mid-Atlantic+stocks_Wiedenmann.pdf) that compared performance of alternative policies across life history types represented by summer flounder, scup, and butterfish. 
 
-Outline the process
+```{r MAFMCriskpolicy, fig.asp = 0.7}
 
-Outline specific info for species level decision
+riskpol <- data.frame(Bfrac = c(0, 0.1, 1.0, 1.5, 2.5),
+                      Current = c(0, 0, 0.45, 0.49, 0.49),
+                      Pre2020 = c(0, 0, 0.4, 0.4, 0.4)
+)
+
+riskpol <- riskpol |>
+  tidyr::pivot_longer(-Bfrac, names_to = "pstar")
+
+p1 <- ggplot2::ggplot(riskpol, ggplot2::aes(x=Bfrac, y=value, linetype = pstar)) +
+  ggplot2::geom_path(show.legend = TRUE) +
+  ggplot2::theme_minimal() +
+  ggplot2::xlab("B/Bmsy") +
+  ggplot2::ylab("p*") +
+  ggplot2::labs(linetype = "Policy")#+
+  #theme(legend.position="bottom")
+
+p1
+#print(p1, vp=grid::viewport(gp=grid::gpar(cex=1.5)))
+```
+
+The [ABC control rule](http://www.mafmc.org/s/MAFMC-ABC-Control-Rule-White-Paper.pdf) includes an SSC decision on uncertainty in the assessment and converts the risk policy into an ABC given the stock status.
+
+```{r OFLCVtoABC, fig.asp = 0.7}
+
+ABCprop <- data.frame(Bfrac = seq(0, 2.5, 0.01)) |>
+  dplyr::mutate(pstar = dplyr::case_when(Bfrac <= 0.1 ~ 0,
+                                  Bfrac > 0.1 & Bfrac <= 1.0 ~ (Bfrac-0.1)*((0.45-0)/(1-0.1)) ,
+                                  Bfrac > 1.0 & Bfrac <= 1.5 ~ (Bfrac-1.0)*((0.49-0.45)/(1.5-1))+0.45,
+                                  Bfrac > 1.5 ~ 0.49)) |>
+  dplyr::mutate("CV=60%" = qlnorm(pstar, log(1), log(0.60 + 1)),
+                "CV=100%" = qlnorm(pstar, log(1), log(1.00 + 1)),
+                "CV=150%" = qlnorm(pstar, log(1), log(1.50 + 1))) |>
+  tidyr::pivot_longer(-c(Bfrac, pstar), names_to = "CVlevel")
+                       
+
+p2 <- ggplot2::ggplot(ABCprop, ggplot2::aes(x=Bfrac, y=value, colour=CVlevel)) +
+  ggplot2::geom_line()+  
+  ggplot2::theme_minimal() +
+  ggplot2::xlab("B/Bmsy") +
+  ggplot2::ylab("ABC/OFL proportion") +
+  ggplot2::labs(colour = "OFL CV") #+
+  #theme(legend.position="bottom")
+
+p2
+#print(p2, vp=grid::viewport(gp=grid::gpar(cex=1.5)))
+  
+```
+
+::: {.ltpurplebox data-latex=""}
+Important: The use of indicators in the SSC's ABC decision process will be **considered separately** under Catch/Quota setting.
+::: 
 
 :::
 
@@ -64,18 +111,50 @@ a column separator -->
 
 ## Information sources to develop indicators
 
-List current info sources from google doc
+### Potential Indicator Sources
 
-:::
 
-::::::
+
+[Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports) for MAFMC stocks: 
+
+*  Black Sea Bass 
+*  Golden Tilefish
+*  Longfin squid 
+*  Shortfin squid
+
+
+
+### Potential Process
+1.  Evaluate indicators of favorable or unfavorable habitat or socioeconomic conditions for a species or life history type
+2.  Simulate management with different risk tolerance under different conditions (update Risk Policy MSE code?)
+3.  Evaluate indicator-based approach with status quo
+    *  Which indicator-adjusted risk tolerance meets objectives across species portfolio for general approach? 
+    *  Which indicator-adjusted risk tolerance improves management for a selected individual species?
+
+```{r DFOpandalidHCR, out.width="90%"}
+
+#knitr::include_graphics("https://raw.githubusercontent.com/sgaichas/HSpresentations/main/docs/images/Rouxetal2022NshrimpbottempHCR.png")
+
+magick::image_read("https://raw.githubusercontent.com/sgaichas/HSpresentations/main/docs/images/Rouxetal2022NshrimpbottempHCR.png")
+```
+
 
 ::: {.ltpurplebox data-latex=""}
 ## Information gaps 
 
-What is missing or would be a lot of work
+Ecosystem and Socioeconomic Profiles do not yet exist for the species originally used to evaluate the Risk Policy:
+
+*  Summer flounder
+*  Scup
+*  Butterfish
+
+However, ecosystem indicators have been evaluated in the past for butterfish
 
 ::: 
+:::
+
+::::::
+
 
 
 
