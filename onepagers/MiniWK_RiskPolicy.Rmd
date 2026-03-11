@@ -31,17 +31,15 @@ library(patchwork)
 Risk policy is a Council-level decision. Current [Risk Policy](https://www.federalregister.gov/documents/2020/12/15/2020-27562/fisheries-of-the-northeastern-united-states-omnibus-framework-adjustment-to-modify-the-mid-atlantic) uses stock status as the only indicator of when to adjust risk tolerance. Low stock status (B/Bmsy < 1) results in much more risk averse probability of overfishing and lower ABC relative to OFL, high stock status (>1.5 B/Bmsy) is as risk tolerant as allowed by law with ABC close to OFL. 
 :::
 
-::: {.ltgreenbox data-latex=""}
 *  **Key question: What additional indicators could inform Council risk tolerance? Could habitat conditions or socioeconomic indicators in addition to stock status tell us whether we can be more or less risky?** 
   
 *  **Scope:  Should we develop a general process for using indicators in the risk policy, or focus on a specific application for a single species? Which species?**
-:::
-
 
 :::::: {.cols data-latex=""}
 
 ::: {.col data-latex="{0.49\textwidth}"}
-## What information is used now for the decision?
+::: {.ltbluebox data-latex=""}
+## What information is used now?
 
 The current Risk Policy was finalized by the Council in [December 2020](https://www.federalregister.gov/documents/2020/12/15/2020-27562/fisheries-of-the-northeastern-united-states-omnibus-framework-adjustment-to-modify-the-mid-atlantic). It is based on a [management strategy evaluation](https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/5e56e0f286208b151ba4f55d/1582752007474/S1_Fine+tuning+the+ABC+control+rule+for+Mid-Atlantic+stocks_Wiedenmann.pdf) that compared performance of alternative policies across life history types represented by summer flounder, scup, and butterfish. 
 
@@ -96,8 +94,9 @@ p2
 ```
 
 ::: {.ltpurplebox data-latex=""}
-Important: The use of indicators in the SSC's ABC decision process will be **considered separately** under Catch/Quota setting.
+**Important:** The use of indicators in the SSC's ABC decision process will be **considered separately** under Catch/Quota setting. Indicators here will address the risk policy and adjustment to risk tolerance rather than assessment uncertainty.
 ::: 
+:::
 
 :::
 
@@ -108,28 +107,30 @@ a column separator -->
 :::
 
 ::: {.col data-latex="{0.49\textwidth}"}
-
-## Information sources to develop indicators
+::: {.ltgreenbox data-latex=""}
+## Information sources for indicators
 
 ### Potential Indicator Sources
 
 
 
-[Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports) for MAFMC stocks: 
+[Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports) conceptual models and indicators for MAFMC stocks: 
 
 *  Black Sea Bass 
 *  Golden Tilefish
 *  Longfin squid 
 *  Shortfin squid
 
-### Potential Process
-1.  Evaluate indicators of favorable or unfavorable habitat or socioeconomic conditions for a species or life history type
-2.  Simulate management with different risk tolerance under different conditions (update Risk Policy MSE code?)
-3.  Evaluate indicator-based approach with status quo
+[State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) and [Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf) indicators
+
+### Potential Pathways
+*  Evaluate indicators of favorable or unfavorable habitat or socioeconomic conditions for a species or life history type
+*  Simulate management with different risk tolerance under different conditions (update Risk Policy MSE code?)
+*  Compare indicator-based approach vs. status quo
     *  Which indicator-adjusted risk tolerance meets objectives across species portfolio for general approach? 
     *  Which indicator-adjusted risk tolerance improves management for a selected individual species?
     
-See an [example for northern shrimp](https://www.frontiersin.org/journals/climate/articles/10.3389/fclim.2021.781559/full#supplementaryMaterial) by [Roux et al. 2022](https://www.frontiersin.org/journals/climate/articles/10.3389/fclim.2021.781559/full):     
+See an [example indicator adjusted control rule for northern shrimp](https://www.frontiersin.org/journals/climate/articles/10.3389/fclim.2021.781559/full#supplementaryMaterial) by [Roux et al. 2022](https://www.frontiersin.org/journals/climate/articles/10.3389/fclim.2021.781559/full):     
 
 ```{r DFOpandalidHCR, out.width="90%"}
 
@@ -138,19 +139,13 @@ See an [example for northern shrimp](https://www.frontiersin.org/journals/climat
 magick::image_read("https://raw.githubusercontent.com/sgaichas/HSpresentations/main/docs/images/Rouxetal2022NshrimpbottempHCR.png")
 ```
 
-
 ::: {.ltpurplebox data-latex=""}
 ## Information gaps 
 
-Ecosystem and Socioeconomic Profiles do not yet exist for the species originally used to evaluate the Risk Policy:
-
-*  Summer flounder
-*  Scup
-*  Butterfish
-
-However, ecosystem indicators have been evaluated in the past for butterfish
+Ecosystem and Socioeconomic Profiles do not yet exist for the species originally used to evaluate the Risk Policy: summer flounder, scup, and butterfish.
 
 ::: 
+:::
 :::
 
 ::::::
