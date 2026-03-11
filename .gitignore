@@ -53,3 +53,5 @@ rsconnect/
 
 # big outputs
 *.pdf
+*.docx
+*.log
