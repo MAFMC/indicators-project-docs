@@ -88,7 +88,7 @@ a column separator -->
 
 ::: {.col data-latex="{0.49\textwidth}"}
 ::: {.ltgreenbox data-latex=""}
-## Information sources for indicators
+## Information sources for indicators 
 
 [Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports) conceptual models and indicators for MAFMC stocks:
 
@@ -98,6 +98,10 @@ a column separator -->
 *  Shortfin squid
 
 [State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) and [Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf) indicators
+
+The fish and invertebrate [Climate Vulnerability Analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0146756) sensitivity, exposure and vulnerability rankings
+
+And many other potential sources (survey data, GLORYS ocean reanalysis)
 
 ### Potential Pathways
 
