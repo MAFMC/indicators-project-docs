@@ -31,26 +31,21 @@ library(patchwork)
 Define the decision briefly with any links to materials 
 :::
 
-**Key question: What additional indicators could inform <this decision>? Could <X type or Y type indicators> in addition to <current information> improve the process?** 
-
-## Scope 
-
-::: {.ltgreenbox data-latex=""}
-Questions for consideration to adjust the scope
-(e.g. demo for one species or develop a more general approach/process for all?)
-:::
+*  **Key question: What additional indicators could inform <this decision>? Could <X type or Y type indicators> in addition to <current information> improve the process?** 
+*  **Scope: demo for one species or develop a more general approach/process for all?** 
 
 
 :::::: {.cols data-latex=""}
 
 ::: {.col data-latex="{0.49\textwidth}"}
-## What information is used now for the decision?
-
+::: {.ltbluebox data-latex=""}
+## What information is used now?
 Sources by scope?
 
 Outline the process
 
 Outline specific info for species level decision
+:::
 
 :::
 
@@ -61,14 +56,12 @@ a column separator -->
 :::
 
 ::: {.col data-latex="{0.49\textwidth}"}
-
-## Information sources to develop indicators
+::: {.ltgreenbox data-latex=""}
+## Information sources for indicators
 
 List current info sources from google doc
 
-:::
 
-::::::
 
 ::: {.ltpurplebox data-latex=""}
 ## Information gaps 
@@ -76,7 +69,10 @@ List current info sources from google doc
 What is missing and/or would be a lot of work
 
 ::: 
+:::
+:::
 
+::::::
 
 
 
