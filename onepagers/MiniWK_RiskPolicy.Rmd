@@ -43,6 +43,8 @@ Risk policy is a Council-level decision. Current [Risk Policy](https://www.feder
 
 The current Risk Policy was finalized by the Council in [December 2020](https://www.federalregister.gov/documents/2020/12/15/2020-27562/fisheries-of-the-northeastern-united-states-omnibus-framework-adjustment-to-modify-the-mid-atlantic). It is based on a [management strategy evaluation](https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/5e56e0f286208b151ba4f55d/1582752007474/S1_Fine+tuning+the+ABC+control+rule+for+Mid-Atlantic+stocks_Wiedenmann.pdf) that compared performance of alternative policies across life history types represented by summer flounder, scup, and butterfish. 
 
+\vspace{1ex}
+
 ```{r MAFMCriskpolicy, fig.asp = 0.7}
 
 riskpol <- data.frame(Bfrac = c(0, 0.1, 1.0, 1.5, 2.5),
@@ -64,6 +66,8 @@ p1 <- ggplot2::ggplot(riskpol, ggplot2::aes(x=Bfrac, y=value, linetype = pstar))
 p1
 #print(p1, vp=grid::viewport(gp=grid::gpar(cex=1.5)))
 ```
+
+\vspace{1ex}
 
 The [ABC control rule](http://www.mafmc.org/s/MAFMC-ABC-Control-Rule-White-Paper.pdf) includes an SSC decision on uncertainty in the assessment and converts the risk policy into an ABC given the stock status.
 
@@ -126,17 +130,17 @@ a column separator -->
 ### Potential Pathways
 *  Evaluate indicators of favorable or unfavorable habitat or socioeconomic conditions for a species or life history type
 *  Simulate management with different risk tolerance under different conditions (update Risk Policy MSE code?)
-*  Compare indicator-based approach vs. status quo
-    *  Which indicator-adjusted risk tolerance meets objectives across species portfolio for general approach? 
-    *  Which indicator-adjusted risk tolerance improves management for a selected individual species?
+*  Compare indicator-based approach vs. status quo: Which indicator-adjusted risk tolerance meets objectives across species portfolio or for a selected individual species?
     
-See an [example indicator adjusted control rule for northern shrimp](https://www.frontiersin.org/journals/climate/articles/10.3389/fclim.2021.781559/full#supplementaryMaterial) by [Roux et al. 2022](https://www.frontiersin.org/journals/climate/articles/10.3389/fclim.2021.781559/full):     
+```{r newriskpol, out.width="90%"}
 
-```{r DFOpandalidHCR, out.width="90%"}
+knitr::include_graphics(here::here("onepagers/RiskPolInds.png"))
+
+#See an [example indicator adjusted control rule for northern shrimp](https://www.frontiersin.org/journals/climate/articles/10.3389/fclim.2021.781559/full#supplementaryMaterial) by [Roux et al. 2022](https://www.frontiersin.org/journals/climate/articles/10.3389/fclim.2021.781559/full):     
 
 #knitr::include_graphics("https://raw.githubusercontent.com/sgaichas/HSpresentations/main/docs/images/Rouxetal2022NshrimpbottempHCR.png")
-
-magick::image_read("https://raw.githubusercontent.com/sgaichas/HSpresentations/main/docs/images/Rouxetal2022NshrimpbottempHCR.png")
+#DFOpandalidHCR
+#magick::image_read("https://raw.githubusercontent.com/sgaichas/HSpresentations/main/docs/images/Rouxetal2022NshrimpbottempHCR.png")
 ```
 
 ::: {.ltpurplebox data-latex=""}
