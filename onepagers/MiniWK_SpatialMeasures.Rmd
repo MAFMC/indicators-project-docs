@@ -1,0 +1,104 @@
+---
+title: |
+output:
+  pdf_document:
+    keep_tex: true
+    includes:
+      in_header: latex/boxescolumns.tex
+  html_document:
+    css: columns.css
+    df_print: paged
+geometry: margin = 0.5in
+link-citations: true
+urlcolor: blue
+---
+
+\vspace{-1cm}
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      warning = FALSE,
+                      message = FALSE)
+
+library(patchwork)
+
+# can I set up 2 columns with highlight boxes in each? yes
+
+```
+
+# Spatial Measures: Potential Indicators and Pathways
+
+::: {.noteblock data-latex=""}
+[Need some background sentence & links here on the decision process]. Two cases identified for spatial measures implemented by the Council: bycatch avoidance and  establishing habitat conservation areas. 
+
+:::
+
+*  **Key question: Can real time or projected habitat conditions assist with spatial measures setting??** 
+*  **Scope: demo for one species or develop a more general approach/process for all?** 
+
+
+:::::: {.cols data-latex=""}
+
+::: {.col data-latex="{0.49\textwidth}"}
+::: {.ltbluebox data-latex=""}
+## What information is used now?
+There are several current examples that use habitat indicators to forecast bycatch potential.  
+
+**GF: Should the in dev tools be moved to rhs? Should something like the scup GRAs be here instead?**
+
+[RHAPcast](https://www.rhapcast.org/index.html) uses species distribution model output and hindcast forecasts of habitat (sea surface temperature) to identify areas that maximize target species encounters while minimizing bycatch species encounters.  
+
+```{r newriskpol, out.width="90%"}
+knitr::include_graphics(here::here("onepagers/rhapcast-screencap.png"))
+```
+
+:::
+
+:::
+
+::: {.col data-latex="{0.02\textwidth}"}
+\ 
+<!-- an empty Div (with a white space), serving as
+a column separator -->
+:::
+
+::: {.col data-latex="{0.49\textwidth}"}
+::: {.ltgreenbox data-latex=""}
+## Information sources for indicators
+
+List current info sources from google doc
+
+### Potential Indicator Sources
+
+* DisMAP (survey data)
+* NRHA data explorer (SDMs)
+* MOM6 (ocean model data products)
+* rhapcast
+* NEFSC fishing effort footprints
+
+[State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) and [Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf) indicators
+
+
+### Potential Pathways
+*  Evaluate measures with indicators of fishery and species spatial overlap
+- Spatial distribution of fishery (confidential data, can we get it? Commercial and rec?)
+- Spatial distribution of species (survey data, can we get it?)
+- Spatial model 
+*  Simulate distribution shifts, fleet movement constraints, etc.
+*  Determine what spatial management measures meet objectives with minimal side effects?
+
+
+::: {.ltpurplebox data-latex=""}
+## Information gaps 
+
+Spatial distribution of fishing effort may not be available/accessible for all sectors / fleets. Challenges of mapping fleet effort to specific species.
+
+
+::: 
+:::
+:::
+
+::::::
+
+
+
+
