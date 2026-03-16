@@ -42,7 +42,7 @@ Catch and Quota Setting is a multistep process involving decisions by the Northe
 ## What information is used now?
 
 ::: {.ltpurplebox data-latex=""}
-1. Determine Assessment Priorities
+**1. Determine Assessment Priorities**
 
 The NRCC prioritizes stocks for assessment based on management needs,
 fishery importance, stock status and trend, ecosystem importance, assessment information, and stock
@@ -50,25 +50,25 @@ biology. Terms of Reference (ToRs) ensure the assessment process delivers consis
 ::: 
 
 ::: {.ltpurplebox data-latex=""}
-2. Conduct Assessment
+**2. Conduct Assessment**
 
 Assessment scientists assemble and analyze fishery dependent and independent data and develop models to synthesize the data and produce outputs meeting the assessment ToRs. 
 ::: 
 
 ::: {.ltpurplebox data-latex=""}
-3. Review Assessment
+**3. Review Assessment**
 
 Independent reviewers evaluate whether assessments ToRs are met, data is appropriate, and methods reflect best practices.
 ::: 
 
 ::: {.ltpurplebox data-latex=""}
-4. Determine Acceptable Biological Catch
+**4. Determine Acceptable Biological Catch (ABC)**
 
 The SSC uses reviewed assessment outputs within a structured framework to determine ABC from assessment uncertainty based on input data, model diagnostics and performance, and ecosystem considerations.
 ::: 
 
 ::: {.ltpurplebox data-latex=""}
-5. Catch Specification
+**5. Catch Limits, Targets, and Quotas**
 
 The Council decides whether annually varying or averaged ABCs will be used in multiyear harvest specifications, then allocates the ABC to harvest sectors. Management uncertainty is determined and applied, then discards are estimated and subtracted to derive quotas and harvest limits.
 ::: 
@@ -93,25 +93,49 @@ a column separator -->
 [Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports) conceptual models and indicators for MAFMC stocks:
 
 *  Black Sea Bass 
+*  Bluefish 
 *  Golden Tilefish
 *  Longfin squid 
 *  Shortfin squid
 
+\vspace{1ex}
+
 [State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) and [Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf) indicators
+
+\vspace{1ex}
 
 The fish and invertebrate [Climate Vulnerability Analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0146756) sensitivity, exposure and vulnerability rankings
 
-And many other potential sources (survey data, GLORYS ocean reanalysis)
+\vspace{1ex}
+
+Multiple Essential Fish Habitat sources:
+
+*  [EFH Habitat Mapper](https://www.fisheries.noaa.gov/resource/map/essential-fish-habitat-mapper)
+*  [NRHA Data Explorer](https://nrha.shinyapps.io/dataexplorer/)
+*  [Fishing Gear Effects Database](https://fishmaps.shinyapps.io/FishingEffectsDatabase/)
+
+\vspace{1ex}
+
+And many other potential sources:
+
+*  [NEFSC Surveys](https://www.fisheries.noaa.gov/inport/item/22549)
+*  [NEFSC Food Habits](https://fwdp.shinyapps.io/tm2020/)
+*  [NEAMAP Survey and Food Habits](https://www.vims.edu/research/units/programs/multispecies_fisheries_research/neamap/)
+*  [GARFO Catch and Monitoring System](https://www.fisheries.noaa.gov/new-england-mid-atlantic/commercial-fishing/quota-monitoring-greater-atlantic-region)
+*  [Atlantic Coastal Cooperative Statistics Programa](https://safis.accsp.org/accsp_prod/f?p=1490:1:6442641492940:::::)
+*  [Marine Recreational Information Program](https://www.fisheries.noaa.gov/recreational-fishing-data/introduction-marine-recreational-information-program-data)
+*  [GLORYS ocean reanalysis](https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/description)
 
 ### Potential Pathways
 
-Ecosystem information can enter at some portion of steps 1, 2, 4, and 5. 
+*  Ecosystem information can enter at some portion of steps 1, 2, 4, and 5. These pathways are detailed in separate 1 page summaries.
+*  The Council could recommend additional assessment or review ToRs in steps 1 and 3.
 
 
 ::: {.ltpurplebox data-latex=""}
 ## Information gaps 
 
-What is missing and/or would be a lot of work
+Ecosystem and Socioeconomic Profiles evaluate and select stock specific ecosystem and socioeconomic indicators that can be useful across many steps of the Catch/Quota setting process; these are currently unavailable for summer flounder, scup, mackerel, butterfish, surfclam, ocean quahog, blueline tilefish, spiny dogfish, and monkfish. 
 
 ::: 
 :::

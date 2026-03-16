@@ -120,7 +120,8 @@ a column separator -->
 
 [Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports) conceptual models and indicators for MAFMC stocks: 
 
-*  Black Sea Bass 
+*  Black Sea Bass
+*  Bluefish 
 *  Golden Tilefish
 *  Longfin squid 
 *  Shortfin squid
@@ -129,7 +130,7 @@ a column separator -->
 
 ### Potential Pathways
 *  Evaluate indicators of favorable or unfavorable habitat or socioeconomic conditions for a species or life history type
-*  Simulate management with different risk tolerance under different conditions (update Risk Policy MSE code?)
+*  Simulate management with different risk tolerance under different conditions (update MSE?)
 *  Compare indicator-based approach vs. status quo: Which indicator-adjusted risk tolerance meets objectives across species portfolio or for a selected individual species?
     
 ```{r newriskpol, out.width="90%"}
