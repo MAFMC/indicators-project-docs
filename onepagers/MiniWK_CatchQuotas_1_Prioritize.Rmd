@@ -49,13 +49,34 @@ fishery importance, stock status and trend, ecosystem importance, assessment inf
 biology. Terms of Reference (ToRs) ensure the assessment process delivers consistent, management-relevant outputs.
 ::: 
 
+Determine Assessment ToRs (Research Track–RT and Management Track–MT are different). This is an NRCC process but there are standardized ToRs as noted here that permit inclusion of ecosystem information:
 
+*  RT Assessment ToR 1 brings in ecosystem and climate influences on the stock. 
 
+*  RT ToR 3 or MT ToR 2 presents assessment indices 
+
+*  RT ToR 5 or MT ToR 4 updates biological references points
+
+*  RT ToR 6 or MT ToR 5 develops short term projections
+
+*  RT ToR 7 is on research recommendations including how to better incorporate ecosystem influences identified under RT ToR 1
+
+*  RT ToR 8 develops a backup assessment approach
 
 
 
 :::
 
+::: {.ltgreenbox data-latex=""}
+## Information sources for indicators 
+
+RT Assessment ToR 1: 
+[Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports) conceptual models and indicators; [State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) and [Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf) indicators; The fish and invertebrate [Climate Vulnerability Analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0146756) sensitivity, exposure and vulnerability rankings
+
+\vspace{1ex}
+
+
+:::
 :::
 
 ::: {.col data-latex="{0.02\textwidth}"}
@@ -68,34 +89,8 @@ a column separator -->
 ::: {.ltgreenbox data-latex=""}
 ## Information sources for indicators 
 
-[Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports) conceptual models and indicators for MAFMC stocks:
-
-*  Black Sea Bass 
-*  Bluefish 
-*  Golden Tilefish
-*  Longfin squid 
-*  Shortfin squid
-
-\vspace{1ex}
-
-[State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) and [Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf) indicators
-
-\vspace{1ex}
-
-The fish and invertebrate [Climate Vulnerability Analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0146756) sensitivity, exposure and vulnerability rankings
-
-\vspace{1ex}
-
-Multiple Essential Fish Habitat sources:
-
-*  [EFH Habitat Mapper](https://www.fisheries.noaa.gov/resource/map/essential-fish-habitat-mapper)
-*  [NRHA Data Explorer](https://nrha.shinyapps.io/dataexplorer/)
-*  [Fishing Gear Effects Database](https://fishmaps.shinyapps.io/FishingEffectsDatabase/)
-
-\vspace{1ex}
-
-And many other potential sources:
-
+RT ToR 3 or MT ToR 2: 
+Can include ecosystem derived information (e.g. seabird diet derived recruitment index) from: 
 *  [NEFSC Surveys](https://www.fisheries.noaa.gov/inport/item/22549)
 *  [NEFSC Food Habits](https://fwdp.shinyapps.io/tm2020/)
 *  [NEAMAP Survey and Food Habits](https://www.vims.edu/research/units/programs/multispecies_fisheries_research/neamap/)
@@ -104,9 +99,22 @@ And many other potential sources:
 *  [Marine Recreational Information Program](https://www.fisheries.noaa.gov/recreational-fishing-data/introduction-marine-recreational-information-program-data)
 *  [GLORYS ocean reanalysis](https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/description)
 
+
+RT ToR 5 or MT ToR 4: 
+Ecosystem information on changing productivity for the system or the stock can apply here to determine how long a time series is the baseline for reference points. MT ToR 4 notes that simple indicators and metrics of stock status should also be included. Multiple Essential Fish Habitat sources: 
+*  [EFH Habitat Mapper](https://www.fisheries.noaa.gov/resource/map/essential-fish-habitat-mapper)
+*  [NRHA Data Explorer](https://nrha.shinyapps.io/dataexplorer/)
+*  [Fishing Gear Effects Database](https://fishmaps.shinyapps.io/FishingEffectsDatabase/)
+
+
+RT ToR 6 or MT ToR 5:
+Ecosystem information on recent productivity for the system or the stock can apply here to determine the basis for short term projections 
+
+RT ToRs 7 and 8:
+Include research to address the above, backup methods could be ecosystem information based
+
 ### Potential Pathways
 
-*  Ecosystem information can enter at some portion of steps 1, 2, 4, and 5. These pathways are detailed in separate 1 page summaries.
 *  The Council could recommend additional assessment or review ToRs in steps 1 and 3.
 
 
