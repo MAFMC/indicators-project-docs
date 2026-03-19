@@ -31,7 +31,7 @@ library(patchwork)
 Catch and Quota Setting is a multistep process involving decisions by the Northeast Regional Coordinating Committee (NRCC; including the Mid Atlantic and New England Councils, Atlantic States Marine Fisheries Commission, and NOAA's Greater Atlantic Regional Fisheries Office and Northeast Fisheries Science Center), assessment scientists, assessment peer reviewers, the Council's Scientific and Statistical Committee (SSC), and the Council. Information for each stock and fishery is reviewed and synthesized to determine catch and quota levels that meet management objectives.
 :::
 
-*  **Key question: What additional indicators could inform decisions and analyses at the Conduct Assessment step in the Catch/Quota setting process? Could habitat, ecosystem, or socioeconomic indicators improve the process?** 
+*  **Key question: What additional indicators could inform decisions and analyses at the Conduct Assessment step in this process? Could habitat, ecosystem, or socioeconomic indicators improve the process?** 
 *  **Scope: Should we develop a general process for using indicators in the Conduct Assessment step of the catch/quota setting process, or focus on a specific application for a single species? Which species?** 
 
 
@@ -55,7 +55,7 @@ ESPs have been produced for 5 stocks during research track assessments under ToR
 
 \vspace{1ex}
 
-Management Track (MT) assessments are conducted by the assessment lead with less formal support in a few month period. MT assessments are used for management advice while RT assessments are not–therefore ecosystem information is most likely to be included in the catch quota setting decision through the assessment if it is approved from the RT assessment and included in or presented along with the MT assessment to be used at a later point in the process such as the SSC ABC decision. 
+Management Track (MT) assessments are conducted by the assessment lead with less formal support in a few month period. MT assessments are used for management advice while RT assessments are not–therefore ecosystem information is most likely to be included in the catch quota setting decision through the assessment if it is approved from the RT assessment and included in or presented along with the MT assessment to be used at a later point in the process such as the SSC ABC decision (Catch/Quota Setting Step 4). 
 
 \vspace{2ex}
 
@@ -105,8 +105,7 @@ Ecosystem information on recent productivity for the system or the stock from so
 \vspace{1ex}
 
 RT ToRs 7 and 8:
-Include research to address the above, backup methods could include ecosystem information based on sources above
-
+Identify research to address the ecosystem drivers, and develop backup methods that could include ecosystem information based on sources above 
 
 ::: {.ltpurplebox data-latex=""}
 ## Information gaps 
