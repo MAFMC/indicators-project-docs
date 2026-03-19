@@ -1,0 +1,314 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage[margin = 0.5in]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{color}
+\usepackage{framed}
+\setlength{\fboxsep}{.8em}
+
+\usepackage{tcolorbox}
+
+\tcbset{
+  mystyle/.style={
+    before skip=-10pt, % Adjust this value
+    after skip=-10pt   % Adjust this value
+  }
+}
+\newtcolorbox{mynoteblock}[1][]{mystyle, #1}
+
+\newtcolorbox{blackbox}{
+  colback=black,
+  colframe=orange,
+  coltext=white,
+  boxsep=5pt,
+  arc=4pt}
+  
+\newtcolorbox{ltbluebox}{
+  colback=blue!5!white,
+  colframe=blue!75!black,
+  boxsep=5pt,
+  arc=4pt}
+  
+\newtcolorbox{ltgreenbox}{
+  colback=green!5!white,
+  colframe=blue!75!black,
+  boxsep=5pt,
+  arc=4pt}
+  
+\newtcolorbox{ltpurplebox}{
+  colback=purple!5!white,
+  colframe=blue!75!black,
+  boxsep=5pt,
+  arc=4pt}
+  
+
+
+\newenvironment{cols}[1][]{}{}
+
+\newenvironment{col}[1]{\begin{minipage}[t]{#1}\ignorespaces\vspace{0pt}}{%
+\end{minipage}
+\ifhmode\unskip\fi
+\aftergroup\useignorespacesandallpars}
+
+\def\useignorespacesandallpars#1\ignorespaces\fi{%
+#1\fi\ignorespacesandallpars}
+
+\makeatletter
+\def\ignorespacesandallpars{%
+  \@ifnextchar\par
+    {\expandafter\ignorespacesandallpars\@gobble}%
+    {}%
+}
+\makeatother
+
+\usepackage{awesomebox}
+\setlength{\aweboxvskip}{1mm}
+
+
+\pagenumbering{gobble}
+
+\usepackage{enumitem}
+\setlist{itemsep=1pt, parsep=0pt} %# Adjust vertical spacing
+\setlist[itemize,1]{leftmargin=*, labelsep=0.3em} %# Adjust horizontal spacing
+\setlist[enumerate,1]{leftmargin=*, labelsep=0.3em} %# Adjust horizontal spacing
+
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  colorlinks=true,
+  linkcolor={Maroon},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+
+\vspace{-1cm}
+
+\section{Catch/Quota Setting Step 4: ABC
+Setting}\label{catchquota-setting-step-4-abc-setting}
+
+\begin{noteblock}
+Catch and Quota Setting is a multistep process involving decisions by
+the Northeast Regional Coordinating Committee (NRCC; including the Mid
+Atlantic and New England Councils, Atlantic States Marine Fisheries
+Commission, and NOAA's Greater Atlantic Regional Fisheries Office and
+Northeast Fisheries Science Center), assessment scientists, assessment
+peer reviewers, the Council's Scientific and Statistical Committee
+(SSC), and the Council. Information for each stock and fishery is
+reviewed and synthesized to determine catch and quota levels that meet
+management objectives.
+
+\end{noteblock}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Key question: What additional indicators could inform SSC
+  decisions at the ABC Determination step in this process? Could
+  habitat, ecosystem, or socioeconomic indicators improve the process?}
+\item
+  \textbf{Scope: Should we develop a general process for using
+  indicators in the ABC Determination step of the catch/quota setting
+  process, or focus on a specific application for a single species?
+  Which species?}
+\end{itemize}
+
+\begin{cols}
+
+\begin{col}{0.49\textwidth}
+
+\begin{ltbluebox}
+
+\subsection{What information is used
+now?}\label{what-information-is-used-now}
+
+\begin{ltpurplebox}
+\textbf{4. Determine Acceptable Biological Catch (ABC)}
+
+The SSC uses reviewed assessment outputs within a structured framework
+to determine ABC from assessment uncertainty based on input data, model
+diagnostics and performance, and ecosystem considerations.
+
+\end{ltpurplebox}
+
+\end{ltbluebox}
+
+\end{col}
+
+\begin{col}{0.02\textwidth}
+~
+
+\end{col}
+
+\begin{col}{0.49\textwidth}
+
+\begin{ltgreenbox}
+
+\subsection{Information sources for
+indicators}\label{information-sources-for-indicators}
+
+\href{https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports}{Ecosystem
+and Socioeconomic Profiles} conceptual models and indicators for MAFMC
+stocks:
+
+\begin{itemize}
+\tightlist
+\item
+  Black Sea Bass
+\item
+  Bluefish
+\item
+  Golden Tilefish
+\item
+  Longfin squid
+\item
+  Shortfin squid
+\end{itemize}
+
+\vspace{1ex}
+
+\href{https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf}{State
+of the Ecosystem} and
+\href{https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf}{Risk
+Assessment} indicators
+
+\vspace{1ex}
+
+The fish and invertebrate
+\href{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0146756}{Climate
+Vulnerability Analysis} sensitivity, exposure and vulnerability rankings
+
+\vspace{1ex}
+
+Multiple Essential Fish Habitat sources:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://www.fisheries.noaa.gov/resource/map/essential-fish-habitat-mapper}{EFH
+  Habitat Mapper}
+\item
+  \href{https://nrha.shinyapps.io/dataexplorer/}{NRHA Data Explorer}
+\item
+  \href{https://fishmaps.shinyapps.io/FishingEffectsDatabase/}{Fishing
+  Gear Effects Database}
+\end{itemize}
+
+\vspace{1ex}
+
+And many other potential sources:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://www.fisheries.noaa.gov/inport/item/22549}{NEFSC Surveys}
+\item
+  \href{https://fwdp.shinyapps.io/tm2020/}{NEFSC Food Habits}
+\item
+  \href{https://www.vims.edu/research/units/programs/multispecies_fisheries_research/neamap/}{NEAMAP
+  Survey and Food Habits}
+\item
+  \href{https://www.fisheries.noaa.gov/new-england-mid-atlantic/commercial-fishing/quota-monitoring-greater-atlantic-region}{GARFO
+  Catch and Monitoring System}
+\item
+  \href{https://safis.accsp.org/accsp_prod/f?p=1490:1:6442641492940:::::}{Atlantic
+  Coastal Cooperative Statistics Programa}
+\item
+  \href{https://www.fisheries.noaa.gov/recreational-fishing-data/introduction-marine-recreational-information-program-data}{Marine
+  Recreational Information Program}
+\item
+  \href{https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/description}{GLORYS
+  ocean reanalysis}
+\end{itemize}
+
+\subsubsection{Potential Pathways}\label{potential-pathways}
+
+\begin{itemize}
+\tightlist
+\item
+  Ecosystem information can enter at some portion of steps 1, 2, 4, and
+  5. These pathways are detailed in separate 1 page summaries.
+\item
+  The Council could recommend additional assessment or review ToRs in
+  steps 1 and 3.
+\end{itemize}
+
+\begin{ltpurplebox}
+
+\subsection{Information gaps}\label{information-gaps}
+
+Ecosystem and Socioeconomic Profiles evaluate and select stock specific
+ecosystem and socioeconomic indicators that can be useful across many
+steps of the Catch/Quota setting process; these are currently
+unavailable for summer flounder, scup, mackerel, butterfish, surfclam,
+ocean quahog, blueline tilefish, spiny dogfish, and monkfish.
+
+\end{ltpurplebox}
+
+\end{ltgreenbox}
+
+\end{col}
+
+\end{cols}
+
+\end{document}
