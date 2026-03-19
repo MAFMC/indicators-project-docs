@@ -25,14 +25,14 @@ library(patchwork)
 
 ```
 
-# Catch/Quota Setting: Potential Indicators and Pathways (Overview)
+# Catch/Quota Setting Step 2: Conduct Assessment
 
 ::: {.noteblock data-latex=""}
 Catch and Quota Setting is a multistep process involving decisions by the Northeast Regional Coordinating Committee (NRCC; including the Mid Atlantic and New England Councils, Atlantic States Marine Fisheries Commission, and NOAA's Greater Atlantic Regional Fisheries Office and Northeast Fisheries Science Center), assessment scientists, assessment peer reviewers, the Council's Scientific and Statistical Committee (SSC), and the Council. Information for each stock and fishery is reviewed and synthesized to determine catch and quota levels that meet management objectives.
 :::
 
-*  **Key question: What additional indicators could inform decisions at different steps in the Catch/Quota setting process? Could habitat, ecosystem, or socioeconomic indicators improve the process?** 
-*  **Scope: Should we develop a general process for using indicators in the catch/quota setting process, or focus on a specific application for a single species? Which species?** 
+*  **Key question: What additional indicators could inform decisions and analyses at the Conduct Assessment step in the Catch/Quota setting process? Could habitat, ecosystem, or socioeconomic indicators improve the process?** 
+*  **Scope: Should we develop a general process for using indicators in the Conduct Assessment step of the catch/quota setting process, or focus on a specific application for a single species? Which species?** 
 
 
 :::::: {.cols data-latex=""}
@@ -41,17 +41,25 @@ Catch and Quota Setting is a multistep process involving decisions by the Northe
 ::: {.ltbluebox data-latex=""}
 ## What information is used now?
 
-
 ::: {.ltpurplebox data-latex=""}
 **2. Conduct Assessment**
 
 Assessment scientists assemble and analyze fishery dependent and independent data and develop models to synthesize the data and produce outputs meeting the assessment ToRs. 
 ::: 
 
+Research Track (RT) Assessment working groups bring in appropriate expertise to cover the ToRs over a ~2 year period. Ecosystem information is summarized under ToR 1, which may produce an Ecosystem Socioeconomic Profile (ESP). Assessment leads work with the ToR 1 team to evaluate whether information can be included in the assessment model or to inform parameter estimates or structural model assumptions. *RTs are indefinitely paused so the information pathway will need to change to introduce new information.*
 
+\vspace{1ex}
 
+ESPs have been produced for 5 stocks during research track assessments under ToR 1:  [black sea bass](https://doi.org/10.25923/ez9g-af05), [bluefish](https://doi.org/10.25923/s3xc-ta06), [golden tilefish](https://doi.org/10.25923/8g2c-0447), longfin inshore squid (in progress), and [shortfin squid](https://doi.org/10.25923/f87x-mj55).
 
+\vspace{1ex}
 
+Management Track (MT) assessments are conducted by the assessment lead with less formal support in a few month period. MT assessments are used for management advice while RT assessments are not–therefore ecosystem information is most likely to be included in the catch quota setting decision through the assessment if it is approved from the RT assessment and included in or presented along with the MT assessment to be used at a later point in the process such as the SSC ABC decision. 
+
+\vspace{2ex}
+
+**Ecosystem indicators have been integrated into the operational black sea bass assessment (winter bottom temperature, northern area influences expected recruitment) and into research track models for black sea bass and bluefish (forage fish index influences recreational index catchability). This integration was based on ESPs and accepted through peer review (Catch/Quota Setting Step 3).** 
 :::
 
 :::
@@ -66,34 +74,13 @@ a column separator -->
 ::: {.ltgreenbox data-latex=""}
 ## Information sources for indicators 
 
-[Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports) conceptual models and indicators for MAFMC stocks:
-
-*  Black Sea Bass 
-*  Bluefish 
-*  Golden Tilefish
-*  Longfin squid 
-*  Shortfin squid
+RT Assessment ToR 1: 
+[Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports) conceptual models and indicators; [State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) and [Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf) indicators; The fish and invertebrate [Climate Vulnerability Analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0146756) sensitivity, exposure and vulnerability rankings
 
 \vspace{1ex}
 
-[State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) and [Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf) indicators
-
-\vspace{1ex}
-
-The fish and invertebrate [Climate Vulnerability Analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0146756) sensitivity, exposure and vulnerability rankings
-
-\vspace{1ex}
-
-Multiple Essential Fish Habitat sources:
-
-*  [EFH Habitat Mapper](https://www.fisheries.noaa.gov/resource/map/essential-fish-habitat-mapper)
-*  [NRHA Data Explorer](https://nrha.shinyapps.io/dataexplorer/)
-*  [Fishing Gear Effects Database](https://fishmaps.shinyapps.io/FishingEffectsDatabase/)
-
-\vspace{1ex}
-
-And many other potential sources:
-
+RT ToR 3 or MT ToR 2: 
+Can include ecosystem derived information (e.g. seabird diet derived recruitment index) from: 
 *  [NEFSC Surveys](https://www.fisheries.noaa.gov/inport/item/22549)
 *  [NEFSC Food Habits](https://fwdp.shinyapps.io/tm2020/)
 *  [NEAMAP Survey and Food Habits](https://www.vims.edu/research/units/programs/multispecies_fisheries_research/neamap/)
@@ -102,10 +89,23 @@ And many other potential sources:
 *  [Marine Recreational Information Program](https://www.fisheries.noaa.gov/recreational-fishing-data/introduction-marine-recreational-information-program-data)
 *  [GLORYS ocean reanalysis](https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/description)
 
-### Potential Pathways
+\vspace{1ex}
 
-*  Ecosystem information can enter at some portion of steps 1, 2, 4, and 5. These pathways are detailed in separate 1 page summaries.
-*  The Council could recommend additional assessment or review ToRs in steps 1 and 3.
+RT ToR 5 or MT ToR 4: 
+Ecosystem information on changing productivity for the system or the stock can apply here to determine how long a time series is the baseline for reference points. MT ToR 4 notes that simple indicators and metrics of stock status should also be included. Multiple Essential Fish Habitat sources: 
+*  [EFH Habitat Mapper](https://www.fisheries.noaa.gov/resource/map/essential-fish-habitat-mapper)
+*  [NRHA Data Explorer](https://nrha.shinyapps.io/dataexplorer/)
+*  [Fishing Gear Effects Database](https://fishmaps.shinyapps.io/FishingEffectsDatabase/)
+
+\vspace{1ex}
+
+RT ToR 6 or MT ToR 5:
+Ecosystem information on recent productivity for the system or the stock from sources above can apply here to determine the basis for short term projections 
+
+\vspace{1ex}
+
+RT ToRs 7 and 8:
+Include research to address the above, backup methods could include ecosystem information based on sources above
 
 
 ::: {.ltpurplebox data-latex=""}
