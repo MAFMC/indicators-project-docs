@@ -25,14 +25,14 @@ library(patchwork)
 
 ```
 
-# Catch/Quota Setting: Potential Indicators and Pathways (Overview)
+# Catch/Quota Setting Step 1: Determine Assessment Priorities
 
 ::: {.noteblock data-latex=""}
 Catch and Quota Setting is a multistep process involving decisions by the Northeast Regional Coordinating Committee (NRCC; including the Mid Atlantic and New England Councils, Atlantic States Marine Fisheries Commission, and NOAA's Greater Atlantic Regional Fisheries Office and Northeast Fisheries Science Center), assessment scientists, assessment peer reviewers, the Council's Scientific and Statistical Committee (SSC), and the Council. Information for each stock and fishery is reviewed and synthesized to determine catch and quota levels that meet management objectives.
 :::
 
-*  **Key question: What additional indicators could inform decisions at different steps in the Catch/Quota setting process? Could habitat, ecosystem, or socioeconomic indicators improve the process?** 
-*  **Scope: Should we develop a general process for using indicators in the catch/quota setting process, or focus on a specific application for a single species? Which species?** 
+*  **Key question: What additional indicators could inform NRCC decisions at the Assessment Prioritization step in the Catch/Quota setting process? Could habitat, ecosystem, or socioeconomic indicators improve the process?** 
+*  **Scope: Is a general process for using indicators in the Assessment Prioritization step of the Catch/Quota setting process preferred?** 
 
 
 :::::: {.cols data-latex=""}
@@ -49,34 +49,36 @@ fishery importance, stock status and trend, ecosystem importance, assessment inf
 biology. Terms of Reference (ToRs) ensure the assessment process delivers consistent, management-relevant outputs.
 ::: 
 
-Determine Assessment ToRs (Research Track–RT and Management Track–MT are different). This is an NRCC process but there are standardized ToRs as noted here that permit inclusion of ecosystem information:
+The NRCC [prioritization process](https://d23h0vhsm26o6d.cloudfront.net/NRCC_Assessment_Process_Version-Jun2025_508.pdf) establishes assessment schedules by scoring stocks using rubrics modified from a [NMFS assessment prioritization method](https://www.st.nmfs.noaa.gov/Assets/stock/documents/PrioritizingFishStockAssessments_FinalWeb.pdf). The NRCC sets, reviews, and adjusts 5 year assessment schedules to align with and address management priorities throughout the region. 
 
-*  RT Assessment ToR 1 brings in ecosystem and climate influences on the stock. 
+\vspace{2ex}
 
-*  RT ToR 3 or MT ToR 2 presents assessment indices 
-
-*  RT ToR 5 or MT ToR 4 updates biological references points
-
-*  RT ToR 6 or MT ToR 5 develops short term projections
-
-*  RT ToR 7 is on research recommendations including how to better incorporate ecosystem influences identified under RT ToR 1
-
-*  RT ToR 8 develops a backup assessment approach
-
-
-
-:::
-
-::: {.ltgreenbox data-latex=""}
-## Information sources for indicators 
-
-RT Assessment ToR 1: 
-[Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports) conceptual models and indicators; [State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) and [Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf) indicators; The fish and invertebrate [Climate Vulnerability Analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0146756) sensitivity, exposure and vulnerability rankings
+The NRCC has specified generic Assessment ToRs for [Research Track (RT)](https://www.fisheries.noaa.gov/s3/2025-07/GenericResearchTrackTermsReference-06252025.pdf) and [Management Track (MT)](https://media.fisheries.noaa.gov/2021-01/z.MgtTrackTORs_508_01122021.pdf?null) assessments, but these can be amended for specific processes. The standardized ToRs noted here already permit inclusion of ecosystem information, implicitly or explicitly:
 
 \vspace{1ex}
 
+*  RT Assessment ToR 1 investigates ecosystem and climate influences on the stock  
+
+*  RT ToR 3 or MT ToR 2 presents assessment indices  
+
+*  RT ToR 5 or MT ToR 4 updates biological references points 
+
+*  RT ToR 6 or MT ToR 5 develops short term projections 
+
+*  RT ToR 7 is on research recommendations including how to better incorporate ecosystem influences identified under RT ToR 1 
+
+*  RT ToR 8 develops a backup assessment approach 
+
+\vspace{2ex}
+
+NRCC guidelines explicitly approve the presentation of contextual ecosystem information influencing stock dynamics in MT assessments, and the direct incorporation of ecosystem factors in MT assessment models. 
+
+<!--
+>including, but not limited to (a) the incorporation of environmental covariates when estimating biological information such as growth and recruitment or developing survey indices, (b) a change in natural mortality informed by predation estimates, (c) estimation of new survey indices or survey catchability through the development of statistical models that incorporate spatio-temporal or ecosystem processes, or (d) changes in the recruitment stanza used to develop reference points as a result of shifts in ecosystem productivity
+-->
 
 :::
+
 :::
 
 ::: {.col data-latex="{0.02\textwidth}"}
@@ -89,39 +91,44 @@ a column separator -->
 ::: {.ltgreenbox data-latex=""}
 ## Information sources for indicators 
 
-RT ToR 3 or MT ToR 2: 
-Can include ecosystem derived information (e.g. seabird diet derived recruitment index) from: 
-*  [NEFSC Surveys](https://www.fisheries.noaa.gov/inport/item/22549)
-*  [NEFSC Food Habits](https://fwdp.shinyapps.io/tm2020/)
-*  [NEAMAP Survey and Food Habits](https://www.vims.edu/research/units/programs/multispecies_fisheries_research/neamap/)
-*  [GARFO Catch and Monitoring System](https://www.fisheries.noaa.gov/new-england-mid-atlantic/commercial-fishing/quota-monitoring-greater-atlantic-region)
-*  [Atlantic Coastal Cooperative Statistics Programa](https://safis.accsp.org/accsp_prod/f?p=1490:1:6442641492940:::::)
-*  [Marine Recreational Information Program](https://www.fisheries.noaa.gov/recreational-fishing-data/introduction-marine-recreational-information-program-data)
-*  [GLORYS ocean reanalysis](https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/description)
+Components of the prioritization process use distinct information.
 
+\vspace{1ex}
 
-RT ToR 5 or MT ToR 4: 
-Ecosystem information on changing productivity for the system or the stock can apply here to determine how long a time series is the baseline for reference points. MT ToR 4 notes that simple indicators and metrics of stock status should also be included. Multiple Essential Fish Habitat sources: 
-*  [EFH Habitat Mapper](https://www.fisheries.noaa.gov/resource/map/essential-fish-habitat-mapper)
-*  [NRHA Data Explorer](https://nrha.shinyapps.io/dataexplorer/)
-*  [Fishing Gear Effects Database](https://fishmaps.shinyapps.io/FishingEffectsDatabase/)
+[Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf) indicators by species and sector could inform *Management needs*  
 
+\vspace{1ex}
 
-RT ToR 6 or MT ToR 5:
-Ecosystem information on recent productivity for the system or the stock can apply here to determine the basis for short term projections 
+[State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) indicators of performance relative to seafood production, profits, and recreational opportunities could inform relative *Fishery importance*. Additional data from the [GARFO Catch and Monitoring System](https://www.fisheries.noaa.gov/new-england-mid-atlantic/commercial-fishing/quota-monitoring-greater-atlantic-region), [Atlantic Coastal Cooperative Statistics Programa](https://safis.accsp.org/accsp_prod/f?p=1490:1:6442641492940:::::), and [Marine Recreational Information Program](https://www.fisheries.noaa.gov/recreational-fishing-data/introduction-marine-recreational-information-program-data) could be included.
+  
+\vspace{1ex}
 
-RT ToRs 7 and 8:
-Include research to address the above, backup methods could be ecosystem information based
+[State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) [stock status](https://noaa-edab.github.io/catalog/stock_status.html) indicators, individual assessment outputsm and [NEFSC Survey](https://www.fisheries.noaa.gov/inport/item/22549) based indicators inform *Stock status and trend*
+
+\vspace{1ex}
+
+[NEFSC Food Habits data](https://fwdp.shinyapps.io/tm2020/), [NEAMAP Survey and Food Habits data](https://www.vims.edu/research/units/programs/multispecies_fisheries_research/neamap/), [NRHA Data Explorer](https://nrha.shinyapps.io/dataexplorer/) predator prey information, and [State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) indicators could inform  *Ecosystem importance*
+
+\vspace{1ex}
+
+Current assessments, [Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports), catch and survey information sources listed above could inform *Assessment information*
+
+\vspace{1ex}
+
+[Climate Vulnerability Analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0146756), [Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports), and biological data included in assessments could inform *Stock biology*
+
 
 ### Potential Pathways
 
-*  The Council could recommend additional assessment or review ToRs in steps 1 and 3.
+*  NRCC prioritization could apply standard indicators at either the stock or full ecosystem level 
+*  Specific RT or MT ToRs could be developed addressing ecosystem change
 
 
 ::: {.ltpurplebox data-latex=""}
 ## Information gaps 
 
-Ecosystem and Socioeconomic Profiles evaluate and select stock specific ecosystem and socioeconomic indicators that can be useful across many steps of the Catch/Quota setting process; these are currently unavailable for summer flounder, scup, mackerel, butterfish, surfclam, ocean quahog, blueline tilefish, spiny dogfish, and monkfish. 
+The specific assessment prioritization scoring rubrics applied by the NRCC would need to be provided in order to evaluate the potential for improved indicator use in this process.
+
 
 ::: 
 :::
