@@ -1,0 +1,150 @@
+---
+title: |
+output:
+  pdf_document:
+    keep_tex: true
+    includes:
+      in_header: boxescolumns.tex
+  html_document:
+    css: columns.css
+    df_print: paged
+geometry: margin = 0.5in
+link-citations: true
+urlcolor: blue
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+\vspace{-1cm}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      warning = FALSE,
+                      message = FALSE)
+
+library(patchwork)
+
+# can I set up 2 columns with highlight boxes in each? yes
+
+```
+
+# Measures Setting: Potential Indicators and Pathways
+
+::: {.noteblock data-latex=""}
+Measure setting is the process of establishing regulatory controls and
+conservation tools that govern how, when, where, and how much fish can
+be harvested to prevent overfishing and ensure the long-term
+sustainability of stocks. Measures could include regulations such as effort controls, spatial or temporal closures, or size and age limits to landings. **Note: **measure setting also includes regulating catch limits, however due to the importance of catch management decisions, catch and quota setting are described in their own 1-pager.
+:::
+
+-   **Key question: What additional indicators could inform measures
+    setting? Could ecosystem indicators or recreational demand
+    indicators in addition to current information improve the process?**
+-   **Scope: Should we develop a general process for using indicators in
+    the measures setting process, or focus on a specific application
+    for a single species? Which species?**
+
+::: {.cols data-latex=""}
+::: {.col data-latex="{0.49\\textwidth}"}
+::: {.ltbluebox data-latex=""}
+## What information is used now?
+
+Current measures in place are outlined by NOAA's [Specification
+Summaries](https://www.fisheries.noaa.gov/species-directory) and their
+[Federal
+Regulations](https://www.fisheries.noaa.gov/rules-and-regulations/fisheries).
+
+## Information sources for indicators
+
+Big picture performance metrics for commercial and recreational
+fisheries are available in:
+
+-   [State of the Ecosystem
+    Reports](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf)
+-   [EAFM Risk
+    Assessments](https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/672bbef75e7b1166ec15dba9/1730920200863/2_MAB_RiskAssess_2024.pdf)
+-   [Ecosystem and Socioeconomic
+    Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports#longfin-inshore-squid%E2%80%94in-process)
+
+Also see [river herring](https://www.rhapcast.org/) bycatch mitigation IRA project
+:::
+:::
+
+::: {.col data-latex="{0.02\\textwidth}"}
+  <!-- an empty Div (with a white space), serving as
+a column separator -->
+:::
+
+::: {.col data-latex="{0.49\\textwidth}"}
+::: {.ltgreenbox data-latex=""}
+## Information gaps
+
+To understand multispecies, multifleet implications of measures set for
+a given species, we would need easy access to:
+
+-   What fleets the species is caught in.
+
+    -   [CAMS](https://www.fisheries.noaa.gov/new-england-mid-atlantic/commercial-fishing/quota-monitoring-greater-atlantic-region)
+        data for commercial fleets
+    -   [MRIP](https://www.fisheries.noaa.gov/recreational-fishing-data/introduction-marine-recreational-information-program-data)
+        for recreational fleets
+
+-   Other targets and catch from these fleets
+
+-   Who manages the other species and fleets if not MAFMC
+
+-   Measures in place for all the other species (commercial and
+    recreational) caught with the species of interest
+
+**Further useful information could include:**
+
+-   Aggregate performance metrics for the fisheries to evaluate
+    implications of changes (commercial and recreational):
+
+    -   Landings
+    -   Revenues
+    -   Trips
+    -   Expenditures
+    -   Resilience
+    -   Other system level fishery elements from risk assessment
+
+-   Stock projections of age and size compositions
+
+-   Projections of commercial fleet and angler response to measures 
+
+    - Is there a threshold for switching to a different species?
+
+-   Projections of climate and habitat conditions for relevant species
+
+    -   See [Changing Ecosystems and Fisheries Initiative
+        Portal](https://psl.noaa.gov/cefi_portal/)
+
+<!-- ::: {.ltpurplebox data-latex=""} -->
+
+<!-- ## Information gaps -->
+
+<!-- To understand multispecies, multifleet implications of measures set for a given species, we would need easy access to:  -->
+
+<!--  * What fleets the species is caught in. Information could come from [CAMS data](https://www.fisheries.noaa.gov/new-england-mid-atlantic/commercial-fishing/quota-monitoring-greater-atlantic-region) for commercial fleets and (MRIP)[<https://www.fisheries.noaa.gov/recreational-fishing-data/introduction-marine-recreational-information-program-data>] for recreational fleets -->
+
+<!--  * What those fleets also catch/target  -->
+
+<!--  * Who manages the other species/fleets if not MAFMC  -->
+
+<!--  * Measures in place for all the other species (commercial, recreational) caught with the species of interest -->
+
+<!-- Further useful information could include:  -->
+
+<!--  * Aggregate performance metrics for the fisheries to evaluate implications of changes (commercial and recreational): landings, revenues, trips, expenditures, resilience and other system level fishery elements from risk assessment  -->
+
+<!--  * Stock projections of age/size comp  -->
+
+<!--  * Projections of commercial fleet and angler response to measures (is there a threshold for switching to a different species)  -->
+
+<!--  * Projections of climate/habitat conditions for relevant species (will availability change for different species). See [Changing Ecosystems and Fisheries Initiative Portal](https://psl.noaa.gov/cefi_portal/) -->
+
+<!-- ::: -->
+:::
+:::
+:::
