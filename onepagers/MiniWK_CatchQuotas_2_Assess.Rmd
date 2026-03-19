@@ -100,12 +100,12 @@ Ecosystem information on changing productivity for the system or the stock can a
 \vspace{1ex}
 
 RT ToR 6 or MT ToR 5:
-Ecosystem information on recent productivity for the system or the stock from sources above can apply here to determine the basis for short term projections 
+Ecosystem information on recent productivity for the system or the stock from sources above can apply here to determine the basis for short term projections. [MOM6 regional ocean projections](https://psl.noaa.gov/cefi_portal/) could also inform short term projections.  
 
 \vspace{1ex}
 
 RT ToRs 7 and 8:
-Identify research to address the ecosystem drivers, and develop backup methods that could include ecosystem information based on sources above 
+Identify research to address the ecosystem drivers and develop ecosystem-based backup methods based on sources above 
 
 ::: {.ltpurplebox data-latex=""}
 ## Information gaps 

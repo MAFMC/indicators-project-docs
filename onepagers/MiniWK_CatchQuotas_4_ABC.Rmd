@@ -48,6 +48,21 @@ Catch and Quota Setting is a multistep process involving decisions by the Northe
 The SSC uses reviewed assessment outputs within a structured framework to determine ABC from assessment uncertainty based on input data, model diagnostics and performance, and ecosystem considerations.
 ::: 
 
+MT assessment gives current status and short term projections of overfishing limit (OFL) that may or may not already include ecosystem information. SSC may discuss performance of short term projections or terminal year estimates in the assessment; ecosystem information can inform decisions about projections or terminal year estimates. The SSC may request new OFL estimates/projections from the assessment lead based on this discussion. 
+
+\vspace{1ex}
+
+SSC uses its [OFL CV process](https://www.mafmc.org/s/Final-OFL-CV-guidance-document_06_24.pdf) to evaluate uncertainty arising from data quality, model selection/identification, retrospective analysis, empirical comparisons,  ecosystem factors, and recruitment stanzas. Ecosystem information can feed into: 
+
+*  Ecosystem factors: currently evaluate [Climate Vulnerability Analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0146756) results for each stock, can include multiple other environmentally driven changes in the stock
+*  Recruitment stanzas: links to environmental drivers can decrease recruitment uncertainty
+
+Ecosystem information that is presented along with the assessment is easiest to use in the OFL CV determination, but nothing limits the SSC from using ecosystem information presented from another source. The SSC has based decisions on published literature in the past.
+
+\vspace{1ex}
+
+The OFL CV is used along with the estimate of current stock status in the MAFMC control rule to determine the ABC that is recommended to the Council
+SSC often provides annually averaged constant ABC for a specified period (2-3 years) as well as annual ABC for each year at the request of the Council.
 
 
 
@@ -66,52 +81,36 @@ a column separator -->
 ::: {.ltgreenbox data-latex=""}
 ## Information sources for indicators 
 
-[Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports) conceptual models and indicators for MAFMC stocks:
-
-*  Black Sea Bass 
-*  Bluefish 
-*  Golden Tilefish
-*  Longfin squid 
-*  Shortfin squid
+[State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf), [Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf), and [Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports) conceptual models and indicators for MAFMC stocks could inform SSC discussion of terminal year estimates or short term projection performance. 
 
 \vspace{1ex}
 
-[State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) and [Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf) indicators
+Similar indicators as above plus habitat indicators [EFH Habitat Mapper](https://www.fisheries.noaa.gov/resource/map/essential-fish-habitat-mapper), [NRHA Data Explorer](https://nrha.shinyapps.io/dataexplorer/) could further inform OFL CV discussions. Systematic translation of stock specific indicators into risk criteria as in the Pacific could simplify OFL CV discussions.
 
-\vspace{1ex}
+```{r}
+Tab4 <- readr::read_csv("https://github.com/sgaichas/HSpresentations/raw/main/Conferences/BevanUW_2026-02-19/data/WestCoastRiskFramework.csv")
 
-The fish and invertebrate [Climate Vulnerability Analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0146756) sensitivity, exposure and vulnerability rankings
+flextable::flextable(Tab4[,1:2])|>
+  flextable::set_caption("Pacific Pilot Risk Levels and Indicator Criteria") |>
+  flextable::width(width = c(0.6,2.5)) |>
+  flextable::fontsize(size=9, part="all") |>
+  #flextable::fit_to_width(max_width = 3.5) |>
+  flextable::bg(i = c(1:3), bg=c("#00FF0050", "white", "#FF000050"))
+```
 
-\vspace{1ex}
 
-Multiple Essential Fish Habitat sources:
 
-*  [EFH Habitat Mapper](https://www.fisheries.noaa.gov/resource/map/essential-fish-habitat-mapper)
-*  [NRHA Data Explorer](https://nrha.shinyapps.io/dataexplorer/)
-*  [Fishing Gear Effects Database](https://fishmaps.shinyapps.io/FishingEffectsDatabase/)
-
-\vspace{1ex}
-
-And many other potential sources:
-
-*  [NEFSC Surveys](https://www.fisheries.noaa.gov/inport/item/22549)
-*  [NEFSC Food Habits](https://fwdp.shinyapps.io/tm2020/)
-*  [NEAMAP Survey and Food Habits](https://www.vims.edu/research/units/programs/multispecies_fisheries_research/neamap/)
-*  [GARFO Catch and Monitoring System](https://www.fisheries.noaa.gov/new-england-mid-atlantic/commercial-fishing/quota-monitoring-greater-atlantic-region)
-*  [Atlantic Coastal Cooperative Statistics Programa](https://safis.accsp.org/accsp_prod/f?p=1490:1:6442641492940:::::)
-*  [Marine Recreational Information Program](https://www.fisheries.noaa.gov/recreational-fishing-data/introduction-marine-recreational-information-program-data)
-*  [GLORYS ocean reanalysis](https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/description)
 
 ### Potential Pathways
 
-*  Ecosystem information can enter at some portion of steps 1, 2, 4, and 5. These pathways are detailed in separate 1 page summaries.
-*  The Council could recommend additional assessment or review ToRs in steps 1 and 3.
+*  Refine OFL CV criteria based on ecosystem risk assessment
+*  Develop criteria indicator based assessment of short term projection performance
 
 
 ::: {.ltpurplebox data-latex=""}
 ## Information gaps 
 
-Ecosystem and Socioeconomic Profiles evaluate and select stock specific ecosystem and socioeconomic indicators that can be useful across many steps of the Catch/Quota setting process; these are currently unavailable for summer flounder, scup, mackerel, butterfish, surfclam, ocean quahog, blueline tilefish, spiny dogfish, and monkfish. 
+Ecosystem and Socioeconomic Profiles are currently unavailable for summer flounder, scup, mackerel, butterfish, surfclam, ocean quahog, blueline tilefish, spiny dogfish, and monkfish. 
 
 ::: 
 :::
