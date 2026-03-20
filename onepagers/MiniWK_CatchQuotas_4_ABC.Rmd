@@ -17,9 +17,17 @@ urlcolor: blue
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, 
                       warning = FALSE,
-                      message = FALSE)
+                      message = FALSE,
+                      dev = "cairo_pdf")
 
 library(patchwork)
+
+flextable::set_flextable_defaults(
+  font.size = 9,
+  padding.bottom = 0,  
+  padding.top = 1, 
+  line_spacing = 1,
+  font.family = "Palatino")
 
 # can I set up 2 columns with highlight boxes in each? yes
 
@@ -48,11 +56,11 @@ Catch and Quota Setting is a multistep process involving decisions by the Northe
 The SSC uses reviewed assessment outputs within a structured framework to determine ABC from assessment uncertainty based on input data, model diagnostics and performance, and ecosystem considerations.
 ::: 
 
-MT assessment gives current status and short term projections of overfishing limit (OFL) that may or may not already include ecosystem information. SSC may discuss performance of short term projections or terminal year estimates in the assessment; ecosystem information can inform decisions about projections or terminal year estimates. The SSC may request new OFL estimates/projections from the assessment lead based on this discussion. 
+The MT assessment gives current status and short term projections of overfishing limit (OFL) that may or may not already include ecosystem information. SSC may discuss performance of short term projections or terminal year estimates in the assessment; ecosystem information can inform decisions about projections or terminal year estimates. The SSC may request new OFL estimates/projections from the assessment lead based on this discussion. 
 
 \vspace{1ex}
 
-SSC uses its [OFL CV process](https://www.mafmc.org/s/Final-OFL-CV-guidance-document_06_24.pdf) to evaluate uncertainty arising from data quality, model selection/identification, retrospective analysis, empirical comparisons,  ecosystem factors, and recruitment stanzas. Ecosystem information can feed into: 
+The SSC uses its [OFL CV process](https://www.mafmc.org/s/Final-OFL-CV-guidance-document_06_24.pdf) to evaluate uncertainty arising from data quality, model selection/identification, retrospective analysis, empirical comparisons,  ecosystem factors, and recruitment stanzas. Ecosystem information can feed into: 
 
 *  Ecosystem factors: currently evaluate [Climate Vulnerability Analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0146756) results for each stock, can include multiple other environmentally driven changes in the stock
 *  Recruitment stanzas: links to environmental drivers can decrease recruitment uncertainty
@@ -81,7 +89,7 @@ a column separator -->
 ::: {.ltgreenbox data-latex=""}
 ## Information sources for indicators 
 
-[State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf), [Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf), and [Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports) conceptual models and indicators for MAFMC stocks could inform SSC discussion of terminal year estimates or short term projection performance. 
+[State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf), [Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf), and [Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports) conceptual models and indicators for MAFMC stocks could inform SSC discussion of terminal year estimates, short term projection performance, and assessment uncertainty. 
 
 \vspace{1ex}
 
@@ -93,9 +101,11 @@ Tab4 <- readr::read_csv("https://github.com/sgaichas/HSpresentations/raw/main/Co
 flextable::flextable(Tab4[,1:2])|>
   flextable::set_caption("Pacific Pilot Risk Levels and Indicator Criteria") |>
   flextable::width(width = c(0.6,2.5)) |>
-  flextable::fontsize(size=9, part="all") |>
+  #flextable::fontsize(size=9, part="all") |>
   #flextable::fit_to_width(max_width = 3.5) |>
   flextable::bg(i = c(1:3), bg=c("#00FF0050", "white", "#FF000050"))
+  #flextable::bg(i = c(1:3), bg=c(scales::alpha("green", 0.5), "white", scales::alpha("red", 0.5)))
+
 ```
 
 
@@ -103,8 +113,8 @@ flextable::flextable(Tab4[,1:2])|>
 
 ### Potential Pathways
 
-*  Refine OFL CV criteria based on ecosystem risk assessment
-*  Develop criteria indicator based assessment of short term projection performance
+*  Refine OFL CV criteria for considering integrated ecosystem conditions
+*  Develop criteria for considering ecosystem impacts in short term projections
 
 
 ::: {.ltpurplebox data-latex=""}
