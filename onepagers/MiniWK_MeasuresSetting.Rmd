@@ -32,14 +32,14 @@ library(patchwork)
 # Measures Setting: Potential Indicators and Pathways
 
 ::: {.noteblock data-latex=""}
-Measure setting is the process of establishing regulatory controls and conservation tools that govern how, when, where, and how much fish can be harvested to prevent overfishing and ensure the long-term sustainability of stocks. **Here we emphasize measures governing how, when, and where to harvest, because how much to harvest is described separately under Catch/Quota setting.** Measures could include regulations such as effort controls, spatial or temporal openings and closures, and size and age limits. 
+Measure setting is the process of establishing regulatory controls and conservation tools that govern how, when, where, and how much fish can be harvested to prevent overfishing and ensure the long-term sustainability of stocks. **Here we emphasize measures governing how, when, and where to harvest, because how much to harvest is described separately under Catch/Quota setting.** Measures could include regulations such as gear rewquirements, spatial or temporal openings and closures, and size and age limits. 
 :::
 
--   **Key question: What additional indicators could inform measures
-    setting? Could ecosystem indicators or recreational demand
+-   **Key question: What indicators could inform measures
+    setting across all stocks? Could ecosystem indicators or recreational demand
     indicators in addition to current information improve the process?**
--   **Scope: Should we develop a general process for using indicators in
-    the measures setting process, or focus on a specific application
+-   **Scope: Should we develop a general process evaluating multifleet objectives in
+    the measures setting process, or focus on an application
     for a single species? Which species?**
 
 ::: {.cols data-latex=""}
@@ -62,7 +62,7 @@ Measures are set for individual stocks within FMPs to "establish allowable harve
 
 \vspace{2ex}
 
-Workshop 1 discussions centered on maximizing opportunities across species when setting measures for individual species. **Opportunities across species are not typically considered when setting measures for individual species.**
+Workshop 1 discussions centered on maximizing fishing opportunities across species and fleets when setting measures for individual species. **Opportunities across species are not typically considered when setting measures for individual species.**
 
 ::: {.ltpurplebox data-latex=""}
 This emphasizes the multifleet/multispecies aspect highlighted in the workshop to ensure overall opportunities are maximized, but ecosystem indicators could also be used in single species measures without considering this (e.g. projected conditions impact on growth could lead to different fish size or gear recommendations, changing seasonality of migration or spawning could lead to different open/closed seasons, etc) simpler but less focused on a system level objective. 
@@ -120,7 +120,7 @@ fisheries (landings, revenues, trips, and other system level fishery attributes)
 
 ### Potential Pathways
 
-Develop a live view of all current measures by species and which interact across fleets
+Develop a live view of all current measures by species and fleet that shows effects of changes for one stock. 
 
 ::: {.ltpurplebox data-latex=""}
 ## Information gaps
@@ -130,7 +130,7 @@ Aggregate performance metrics for the fisheries to evaluate implications of chan
 -   Expenditures 
 -   Resilience 
 
-Easily accessible, up to date measures in place for all species
+Easily accessible, up to date measures in place for all species across all states
 
 
 :::
