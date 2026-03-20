@@ -69,7 +69,7 @@ Ecosystem information that is presented along with the assessment is easiest to 
 
 \vspace{1ex}
 
-The OFL CV is used along with the estimate of current stock status in the MAFMC control rule to determine the ABC that is recommended to the Council
+The OFL CV is used along with the estimate of current stock status in the [MAFMC ABC control rule](http://www.mafmc.org/s/MAFMC-ABC-Control-Rule-White-Paper.pdf) to determine the ABC that is recommended to the Council
 SSC often provides annually averaged constant ABC for a specified period (2-3 years) as well as annual ABC for each year at the request of the Council.
 
 
