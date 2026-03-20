@@ -51,7 +51,7 @@ The Council decides whether annually varying or averaged ABCs will be used in mu
 
 \vspace{1ex}
 
-*Details vary by FMP*
+*Details vary by FMP* but in general:
 
 \vspace{2ex}
 
@@ -94,7 +94,7 @@ a column separator -->
 ::: {.ltgreenbox data-latex=""}
 ## Information sources for indicators 
 
-Workshop 1 discussion suggested that indicators may help with average vs annual ABC decision; clarification is requested
+Workshop 1 discussion suggested that indicators may help with the Council's average vs annual ABC decision; clarification is requested
 
 \vspace{1ex}
 
@@ -111,8 +111,7 @@ SOE or ESP economic and social indicators could inform these decisions.
 
 ### Potential Pathways
 
-*  The Council 
-*  The Monitoring Committee
+*  Develop indicators for Monitoring Committee decisions, FMP amendments/frameworks
 
 
 ::: {.ltpurplebox data-latex=""}

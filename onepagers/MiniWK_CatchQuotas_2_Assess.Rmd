@@ -92,7 +92,7 @@ Can include ecosystem derived information (e.g. seabird diet derived recruitment
 \vspace{1ex}
 
 RT ToR 5 or MT ToR 4: 
-Ecosystem information on changing productivity for the system or the stock can apply here to determine how long a time series is the baseline for reference points. MT ToR 4 notes that simple indicators and metrics of stock status should also be included. Multiple Essential Fish Habitat sources: 
+Ecosystem information on changing productivity for the system or the stock can apply here to determine how long a time series is the baseline for reference points. MT ToR 4 notes that simple indicators and metrics of stock status should also be included. Indicators above plus habitat information: 
 *  [EFH Habitat Mapper](https://www.fisheries.noaa.gov/resource/map/essential-fish-habitat-mapper)
 *  [NRHA Data Explorer](https://nrha.shinyapps.io/dataexplorer/)
 *  [Fishing Gear Effects Database](https://fishmaps.shinyapps.io/FishingEffectsDatabase/)
