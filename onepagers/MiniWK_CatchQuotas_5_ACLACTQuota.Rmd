@@ -32,7 +32,7 @@ Catch and Quota Setting is a multistep process involving decisions by the Northe
 :::
 
 *  **Key question: What additional indicators could inform Council decisions at the Catch Limit, Target, and Quota setting step in the Catch/Quota setting process? Could habitat, ecosystem, or socioeconomic indicators improve the process?** 
-*  **Scope: Should we develop a general process for using indicators in the catch/quota setting process, or focus on a specific application for a single species? Which species?** 
+*  **Scope: Should we develop a general process for using indicators in the ACL, ACT, and Quota setting process, or focus on a specific application for a single species? Which steps of the process should we evaluate? Which FMP or species?** 
 
 
 :::::: {.cols data-latex=""}
@@ -49,7 +49,35 @@ Catch and Quota Setting is a multistep process involving decisions by the Northe
 The Council decides whether annually varying or averaged ABCs will be used in multiyear harvest specifications, then allocates the ABC to harvest sectors. Management uncertainty is determined and applied, then discards are estimated and subtracted to derive quotas and harvest limits.
 ::: 
 
+\vspace{1ex}
 
+*Details vary by FMP*
+
+\vspace{2ex}
+
+The Council decides whether to use constant ABC or annual ABC for the specification years.
+
+\vspace{2ex}
+
+The ABC is split to recreational and commercial sector Annual Catch Limit (ACL), if applicable: the percentage is defined in the FMP, and requires an amendment or framework to change. 
+
+\vspace{2ex}
+
+The Monitoring Committee recommends a management uncertainty buffer to determine the Annual Catch Target (ACT) for each sector. 
+
+\vspace{2ex}
+
+The Monitoring Committee projects sector specific discards and subtracts them from each sector's ACT to determine the Recreational Harvest Limit (RHL) and the Commercial Quota. 
+
+\vspace{2ex}
+
+Commercial quota is allocated to states or seasons as specified in FMPs. These allocations require an amendment or framework to change.
+
+::: {.ltpurplebox data-latex=""}
+## Important 
+
+The scope for use of indicators in this process requires clarification. Workshop participants should consider whether routine/tactical committee decisions, strategic FMP decisions, or all decisions should be considered. 
+::: 
 
 
 :::
@@ -66,52 +94,31 @@ a column separator -->
 ::: {.ltgreenbox data-latex=""}
 ## Information sources for indicators 
 
-[Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports) conceptual models and indicators for MAFMC stocks:
-
-*  Black Sea Bass 
-*  Bluefish 
-*  Golden Tilefish
-*  Longfin squid 
-*  Shortfin squid
+Workshop 1 discussion suggested that indicators may help with average vs annual ABC decision; clarification is requested
 
 \vspace{1ex}
 
-[State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) and [Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf) indicators
+Management uncertainty buffer estimation could include ecosystem information such as projected stock productivity and distribution. [Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports) conceptual models and indicators for MAFMC stocks, the fish and invertebrate [Climate Vulnerability Analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0146756) sensitivity, exposure and vulnerability rankings, [State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) and [Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf) indicators could be applied here.
 
 \vspace{1ex}
 
-The fish and invertebrate [Climate Vulnerability Analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0146756) sensitivity, exposure and vulnerability rankings
+Discard estimation/projection could include similar ecosystem information as above on projected stock productivity and distribution, and also consider habitat conditions leading to different product quality or discard survival based on multiple Essential Fish Habitat sources such as [EFH Habitat Mapper](https://www.fisheries.noaa.gov/resource/map/essential-fish-habitat-mapper) or [NRHA Data Explorer](https://nrha.shinyapps.io/dataexplorer/) combined with projected habitat conditions from [MOM6 regional ocean projections](https://psl.noaa.gov/cefi_portal/).  
 
 \vspace{1ex}
 
-Multiple Essential Fish Habitat sources:
-
-*  [EFH Habitat Mapper](https://www.fisheries.noaa.gov/resource/map/essential-fish-habitat-mapper)
-*  [NRHA Data Explorer](https://nrha.shinyapps.io/dataexplorer/)
-*  [Fishing Gear Effects Database](https://fishmaps.shinyapps.io/FishingEffectsDatabase/)
-
-\vspace{1ex}
-
-And many other potential sources:
-
-*  [NEFSC Surveys](https://www.fisheries.noaa.gov/inport/item/22549)
-*  [NEFSC Food Habits](https://fwdp.shinyapps.io/tm2020/)
-*  [NEAMAP Survey and Food Habits](https://www.vims.edu/research/units/programs/multispecies_fisheries_research/neamap/)
-*  [GARFO Catch and Monitoring System](https://www.fisheries.noaa.gov/new-england-mid-atlantic/commercial-fishing/quota-monitoring-greater-atlantic-region)
-*  [Atlantic Coastal Cooperative Statistics Programa](https://safis.accsp.org/accsp_prod/f?p=1490:1:6442641492940:::::)
-*  [Marine Recreational Information Program](https://www.fisheries.noaa.gov/recreational-fishing-data/introduction-marine-recreational-information-program-data)
-*  [GLORYS ocean reanalysis](https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/description)
+If FMP amendments or frameworks are considered to alter allocations, [GARFO Catch and Monitoring System](https://www.fisheries.noaa.gov/new-england-mid-atlantic/commercial-fishing/quota-monitoring-greater-atlantic-region), [Atlantic Coastal Cooperative Statistics Programa](https://safis.accsp.org/accsp_prod/f?p=1490:1:6442641492940:::::), and [Marine Recreational Information Program](https://www.fisheries.noaa.gov/recreational-fishing-data/introduction-marine-recreational-information-program-data) information along with
+SOE or ESP economic and social indicators could inform these decisions.
 
 ### Potential Pathways
 
-*  Ecosystem information can enter at some portion of steps 1, 2, 4, and 5. These pathways are detailed in separate 1 page summaries.
-*  The Council could recommend additional assessment or review ToRs in steps 1 and 3.
+*  The Council 
+*  The Monitoring Committee
 
 
 ::: {.ltpurplebox data-latex=""}
 ## Information gaps 
 
-Ecosystem and Socioeconomic Profiles evaluate and select stock specific ecosystem and socioeconomic indicators that can be useful across many steps of the Catch/Quota setting process; these are currently unavailable for summer flounder, scup, mackerel, butterfish, surfclam, ocean quahog, blueline tilefish, spiny dogfish, and monkfish. 
+Ecosystem and Socioeconomic Profiles are currently unavailable for summer flounder, scup, mackerel, butterfish, surfclam, ocean quahog, blueline tilefish, spiny dogfish, and monkfish. 
 
 ::: 
 :::
