@@ -28,7 +28,7 @@ library(patchwork)
 # Catch/Quota Setting Step 1: Determine Assessment Priorities
 
 ::: {.noteblock data-latex=""}
-Catch and Quota Setting is a multistep process involving decisions by the Northeast Regional Coordinating Committee (NRCC; including the Mid Atlantic and New England Councils, Atlantic States Marine Fisheries Commission, and NOAA's Greater Atlantic Regional Fisheries Office and Northeast Fisheries Science Center), assessment scientists, assessment peer reviewers, the Council's Scientific and Statistical Committee (SSC), and the Council. Information for each stock and fishery is reviewed and synthesized to determine catch and quota levels that meet management objectives.
+Catch and Quota Setting is a multistep process involving decisions by the Northeast Regional Coordinating Committee (NRCC; including the Mid Atlantic and New England Councils, Atlantic States Marine Fisheries Commission, and NOAA's Greater Atlantic Regional Fisheries Office and Northeast Fisheries Science Center), assessment scientists, assessment peer reviewers, the Council's Scientific and Statistical Committee (SSC), Monitoring Committees, and the Council. Information for each stock and fishery is reviewed and synthesized to determine catch and quota levels that meet management objectives.
 :::
 
 *  **Key question: What additional indicators could inform NRCC decisions at the Assessment Prioritization step in the Catch/Quota setting process? Could habitat, ecosystem, or socioeconomic indicators improve the process?** 
@@ -49,7 +49,7 @@ fishery importance, stock status and trend, ecosystem importance, assessment inf
 biology. Terms of Reference (ToRs) ensure the assessment process delivers consistent, management-relevant outputs.
 ::: 
 
-The NRCC [prioritization process](https://d23h0vhsm26o6d.cloudfront.net/NRCC_Assessment_Process_Version-Jun2025_508.pdf) establishes assessment schedules by scoring stocks using rubrics modified from a [NMFS assessment prioritization method](https://www.st.nmfs.noaa.gov/Assets/stock/documents/PrioritizingFishStockAssessments_FinalWeb.pdf). The NRCC sets, reviews, and adjusts 5 year assessment schedules to align with and address management priorities throughout the region. 
+The NRCC [prioritization process](https://d23h0vhsm26o6d.cloudfront.net/NRCC_Assessment_Process_Version-Jun2025_508.pdf) establishes assessment schedules by scoring stocks using rubrics modified from a [NMFS assessment prioritization method](https://www.st.nmfs.noaa.gov/Assets/stock/documents/PrioritizingFishStockAssessments_FinalWeb.pdf). Current scoring is based on combinations of catch and assessment data, [climate vulnerability analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0146756) and expert opinion. The NRCC sets, reviews, and adjusts 5 year assessment schedules to align with and address management priorities throughout the region. 
 
 \vspace{2ex}
 
@@ -120,6 +120,7 @@ Current assessments, [Ecosystem and Socioeconomic Profiles](https://www.fisherie
 
 ### Potential Pathways
 
+*  Integrating indicators at this step would be an NRCC process, including MAFMC and partners
 *  NRCC prioritization could apply standard indicators at either the stock or full ecosystem level 
 *  Specific RT or MT ToRs could be developed addressing ecosystem change
 
@@ -127,7 +128,7 @@ Current assessments, [Ecosystem and Socioeconomic Profiles](https://www.fisherie
 ::: {.ltpurplebox data-latex=""}
 ## Information gaps 
 
-The specific assessment prioritization scoring rubrics applied by the NRCC would need to be provided in order to evaluate the potential for improved indicator use in this process.
+Further details on current NRCC prioritization is needed to evaluate the potential for improved indicator use in this process.
 
 
 ::: 
