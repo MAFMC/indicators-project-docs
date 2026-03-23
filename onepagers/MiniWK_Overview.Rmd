@@ -27,7 +27,7 @@ library(patchwork)
 
 # MAFMC Indicators Project: Mini-Workshop Overview
 
-Workshop objective: Scope development of operational ecosystem indicators for 2 priority Council management decisions.
+Workshop objective: Outline development of indicators and processes to use them in 2 priority Council management decisions.
 
 ## Mini-Workshop Introduction 
 
@@ -60,7 +60,7 @@ Presentations:
 *Things to think about...*
 
 ## Discussion 1
-*  Confirm management objectives for priority decisions 
+*  Confirm management objectives for two priority decisions 
 *  Do the decisions already have indicators available or information in hand?
 *  Should we examine linked decisions independently?
 
@@ -86,8 +86,8 @@ includes a clear description of tradeoffs
 ::: {.ltpurplebox data-latex=""}
 *Example: Measures setting* 
 
-*  Target: maintain 5 different species/area/gear opportunities each month 
-*  Threshold: opportunities in a species/area/gear are 2 or fewer in a month 
+*  Target: maintain 5 different species/area/gear fishing opportunities each month 
+*  Threshold: fishing opportunities in a species/area/ gear are 2 or fewer in a month 
 :::
 :::
 
