@@ -28,8 +28,7 @@ library(patchwork)
 # Spatial Measures: Potential Indicators and Pathways
 
 ::: {.noteblock data-latex=""}
-[Need some background sentence & links here on the decision process]. Two cases identified for spatial measures implemented by the Council: bycatch avoidance and  establishing habitat conservation areas. 
-
+Spatial management encompasses both decision processes surrounding delineation of management units (and how they correspond to stock units) and also as a subset of measures setting, with area-based designations for subsets of fishing activities. The spatial distributions of both fishery resources and fishing fleets are dynamic and responsive to multiple socio-economic and environmental drivers. Two cases were identified for spatial measures implemented by the Council that could be informed by ecosystem indicators: bycatch avoidance and establishing habitat conservation areas. 
 :::
 
 *  **Key question: Can real time or projected habitat conditions assist with spatial measures setting??** 
@@ -41,11 +40,7 @@ library(patchwork)
 ::: {.col data-latex="{0.49\textwidth}"}
 ::: {.ltbluebox data-latex=""}
 ## What information is used now?
-There are several current examples that use habitat indicators to forecast bycatch potential.  
-
-**GF: Should the in dev tools be moved to rhs? Should something like the scup GRAs be here instead?**
-
-[RHAPcast](https://www.rhapcast.org/index.html) uses species distribution model output and hindcast forecasts of habitat (sea surface temperature) to identify areas that maximize target species encounters while minimizing bycatch species encounters.  
+There are several current examples that use habitat indicators to forecast bycatch potential. The recently developed [RHAPcast](https://www.rhapcast.org/index.html) uses species distribution model output and hindcast forecasts of habitat (sea surface temperature) to identify areas that maximize target species encounters while minimizing bycatch species encounters. This tool is similar to the [Turtlewatch](https://oceanwatch.pifsc.noaa.gov/turtlewatch.html) approach in the Pacific.    
 
 ```{r newriskpol, out.width="90%"}
 knitr::include_graphics(here::here("onepagers/rhapcast-screencap.png"))
@@ -65,32 +60,40 @@ a column separator -->
 ::: {.ltgreenbox data-latex=""}
 ## Information sources for indicators
 
-List current info sources from google doc
-
 ### Potential Indicator Sources
 
-* DisMAP (survey data)
-* NRHA data explorer (SDMs)
-* MOM6 (ocean model data products)
-* rhapcast
-* NEFSC fishing effort footprints
+* Observer data bycatch estimates
+* Species distribution models and data products, e.g. DisMAP (survey data) and NRHA data explorer
+* Spatiotemporal environmental forecasts from ocean model output (e.g. MOM6)
+* Fishing effort distributions / footprints
+* Effects of Fishing database
 
 [State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) and [Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf) indicators
 
 
 ### Potential Pathways
-*  Evaluate measures with indicators of fishery and species spatial overlap
-- Spatial distribution of fishery (confidential data, can we get it? Commercial and rec?)
-- Spatial distribution of species (survey data, can we get it?)
-- Spatial model 
-*  Simulate distribution shifts, fleet movement constraints, etc.
-*  Determine what spatial management measures meet objectives with minimal side effects?
 
+__Bycatch__   
+* Some spatial indicators could achieve management objectives for bycatch reduction if appropriate indicator information were made available to fishery participants so that they could decide how to avoid bycatch, rather than Council decisions.  
+* Indicators of bycatch magnitude for certain areas could be monitored with respect to thresholds that would trigger spatial measures
+
+__Establishing habitat conservation areas__   
+Once objectives for conservation areas are established, an analysis could proceed by:  
+* Evaluate area measures with indicators of fishery and species spatial overlap:
+- Spatial distribution of fishery
+- Spatial distribution of species
+- Spatial model 
+* Determine habitat effects of fishing activity (e.g. benthic impact studies)
+* Simulate relevant system drivers (species distribution shifts, fleet movement constraints, etc.)
+* Determine what spatial management measures meet objectives with minimal side effects?
+
+
+_GF: Do we want to include thigns like spatial habitat quotas / here? [ie fishing in certain areas 'costs' more]_
 
 ::: {.ltpurplebox data-latex=""}
 ## Information gaps 
 
-Spatial distribution of fishing effort may not be available/accessible for all sectors / fleets. Challenges of mapping fleet effort to specific species.
+Spatial distribution of fishing effort may not be available/accessible for all sectors / fleets. There are often challenges to map fishing fleet effort to specific species.  
 
 
 ::: 
