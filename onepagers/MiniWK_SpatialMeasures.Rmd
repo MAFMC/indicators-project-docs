@@ -40,13 +40,29 @@ Spatial management encompasses both decision processes surrounding delineation o
 ::: {.col data-latex="{0.49\textwidth}"}
 ::: {.ltbluebox data-latex=""}
 ## What information is used now?
-There are several current examples that use habitat indicators to forecast bycatch potential. The recently developed [RHAPcast](https://www.rhapcast.org/index.html) uses species distribution model output and hindcast forecasts of habitat (sea surface temperature) to identify areas that maximize target species encounters while minimizing bycatch species encounters. This tool is similar to the [Turtlewatch](https://oceanwatch.pifsc.noaa.gov/turtlewatch.html) approach in the Pacific.    
 
-```{r newriskpol, out.width="90%"}
+The general process for setting spatial measures can be the same as for all other measures as noted in the Measures Setting 1-pager.  Measures are set in specifications. The process for setting measures can be changed by either FMP amendment or framework action. 
+
+\vspace{1ex}
+
+The seasonal Scup Gear Restricted Areas (GRAs) are spatial measures designed to reduce juvenile scup discards in small mesh fisheries. The GRAs have remained the same for decades. They are currently being [re-evaluated](https://ccesuffolk.org/marine/fisheries/scup-gra) using fishing and environmental data as well as industry expertise.
+
+\vspace{1ex}
+
+There are several current examples that use habitat indicators to forecast bycatch potential in near-real time. The recently developed [RHAPcast](https://www.rhapcast.org/index.html) uses species distribution model output and hindcast forecasts of habitat (sea surface temperature) to identify areas that maximize target species encounters while minimizing bycatch species encounters. This tool is similar to the [Turtlewatch](https://oceanwatch.pifsc.noaa.gov/turtlewatch.html) approach in the Pacific.   
+
+\vspace{1ex}
+
+```{r rhapcast, out.width="87%", fig.align='center'}
 knitr::include_graphics(here::here("onepagers/rhapcast-screencap.png"))
 ```
 
+\vspace{1ex}
+
+Stock and fishery distribution shifts are also being addressed from a [governance perspective](https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/68e67a313a977f0b7ec34724/1759935025455/Project+7_IRA-Project-Brief.pdf). Indicators developed for this project may also be useful for developing and evaluating spatial measures. 
+
 :::
+
 
 :::
 
@@ -66,42 +82,47 @@ a column separator -->
 * Species distribution models and data products, e.g. DisMAP (survey data) and NRHA data explorer
 * Spatiotemporal environmental forecasts from ocean model output (e.g. MOM6)
 * Fishing effort distributions / footprints
-* Effects of Fishing database
-
-[State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) and [Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf) indicators
+* Effects of Fishing database 
+* [State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) and [Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf) indicators
 
 
 ### Potential Pathways
 
 __Bycatch__   
-* Some spatial indicators could achieve management objectives for bycatch reduction if appropriate indicator information were made available to fishery participants so that they could decide how to avoid bycatch, rather than Council decisions.  
-* Indicators of bycatch magnitude for certain areas could be monitored with respect to thresholds that would trigger spatial measures
 
-__Establishing habitat conservation areas__   
-Once objectives for conservation areas are established, an analysis could proceed by:  
-* Evaluate area measures with indicators of fishery and species spatial overlap:
-- Spatial distribution of fishery
-- Spatial distribution of species
-- Spatial model 
-* Determine habitat effects of fishing activity (e.g. benthic impact studies)
-* Simulate relevant system drivers (species distribution shifts, fleet movement constraints, etc.)
-* Determine what spatial management measures meet objectives with minimal side effects?
+*  Some spatial indicators could achieve management objectives for bycatch reduction if appropriate indicator information were made available to fishery participants so that they could decide how to avoid bycatch, rather than Council decisions. 
+*  Indicators of bycatch magnitude for certain areas could be monitored with respect to thresholds that would trigger spatial measures
 
+\vspace{2ex}
 
-_GF: Do we want to include thigns like spatial habitat quotas / here? [ie fishing in certain areas 'costs' more]_
+__Establishing habitat conservation areas__  
 
-::: {.ltpurplebox data-latex=""}
-## Information gaps 
+Once objectives for conservation areas are established, an analysis could proceed by:
 
-Spatial distribution of fishing effort may not be available/accessible for all sectors / fleets. There are often challenges to map fishing fleet effort to specific species.  Spatial measures also have implications for future monitoring.  
+*  Evaluate area measures with indicators of fishery and species spatial overlap:  
+    - Spatial distribution of fishery 
+    - Spatial distribution of species 
+    - Spatial model 
+*  Determine habitat effects of fishing activity (e.g. benthic impact studies) 
+*  Simulate relevant system drivers (species distribution shifts, fleet movement constraints, etc.) 
+*  Determine what spatial management measures meet objectives with minimal side effects? 
 
+<!--
+_GF: Do we want to include things like spatial habitat quotas / here? [ie fishing in certain areas 'costs' more]_
+-->
 
-::: 
 :::
 :::
 
 ::::::
 
 
+::: {.ltpurplebox data-latex=""}
+## Information gaps 
+
+Spatial distribution of fishing effort may not be available/accessible for all sectors / fleets. There are often challenges to map fishing fleet effort to specific species, and with mismatches in spatial and temporal scale of management areas and processes. Spatial measures also have implications for future monitoring.  
+
+
+::: 
 
 
