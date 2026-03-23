@@ -99,7 +99,7 @@ Components of the prioritization process use distinct information.
 
 \vspace{1ex}
 
-[State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) indicators of performance relative to seafood production, profits, and recreational opportunities could inform relative *Fishery importance*. Additional data from the [GARFO Catch and Monitoring System](https://www.fisheries.noaa.gov/new-england-mid-atlantic/commercial-fishing/quota-monitoring-greater-atlantic-region), [Atlantic Coastal Cooperative Statistics Programa](https://safis.accsp.org/accsp_prod/f?p=1490:1:6442641492940:::::), and [Marine Recreational Information Program](https://www.fisheries.noaa.gov/recreational-fishing-data/introduction-marine-recreational-information-program-data) could be included.
+[State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) management performance indicators and [NEFSC SSB Commercial Fishing Performance Measures](https://apps-nefsc.fisheries.noaa.gov/pm/index.php) could inform relative *Fishery importance*. Additional data from the [GARFO Catch and Monitoring System](https://www.fisheries.noaa.gov/new-england-mid-atlantic/commercial-fishing/quota-monitoring-greater-atlantic-region), [Atlantic Coastal Cooperative Statistics Programa](https://safis.accsp.org/accsp_prod/f?p=1490:1:6442641492940:::::), and [Marine Recreational Information Program](https://www.fisheries.noaa.gov/recreational-fishing-data/introduction-marine-recreational-information-program-data) could be included.
   
 \vspace{1ex}
 
