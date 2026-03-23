@@ -93,7 +93,7 @@ _GF: Do we want to include thigns like spatial habitat quotas / here? [ie fishin
 ::: {.ltpurplebox data-latex=""}
 ## Information gaps 
 
-Spatial distribution of fishing effort may not be available/accessible for all sectors / fleets. There are often challenges to map fishing fleet effort to specific species.  
+Spatial distribution of fishing effort may not be available/accessible for all sectors / fleets. There are often challenges to map fishing fleet effort to specific species.  Spatial measures also have implications for future monitoring.  
 
 
 ::: 
