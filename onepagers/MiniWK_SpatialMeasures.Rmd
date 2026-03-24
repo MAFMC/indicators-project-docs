@@ -31,7 +31,7 @@ library(patchwork)
 Spatial management encompasses both decision processes surrounding delineation of management units (and how they correspond to stock units) and also as a subset of measures setting, with area-based designations for subsets of fishing activities. The spatial distributions of both fishery resources and fishing fleets are dynamic and responsive to multiple socio-economic and environmental drivers. Two cases were identified for spatial measures implemented by the Council that could be informed by ecosystem indicators: bycatch avoidance and establishing habitat conservation areas. 
 :::
 
-*  **Key question: Can real time or projected habitat conditions assist with spatial measures setting??** 
+*  **Key question: Can real time or projected habitat conditions assist with spatial measures setting?** 
 *  **Scope: demo for one species or develop a more general approach/process for all?** 
 
 
@@ -90,14 +90,14 @@ a column separator -->
 
 __Bycatch__   
 
-*  Some spatial indicators could achieve management objectives for bycatch reduction if appropriate indicator information were made available to fishery participants so that they could decide how to avoid bycatch, rather than Council decisions. 
-*  Indicators of bycatch magnitude for certain areas could be monitored with respect to thresholds that would trigger spatial measures
+*  Appropriate spatial indicator information could be provided to fishery participants to help them decide how to avoid bycatch and achieve management objectives for bycatch reduction, and/or the Council could implement spatial measures.
+*  Indicators of bycatch magnitude for specific areas could be monitored with respect to thresholds that would trigger spatial measures
 
 \vspace{2ex}
 
 __Establishing habitat conservation areas__  
 
-Once objectives for conservation areas are established, an analysis could proceed by:
+Once objectives for conservation areas are established, an analysis could:
 
 *  Evaluate area measures with indicators of fishery and species spatial overlap:  
     - Spatial distribution of fishery 
@@ -120,7 +120,7 @@ _GF: Do we want to include things like spatial habitat quotas / here? [ie fishin
 ::: {.ltpurplebox data-latex=""}
 ## Information gaps 
 
-Spatial distribution of fishing effort may not be available/accessible for all sectors / fleets. There are often challenges to map fishing fleet effort to specific species, and with mismatches in spatial and temporal scale of management areas and processes. Spatial measures also have implications for future monitoring.  
+Spatial distribution of fishing effort may not be available/accessible for all sectors/fleets due to confidentiality. There are often challenges to map fishing fleet effort to specific species, and with mismatches in spatial and temporal scale of management areas and processes. Spatial measures also have implications for future monitoring.  
 
 
 ::: 
