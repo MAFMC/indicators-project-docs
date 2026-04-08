@@ -12,7 +12,11 @@ urlcolor: blue
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
+
+library(patchwork)
 ```
 
 # Executive Summary
@@ -29,8 +33,8 @@ The 2 priority management decisions were selected from the list of 4 decisions d
 The workshop included an introductory presentation from the project team, including poll results, followed by three discussions to scope development of operational ecosystem indicators for the 2 priority decisions. Discussion 1 reviewed the relative merits of developing indicators for each priority decision. Discussion 2 identified desirable and undesirable states for management outcomes. Discussion 3 outlined potential indicator targets or thresholds tied to desirable and undesirable states. The key takeaways of each discussion are outlined here, and detailed in the main report.
 
 ## Discussion 1: Indicators and approach for each decision
-*  **Risk policy:**  consider risk indicators in addition to stock status 
-*  **Catch/quota setting:** communicate information available/used throughout the process. Consider Assessment, SSC ABC, Monitoring Committee, and Council processes 
+*  **Risk policy:**  consider social or economic risk indicators in addition to stock status while retaining overall simplicty of the approach. Start by reviewing cases where the Council has suspended the risk policy. Retain broad scope for application across species.
+*  **Catch/quota setting:** review and communicate information available/used throughout the process to ensure indicators are not "double counted". Consider inforamtion used in prioritization and assessment but focus on developing new indicators for SSC ABC, Monitoring Committee, and Council processes. Consider a detailed application for a particular species.
 
 ## Discussion 2: Desirable and undesirable states
 *  **Risk policy:**  consider risk indicators in addition to stock status 
@@ -139,13 +143,59 @@ prior2 <- totprior[2,]
 
 ```
 
+Results for each question showed a majority prioritizing Risk Policy first. The next highest priority decision measured across all respondents was Catch/Quota setting. 
+
+```{r priority1, fig.asp=0.9, out.width="100%"}
+
+decision_cols <- c("Risk Policy" = "red", "Catch/Quota Setting" = "blue", "Measures Setting" = "purple","Spatial Measures" = "green" )
+
+p1 <- ggplot2::ggplot(responses, ggplot2::aes(x = forcats::fct_rev(forcats::fct_infreq(Priority1)),
+                                              fill = Priority1)) +
+  ggplot2::geom_bar() +
+  ggplot2::ggtitle("Priority 1") +
+  ggplot2::xlab(NULL) +
+  ggplot2::scale_fill_manual(values = decision_cols) +
+  ggplot2::coord_flip() +
+  ggplot2::theme(legend.position = "none")
+
+p2 <- ggplot2::ggplot(responses, ggplot2::aes(x = forcats::fct_rev(forcats::fct_infreq(Priority2)),
+                                              fill = Priority2)) +
+  ggplot2::geom_bar() +
+  ggplot2::ggtitle("Priority 2") +
+  ggplot2::xlab(NULL) +
+  ggplot2::scale_fill_manual(values = decision_cols) +
+  ggplot2::coord_flip() +
+  ggplot2::theme(legend.position = "none")
+
+#print(p1 + p2, vp=grid::viewport(gp=grid::gpar(cex=1.5)))
+p1/p2
+
+```
+
+```{r poll, ft.arraystretch = 1}
+#latex ignores flextable::line_spacing so ft.arraystretch argument in chunk header is as close as we get
+
+flextable::flextable(totprior) |>
+  flextable::set_header_labels(Val = "Decision",
+                               n = "Votes",
+                               perc = "% Total Votes") |>
+  flextable::colformat_double(digits = 0) |>
+  flextable::width(width = c(1.5,0.5,0.8)) |>
+  flextable::fontsize(size = 9, part = "all") 
+```
+
+
+One later response and discussion during the workshop confirmed Catch/Quota setting as high priority. 
+All who prioritized "Risk Policy" would focus on "General" scope. 
+
+"Catch/Quota Setting" had 57% recommending a "Detailed example" for one species. However, there was not a clear majority for which species. Summer flounder and black sea bass had the most support considering both the poll and the workshop discussion, but squids were mentioned many times as well. 
 
 Next, current processes for each priority decision were reviewed, along with potential information sources and pathways to test and use the indicators.
 
 
 # Workshop Discussion Summary
 
-Discussions made up the majority of the workshop. All discussions were conducted in plenary with all participants. Each discussion had a discussion facilitator from the project team and a note taker. At the end of the discussions, a project team member summarized the main points. Notes from all discussions were reviewed and combined into this summary. 
+Discussions made up the majority of the workshop. All discussions were conducted in plenary with all participants. Each discussion had a discussion facilitator from the project team and multiple note takers. At the end of the discussions, a project team lead summarized the main points. Notes from all discussions were reviewed and combined into this summary. 
 
 ## Discussion 1:  Relative merits of developing indicators for each priority decision
 
@@ -197,12 +247,18 @@ Pick a species: BSB or Fluke?
 
 # List of Appendices
 
-1. Workshop [Agenda](https://www.mafmc.org/s/Workshop-1-Final-Agenda.pdf)
+1. Workshop [Agenda](https://www.mafmc.org/s/1_Final-Mini-Workshop-Agenda.pdf)
 1. Workshop Attendees
-1. Workshop Overview [1-pager](https://www.mafmc.org/s/1_WK1_Overview.pdf)
-1. Definitions [1-pager](https://www.mafmc.org/s/2_WK1_Definitions.pdf)
-1. Management Decisions [1-pager](https://www.mafmc.org/s/3_WK1_MgtDecisions.pdf)
-1. Workshop Results [1-pager](https://www.mafmc.org/s/WK1_Results-Summary.pdf)
+1. Workshop Overview [1-pager](https://www.mafmc.org/s/2_MiniWK_Overview.pdf)
+1. Risk Policy [1-pager](https://www.mafmc.org/s/3_MiniWK_RiskPolicy.pdf)
+1. Catch/Quota Setting Overview [1-pager](https://www.mafmc.org/s/4_MiniWK_CatchQuotas.pdf)
+    +  Catch/Quota Setting Step 1: Prioritization [1-pager](https://www.mafmc.org/s/4a_MiniWK_CatchQuotas_1_Prioritize.pdf)
+    +  Catch/Quota Setting Step 2: Assessment [1-pager](https://www.mafmc.org/s/4b_MiniWK_CatchQuotas_2_Assess.pdf)
+    +  Catch/Quota Setting Step 4: ABC [1-pager](https://www.mafmc.org/s/4c_MiniWK_CatchQuotas_4_ABC.pdf)
+    +  Catch/Quota Setting Step 5: ACL/ACT/Quotas [1-pager](https://www.mafmc.org/s/4d_MiniWK_CatchQuotas_5_ACLACTQuota.pdf)
+1. Measures Setting [1-pager](https://www.mafmc.org/s/5_MiniWK_MeasuresSetting.pdf)
+1. Spatial Measures [1-pager](https://www.mafmc.org/s/6_MiniWK_SpatialMeasures.pdf)
+1. Workshop Summary [1-pager]()
 
 # References
 
