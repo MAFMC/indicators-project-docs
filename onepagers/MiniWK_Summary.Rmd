@@ -1,0 +1,151 @@
+---
+title: |
+output:
+  pdf_document:
+    keep_tex: true
+    includes:
+      in_header: latex/boxescolumns.tex
+  html_document:
+    css: columns.css
+    df_print: paged
+geometry: margin = 0.5in
+link-citations: true
+urlcolor: blue
+---
+
+\vspace{-1cm}
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      warning = FALSE,
+                      message = FALSE)
+
+library(patchwork)
+
+# can I set up 2 columns with highlight boxes in each? yes
+
+```
+
+```{r polldat}
+
+# once file has been downloaded use this
+responses <- read.csv("https://github.com/sgaichas/HSpresentations/raw/refs/heads/main/Projects/MAFMC_Indicators/Priority%20Management%20Decisions%20(Responses).csv",header=T)
+
+# separate question number and element name? numbers are duplicates so just use name
+
+#names(responses) <- sub("^X.*\\.\\.\\.","",names(responses))
+names(responses)[-1] <- c("Priority1", "Scope1", "Species1", "Priority2", "Scope2", "Species2")
+
+lookup <- c(
+  #long = short
+  "Develop a detailed example tailored to a particular species (Please write in species below)" = "Detailed example",
+  "Develop a general process that could work across species/FMPs" = "General process"
+)
+
+responses$Scope1Brief <- unname(lookup[responses$Scope1])
+responses$Scope2Brief <- unname(lookup[responses$Scope2])
+
+respsumm <- responses |>
+  dplyr::select(Priority1, Scope1Brief, Species1, Priority2, Scope2Brief, Species2) |>
+  tibble::rownames_to_column("ID") |>
+  tidyr::pivot_longer(-ID, names_to = "Var", values_to = "Val") 
+  
+totprior <- respsumm |>
+  dplyr::filter(Var %in% c("Priority1", "Priority2")) |>
+  dplyr::group_by(Val) |>
+  dplyr::summarise(n = dplyr::n(),
+                   perc = n/nrow(responses)*100) |>
+  dplyr::arrange(desc(perc))
+
+prior1 <- totprior[1,]
+
+prior2 <- totprior[2,]
+
+```
+
+# MAFMC Indicators Project: Mini-Workshop Results
+
+Workshop objective: Outline development of indicators and processes to use them in 2 priority Council management decisions.
+
+## Mini-Workshop Introduction 
+
+::: {.noteblock data-latex=""}
+[Presentation](https://sgaichas.github.io/HSpresentations/20260331_ProjectOverview_MiniWK_Gaichas.html):  
+
+1. A quick overview of the [project](https://www.mafmc.org/s/Project-5_IRA-Project-Brief.pdf) and [decisions made at Workshop 1](https://www.mafmc.org/s/WK1_Results-Summary.pdf)  
+
+2. Reviewed pre-workshop poll: prioritized [Risk Policy](https://www.mafmc.org/s/3_MiniWK_RiskPolicy.pdf), and [Catch/Quota Setting](https://www.mafmc.org/s/4_MiniWK_CatchQuotas.pdf) 
+
+3. Reviewed current processes and information available for Risk Policy and Catch/Quota Setting
+:::
+
+::: {.ltgreenbox data-latex=""}
+## Workshop Discussions and Outcomes 
+
+**Goal:** Prioritize 2 decisions and associated indicators for further development and testing of targets and thresholds 
+
+**Discussion 1:** Discussed the relative merits of developing indicators for each priority management decision 
+
+**Discussion 2:** Identifed desirable and undesirable states for the priority management outcomes 
+
+**Discussion 3:** Discussed potential targets or thresholds associated with indicators related to management decisions
+:::
+
+:::::: {.cols data-latex=""}
+::: {.col data-latex="{0.49\textwidth}"}
+::: {.ltpurplebox data-latex=""}
+**Prioritization Poll Results** 
+```{r poll, ft.arraystretch = 1}
+#latex ignores flextable::line_spacing so ft.arraystretch argument in chunk header is as close as we get
+
+flextable::flextable(totprior) |>
+  flextable::set_header_labels(Val = "Decision",
+                               n = "Votes",
+                               perc = "% Total Votes") |>
+  flextable::colformat_double(digits = 0) |>
+  flextable::width(width = c(1.5,0.5,0.8)) |>
+  flextable::fontsize(size = 9, part = "all") 
+```
+**Scope:** All who prioritized "Risk Policy" would focus on "General" scope. 
+"Catch/Quota Setting" had 57% recommending a "Detailed example" for one species.
+:::
+## Discussion 1
+*  Confirm management objectives for two priority decisions 
+*  Do the decisions already have indicators available or information in hand?
+*  Should we examine linked decisions independently?
+
+
+## Discussion 2 
+*  What is a desirable outcome for the management decision? 
+*  What is undesirable?
+*  A **good decision** is responsive and timely, incorporating new information as it becomes available, providing more flexible opportunities for fishing, and 
+includes a clear description of tradeoffs
+
+
+## Discussion 3
+*  Indicator targets are points or ranges associated with desirable states
+*  Indicator thresholds are points transitioning to undesirable states and require action if crossed
+:::
+
+::: {.col data-latex="{0.02\textwidth}"}
+\ 
+<!-- an empty Div (with a white space), serving as
+a column separator -->
+:::
+
+::: {.col data-latex="{0.49\textwidth}"}
+*Project Steps: This mini-workshop focused on Management Decisions and linked Objectives, Information Supporting Decisions, links from Objectives to Targets and Thresholds, and preliminary Indicator Development*
+
+```{r projectoutline, out.width="100%"}
+magick::image_read("https://github.com/sgaichas/HSpresentations/raw/main/docs/images/indicatorsproject-miniwk.png")
+```
+
+::: {.ltbluebox data-latex=""}
+*This workshop addressed project goals:*  
+*  Review and assess existing indicators and evaluate their utility to support management objectives  
+*  Identify and develop priority ecosystem and habitat indicators, including associated targets and thresholds as appropriate, and identify specific pathways for incorporation into Council management processes 
+:::
+:::
+::::::
+
+
+

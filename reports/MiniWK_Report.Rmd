@@ -12,19 +12,19 @@ urlcolor: blue
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 # Executive Summary
 
-The Mid-Atlantic Fishery Management Council Inflation Reduction Act Project 5, "Operationalizing Ecosystem and Habitat Indicators to Support Climate-Ready Fisheries Management in the Mid-Atlantic" (MAFMC Indicators Project) held an online workshop on March 31, 2026. The workshop objective was to outline development of indicators and processes to use them in 2 priority Council management decisions. Workshop materials are posted at https://www.mafmc.org/council-events/2026/eco-hab-indicators-workshop.
+The Mid-Atlantic Fishery Management Council Inflation Reduction Act Project 5, "Operationalizing Ecosystem and Habitat Indicators to Support Climate-Ready Fisheries Management in the Mid-Atlantic" (MAFMC Indicators Project) held an online workshop on March 31, 2026. The workshop focused on transitioning from the broader review phase of the project to phase two developing and testing specific indicators for decision-making. The workshop objective was to outline development of indicators and processes to use them in 2 priority Council management decisions. Workshop materials are posted at https://www.mafmc.org/council-events/2026/eco-hab-indicators-workshop.
 
 A total of 33 people attended the workshop, including 28 participants from the Council, Council Advisory Panels, Scientific and Statistical Committee (SSC), Council staff, as well as staff from the New England Council, Atlantic States Marine Fisheries Commission, Greater Atlantic Regional Fisheries Office, and the Northeast Fisheries Science Center, in addition to the project team. Five University of Massachusetts School for Marine Science and Technology graduate students also attended and supported the meeting. 
 
 The 2 priority management decisions were selected from the list of 4 decisions developed in [December 2025](https://www.mafmc.org/council-events/2025/dec-10/indicators-workshop) based on responses to polling conducted prior to the online workshop. Selected decisions were:
 
-1. Risk Policy
-1. Catch/Quota Setting
+1. [Risk Policy](https://www.mafmc.org/s/3_MiniWK_RiskPolicy.pdf)
+1. [Catch/Quota Setting](https://www.mafmc.org/s/4_MiniWK_CatchQuotas.pdf)
 
 The workshop included an introductory presentation from the project team, including poll results, followed by three discussions to scope development of operational ecosystem indicators for the 2 priority decisions. Discussion 1 reviewed the relative merits of developing indicators for each priority decision. Discussion 2 identified desirable and undesirable states for management outcomes. Discussion 3 outlined potential indicator targets or thresholds tied to desirable and undesirable states. The key takeaways of each discussion are outlined here, and detailed in the main report.
 
@@ -79,7 +79,68 @@ A 1-page Workshop Summary was also developed and is included as Appendix 6.
 
 The workshop began with a round of introductions, followed by an introductory presentation. The [presentation](https://sgaichas.github.io/HSpresentations/20260331_ProjectOverview_MiniWK_Gaichas.html) briefly reviewed the overall MAFMC Indicators Project goals and objectives, timeline, current progress, and planned activities.  
 
-Poll results were then summarized. 
+Poll results were then summarized. The poll had four multiple choice questions and two short answer questions:
+
+1. What is the highest priority management measure this project should focus on? 
+     + Risk Policy 
+     + Catch/Quota Setting 
+     + Measures Setting 
+     + Spatial Measures 
+1. What is the scope of the highest priority management decision that this project should focus on? 
+     + Develop a general process that could work across species/FMPs 
+     + Develop a detailed example tailored to a particular species (Please write in species below) 
+1. If a detailed example is preferred, which species should be the focus? 
+     + [short answer] 
+1. What is the next highest priority management measure this project should focus on? 
+     + Risk Policy 
+     + Catch/Quota Setting 
+     + Measures Setting 
+     + Spatial Measures 
+1. What is the scope of the next highest priority management decision that this project should focus on? 
+     + Develop a general process that could work across species/FMPs 
+     + Develop a detailed example tailored to a particular species (Please write in species below) 
+1. If a detailed example is preferred, which species should be the focus? 
+     + [short answer]  
+
+```{r polldat}
+
+# once file has been downloaded use this
+responses <- read.csv("https://github.com/sgaichas/HSpresentations/raw/refs/heads/main/Projects/MAFMC_Indicators/Priority%20Management%20Decisions%20(Responses).csv",header=T)
+
+# separate question number and element name? numbers are duplicates so just use name
+
+#names(responses) <- sub("^X.*\\.\\.\\.","",names(responses))
+names(responses)[-1] <- c("Priority1", "Scope1", "Species1", "Priority2", "Scope2", "Species2")
+
+lookup <- c(
+  #long = short
+  "Develop a detailed example tailored to a particular species (Please write in species below)" = "Detailed example",
+  "Develop a general process that could work across species/FMPs" = "General process"
+)
+
+responses$Scope1Brief <- unname(lookup[responses$Scope1])
+responses$Scope2Brief <- unname(lookup[responses$Scope2])
+
+respsumm <- responses |>
+  dplyr::select(Priority1, Scope1Brief, Species1, Priority2, Scope2Brief, Species2) |>
+  tibble::rownames_to_column("ID") |>
+  tidyr::pivot_longer(-ID, names_to = "Var", values_to = "Val") 
+  
+totprior <- respsumm |>
+  dplyr::filter(Var %in% c("Priority1", "Priority2")) |>
+  dplyr::group_by(Val) |>
+  dplyr::summarise(n = dplyr::n(),
+                   perc = n/nrow(responses)*100) |>
+  dplyr::arrange(desc(perc))
+
+prior1 <- totprior[1,]
+
+prior2 <- totprior[2,]
+
+```
+
+
+Next, current processes for each priority decision were reviewed, along with potential information sources and pathways to test and use the indicators.
 
 
 # Workshop Discussion Summary
@@ -110,7 +171,7 @@ Discussions made up the majority of the workshop. All discussions were conducted
 
 # Next Steps
 
-Approach: adjustment to current processes with indicators
+Approach: adjustment to current processes with indicators, not invention of new processes
 
 ## Risk Policy: general scope and keep it simple
 
