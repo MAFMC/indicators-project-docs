@@ -66,22 +66,18 @@ prior2 <- totprior[2,]
 
 Workshop objective: Outline development of indicators and processes to use them in 2 priority Council management decisions.
 
-## Mini-Workshop Introduction 
+## Mini-Workshop Introductory [Presentation](https://sgaichas.github.io/HSpresentations/20260331_ProjectOverview_MiniWK_Gaichas.html) 
 
 ::: {.noteblock data-latex=""}
-[Presentation](https://sgaichas.github.io/HSpresentations/20260331_ProjectOverview_MiniWK_Gaichas.html):  
+Overview of the [project](https://www.mafmc.org/s/Project-5_IRA-Project-Brief.pdf) and [decisions made at Workshop 1](https://www.mafmc.org/s/WK1_Results-Summary.pdf)  
 
-1. A quick overview of the [project](https://www.mafmc.org/s/Project-5_IRA-Project-Brief.pdf) and [decisions made at Workshop 1](https://www.mafmc.org/s/WK1_Results-Summary.pdf)  
+Reviewed pre-workshop poll: prioritized [Risk Policy](https://www.mafmc.org/s/3_MiniWK_RiskPolicy.pdf), and [Catch/Quota Setting](https://www.mafmc.org/s/4_MiniWK_CatchQuotas.pdf) 
 
-2. Reviewed pre-workshop poll: prioritized [Risk Policy](https://www.mafmc.org/s/3_MiniWK_RiskPolicy.pdf), and [Catch/Quota Setting](https://www.mafmc.org/s/4_MiniWK_CatchQuotas.pdf) 
-
-3. Reviewed current processes and information available for Risk Policy and Catch/Quota Setting
+Reviewed current processes and information available for Risk Policy and Catch/Quota Setting
 :::
 
 ::: {.ltgreenbox data-latex=""}
 ## Workshop Discussions and Outcomes 
-
-**Goal:** Prioritize 2 decisions and associated indicators for further development and testing of targets and thresholds 
 
 **Discussion 1:** Discussed the relative merits of developing indicators for each priority management decision 
 
@@ -93,7 +89,7 @@ Workshop objective: Outline development of indicators and processes to use them 
 :::::: {.cols data-latex=""}
 ::: {.col data-latex="{0.49\textwidth}"}
 ::: {.ltpurplebox data-latex=""}
-**Prioritization Poll Results** 
+**Poll Results** 
 ```{r poll, ft.arraystretch = 1}
 #latex ignores flextable::line_spacing so ft.arraystretch argument in chunk header is as close as we get
 
@@ -105,25 +101,22 @@ flextable::flextable(totprior) |>
   flextable::width(width = c(1.5,0.5,0.8)) |>
   flextable::fontsize(size = 9, part = "all") 
 ```
-**Scope:** All who prioritized "Risk Policy" would focus on "General" scope. 
-"Catch/Quota Setting" had 57% recommending a "Detailed example" for one species.
+<!--**Scope:** All who prioritized "Risk Policy" would focus on "General" scope. 
+"Catch/Quota Setting" had 57% recommending a "Detailed example" for one species.-->
 :::
-## Discussion 1
-*  Confirm management objectives for two priority decisions 
-*  Do the decisions already have indicators available or information in hand?
-*  Should we examine linked decisions independently?
 
+## Discussion 1: Indicators and approach
+*  **Risk policy:**  consider social or economic risk indicators in addition to stock status while retaining overall simplicty of the approach. Start by reviewing cases where the Council has suspended the risk policy. Retain broad scope for application across species.
+*  **Catch/quota setting:** review and communicate information available/used throughout the process to ensure indicators are not "double counted". Consider inforamtion used in prioritization and assessment but focus on developing new indicators for SSC ABC, Monitoring Committee, and Council processes. Consider a detailed application for a particular species.
 
-## Discussion 2 
-*  What is a desirable outcome for the management decision? 
-*  What is undesirable?
-*  A **good decision** is responsive and timely, incorporating new information as it becomes available, providing more flexible opportunities for fishing, and 
-includes a clear description of tradeoffs
+## Discussion 2: Desirable and undesirable states
+*  **Desirable:**  transparent and relatively simple decision processes, decisions reflect reality, interannual catch stability, ability to assess tradeoffs across objectives
+*  **Undesirable:** overly complex processes, cascading unforseen impacts of decisions resulting in reactive rather than proactive management, accounting for conditions in more than one place 
 
+## Discussion 3: Targets and thresholds
+*  **Characteristics:**  targets as ranges rather than points, surveillance indicators to determine if conditions leave target range, historical baselines could provide initial target ranges but recognize and adapt to changing conditions, apply targets similarly across fishery sectors
+*  **Other considerations:** indicators that imply certainty or reduce uncertainty are desirable 
 
-## Discussion 3
-*  Indicator targets are points or ranges associated with desirable states
-*  Indicator thresholds are points transitioning to undesirable states and require action if crossed
 :::
 
 ::: {.col data-latex="{0.02\textwidth}"}
@@ -142,10 +135,17 @@ magick::image_read("https://github.com/sgaichas/HSpresentations/raw/main/docs/im
 ::: {.ltbluebox data-latex=""}
 *This workshop addressed project goals:*  
 *  Review and assess existing indicators and evaluate their utility to support management objectives  
-*  Identify and develop priority ecosystem and habitat indicators, including associated targets and thresholds as appropriate, and identify specific pathways for incorporation into Council management processes 
+*  Identify and develop priority ecosystem and habitat indicators, including associated targets and thresholds as appropriate, and identify specific pathways for incorporation into Council management processes  
+*  Develop operational capability by including students and early career scientists
 :::
 :::
 ::::::
 
+<!--
+The next steps for the project are:
 
+1. to evaluate information sources and develop indicators that address the priority management decisions,  
+1. to develop and apply frameworks to test the use of indicators in each decision, and
+1. to prepare interim results for a workshop outlining performance metrics in late 2026.
+-->
 
