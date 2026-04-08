@@ -1,0 +1,148 @@
+---
+title: "MAFMC Indicators Project Online Mini Workshop Report"
+author: "Sarah Gaichas, Kelsey Roberts, Gavin Fay, Sophie Wulfing"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  word_document: default
+csl: plos.csl
+bibliography: operationalSOE.bib
+link-citations: true
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Executive Summary
+
+The Mid-Atlantic Fishery Management Council Inflation Reduction Act Project 5, "Operationalizing Ecosystem and Habitat Indicators to Support Climate-Ready Fisheries Management in the Mid-Atlantic" (MAFMC Indicators Project) held an online workshop on March 31, 2026. The workshop objective was to outline development of indicators and processes to use them in 2 priority Council management decisions. Workshop materials are posted at https://www.mafmc.org/council-events/2026/eco-hab-indicators-workshop.
+
+A total of 33 people attended the workshop, including 28 participants from the Council, Council Advisory Panels, Scientific and Statistical Committee (SSC), Council staff, as well as staff from the New England Council, Atlantic States Marine Fisheries Commission, Greater Atlantic Regional Fisheries Office, and the Northeast Fisheries Science Center, in addition to the project team. Five University of Massachusetts School for Marine Science and Technology graduate students also attended and supported the meeting. 
+
+The 2 priority management decisions were selected from the list of 4 decisions developed in [December 2025](https://www.mafmc.org/council-events/2025/dec-10/indicators-workshop) based on responses to polling conducted prior to the online workshop. Selected decisions were:
+
+1. Risk Policy
+1. Catch/Quota Setting
+
+The workshop included an introductory presentation from the project team, including poll results, followed by three discussions to scope development of operational ecosystem indicators for the 2 priority decisions. Discussion 1 reviewed the relative merits of developing indicators for each priority decision. Discussion 2 identified desirable and undesirable states for management outcomes. Discussion 3 outlined potential indicator targets or thresholds tied to desirable and undesirable states. The key takeaways of each discussion are outlined here, and detailed in the main report.
+
+## Discussion 1: Indicators and approach for each decision
+*  **Risk policy:**  consider risk indicators in addition to stock status 
+*  **Catch/quota setting:** communicate information available/used throughout the process. Consider Assessment, SSC ABC, Monitoring Committee, and Council processes 
+
+## Discussion 2: Desirable and undesirable states
+*  **Risk policy:**  consider risk indicators in addition to stock status 
+*  **Catch/quota setting:** communicate information available/used throughout the process. Consider Assessment, SSC ABC, Monitoring Committee, and Council processes 
+
+## Discussion 3: Targets and thresholds
+*  **Risk policy:**  consider risk indicators in addition to stock status 
+*  **Catch/quota setting:** communicate information available/used throughout the process. Consider Assessment, SSC ABC, Monitoring Committee, and Council processes 
+
+The next steps for the project are:
+
+1. to evaluate information sources and develop indicators that address the priority management decisions,  
+1. to develop and apply frameworks to test the use of indicators in each decision, and
+1. to prepare interim results for a workshop outlining performance metrics in late 2026.
+
+
+# Introduction
+
+The Mid-Atlantic Fishery Management Council Inflation Reduction Act Project 5, "Operationalizing Ecosystem and Habitat Indicators to Support Climate-Ready Fisheries Management in the Mid-Atlantic" (MAFMC Indicators Project) has been designed to address the Council's April 2025 request to 
+
+> "(1) conduct a comprehensive review of ecosystem and habitat indicators that will support management objectives, and (2) identify management processes, documents, and/or actions where ecosystem and habitat indicators can be integrated to inform management decisions."
+
+The MAFMC Indicators Project addresses three Council objectives: 
+
+1.  Review and assess existing ecosystem and habitat indicators in the Northeast and evaluate their utility to support management objectives. 
+1.  Identify and develop priority ecosystem and habitat indicators, including associated targets and thresholds as appropriate, and identify specific pathways for incorporation into Council management processes, documents, or actions. 
+1.  Create workflow and communication tools to support regular updates of indicators and that enhance usability of indicators in the management process. 
+
+To address these objectives, the project team continues to conduct a comprehensive review of existing indicators, has developed a framework for evaluating the indicators, and organized an initial workshop in December 2025 to identify and prioritize Council management decisions that could be supported or improved by operational use of ecosystem indicators. The [Workshop 1 Report](https://www.mafmc.org/s/WK1_Report.pdf) and [Workshop 1 Outcomes Summary](https://www.mafmc.org/s/WK1_Results-Summary.pdf) summarized the presentations, discussions, and outcomes of Workshop 1. 
+
+Four decisions were identified at Workshop 1: Risk Policy, Catch/Quota Setting, Measures Setting, and Spatial Management. After Workshop 1, the project team outlined the current decision processes and information used for each of the four decisions, and identified potential information sources for new indicators and pathways to use new indicators in each decision. This information was summarized in a series of short reports that were provided to workshop participants in advance of the online mini-workshop, which is the subject of this report. 
+
+An online poll of invited participants was distributed the week prior to the workshop. 
+
+While the online mini-workshop was a public meeting open to all interested participants, some Council, Advisory Panel, Scientific and Statistical Committee, and Atlantic States Marine Fisheries Commission (ASMFC) and Council staff members that participated in the December 2025 workshop were specifically invited to participate based on their prior experience with the project and with Council ecosystem and habitat indicators, and to encourage participation across a full range of stakeholder groups.
+
+The workshop was held online March 31, 2026. Workshop materials are posted at https://www.mafmc.org/council-events/2026/eco-hab-indicators-workshop. 
+
+The workshop was well-attended. A total of 33 people attended the workshop. Attendees included 28 participants from the Council, Council Advisory Panels, Scientific and Statistical Committee (SSC), Council staff, as well as staff from the New England Council, Atlantic States Marine Fisheries Commission, Greater Atlantic Regional Fisheries Office, and the Northeast Fisheries Science Center, in addition to the project team. Five University of Massachusetts School for Marine Science and Technology graduate students also attended and supported the meeting.
+
+The workshop Agenda is included as Appendix 1 and the list of attendees is included as Appendix 2. The remaining workshop materials are included as Appendices 3-11. The presentation shown during the workshop are linked below. 
+
+A 1-page Workshop Summary was also developed and is included as Appendix 6. 
+
+# Workshop Presentation Summary
+
+The workshop began with a round of introductions, followed by an introductory presentation. The [presentation](https://sgaichas.github.io/HSpresentations/20260331_ProjectOverview_MiniWK_Gaichas.html) briefly reviewed the overall MAFMC Indicators Project goals and objectives, timeline, current progress, and planned activities.  
+
+Poll results were then summarized. 
+
+
+# Workshop Discussion Summary
+
+Discussions made up the majority of the workshop. All discussions were conducted in plenary with all participants. Each discussion had a discussion facilitator from the project team and a note taker. At the end of the discussions, a project team member summarized the main points. Notes from all discussions were reviewed and combined into this summary. 
+
+## Discussion 1:  Relative merits of developing indicators for each priority decision
+
+1. Risk policy and catch/quota setting were confirmed as the two priority decisions, with risk policy ranking highest; spatial management was set aside for potential future exploration  
+2. Participants emphasized the importance of avoiding "double-dipping" – ensuring ecosystem indicators aren't applied redundantly at multiple steps in the management process where they are already implicitly incorporated  
+3. Participants stressed the importance of clear communication and transparent documentation of where and how ecosystem considerations enter the process, and flagged data timing as a practical concern – indicators need to be available when decisions are actually being made  
+4. Socioeconomic indicators were identified as a promising area for development, particularly for risk policy, given that the current framework relies almost exclusively on biological indicators
+
+## Discussion 2:  Identify desirable and undesirable states for management outcomes
+
+1. Participants favored defining desirable states in directional or relative terms (e.g., landings above a minimum threshold) rather than as fixed point targets  
+2. The risk policy's existing simplicity was viewed as a strength worth preserving; however, past instances where the policy was suspended (driven by socioeconomic conditions) were identified as opportunities to formally embed additional indicator types  
+3. Stability in management measures was raised as a desirable objective, with the idea that well-chosen indicators could reduce large year-to-year swings, though adding indicators also risks increasing complexity  
+4. There was interest in reframing desirable outcomes as operating within a complex of interconnected indicators rather than as single targets. For example, maintaining stability while still allowing fishing opportunity  
+5. It was noted that a particularly undesirable outcome would result in cascading, unanticipated effects that force managers into reactive correction rather than proactive management
+
+## Discussion 3: Discuss potential indicator targets or thresholds tied to states above
+
+1. Participants broadly agreed that thresholds should be expressed as ranges rather than fixed points, with a historical baseline period used as a reference while allowing for adaptability as system conditions change   
+2. There was strong agreement that percent-change constraints on management measures (e.g., year-to-year quota changes) should apply for recreational and commercial if implemented, and that stock status should factor into what level of change is considered acceptable  
+3. Uncertainty quantification was highlighted as an important issue, with concern that the current SSC process sometimes defaults to conservative CV values regardless of data quality; participants highlighted the need for more explicit tracking of both sources of certainty and uncertainty  
+4. The concept of "surveillance indicators" was discussed as a potential framework –  pre-defined flags that trigger extra scrutiny when conditions fall outside an acceptable range, rather than requiring a rigid management response
+
+# Next Steps
+
+Approach: adjustment to current processes with indicators
+
+## Risk Policy: general scope and keep it simple
+
+What is the range of acceptable tradeoffs between social/economic considerations and stock status at a given level of overfishing risk? Can the use of multiple indicators increase stability in advice?
+Initial needs
+Documentation for each time Council has suspended current (or former?) risk policy: help from Brandon & Julia?
+Request code from Weidenmann for 2019 risk policy assessment
+Focus on social and economic indicators
+Integrate concerns that caused risk policy suspension
+Review current SOE, Risk Assessment, SSB Performance
+Draw dataset from Fishery Performance reports
+
+## Catch/Quota setting: species scope and avoid double counting
+
+Focus on indicators for Steps 4 and 5: under Council control
+List indicators/processes currently used steps 1-3 to avoid double counting, but don't suggest new indicators in these steps
+NRCC and NEFSC already have processes to use indicators for prioritization and assessment, respectively
+How to make Steps 4 and 5 work with indicators but without assessments? A different but relevant problem. address?
+Clarifications needed
+Step 5: evaluate indicators for both occasional strategic and routine tactical? Are we tackling allocation or not?
+Pick a species: BSB or Fluke?
+
+
+# List of Appendices
+
+1. Workshop [Agenda](https://www.mafmc.org/s/Workshop-1-Final-Agenda.pdf)
+1. Workshop Attendees
+1. Workshop Overview [1-pager](https://www.mafmc.org/s/1_WK1_Overview.pdf)
+1. Definitions [1-pager](https://www.mafmc.org/s/2_WK1_Definitions.pdf)
+1. Management Decisions [1-pager](https://www.mafmc.org/s/3_WK1_MgtDecisions.pdf)
+1. Workshop Results [1-pager](https://www.mafmc.org/s/WK1_Results-Summary.pdf)
+
+# References
+
+
