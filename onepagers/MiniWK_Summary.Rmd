@@ -106,12 +106,12 @@ flextable::flextable(totprior) |>
 :::
 
 ## Discussion 1: Indicators and approach
-*  **Risk policy:**  consider social or economic risk indicators in addition to stock status while retaining overall simplicty of the approach. Start by reviewing cases where the Council has suspended the risk policy. Retain broad scope for application across species.
-*  **Catch/quota setting:** review and communicate information available/used throughout the process to ensure indicators are not "double counted". Consider inforamtion used in prioritization and assessment but focus on developing new indicators for SSC ABC, Monitoring Committee, and Council processes. Consider a detailed application for a particular species.
+*  **Risk policy:**  consider social or economic risk indicators in addition to stock status while retaining overall simplicity of the approach and broad scope for consistent application across species. Start by reviewing cases where the Council has suspended the risk policy. 
+*  **Catch/quota setting:** review and communicate ecosystem/habitat information available/used throughout the process to ensure indicators are not "double counted". Consider information used in prioritization and assessment but focus on developing new indicators for SSC ABC, Monitoring Committee, and Council processes. Consider a detailed application for a particular species.
 
 ## Discussion 2: Desirable and undesirable states
-*  **Desirable:**  transparent and relatively simple decision processes, decisions reflect reality, interannual catch stability, ability to assess tradeoffs across objectives
-*  **Undesirable:** overly complex processes, cascading unforseen impacts of decisions resulting in reactive rather than proactive management, accounting for conditions in more than one place 
+*  **Desirable:**  transparent and relatively simple decision processes, decisions reflect reality, interannual stability, ability to assess tradeoffs across objectives
+*  **Undesirable:** overly complex processes, cascading unforeseen impacts of decisions resulting in reactive rather than proactive management, accounting for conditions in more than one place (double counting)
 
 ## Discussion 3: Targets and thresholds
 *  **Characteristics:**  targets as ranges rather than points, surveillance indicators to determine if conditions leave target range, historical baselines could provide initial target ranges but recognize and adapt to changing conditions, apply targets similarly across fishery sectors
