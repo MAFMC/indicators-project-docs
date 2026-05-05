@@ -298,7 +298,7 @@ Ecosystem and Socioeconomic Profiles do not yet exist for the species originally
 
 ## Catch/Quota Setting
 
-Catch and Quota Setting is a multistep process involving decisions by the Northeast Regional Coordinating Committee (NRCC; including the Mid Atlantic and New England Councils, Atlantic States Marine Fisheries Commission, and NOAA's Greater Atlantic Regional Fisheries Office and Northeast Fisheries Science Center), assessment scientists, assessment peer reviewers, the Council's Scientific and Statistical Committee (SSC), Monitoring Committees, and the Council. Information for each stock and fishery is reviewed and synthesized to determine catch and quota levels that meet management objectives.
+Catch and Quota Setting is a multistep process involving decisions by the Northeast Regional Coordinating Committee (NRCC; including the Mid Atlantic and New England Councils, ASMFC, and NOAA's GARFO and NEFSC), assessment scientists, assessment peer reviewers, the Council's SSC, Monitoring Committees, and the Council. Information for each stock and fishery is reviewed and synthesized to determine catch and quota levels that meet management objectives.
 
 ### What information is used now?
 
@@ -316,27 +316,27 @@ Assessment scientists assemble and analyze fishery dependent and independent dat
 
 **3. Review Assessment**
 
-Independent reviewers evaluate whether assessments ToRs are met, data is appropriate, and methods reflect best practices.
+Independent peer reviewers evaluate whether assessment ToRs are met, data is appropriate, and methods reflect best practices.
 
 **4. Determine Acceptable Biological Catch (ABC)**
 
 The SSC uses reviewed assessment outputs within a structured framework to determine ABC from assessment uncertainty based on input data, model diagnostics and performance, and ecosystem considerations.
 
-The Management Track assessment gives current status and short term projections of overfishing limit (OFL) that may or may not already include ecosystem information. The SSC may discuss performance of short term projections or terminal year estimates in the assessment; ecosystem information can inform decisions about projections or terminal year estimates. The SSC may request new OFL estimates/projections from the assessment lead based on this discussion. 
+The stock assessment gives current status and short term projections of overfishing limit (OFL) that may or may not already include ecosystem information. The SSC may discuss performance of short term projections or terminal year estimates in the assessment; ecosystem information can inform decisions about projections or terminal year estimates. The SSC may request new OFL estimates/projections from the assessment lead based on this discussion. 
 
-The SSC uses its [OFL CV process](https://www.mafmc.org/s/Final-OFL-CV-guidance-document_06_24.pdf) to evaluate uncertainty arising from data quality, model selection/identification, retrospective analysis, empirical comparisons,  ecosystem factors, and recruitment stanzas. Ecosystem information can feed into: 
+The SSC uses its [OFL CV process](https://www.mafmc.org/s/Final-OFL-CV-guidance-document_06_24.pdf) to evaluate scientific uncertainty arising from data quality, model selection/identification, retrospective analysis, empirical comparisons,  ecosystem factors, and recruitment stanzas. Ecosystem information can feed into: 
 
 *  Ecosystem factors: [Climate Vulnerability Analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0146756) results are currently included for each stock, can include multiple other environmentally driven changes in the stock
 *  Recruitment stanzas: links to environmental drivers can decrease recruitment uncertainty
 
-Ecosystem information that is presented along with the assessment is easiest to use in the OFL CV determination, but nothing limits the SSC from using ecosystem information presented from another source. The SSC has based decisions on published literature in the past.
+Ecosystem information that is presented along with the assessment is easiest to use in the OFL CV determination, but nothing limits the SSC from using ecosystem information presented from other sources. The SSC has based decisions on published literature in the past.
 
 The OFL CV is used along with the estimate of current stock status in the [MAFMC ABC control rule](http://www.mafmc.org/s/MAFMC-ABC-Control-Rule-White-Paper.pdf) to determine the ABC that is recommended to the Council. The SSC often provides annually averaged constant ABC for a specified period (2-3 years) as well as annual ABC for each year at the request of the Council.
 
 
 **5. Catch Limits, Targets, and Quotas**
 
-The Council decides whether annually varying or averaged ABCs will be used in multiyear harvest specifications, then allocates the ABC to harvest sectors. Management uncertainty is determined and applied, then discards are estimated and subtracted to derive quotas and harvest limits.
+The Council decides whether annually varying or averaged ABCs will be used in multiyear harvest specifications, then allocates the ABC to harvest sectors, if appropriate. Management uncertainty is determined and applied, then discards are estimated and subtracted to derive commercial quotas and recreational harvest limits.
 
 *Details vary by FMP* but in general:
 
@@ -346,17 +346,15 @@ The ABC is split to recreational and commercial sector Annual Catch Limit (ACL),
 
 The Monitoring Committee recommends a management uncertainty buffer to determine the Annual Catch Target (ACT) for each sector. 
 
-The Monitoring Committee projects sector specific discards and subtracts them from each sector's ACT to determine the Recreational Harvest Limit (RHL) and the Commercial Quota. 
+The Monitoring Committee projects sector specific discards and subtracts them from each sector's ACT to determine the total allowable landings limit, or Recreational Harvest Limit (RHL) and the commercial quota, depending on the FMP. 
 
-Commercial quota is allocated to states or seasons as specified in FMPs. These allocations require an amendment or framework to change.
-
-*The scope for use of indicators in this process requires clarification. Workshop participants should consider whether routine/tactical committee decisions, strategic FMP decisions, or all decisions should be considered.* 
+For some species, the commercial quota is allocated to states or seasons as specified in FMPs. These allocations require an amendment or framework to change.
 
 ### Information sources for indicators 
 
 There are many potential sources for indicator use in the Catch/Quota setting process. Indicators are already used in Steps 1 and 2. 
 
-[Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports) conceptual models and indicators for MAFMC stocks:
+As noted above, existing [Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports) conceptual models and indicators for MAFMC stocks include:
 
 *  Black Sea Bass 
 *  Bluefish 
@@ -364,7 +362,7 @@ There are many potential sources for indicator use in the Catch/Quota setting pr
 *  Longfin squid 
 *  Shortfin squid
 
-[State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) and [Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf) indicators
+[State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) and [EAFM Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf) indicators
 
 The fish and invertebrate [Climate Vulnerability Analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0146756) sensitivity, exposure and vulnerability rankings
 
@@ -394,18 +392,19 @@ And many other potential sources:
 
 *  Refine OFL CV criteria for considering integrated ecosystem conditions
 *  Develop criteria for considering ecosystem impacts in short term projections
-*  Systematic translation of stock specific indicators into risk criteria as in the Pacific could simplify OFL CV discussions (see [CCIEA Risk Table Report](https://www.pcouncil.org/documents/2024/08/h-1-a-cciea-team-report-1-cciea-risk-table-report-on-fep-initiative-4.pdf/)).
+*  Systematic translation of stock specific indicators into risk criteria as in the Pacific could simplify OFL CV discussions (Table \@ref(tab:pacrisk) and see the [CCIEA Risk Table Report](https://www.pcouncil.org/documents/2024/08/h-1-a-cciea-team-report-1-cciea-risk-table-report-on-fep-initiative-4.pdf/)).
 
-```{r pacrisk}
+```{r pacrisk, ft.arraystretch = 1.2}
 Tab4 <- readr::read_csv("https://github.com/sgaichas/HSpresentations/raw/main/Conferences/BevanUW_2026-02-19/data/WestCoastRiskFramework.csv")
 
 flextable::flextable(Tab4[,1:2])|>
   flextable::set_caption("Pacific Pilot Risk Levels and Indicator Criteria") |>
-  flextable::width(width = c(0.6,2.5)) |>
-  #flextable::fontsize(size=9, part="all") |>
+  flextable::width(width = c(1,4)) |>
+  flextable::fontsize(size=9, part="all") |>
   #flextable::fit_to_width(max_width = 3.5) |>
-  flextable::bg(i = c(1:3), bg=c("#00FF0050", "white", "#FF000050"))
+  flextable::bg(i = c(1:3), bg=c("#00FF0050", "white", "#FF000050")) |>
   #flextable::bg(i = c(1:3), bg=c(scales::alpha("green", 0.5), "white", scales::alpha("red", 0.5)))
+  flextable::set_table_properties(opts_word = list(split = FALSE, keep_with_next = TRUE))
 
 ```
 
@@ -415,12 +414,12 @@ Management uncertainty buffer estimation could include ecosystem information suc
 
 Discard estimation/projection could include similar ecosystem information as above on projected stock productivity and distribution, and also consider habitat conditions leading to different product quality or discard survival based on multiple Essential Fish Habitat sources such as [EFH Habitat Mapper](https://www.fisheries.noaa.gov/resource/map/essential-fish-habitat-mapper) or [NRHA Data Explorer](https://nrha.shinyapps.io/dataexplorer/) combined with projected habitat conditions from [MOM6 regional ocean projections](https://psl.noaa.gov/cefi_portal/).  
 
-If FMP amendments or frameworks are considered to alter allocations, [GARFO Catch and Monitoring System](https://www.fisheries.noaa.gov/new-england-mid-atlantic/commercial-fishing/quota-monitoring-greater-atlantic-region), [Atlantic Coastal Cooperative Statistics Programa](https://safis.accsp.org/accsp_prod/f?p=1490:1:6442641492940:::::), and [Marine Recreational Information Program](https://www.fisheries.noaa.gov/recreational-fishing-data/introduction-marine-recreational-information-program-data) information along with
+If FMP amendments or frameworks are considered to alter allocations, [GARFO Catch and Monitoring System](https://www.fisheries.noaa.gov/new-england-mid-atlantic/commercial-fishing/quota-monitoring-greater-atlantic-region), [Atlantic Coastal Cooperative Statistics Program](https://safis.accsp.org/accsp_prod/f?p=1490:1:6442641492940:::::), and [Marine Recreational Information Program](https://www.fisheries.noaa.gov/recreational-fishing-data/introduction-marine-recreational-information-program-data) information along with
 SOE or ESP economic and social indicators could inform these decisions.
 
 ### Information gaps 
 
-Ecosystem and Socioeconomic Profiles evaluate and select stock specific ecosystem and socioeconomic indicators that can be useful across many steps of the Catch/Quota setting process; these are currently unavailable for summer flounder, scup, mackerel, butterfish, surfclam, ocean quahog, blueline tilefish, spiny dogfish, and monkfish. 
+Ecosystem and Socioeconomic Profiles evaluate and select stock specific ecosystem and socioeconomic indicators that can be useful across many steps of the Catch/Quota setting process; these are currently unavailable for summer flounder, scup, Atlantic mackerel, butterfish, surfclam, ocean quahog, blueline tilefish, spiny dogfish, and monkfish. 
 
 
 # Workshop Discussion Summary
@@ -429,25 +428,25 @@ Discussions made up the majority of the workshop. All discussions were conducted
 
 ## Discussion 1:  Relative merits of developing indicators for each priority decision
 
-1. Risk policy and catch/quota setting were confirmed as the two priority decisions, with risk policy ranking highest; spatial management was set aside for potential future exploration  
-2. Participants emphasized the importance of avoiding "double-dipping" – ensuring ecosystem indicators aren't applied redundantly at multiple steps in the management process where they are already implicitly incorporated  
-3. Participants stressed the importance of clear communication and transparent documentation of where and how ecosystem considerations enter the process, and flagged data timing as a practical concern – indicators need to be available when decisions are actually being made  
-4. Socioeconomic indicators were identified as a promising area for development, particularly for risk policy, given that the current framework relies almost exclusively on biological indicators
+1. Risk policy and catch/quota setting were confirmed as the two priority decisions, with risk policy ranking highest. Spatial management was set aside for potential future exploration.  
+2. Participants emphasized the importance of avoiding "double-dipping" – ensuring ecosystem indicators aren't applied redundantly at multiple steps in the management process where they are already explicitly or implicitly incorporated.  
+3. Participants stressed the importance of clear communication and transparent documentation of where and how ecosystem considerations enter the process. They also flagged data timing as a practical concern, noting that indicators need to be available when decisions are actually being made.  
+4. Socioeconomic indicators were identified as a promising area for development, particularly for risk policy, given that the current framework relies almost exclusively on biological indicators. 
 
 ## Discussion 2:  Identify desirable and undesirable states for management outcomes
 
-1. Participants favored defining desirable states in directional or relative terms (e.g., landings above a minimum threshold) rather than as fixed point targets  
-2. The risk policy's existing simplicity was viewed as a strength worth preserving; however, past instances where the policy was suspended (driven by socioeconomic conditions) were identified as opportunities to formally embed additional indicator types  
-3. Stability in management measures was raised as a desirable objective, with the idea that well-chosen indicators could reduce large year-to-year swings, though adding indicators also risks increasing complexity  
-4. There was interest in reframing desirable outcomes as operating within a complex of interconnected indicators rather than as single targets. For example, maintaining stability while still allowing fishing opportunity  
-5. It was noted that a particularly undesirable outcome would result in cascading, unanticipated effects that force managers into reactive correction rather than proactive management
+1. Participants favored defining desirable states in directional or relative terms (e.g., landings above a minimum threshold) rather than as fixed point targets.  
+2. The risk policy's existing simplicity was viewed as a strength worth preserving; however, past instances where the policy was suspended (driven by socioeconomic conditions) were identified as opportunities to formally embed additional indicator types.  
+3. Stability in management measures was raised as a desirable objective, with the idea that well-chosen indicators could reduce large year-to-year swings. However, adding indicators also risks increasing complexity.  
+4. There was interest in reframing desirable outcomes as operating within a complex of interconnected indicators rather than as single targets. For example, "maintaining stability while still allowing fishing opportunities."  
+5. It was noted that a particularly undesirable outcome would result in cascading, unanticipated effects that force managers into reactive correction rather than proactive management.
 
 ## Discussion 3: Discuss potential indicator targets or thresholds tied to states above
 
-1. Participants broadly agreed that thresholds should be expressed as ranges rather than fixed points, with a historical baseline period used as a reference while allowing for adaptability as system conditions change   
-2. There was strong agreement that percent-change constraints on management measures (e.g., year-to-year quota changes) should apply for recreational and commercial if implemented, and that stock status should factor into what level of change is considered acceptable  
-3. Uncertainty quantification was highlighted as an important issue, with concern that the current SSC process sometimes defaults to conservative CV values regardless of data quality; participants highlighted the need for more explicit tracking of both sources of certainty and uncertainty  
-4. The concept of "surveillance indicators" was discussed as a potential framework –  pre-defined flags that trigger extra scrutiny when conditions fall outside an acceptable range, rather than requiring a rigid management response
+1. Participants broadly agreed that thresholds should be expressed as ranges rather than fixed points, with a historical baseline period used as a reference while allowing for adaptability as system conditions change.   
+2. There was strong agreement that percent-change constraints on management measures (e.g., year-to-year quota changes) should apply for recreational and commercial fisheries if implemented, and that stock status should factor into what level of change is considered acceptable.  
+3. Uncertainty quantification was highlighted as an important issue, with concern that the current SSC process sometimes defaults to conservative CV values regardless of data quality.  Participants highlighted the need for more explicit tracking of both sources of certainty and uncertainty.  
+4. The concept of "surveillance indicators" was discussed as a potential framework, referring to pre-defined flags that trigger extra scrutiny when conditions fall outside an acceptable or recently/historically observed range, rather than requiring a rigid management response.
 
 # Next Steps
 
@@ -457,24 +456,37 @@ Approach: adjustment to current processes with indicators, not invention of new 
 
 **Guiding question:** What is the range of acceptable tradeoffs between social/economic considerations and stock status at a given level of overfishing risk? Can the use of multiple indicators increase stability in advice?
 
-**Initial needs**
-*  Documentation for each time Council has suspended current (or former?) risk policy
-*  Request code from Weidenmann for 2019 risk policy assessment
+**Initial needs**  
+
+*  Documentation for each time Council has suspended the risk policy. 
+*  Request code from Weidenmann for 2019 risk policy MSE. 
 
 **Focus on social and economic indicators**
-*  Integrate concerns that caused risk policy suspension
-*  Review current SOE, Risk Assessment, SSB Performance
-*  Draw dataset from Fishery Performance reports
+
+*  Integrate concerns that caused risk policy suspension. 
+*  Review current SOE, Risk Assessment, SSB Performance. 
+*  Draw dataset from Fishery Performance reports. 
 
 ## Catch/Quota setting: species scope and avoid double counting
 
 **Focus on indicators for Steps 4 and 5: under Council control**
-*  List indicators/processes currently used steps 1-3 to avoid double counting, but don't suggest new indicators in these steps
-*  NRCC and NEFSC already have processes to use indicators for prioritization and assessment, respectively
-How to make Steps 4 and 5 work with indicators but without assessments? A different but relevant problem. address?
+
+*  List indicators/processes currently used steps 1-3 to avoid double counting, but don't suggest new indicators in these steps. 
+*  NRCC and NEFSC already have processes to use indicators for prioritization and assessment, respectively. 
+
+It was noted that making Steps 4 and 5 work with indicators but without assessments is a potentially important future issue that this project could address. The project team will evaluate the feasibility of developing options for indicator-based decision making in the absence of stock assessments and report back at the next workshop.
+
 **Clarifications needed**
-*  Step 5: evaluate indicators for both occasional strategic and routine tactical? Are we tackling allocation or not?
-*  Pick a species: BSB or Fluke or Squid?
+
+The project team requested clarification during the workshop regarding these questions. 
+
+*  Step 5: evaluate indicators for both occasional strategic and routine tactical? Are we tackling allocation or not? 
+*  Which focal species: Black sea bass, summer flounder, squid, a combination? 
+
+The scope for use of indicators in this process was not limited by the workshop participants, and species selection was narrowed to the group above but no single species was selected. The project team will consider routine/tactical committee decisions and strategic FMP decisions for indicator development across up to two contrasting species, and bring a range of options back at the next workshop. 
+
+The project team will also consider whether it is feasible to evaluate results from indicator use across both the risk policy and a selected species catch/quota setting process and present that scenario at the next workshop.
+
 
 ## Planned Analyses through 2026
 
