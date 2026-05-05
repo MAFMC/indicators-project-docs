@@ -3,6 +3,12 @@ title: "MAFMC Indicators Project Online Mini Workshop Report"
 author: "Sarah Gaichas, Kelsey Roberts, Gavin Fay, Sophie Wulfing"
 date: "`r Sys.Date()`"
 output:
+  bookdown::pdf_document2:
+    includes:
+      in_header: latex/header1.tex
+    keep_tex: true
+    toc: false
+    number_sections: false
   pdf_document: default
   word_document: default
 csl: plos.csl
@@ -14,7 +20,8 @@ urlcolor: blue
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE,
                       warning = FALSE,
-                      message = FALSE)
+                      message = FALSE,
+                      fig.align = 'center')
 
 library(patchwork)
 ```
@@ -25,20 +32,20 @@ The Mid-Atlantic Fishery Management Council Inflation Reduction Act Project 5, "
 
 A total of 33 people attended the workshop, including 28 participants from the Council, Council Advisory Panels, Scientific and Statistical Committee (SSC), Council staff, as well as staff from the New England Council, Atlantic States Marine Fisheries Commission, Greater Atlantic Regional Fisheries Office, and the Northeast Fisheries Science Center, in addition to the project team. Five University of Massachusetts School for Marine Science and Technology graduate students also attended and supported the meeting. 
 
-The 2 priority management decisions were selected from the list of 4 decisions developed in [December 2025](https://www.mafmc.org/council-events/2025/dec-10/indicators-workshop) based on responses to polling conducted prior to the online workshop. Selected decisions were:
+The 2 priority management decisions were selected from the list of 4 decisions developed in [December 2025](https://www.mafmc.org/council-events/2025/dec-10/indicators-workshop) based on responses to polling conducted prior to the online workshop and confirmed by workshop participants. Selected decisions were:
 
 1. [Risk Policy](https://www.mafmc.org/s/3_MiniWK_RiskPolicy.pdf)
 1. [Catch/Quota Setting](https://www.mafmc.org/s/4_MiniWK_CatchQuotas.pdf)
 
-The workshop included an introductory presentation from the project team, including poll results, followed by three discussions to scope development of operational ecosystem indicators for the 2 priority decisions. Discussion 1 reviewed the relative merits of developing indicators for each priority decision. Discussion 2 identified desirable and undesirable states for management outcomes. Discussion 3 outlined potential indicator targets or thresholds tied to desirable and undesirable states. The key takeaways of each discussion are outlined here, and detailed in the main report.
+The workshop included an introductory presentation from the project team, including poll results, followed by three discussions to scope development of operational ecosystem indicators for the 2 priority decisions. Discussion 1 reviewed the relative merits of developing indicators for each priority decision. Discussion 2 identified desirable and undesirable states for management outcomes. Discussion 3 outlined potential indicator targets or thresholds tied to desirable and undesirable states. The key takeaways of each discussion are outlined here.
 
 ## Discussion 1: Indicators and approach for each decision
-*  **Risk policy:**  consider social or economic risk indicators in addition to stock status while retaining overall simplicty of the approach. Start by reviewing cases where the Council has suspended the risk policy. Retain broad scope for application across species.
-*  **Catch/quota setting:** review and communicate information available/used throughout the process to ensure indicators are not "double counted". Consider inforamtion used in prioritization and assessment but focus on developing new indicators for SSC ABC, Monitoring Committee, and Council processes. Consider a detailed application for a particular species.
+*  **Risk policy:**  consider social or economic risk indicators in addition to stock status while retaining overall simplicity of the approach and consistent application across species. Start by reviewing cases where the Council has suspended the risk policy. Retain broad scope for application across species.
+*  **Catch/quota setting:** review and communicate ecosystem/habitat information available/used throughout the process to ensure indicators are not "double counted". Consider information used in prioritization and assessment but focus on developing new indicators for SSC ABC, Monitoring Committee, and Council processes. Consider a detailed application for a particular species.
 
 ## Discussion 2: Desirable and undesirable states
-*  **Desirable:**  transparent and relatively simple decision processes, decisions reflect reality, interannual catch stability, ability to assess tradeoffs across objectives
-*  **Undesirable:** overly complex processes, cascading unforseen impacts of decisions resulting in reactive rather than proactive management, accounting for conditions in more than one place 
+*  **Desirable:**  transparent and relatively simple decision processes, decisions reflect reality, interannual stability, ability to assess tradeoffs across objectives
+*  **Undesirable:** overly complex processes, cascading unforeseen impacts of decisions resulting in reactive rather than proactive management, large interannual swings in management outcomes, accounting for conditions in more than one place (double counting)
 
 ## Discussion 3: Targets and thresholds
 *  **Characteristics:**  targets as ranges rather than points, surveillance indicators to determine if conditions leave target range, historical baselines could provide initial target ranges but recognize and adapt to changing conditions, apply targets similarly across fishery sectors
@@ -66,19 +73,19 @@ The MAFMC Indicators Project addresses three Council objectives:
 
 To address these objectives, the project team continues to conduct a comprehensive review of existing indicators, has developed a framework for evaluating the indicators, and organized an initial workshop in December 2025 to identify and prioritize Council management decisions that could be supported or improved by operational use of ecosystem indicators. The [Workshop 1 Report](https://www.mafmc.org/s/WK1_Report.pdf) and [Workshop 1 Outcomes Summary](https://www.mafmc.org/s/WK1_Results-Summary.pdf) summarized the presentations, discussions, and outcomes of Workshop 1. 
 
-Four decisions were identified at Workshop 1: Risk Policy, Catch/Quota Setting, Measures Setting, and Spatial Management. After Workshop 1, the project team outlined the current decision processes and information used for each of the four decisions, and identified potential information sources for new indicators and pathways to use new indicators in each decision. This information was summarized in a series of short, decision-specific 1 page reports that were provided to workshop participants in advance of the online mini-workshop, which is the subject of this report. 
+Four management decisions were identified at Workshop 1: Risk Policy, Catch/Quota Setting, Measures Setting, and Spatial Management. After Workshop 1, the project team outlined the current decision processes and information used for each of the four decisions, and identified potential information sources for new indicators and pathways to use new indicators in each decision. This information was summarized in a series of short, decision-specific 1 page reports that were provided to workshop participants in advance of the online mini-workshop, which is the subject of this report. 
 
-While the online mini-workshop was a public meeting open to all interested participants, some Council, Advisory Panel, Scientific and Statistical Committee, and Atlantic States Marine Fisheries Commission (ASMFC) and Council staff members that participated in the December 2025 workshop were specifically invited to participate based on their prior experience with the project and with Council ecosystem and habitat indicators, and to encourage participation across a full range of stakeholder groups.
+While the online mini-workshop was a public meeting open to all interested participants, some Council, Advisory Panel, Scientific and Statistical Committee (SSC), and Atlantic States Marine Fisheries Commission (ASMFC) and Council staff members that participated in the December 2025 workshop were specifically invited to participate based on their prior experience with the project and with Council ecosystem and habitat indicators, and to encourage participation across a range of stakeholder groups.
 
 A brief online poll (described below) and all of the short reports were distributed to invited participants the week prior to the workshop to solicit priorities for project focus from as many individuals as possible. 
 
 The workshop was held online March 31, 2026. Workshop materials are posted at https://www.mafmc.org/council-events/2026/eco-hab-indicators-workshop. 
 
-The workshop was well-attended. A total of 33 people attended the workshop. Attendees included 28 participants from the Council, Council Advisory Panels, Scientific and Statistical Committee (SSC), Council staff, as well as staff from the New England Council, Atlantic States Marine Fisheries Commission, Greater Atlantic Regional Fisheries Office, and the Northeast Fisheries Science Center, in addition to the project team. Five University of Massachusetts School for Marine Science and Technology graduate students also attended and supported the meeting.
+The workshop was well-attended. A total of 33 people attended the workshop. Attendees included 28 participants from the Council, Council Advisory Panels, SSC, Council staff, as well as staff from the New England Council, ASMFC, Greater Atlantic Regional Fisheries Office (GARFO), and the Northeast Fisheries Science Center (NEFSC), in addition to the project team. Five graduate students from the University of Massachusetts Dartmouth School for Marine Science and Technology also attended and supported the meeting.
 
-The workshop Agenda is included as Appendix 1 and the list of attendees is included as Appendix 2. The remaining workshop materials are included as Appendices 3-11. The presentation shown during the workshop are linked below. 
+The workshop agenda is included as Appendix 1 and the list of attendees is included as Appendix 2. The remaining workshop materials are included as Appendices 3-11. The presentation shown during the workshop is linked below. 
 
-A 1-page Workshop Summary was also developed and is included as Appendix 12. 
+A 1-page workshop summary was also developed and is included as Appendix 12. 
 
 # Workshop Presentation Summary
 
@@ -146,9 +153,9 @@ prior2 <- totprior[2,]
 
 ```
 
-Results for each question showed a majority prioritizing Risk Policy first. The next highest priority decision measured across all respondents was Catch/Quota setting. 
+Results for each question showed a majority prioritizing Risk Policy first. The next highest priority decision measured across all respondents was Catch/Quota setting (Fig. \@ref(fig:priority1), Table \@ref(tab:poll)). 
 
-```{r priority1, fig.asp=0.9, out.width="80%"}
+```{r priority1, fig.cap="Pre-workshop poll results", fig.asp=0.9, out.width="80%"}
 
 decision_cols <- c("Risk Policy" = "red", "Catch/Quota Setting" = "blue", "Measures Setting" = "purple","Spatial Measures" = "green" )
 
@@ -184,11 +191,12 @@ flextable::flextable(totprior) |>
                                perc = "% Total Votes") |>
   flextable::colformat_double(digits = 0) |>
   flextable::width(width = c(2,1,1)) |>
-  flextable::fontsize(size = 11, part = "all") 
+  flextable::fontsize(size = 11, part = "all") |>
+  flextable::set_caption("Summary poll results across both questions")
 ```
 
 
-(One response recieved after the workshop selected Catch/Quota setting as highest priority and Measures Setting as the next highest priority.) 
+(One response received after the workshop selected Catch/Quota setting as highest priority and Measures Setting as the next highest priority.) 
 
 All respondents who prioritized "Risk Policy" recommended focus on "General" scope. "Catch/Quota Setting" had 57% recommending a "Detailed example" for one species. However, there was not a clear majority for which species. Summer flounder and black sea bass had the most support considering both the poll and the workshop discussion, but squids were mentioned many times as well. 
 
@@ -196,13 +204,13 @@ Next, current processes for each priority decision were reviewed, along with pot
 
 ## Risk Policy
 
-Risk policy is a Council-level decision. Current [Risk Policy](https://www.federalregister.gov/documents/2020/12/15/2020-27562/fisheries-of-the-northeastern-united-states-omnibus-framework-adjustment-to-modify-the-mid-atlantic) uses stock status as the only indicator of when to adjust risk tolerance. Low stock status (B/Bmsy < 1) results in much more risk averse probability of overfishing and lower ABC relative to OFL, high stock status (>1.5 B/Bmsy) is as risk tolerant as allowed by law with ABC close to OFL. 
+Risk policy is a Council-level decision and specifies the Council’s risk tolerance (e.g., probability of overfishing) for its managed stocks. Current [Risk Policy](https://www.federalregister.gov/documents/2020/12/15/2020-27562/fisheries-of-the-northeastern-united-states-omnibus-framework-adjustment-to-modify-the-mid-atlantic) uses stock status as the only indicator of when to adjust risk tolerance. Low stock status (B/Bmsy < 1) results in much more risk averse probability of overfishing and lower ABC relative to OFL. High stock status (>1.5 B/Bmsy) is nearly as risk tolerant as allowed by law with ABC close to OFL. 
 
 ### What information is used now?
 
-The current Risk Policy was finalized by the Council in [December 2020](https://www.federalregister.gov/documents/2020/12/15/2020-27562/fisheries-of-the-northeastern-united-states-omnibus-framework-adjustment-to-modify-the-mid-atlantic). It is based on a [management strategy evaluation](https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/5e56e0f286208b151ba4f55d/1582752007474/S1_Fine+tuning+the+ABC+control+rule+for+Mid-Atlantic+stocks_Wiedenmann.pdf) that compared performance of alternative policies across life history types represented by summer flounder, scup, and butterfish. 
+The current Risk Policy (Fig. \@ref(fig:MAFMCriskpolicy)) was finalized by the Council in [December 2020](https://www.federalregister.gov/documents/2020/12/15/2020-27562/fisheries-of-the-northeastern-united-states-omnibus-framework-adjustment-to-modify-the-mid-atlantic). It is based on a [management strategy evaluation](https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/5e56e0f286208b151ba4f55d/1582752007474/S1_Fine+tuning+the+ABC+control+rule+for+Mid-Atlantic+stocks_Wiedenmann.pdf) (MSE) that compared performance of alternative policies across life history types represented by summer flounder, scup, and butterfish. 
 
-```{r MAFMCriskpolicy, fig.asp = 0.7}
+```{r MAFMCriskpolicy, fig.cap="MAFMC risk policy.", fig.asp = 0.7, out.width='70%'}
 
 riskpol <- data.frame(Bfrac = c(0, 0.1, 1.0, 1.5, 2.5),
                       Current = c(0, 0, 0.45, 0.49, 0.49),
@@ -224,9 +232,9 @@ p1
 #print(p1, vp=grid::viewport(gp=grid::gpar(cex=1.5)))
 ```
 
-The [ABC control rule](http://www.mafmc.org/s/MAFMC-ABC-Control-Rule-White-Paper.pdf) includes an SSC decision on uncertainty in the assessment and converts the risk policy into an ABC given the stock status.
+The [ABC control rule](http://www.mafmc.org/s/MAFMC-ABC-Control-Rule-White-Paper.pdf) includes an SSC decision on scientific uncertainty in the assessment and converts the risk policy into an ABC given the stock status (Fig. \@ref(fig:OFLCVtoABC)).
 
-```{r OFLCVtoABC, fig.asp = 0.7}
+```{r OFLCVtoABC, fig.cap="MAFMC ABC control rule.", fig.asp = 0.7, out.width='70%'}
 
 ABCprop <- data.frame(Bfrac = seq(0, 2.5, 0.01)) |>
   dplyr::mutate(pstar = dplyr::case_when(Bfrac <= 0.1 ~ 0,
@@ -252,11 +260,11 @@ p2
   
 ```
 
-**Important:** The use of indicators in the SSC's ABC decision process will be **considered separately** under Catch/Quota setting. Indicators here will address the risk policy and adjustment to risk tolerance rather than assessment uncertainty.
+**Important:** In this project, the use of indicators in the SSC's ABC decision process will be **considered separately** under the Catch/Quota setting management decision described below. Indicators tested for consideration within the risk policy decision will address adjustments to risk tolerance rather than to scientific uncertainty.
 
 ### Potential Indicator Sources
 
-[Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports) conceptual models and indicators for MAFMC stocks: 
+Existing [Ecosystem and Socioeconomic Profiles](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports) conceptual models and indicators for MAFMC stocks include: 
 
 *  Black Sea Bass
 *  Bluefish 
@@ -264,14 +272,16 @@ p2
 *  Longfin squid 
 *  Shortfin squid
 
-[State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) and [Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf) indicators
+[State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) and [EAFM Risk Assessment](https://www.mafmc.org/s/2_MAB_RiskAssess_2024.pdf) indicators
 
 ### Potential Pathways
 *  Evaluate indicators of favorable or unfavorable habitat or socioeconomic conditions for a species or life history type
-*  Simulate management with different risk tolerance under different conditions (update MSE?)
+*  Simulate management with different risk tolerance under different conditions (update the initial MSE?)
 *  Compare indicator-based approach vs. status quo: Which indicator-adjusted risk tolerance meets objectives across species portfolio or for a selected individual species?
+
+For example, indicators of undesirable socioeconomic tradeoffs or favorable habitat conditions could suggest increasing risk tolerance relative to status quo (green arrows, Fig. \@ref(fig:newriskpol)). Conversely, unfavorable habitat conditions or different socioeconomic tradeoffs could suggest decreasing risk tolerance (red arrows, Fig. \@ref(fig:newriskpol)).
     
-```{r newriskpol, out.width="90%"}
+```{r newriskpol, fig.cap="Example indicator-based adjustments to risk policy, with increased risk tolerance indicated by green arrows and decreased risk tolerance indicated by red arrows.", out.width="80%"}
 
 knitr::include_graphics(here::here("onepagers/RiskPolInds.png"))
 

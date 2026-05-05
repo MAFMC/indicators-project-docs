@@ -55,3 +55,7 @@ rsconnect/
 *.pdf
 *.docx
 *.log
+
+# interim latex
+*.upa
+*.upb
