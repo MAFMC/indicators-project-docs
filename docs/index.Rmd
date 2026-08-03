@@ -1,0 +1,16 @@
+---
+title: "MAFMC Indicators Online Project Documents"
+author: "Sarah Gaichas, Hydra Scientific LLC"
+output: html_document
+---
+
+<button>
+    <a href="https://github.com/MAFMC/indicators-project-docs"> MAFMC Ecosystem Indicators Project Documents github repo </a>
+</button>
+
+
+<!-- ADD LINKS BELOW, note, using the RMD link syntax will open the presentation in the same tab, which is annoying. Use the html with the "_blank" to fix that behavior -->
+
+## Analysis and visualizations
+
+<a href="https://mafmc.github.io/indicators-project-docs/ABCOptions.html" target="_blank"> ABC Options Outline, August 2026 </a> 
