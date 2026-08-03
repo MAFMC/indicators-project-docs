@@ -1,0 +1,52 @@
+---
+title: "ABC Setting"
+author: "Sarah Gaichas"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+Using indicators in Catch/Quota setting was identified as one of the two highest priority Council decisions. We will consider the fully Council controlled steps in the process, including the SSC's ABC setting step and the Monitoring Committee's ACL/ACT/Quota setting steps that are not currently specified in the FMPs. Here we focus on the SSC's ABC setting step and a range of options for including indicators more systematically. 
+
+First reviewed proposed [NEFMC risk policy scoring rubrics](https://d23h0vhsm26o6d.cloudfront.net/3.-Risk-Policy-Statement-and-Concept-Overview_for-Council-Binder.pdf) and [PFMC risk based framework](https://www.pcouncil.org/documents/2024/08/h-1-a-cciea-team-report-1-cciea-risk-table-report-on-fep-initiative-4.pdf/) for ABC setting as well as [SAFMC ABC risk scoring rubric](https://safmc.net/documents/abccram_06052023_submittal-pdf/) (understanding that risk policies and ABC control rules are apples to oranges and that terminology is applied differently across councils): 
+
+*  NEFMC and PFMC score in both positive and negative directions, theoretically allowing both decreased and increased buffers from OFL to ABC. MAFMC also has a standard 100% OFL CV and can have smaller or larger buffers by going to 150% or 60%. SAFMC assigns p* based on an AP and SSC derived risk ranking from low to high and the Council can then choose to deviate from the p* by up to 0.1 from the risk based level within the limit of 0.5. 
+*  All consider a variety of factors but the PFMC and MAFMC don't include socioeconomic information (they consider data, assessment performance, and ecosystem) while the SAFMC risk ranking does (biology of the stock, human dimensions, ecosystem) and the NEFMC risk policy does (commercial and recreational fishery characterization in addition to stock status, recruitment, and climate vulnerability).  
+*  The NEFMC and SAFMC rules address "probability of management success" or of overfishing (p*). The MAFMC and PFMC rules address OFL uncertainty to determine the buffer to get to ABC. Therefore, the NEFMC risk policy and SAFMC rule do not consider data quality or assessment performance the way the PFMC and MAFMC ABC control rules do, and it is yet to be determined how the NEFMC scores will translate into ABCs. The SAFMC appears to use Fmsy or a proxy and apply the p* resulting from the risk ranking directly without additional buffers. 
+*  NEFMC formally weights the categories (done by the Council only) while the MAFMC SSC has two tiers that informally weight the data and assessment factors higher than ecosystem factors. Weighting for PFMC is done by the SSC after the categories are filled. SAFMC risk factors are equally weighted. 
+
+
+## Options Brainstorm
+
+1.  Use current OFL CV framework and only standardize indicators under the ecosystem criterion, a second tier consideration that will not override data or assessment performance criteria
+    + Mainly CVA results are used now, could go beyond vulnerability rating to look at the specific sensitivity and exposure as well as directional change
+    + Ask whether distribution shift potential is affecting perception of the stock
+    + Ask whether current indicators driving stock sensitivity are increasing, decreasing, or stable (e.g. temperature)
+    + Include any indicators from ESPs or other stock specific analyses
+1.  Standardize indicators under the ecosystem criterion within the current OFL CV framework but make a more integrated favorable vs unfavorable ecosystem criterion considering multiple factors beyond CVA (see e.g. 5)
+1.  Consider ecosystem factors in data quality or assessment performance criteria
+    + Likely survey performance? Changes in fisheries?
+    + Are assessment assumptions of (non)stationarity supported by indicators?
+1.  Standardize indicators under the ecosystem criterion within the current OFL CV framework, and suggest thresholds where ecosystem indicators might warrant the same or greater weight as data and assessment performance 
+    + Maybe good ecosystem conditions can overcome poor data to reduce buffers? Or the converse
+    + Can we apply ecosystem indicators when we only have data updates? See 6 below
+1.  Modify the OFL CV framework to be more similar to the PFMC framework using similar language and categories for ecosystem indicators. 
+    + Pacific ecosystem factors evaluated from structured discussion:
+       + Food webs (e.g., predator abundance or productivity, competitor abundance or productivity, spatial overlap with predators/competitors, prey abundance) 
+       + Habitat availability (e.g., do current or near-term predictions of ocean temperatures and oxygen match known optimal ranges for [priority species] life history stages, closed area regulations) 
+       + Changes in ecosystem productivity (e.g., upwelling indices, chlorophyll a, abundance of low trophic level organisms) 
+       + Physiological indices (e.g., growth, condition, pathogens/parasites, stomach weight/fullness) 
+       + Reproductive indices (e.g., maturity, fecundity, spawn timing and duration) 
+    + Pacific assessment data inputs
+    + Pacific assessment model fits and structural uncertainty
+1.  Can the SSC use ecosystem information to modify ABC when there is no OFL? Can we use ecosystem indicators for short term projections? (Can we do better than a 2% staleness factor?) Can the SSC use existing EAFM risk assessment indicators or criteria in these cases? 
+1.  Ana Parma's presentation from last week: EXCEPTIONAL CIRCUMSTANCES–when are we in them? Indicator based decision process outside the OFL CV table. We should or should not deviate from previous ABC based on pre-agreed information. 
+
+
+
+
