@@ -13,4 +13,4 @@ output: html_document
 
 ## Analysis and visualizations
 
-<a href="https://mafmc.github.io/indicators-project-docs/ABCSetting.html" target="_blank"> ABC Setting options outline, August 2026 </a> 
+<a href="https://mafmc.github.io/indicators-project-docs/ABCsetting.html" target="_blank"> ABC Setting options outline, August 2026 </a> 
