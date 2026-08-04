@@ -3,6 +3,10 @@ title: "ABC Setting"
 author: "Sarah Gaichas"
 date: "`r Sys.Date()`"
 output: html_document
+csl: ../reports/plos.csl
+bibliography: ../reports/operationalSOE.bib
+link-citations: true
+urlcolor: blue
 ---
 
 ```{r setup, include=FALSE}
@@ -47,6 +51,25 @@ For context, other Council Catch setting processes employing indicators were rev
 1.  Can the SSC use ecosystem information to modify ABC when there is no OFL? Can we use ecosystem indicators for short term projections? (Can we do better than a 2% staleness factor?) Can the SSC use existing EAFM risk assessment indicators or criteria in these cases? 
 1.  Ana Parma's presentation from last week: EXCEPTIONAL CIRCUMSTANCES–when are we in them? Indicator based decision process outside the OFL CV table. We should or should not deviate from previous ABC based on pre-agreed information. 
 
+## Indicator Use At Present
+
+The [SSC OFL CV framework](https://www.mafmc.org/s/Final-OFL-CV-guidance-document_06_24.pdf) consults Climate Vulnerability Assessment (CVA) results explicitly. Although there are other metrics under the "Ecosystem Factors Accounted" decision criteria, this is the only one routinely applied. 
+
+The 60% OFL CV category states: climate vulnerability analysis suggests low risk of change in productivity due to changing climate.
+The 100% OFL CV (default) category states: climate vulnerability analysis suggests moderate risk of change in productivity from changing climate.
+The 150% OFL CV category states: climate vulnerability analysis suggests high risk of changing productivity from changing climate. 
+
+Current CVA results [@hare_vulnerability_2016] for MAFMC managed stocks:
+
+```{r}
+# download csv results files from hare et al 2016 paper in PLOS one
+# try package suppdata https://docs.ropensci.org/suppdata/
+
+vulresults <- readr::read_csv(suppdata::suppdata("10.1371/journal.pone.0146756", 1))
+direffects <- readr::read_csv(suppdata::suppdata("10.1371/journal.pone.0146756", 2))
+
+```
 
 
 
+## References
