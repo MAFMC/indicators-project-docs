@@ -59,7 +59,9 @@ The 60% OFL CV category states: climate vulnerability analysis suggests low risk
 The 100% OFL CV (default) category states: climate vulnerability analysis suggests moderate risk of change in productivity from changing climate.
 The 150% OFL CV category states: climate vulnerability analysis suggests high risk of changing productivity from changing climate. 
 
-Current CVA results [@hare_vulnerability_2016] for MAFMC managed stocks:
+Current CVA results [@hare_vulnerability_2016] for MAFMC managed stocks were calculated as follows:
+
+>Overall climate vulnerability was estimated using a four step process. First, the component scores (low, moderate, high and very high) were assigned a numerical value (1, 2, 3, and 4). Second, an average score for each climate exposure factor and sensitivity attribute was calculated as the weighted-mean of the experts’ tallies. Third, an overall exposure and sensitivity score was calculated from the weighted means using a logic rule (Table 3). Fourth, an overall climate vulnerability score was calculated by multiplying the overall exposure and sensitivity scores. The product of the two component numeric scores results in a value between 1 and 16. The overall climate vulnerability rank is then classified as follows: 1–3 low, 4–6 moderate, 8–9 high, and 12–16 very high.
 
 ```{r}
 # download csv results files from hare et al 2016 paper in PLOS one
@@ -77,6 +79,34 @@ direffects <- direffects[-1,-ncol(direffects)]
 direffects$Negative <- as.numeric(direffects$Negative)
 direffects$Neutral <- as.numeric(direffects$Neutral)
 direffects$Positive <- as.numeric(direffects$Positive)
+
+# Applying the vulnerability decision rule from Table 3
+#Overall climate vulnerability was estimated using a four step process. First, the component scores (low, moderate, high and very high) were assigned a numerical value (1, 2, 3, and 4). Second, an average score for each climate exposure factor and sensitivity attribute was calculated as the weighted-mean of the experts’ tallies. Third, an overall exposure and sensitivity score was calculated from the weighted means using a logic rule (Table 3). Fourth, an overall climate vulnerability score was calculated by multiplying the overall exposure and sensitivity scores. The product of the two component numeric scores results in a value between 1 and 16. The overall climate vulnerability rank is then classified as follows: 1–3 low, 4–6 moderate, 8–9 high, and 12–16 very high.
+
+vulcalc_att <- vulresults |>
+  tidyr::pivot_longer(c(5:8), names_to = "Score", values_to = "ExpertWt") |>
+  dplyr::mutate("NumScore" = dplyr::case_when(Score == "Low" ~ 1,
+                                              Score == "Moderate" ~ 2, 
+                                              Score == "High" ~ 3,
+                                              Score == "Very High" ~ 4)) |>
+  dplyr::group_by(Species, Attribute, `Attribute Category`) |>
+  dplyr::summarise(WtScore = weighted.mean(NumScore, ExpertWt, na.rm=T))
+
+vulcalc_sensexp <- vulcalc_att |>
+  dplyr::group_by(Species, `Attribute Category`) |>
+  dplyr::summarise("Overall" = dplyr::case_when(sum(WtScore >= 3.5) >= 3 ~ 4,
+                                                sum(WtScore >= 3.0) >= 2 ~ 3,
+                                                sum(WtScore >= 2.5) >= 2 ~ 2,
+                                                TRUE ~ 1))
+
+vulcalc <- vulcalc_sensexp |>
+  tidyr::pivot_wider(-Species, names_from = `Attribute Category`, values_from = Overall) |>
+  dplyr::mutate("Vulnerability" = as.numeric(`Exposure Factor`)*as.numeric(`Sensitivity Attribute`),
+                "VulRank" = dplyr::case_when(Vulnerability > 10 ~"Very High",
+                                           Vulnerability > 7 ~ "High",
+                                           Vulnerability > 3 ~ "Moderate",
+                                           TRUE ~ "Low"))
+  
 
 ```
 
