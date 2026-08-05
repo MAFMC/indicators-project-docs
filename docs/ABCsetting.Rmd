@@ -66,7 +66,17 @@ Current CVA results [@hare_vulnerability_2016] for MAFMC managed stocks:
 # try package suppdata https://docs.ropensci.org/suppdata/
 
 vulresults <- readr::read_csv(suppdata::suppdata("10.1371/journal.pone.0146756", 1))
-direffects <- readr::read_csv(suppdata::suppdata("10.1371/journal.pone.0146756", 2))
+
+# csv has trailing blank column, thanks excel, read in without header to keep aligned
+direffects <- read.csv(suppdata::suppdata("10.1371/journal.pone.0146756", 2), header = F)
+# copy row 1 into column names but some have leading whitespace
+colnames(direffects) <- stringr::str_trim(direffects[1,])
+# remove redundant first row and NA last column
+direffects <- direffects[-1,-ncol(direffects)]
+# numeric columns
+direffects$Negative <- as.numeric(direffects$Negative)
+direffects$Neutral <- as.numeric(direffects$Neutral)
+direffects$Positive <- as.numeric(direffects$Positive)
 
 ```
 
