@@ -2,7 +2,12 @@
 title: "ABC Setting"
 author: "Sarah Gaichas"
 date: "`r Sys.Date()`"
-output: html_document
+output:
+  bookdown::html_document2:
+    code_fold: hide
+    df_print: paged
+    toc: true
+    toc_float: true
 csl: ../reports/plos.csl
 bibliography: ../reports/operationalSOE.bib
 link-citations: true
@@ -23,7 +28,7 @@ For context, other Council Catch setting processes employing indicators were rev
 
 *  NEFMC and PFMC score in both positive and negative directions, theoretically allowing both decreased and increased buffers from OFL to ABC. MAFMC also has a standard 100% OFL CV and can have smaller or larger buffers by going to 150% or 60%. SAFMC assigns p* based on an AP and SSC derived risk ranking from low to high and the Council can then choose to deviate from the p* by up to 0.1 from the risk based level within the limit of 0.5. 
 *  All consider a variety of factors but the PFMC and MAFMC don't include socioeconomic information (they consider data, assessment performance, and ecosystem) while the SAFMC risk ranking does (biology of the stock, human dimensions, ecosystem) and the NEFMC risk policy does (commercial and recreational fishery characterization in addition to stock status, recruitment, and climate vulnerability).  
-*  The NEFMC and SAFMC rules address "probability of management success" or of overfishing (p*). The MAFMC and PFMC rules address OFL uncertainty to determine the buffer to get to ABC. Therefore, the NEFMC risk policy and SAFMC rule do not consider data quality or assessment performance the way the PFMC and MAFMC ABC control rules do, and it is yet to be determined how the NEFMC scores will translate into ABCs. The SAFMC appears to use Fmsy or a proxy and apply the p* resulting from the risk ranking directly without additional buffers. 
+*  The NEFMC and SAFMC rules address "probability of management success" or of overfishing (p\*). The MAFMC and PFMC rules address OFL uncertainty to determine the buffer to get to ABC. Therefore, the NEFMC risk policy and SAFMC rule do not consider data quality or assessment performance the way the PFMC and MAFMC ABC control rules do, and it is yet to be determined how the NEFMC scores will translate into ABCs. The SAFMC appears to use Fmsy or a proxy and apply the p* resulting from the risk ranking directly without additional buffers. 
 *  NEFMC formally weights the categories (done by the Council only) while the MAFMC SSC has two tiers that informally weight the data and assessment factors higher than ecosystem factors. Weighting for PFMC is done by the SSC after the categories are filled. SAFMC risk factors are equally weighted. 
 
 
@@ -53,7 +58,7 @@ For context, other Council Catch setting processes employing indicators were rev
 1.  Can the SSC use ecosystem information to modify ABC when there is no OFL? Can we use ecosystem indicators for short term projections? (Can we do better than a 2% staleness factor?) Can the SSC use existing EAFM risk assessment indicators or criteria in these cases? 
 1.  Ana Parma's presentation from last week: EXCEPTIONAL CIRCUMSTANCES–when are we in them? Indicator based decision process outside the OFL CV table. We should or should not deviate from previous ABC based on pre-agreed information. 
 
-## Indicator Use At Present
+## Indicator Use At Present: CVA
 
 The [SSC OFL CV framework](https://www.mafmc.org/s/Final-OFL-CV-guidance-document_06_24.pdf) consults Climate Vulnerability Assessment (CVA) results explicitly. Although there are other metrics under the "Ecosystem Factors Accounted" decision criteria, this is the only one routinely applied. 
 
@@ -81,6 +86,15 @@ direffects <- direffects[-1,-ncol(direffects)]
 direffects$Negative <- as.numeric(direffects$Negative)
 direffects$Neutral <- as.numeric(direffects$Neutral)
 direffects$Positive <- as.numeric(direffects$Positive)
+
+#The scores were converted to numbers (negative = -1, neutral = 0, positive = 1) and a weighted average was calculated based on the total of 12 tallies. Weighted averages below -0.333 were classified as an overall negative effect, weighted averages between -0.333 and 0.333 were classified as an overall neutral effect, and weighted averages above 0.333 were classified as an overall positive effect.
+
+direffects <- direffects |>
+  dplyr::mutate(Score = (Negative*-1.0 + Positive)/12,
+                Overall = dplyr::case_when(Score < -0.333 ~ "Negative",
+                                           Score > 0.333 ~ "Positive",
+                                           TRUE ~ "Neutral"))
+
 
 # Applying the vulnerability decision rule from Table 3
 #Overall climate vulnerability was estimated using a four step process. First, the component scores (low, moderate, high and very high) were assigned a numerical value (1, 2, 3, and 4). Second, an average score for each climate exposure factor and sensitivity attribute was calculated as the weighted-mean of the experts’ tallies. Third, an overall exposure and sensitivity score was calculated from the weighted means using a logic rule (Table 3). Fourth, an overall climate vulnerability score was calculated by multiplying the overall exposure and sensitivity scores. The product of the two component numeric scores results in a value between 1 and 16. The overall climate vulnerability rank is then classified as follows: 1–3 low, 4–6 moderate, 8–9 high, and 12–16 very high.
@@ -123,11 +137,44 @@ mafmc <- c("Atlantic Mackerel",
            #"SurfClam", these arent in the CVA
            #"OceanQuahog")
 
+distshiftatt <- c("Adult Mobility",
+                  "Dispersal of Early Life Stages",
+                  "Habitat Specificity")#,
+                  #"Sensitivity to Temperature") this doesnt get reversed, add original scores back
+
+distcalc_att <- vulresults |>
+  dplyr::filter(Attribute %in% distshiftatt) |>
+  tidyr::pivot_longer(c(5:8), names_to = "Score", values_to = "ExpertWt") |>
+  dplyr::mutate("NumScore" = dplyr::case_when(Score == "Low" ~ 4,
+                                              Score == "Moderate" ~ 3, 
+                                              Score == "High" ~ 2,
+                                              Score == "Very High" ~ 1)) |>
+  dplyr::group_by(Species, Attribute, `Attribute Category`) |>
+  dplyr::summarise(WtScore = weighted.mean(NumScore, ExpertWt, na.rm=T))
+
+distcalc_temp <- vulcalc_att |>
+  dplyr::filter(Attribute == "Sensitivity to Temperature")
+
+distshift_att <- dplyr::bind_rows(distcalc_att, distcalc_temp)
+
+distshift_summ <- distshift_att |>
+  dplyr::group_by(Species, `Attribute Category`) |>
+  dplyr::summarise("Overall" = dplyr::case_when(sum(WtScore >= 3.5) >= 3 ~ 4,
+                                                sum(WtScore >= 3.0) >= 2 ~ 3,
+                                                sum(WtScore >= 2.5) >= 2 ~ 2,
+                                                TRUE ~ 1)) |>
+  dplyr::mutate(`Attribute Category` = "Distribution Shift") |>
+  dplyr::mutate("Potential" = dplyr::case_when(Overall == 4 ~ "Very High",
+                                               Overall == 3 ~ "High",
+                                               Overall == 2 ~ "Moderate",
+                                               Overall == 1 ~ "Low"))
 
 
 ```
 
-Results for MAFMC species. Overall vulnerability:
+### Overall Vulnerability
+
+This is currently used in the OFL CV process and in the EAFM risk assessment ("Climate Vulnerability" risk element). Results for MAFMC species:
 
 ```{r vultable}
 
@@ -135,19 +182,83 @@ mafmcvul <- vulcalc |>
   dplyr::filter(Species %in% mafmc)
 
 flextable::flextable(mafmcvul) |>
+  flextable::bg(i = ~VulRank == "Low", j = "VulRank", bg = "green") |>
+  flextable::bg(i = ~VulRank == "Moderate", j = "VulRank", bg = "yellow") |>
+  flextable::bg(i = ~VulRank == "High", j = "VulRank", bg = "orange") |>
+  flextable::bg(i = ~VulRank == "Very High", j = "VulRank", bg = "red") |>
   flextable::width(width = c(3,2,2,2,2))
 
 ```
 
-Directional effect (ranks by each expert):
+### Potential for a change in species distribution
+
+Current distribution shift potential results [@hare_vulnerability_2016] for MAFMC managed stocks were calculated as follows:
+
+>High potential for change in species distribution was defined as highly mobile adults, broadly dispersing early life stages, low habitat specificity, and high temperature sensitivity [34]. These attributes have some skill in predicting species that can change distribution in response to climate change; increased dispersal capacity and ecological generalism promote changes in distribution [74]. The potential for a change in species distribution was estimated using these attributes, reversing the scores for Adult Mobility, Early Life Stage Dispersal, and Habitat Specificity, and applying the same logic rule as in the general vulnerability calculation.
+
+This is not currently used in the OFL CV process, but is used in the EAFM risk assessment ("Distribution Shift" risk element). 
+
+```{r distshift}
+
+mafmcatt_dist <- distshift_summ |>
+  dplyr::filter(Species %in% mafmc)
+
+flextable::flextable(mafmcatt_dist) |>
+  flextable::bg(i = ~Potential == "Low", j = "Potential", bg = "green") |>
+  flextable::bg(i = ~Potential == "Moderate", j = "Potential", bg = "yellow") |>
+  flextable::bg(i = ~Potential == "High", j = "Potential", bg = "orange") |>
+  flextable::bg(i = ~Potential == "Very High", j = "Potential", bg = "red") |>
+  flextable::width(width = c(3,2,2,2))
+
+
+```
+
+
+### Directional effect 
+
+Directional effect [@hare_vulnerability_2016] for MAFMC managed stocks were calculated as follows:
+
+>Experts were asked to score the directional effect of climate change for each species, giving an overall indication whether impacts are anticipated to be negative, neutral, or positive on the species in the region. For each species, 3 experts scored directional effect. Experts included the functional group experts for each species (n = 2) and the lead author. Each expert was given 4 tallies to score in the 3 bins. The scores were converted to numbers (negative = -1, neutral = 0, positive = 1) and a weighted average was calculated based on the total of 12 tallies. Weighted averages below -0.333 were classified as an overall negative effect, weighted averages between -0.333 and 0.333 were classified as an overall neutral effect, and weighted averages above 0.333 were classified as an overall positive effect. 
+
+This is not currently used in the OFL CV process or any other MAFMC process, but it could be. These are ranks by each expert, with darker colors on higher agreement direction:
 
 ```{r mafmcdir}
 
 mafmcdir <- direffects |>
   dplyr::filter(Species %in% mafmc)
 
-flextable::flextable(mafmcdir) |>
-  flextable::width(width = c(3,2,2,2,2))
+# solution for alpha by column here https://www.ardata.fr/en/flextable-gallery/2021-03-29-gradient-colored-table/
+
+# pick colors from hcl.colors(8, "Dark 3") to get similar light-dark scale across colors
+
+negativepal <- scales::col_numeric(
+  palette = c("transparent","#E16A86"),
+  domain = c(0,12)
+)
+
+neutralpal <- scales::col_numeric(
+  palette = c("transparent", "#909800"),
+  domain = c(0, 12)
+)
+
+positivepal <- scales::col_numeric(
+  palette = c("transparent","#00A846"),
+  domain = c(0, 12)
+)
+
+
+flextable::flextable(mafmcdir |>
+                       dplyr::select(-Score)) |>
+  flextable::bg(j = "Negative",
+                bg = negativepal,
+                source = "Negative") |>
+  flextable::bg(j = c("Neutral"),
+                bg = neutralpal,
+                source = c("Neutral")) |>
+  flextable::bg(j = c("Positive"),
+                bg = positivepal,
+                source = c("Positive")) |>
+  flextable::width(width = c(3,2,1,1,1,2))
 
 
 ```
@@ -160,9 +271,10 @@ mafmcatt <- vulcalc_att |>
 
 ```
 
-And individual species attributes:
 
 ### Species Attributes {.tabset}
+
+Each species sensitivity attributes and exposure scores are not currently used in the OFL CV process, but could be to define further specific indicators to use.
 
 ```{r mafmcsppatt, results='asis'}
 
@@ -170,7 +282,8 @@ for(s in unique(mafmcatt$Species)){
   cat("  \n#### ",  s,"  \n\n")
   
   print(flextable::flextable_to_rmd(flextable::flextable(mafmcatt |>
-                                                dplyr::filter(Species %in% s)) |>
+                                                dplyr::filter(Species %in% s) |>
+                                                  dplyr::arrange(desc(WtScore))) |>
                            flextable::autofit()))
   
   cat("  \n")
@@ -180,5 +293,7 @@ for(s in unique(mafmcatt$Species)){
 
 
 ### {-}
+
+
 
 ## References
