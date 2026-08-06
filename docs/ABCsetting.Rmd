@@ -10,7 +10,9 @@ urlcolor: blue
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
 ```
 
 ## Introduction
@@ -125,7 +127,7 @@ mafmc <- c("Atlantic Mackerel",
 
 ```
 
-Results for MAFMC species
+Results for MAFMC species. Overall vulnerability:
 
 ```{r vultable}
 
@@ -136,6 +138,9 @@ flextable::flextable(mafmcvul) |>
   flextable::width(width = c(3,2,2,2,2))
 
 ```
+
+Directional effect (ranks by each expert):
+
 ```{r mafmcdir}
 
 mafmcdir <- direffects |>
@@ -155,5 +160,25 @@ mafmcatt <- vulcalc_att |>
 
 ```
 
+And individual species attributes:
+
+### Species Attributes {.tabset}
+
+```{r mafmcsppatt, results='asis'}
+
+for(s in unique(mafmcatt$Species)){
+  cat("  \n#### ",  s,"  \n\n")
+  
+  print(flextable::flextable_to_rmd(flextable::flextable(mafmcatt |>
+                                                dplyr::filter(Species %in% s)) |>
+                           flextable::autofit()))
+  
+  cat("  \n")
+}
+
+```
+
+
+### {-}
 
 ## References
