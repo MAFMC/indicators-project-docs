@@ -10,7 +10,7 @@ urlcolor: blue
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Introduction
@@ -100,16 +100,60 @@ vulcalc_sensexp <- vulcalc_att |>
                                                 TRUE ~ 1))
 
 vulcalc <- vulcalc_sensexp |>
-  tidyr::pivot_wider(-Species, names_from = `Attribute Category`, values_from = Overall) |>
+  tidyr::pivot_wider(names_from = `Attribute Category`, values_from = Overall) |>
   dplyr::mutate("Vulnerability" = as.numeric(`Exposure Factor`)*as.numeric(`Sensitivity Attribute`),
                 "VulRank" = dplyr::case_when(Vulnerability > 10 ~"Very High",
                                            Vulnerability > 7 ~ "High",
                                            Vulnerability > 3 ~ "Moderate",
                                            TRUE ~ "Low"))
   
+mafmc <- c("Atlantic Mackerel",
+           "Black Sea Bass",
+           "Bluefish",
+           "Butterfish",
+           "Monkfish",
+           "Northern Shortfin Squid",
+           "Longfin Inshore Squid",
+           "Scup",
+           "Spiny Dogfish",
+           "Summer Flounder",
+           "Tilefish")
+           #"SurfClam", these arent in the CVA
+           #"OceanQuahog")
+
+
 
 ```
 
+Results for MAFMC species
+
+```{r vultable}
+
+mafmcvul <- vulcalc |>
+  dplyr::filter(Species %in% mafmc)
+
+flextable::flextable(mafmcvul) |>
+  flextable::width(width = c(3,2,2,2,2))
+
+```
+```{r mafmcdir}
+
+mafmcdir <- direffects |>
+  dplyr::filter(Species %in% mafmc)
+
+flextable::flextable(mafmcdir) |>
+  flextable::width(width = c(3,2,2,2,2))
+
+
+```
+
+```{r mafmcatt}
+
+mafmcatt <- vulcalc_att |>
+  dplyr::filter(Species %in% mafmc)
+
+
+```
 
 
 ## References
