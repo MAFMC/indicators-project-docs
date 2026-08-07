@@ -60,17 +60,23 @@ For context, other Council Catch setting processes employing indicators were rev
 
 ## Indicator Use At Present: CVA
 
-The [SSC OFL CV framework](https://www.mafmc.org/s/Final-OFL-CV-guidance-document_06_24.pdf) consults Climate Vulnerability Assessment (CVA) results explicitly. Although there are other metrics under the "Ecosystem Factors Accounted" decision criteria, this is the only one routinely applied. 
+The [SSC OFL CV framework](https://www.mafmc.org/s/Final-OFL-CV-guidance-document_06_24.pdf) consults Climate Vulnerability Assessment (CVA, [@hare_vulnerability_2016]) results explicitly. Although there are other metrics under the "Ecosystem Factors Accounted" decision criteria, this is the only one routinely applied to all assessments. Ecosystem factors is a tier-2 decision criterion, meaning its ranking cannot be used to justify a lower OFL CV than would be assigned from Tier 1 criteria (Data quality, Model identification, and Retrospective analysis).
+
+We note that the CVA is currently (2026) being updated. However, the results of the update are not yet available, so we continue to use the available indicators published in 2016. 
+
+The OFL CV criteria map to the CVA vulnerability results as follows:
 
 The 60% OFL CV category states: climate vulnerability analysis suggests low risk of change in productivity due to changing climate.
 The 100% OFL CV (default) category states: climate vulnerability analysis suggests moderate risk of change in productivity from changing climate.
 The 150% OFL CV category states: climate vulnerability analysis suggests high risk of changing productivity from changing climate. 
 
+Here, we used the data available from the original CVA to calculate indicator results for MAFMC managed species. These were compared with tables and figures in the publication to ensure methods were implemented correctly.  
+
 Current CVA results [@hare_vulnerability_2016] for MAFMC managed stocks were calculated as follows:
 
 >Overall climate vulnerability was estimated using a four step process. First, the component scores (low, moderate, high and very high) were assigned a numerical value (1, 2, 3, and 4). Second, an average score for each climate exposure factor and sensitivity attribute was calculated as the weighted-mean of the experts’ tallies. Third, an overall exposure and sensitivity score was calculated from the weighted means using a logic rule (Table 3). Fourth, an overall climate vulnerability score was calculated by multiplying the overall exposure and sensitivity scores. The product of the two component numeric scores results in a value between 1 and 16. The overall climate vulnerability rank is then classified as follows: 1–3 low, 4–6 moderate, 8–9 high, and 12–16 very high.
 
-```{r}
+```{r datafrompaper}
 # download csv results files from hare et al 2016 paper in PLOS one
 # try package suppdata https://docs.ropensci.org/suppdata/
 
@@ -174,7 +180,7 @@ distshift_summ <- distshift_att |>
 
 ### Overall Vulnerability
 
-This is currently used in the OFL CV process and in the EAFM risk assessment ("Climate Vulnerability" risk element). Results for MAFMC species:
+This is currently used in the OFL CV process and in the EAFM risk assessment ("Climate Vulnerability" risk element). As noted in the 2016 CVA [@hare_vulnerability_2016] and in the EAFM Risk Assessment [@gaichas_implementing_2018], many MAFMC managed species have low climate vulnerability (with 3 moderate and 2 high vulnerability). While they all have high or very high exposure, many of them have low sensitivity overall. Results for MAFMC species:
 
 ```{r vultable}
 
@@ -189,6 +195,12 @@ flextable::flextable(mafmcvul) |>
   flextable::width(width = c(3,2,2,2,2))
 
 ```
+
+At present, this information on its own could rank the Ecosystem factors accounted Decision Criterion as 60% OFL CV for bluefish, butterfish, both squids, monkfish (not rated by the MAFMC SSC as NEFMC has the lead), and spiny dogfish. Atlantic mackerel, scup, and summer flounder would be in the 100% OFL CV bin, and tilefish and black sea bass would be in the 150% OFL CV bin for this tier-2 decision criterion.
+
+However, the Ecosystem factors accounted Decision Criterion considers more than just the CVA Vulnerability indicator.
+
+Also, by using this indicator alone, some CVA results are missed. For example, while black sea bass has high overall climate vulnerability, the directional effect of climate for black sea bass is expected to be positive. Therefore, the current framework could be improved by considering the CVA indicators together. The next sections examine additional indicators and suggest how they might be used in addition to the overall vulnerability indicator.
 
 ### Potential for a change in species distribution
 
