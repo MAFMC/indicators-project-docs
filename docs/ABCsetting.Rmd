@@ -200,15 +200,15 @@ At present, this information on its own could rank the Ecosystem factors account
 
 However, the Ecosystem factors accounted Decision Criterion considers more than just the CVA Vulnerability indicator.
 
-Also, by using this indicator alone, some CVA results are missed. For example, while black sea bass has high overall climate vulnerability, the directional effect of climate for black sea bass is expected to be positive. Therefore, the current framework could be improved by considering the CVA indicators together. The next sections examine additional indicators and suggest how they might be used in addition to the overall vulnerability indicator.
+Also, by using this indicator alone, some CVA results are missed. For example, while black sea bass has high overall climate vulnerability, the directional effect of climate for black sea bass is expected to be positive (see [below](#directional-effect)). Therefore, the current framework could be improved by considering the CVA indicators together. The next sections examine additional indicators and suggest how they might be used in addition to the overall vulnerability indicator.
 
 ### Potential for a change in species distribution
 
-Current distribution shift potential results [@hare_vulnerability_2016] for MAFMC managed stocks were calculated as follows:
+Current distribution shift potential results [@hare_vulnerability_2016] for MAFMC managed stocks were calculated as follows (citation 34 in the quote is @morrison_methodology_2015 and citation 74 is @sunday_species_2015 in this document):
 
 >High potential for change in species distribution was defined as highly mobile adults, broadly dispersing early life stages, low habitat specificity, and high temperature sensitivity [34]. These attributes have some skill in predicting species that can change distribution in response to climate change; increased dispersal capacity and ecological generalism promote changes in distribution [74]. The potential for a change in species distribution was estimated using these attributes, reversing the scores for Adult Mobility, Early Life Stage Dispersal, and Habitat Specificity, and applying the same logic rule as in the general vulnerability calculation.
 
-This is not currently used in the OFL CV process, but is used in the EAFM risk assessment ("Distribution Shift" risk element). 
+This is not currently used in the OFL CV process, but is used in the EAFM risk assessment ("Distribution Shift" risk element). As noted in the EAFM Risk Assessment [@@gaichas_implementing_2018], nearly all MAFMC managed species have high or very high potential for distribution shifts:
 
 ```{r distshift}
 
@@ -224,6 +224,11 @@ flextable::flextable(mafmcatt_dist) |>
 
 
 ```
+
+This indicator of distribution shift potential based on life history attributes could be combined with indicators of observed or projected distribution shifts. In the EAFM risk assessment, the CVA shift potential is used to represent risk to meeting OY objectives due to mismatches between catch allocation and species distribution. 
+
+For ABC setting, the distribution shift potential indicator (ideally combined with indicators of observed or projected shifts by species) could be used within the Data quality or Model identification OFL CV decision criteria to determine whether surveys or the assessment (respectively) align with the stock's range. 
+
 
 
 ### Directional effect 
