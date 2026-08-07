@@ -66,9 +66,9 @@ We note that the CVA is currently (2026) being updated. However, the results of 
 
 The OFL CV criteria map to the CVA vulnerability results as follows:
 
-The 60% OFL CV category states: climate vulnerability analysis suggests low risk of change in productivity due to changing climate.
-The 100% OFL CV (default) category states: climate vulnerability analysis suggests moderate risk of change in productivity from changing climate.
-The 150% OFL CV category states: climate vulnerability analysis suggests high risk of changing productivity from changing climate. 
+*  The 60% OFL CV category states: climate vulnerability analysis suggests low risk of change in productivity due to changing climate. 
+*  The 100% OFL CV (default) category states: climate vulnerability analysis suggests moderate risk of change in productivity from changing climate. 
+*  The 150% OFL CV category states: climate vulnerability analysis suggests high risk of changing productivity from changing climate.  
 
 Here, we used the data available from the original CVA to calculate indicator results for MAFMC managed species. These were compared with tables and figures in the publication to ensure methods were implemented correctly.  
 
@@ -229,7 +229,11 @@ This indicator of distribution shift potential based on life history attributes 
 
 For ABC setting, the distribution shift potential indicator (ideally combined with indicators of observed or projected shifts by species) could be used within the Data quality or Model identification OFL CV decision criteria to determine whether surveys or the assessment (respectively) align with the stock's range. 
 
+The information could align similarly to the vulnerability indicator:
 
+*  Low potential for distribution shift would suggest low uncertainty (60% CV) for survey data quality and assessment alignment, all things being equal 
+*  Moderate potential for distribution shift would suggest default uncertainty (100% CV) for survey data quality and assessment alignment, and  
+*  High or very high potential for distribution shift would suggest high uncertainty (150% CV) for survey data quality and assessment alignment unless there is information that survey and assessment boundaries still encompass a high quantile of the stock distribution.
 
 ### Directional effect 
 
@@ -291,7 +295,7 @@ mafmcatt <- vulcalc_att |>
 
 ### Species Attributes {.tabset}
 
-Each species sensitivity attributes and exposure scores are not currently used in the OFL CV process, but could be to define further specific indicators to use.
+Each species sensitivity attributes and exposure scores are not currently used in the OFL CV process, but could be to define further specific indicators to use. We could consider looking for attributes with mean rankings of 2.5 or higher. 
 
 ```{r mafmcsppatt, results='asis'}
 
@@ -311,6 +315,17 @@ for(s in unique(mafmcatt$Species)){
 
 ### {-}
 
+Species attributes could be used to link specific climate and habitat indicators with each species considered.
+
+Species could have additional indicators examined based on overall vulnerability combined with directional effect. Low vulnerability species may not require additional indicators, but moderate-high vulnerability species could be prioritized. 
+
+For example, Atlantic mackerel has moderate climate vulnerability and the direction of climate impacts is expected to be negative. Therefore, individual attributes are examined. Two exposure factors and three sensitivity attributes have weighted scores above 2.5. 
+
+Atlantic mackerel's high sensitivity attributes are stock size/status, early life history survival and settlement requirements, and spawning cycle. 
+
+Atlantic mackerel's high exposure factors are mean sea surface temperature and ocean acidification. Ideally, stock specific indicators would be available for mean SST in areas and seasons critical to early life history survival and settlement and/or during spawning. In the absence of these indicators, SOE indicators could be evaluated for recent trends. 
+
+Increasing trends of exposure factors linked to stock sensitivity would indicate more risk to the stock than decreasing trends. Increased or decreased risk would in turn either increase or decrease OFL CV or a buffer applied to a previous ABC. These CVA derived indicators could therefore be used outside the OFL CV process in a more data limited ABC setting process where OFL was not available.
 
 
 ## References
