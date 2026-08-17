@@ -12,6 +12,8 @@ csl: ../reports/plos.csl
 bibliography: ../reports/operationalSOE.bib
 link-citations: true
 urlcolor: blue
+editor_options: 
+  chunk_output_type: inline
 ---
 
 ```{r setup, include=FALSE}
@@ -326,6 +328,8 @@ Atlantic mackerel's high sensitivity attributes are stock size/status, early lif
 Atlantic mackerel's high exposure factors are mean sea surface temperature and ocean acidification. Ideally, stock specific indicators would be available for mean SST in areas and seasons critical to early life history survival and settlement and/or during spawning. In the absence of these indicators, SOE indicators could be evaluated for recent trends. 
 
 Increasing trends of exposure factors linked to stock sensitivity would indicate more risk to the stock than decreasing trends. Increased or decreased risk would in turn either increase or decrease OFL CV or a buffer applied to a previous ABC. These CVA derived indicators could therefore be used outside the OFL CV process in a more data limited ABC setting process where OFL was not available.
+
+How will we implement this in a simulation?
 
 
 ## References
