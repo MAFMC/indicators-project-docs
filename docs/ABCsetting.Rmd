@@ -58,7 +58,14 @@ For context, other Council Catch setting processes employing indicators were rev
     + Pacific assessment data inputs
     + Pacific assessment model fits and structural uncertainty
 1.  Can the SSC use ecosystem information to modify ABC when there is no OFL? Can we use ecosystem indicators for short term projections? (Can we do better than a 2% staleness factor?) Can the SSC use existing EAFM risk assessment indicators or criteria in these cases? 
-1.  Ana Parma's presentation from last week: EXCEPTIONAL CIRCUMSTANCES–when are we in them? Indicator based decision process outside the OFL CV table. We should or should not deviate from previous ABC based on pre-agreed information. 
+1.  Ana Parma's presentation from last week: [EXCEPTIONAL CIRCUMSTANCES](https://www.youtube.com/watch?v=jNjVHg9ZeqY)–when are we in them? Indicator based ABC decision process outside the OFL CV table. We should or should not deviate from previous ABC based on pre-agreed information. 
+    + Formalize situations used in MPs: 
+       + Inputs differ: missing data, *are new data within bound of data simulated by OM (or recent assessment)*, new info suggests problems with current indicators
+       + Pop dyn or fishery change: new info outside range of OM assumptions (stock structure, life history, movement, mixing, stock size), fleet operations. targeting, or allocation change
+       + Past catch very different from TACs: unaccounted mort or inadequate management control (implementation error)
+    + Update expected distributions with new information
+    + EC does not always imply you need to change previously specified TAC, can keep it while gathering info
+    + Can we detect problematic circumstances from simulation and avoid those or ID them if external?
 
 ## Indicator Use At Present: CVA
 
