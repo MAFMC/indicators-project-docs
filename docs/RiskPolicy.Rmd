@@ -1,0 +1,174 @@
+---
+title: "Risk Policy"
+author: "Sarah Gaichas"
+date: "`r Sys.Date()`"
+output:
+  bookdown::html_document2:
+    code_fold: hide
+    df_print: paged
+    toc: true
+    toc_float: true
+csl: ../reports/plos.csl
+bibliography: ../reports/operationalSOE.bib
+link-citations: true
+urlcolor: blue
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
+```
+
+## Introduction
+
+The MAFMC Risk Policy was identified as a high priority decision for further indicator integration. The current [Risk Policy](https://www.federalregister.gov/documents/2020/12/15/2020-27562/fisheries-of-the-northeastern-united-states-omnibus-framework-adjustment-to-modify-the-mid-atlantic) uses one indicator, stock biomass status, to determine the Council's risk policy with respect to probability of overfishing. Low stock status (B/Bmsy < 1) results in much more risk averse probability of overfishing and lower ABC relative to OFL, high stock status (>1.5 B/Bmsy) is as risk tolerant as allowed by law with ABC close to OFL. 
+
+The current Risk Policy was finalized by the Council in [December 2020](https://www.federalregister.gov/documents/2020/12/15/2020-27562/fisheries-of-the-northeastern-united-states-omnibus-framework-adjustment-to-modify-the-mid-atlantic). It is based on a [management strategy evaluation](https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/5e56e0f286208b151ba4f55d/1582752007474/S1_Fine+tuning+the+ABC+control+rule+for+Mid-Atlantic+stocks_Wiedenmann.pdf) that compared performance of alternative policies across life history types represented by summer flounder, scup, and butterfish. 
+
+```{r MAFMCriskpolicy, fig.asp = 0.7}
+
+riskpol <- data.frame(Bfrac = c(0, 0.1, 1.0, 1.5, 2.5),
+                      Current = c(0, 0, 0.45, 0.49, 0.49),
+                      Pre2020 = c(0, 0, 0.4, 0.4, 0.4)
+)
+
+riskpol <- riskpol |>
+  tidyr::pivot_longer(-Bfrac, names_to = "pstar")
+
+p1 <- ggplot2::ggplot(riskpol, ggplot2::aes(x=Bfrac, y=value, linetype = pstar)) +
+  ggplot2::geom_path(show.legend = TRUE) +
+  ggplot2::theme_minimal() +
+  ggplot2::xlab("B/Bmsy") +
+  ggplot2::ylab("p*") +
+  ggplot2::labs(linetype = "Policy")#+
+  #theme(legend.position="bottom")
+
+p1
+#print(p1, vp=grid::viewport(gp=grid::gpar(cex=1.5)))
+```
+
+The [ABC control rule](http://www.mafmc.org/s/MAFMC-ABC-Control-Rule-White-Paper.pdf) includes an SSC decision on uncertainty in the assessment and converts the risk policy into an ABC given the stock status.
+
+```{r OFLCVtoABC, fig.asp = 0.7}
+
+ABCprop <- data.frame(Bfrac = seq(0, 2.5, 0.01)) |>
+  dplyr::mutate(pstar = dplyr::case_when(Bfrac <= 0.1 ~ 0,
+                                  Bfrac > 0.1 & Bfrac <= 1.0 ~ (Bfrac-0.1)*((0.45-0)/(1-0.1)) ,
+                                  Bfrac > 1.0 & Bfrac <= 1.5 ~ (Bfrac-1.0)*((0.49-0.45)/(1.5-1))+0.45,
+                                  Bfrac > 1.5 ~ 0.49)) |>
+  dplyr::mutate("CV=60%" = qlnorm(pstar, log(1), log(0.60 + 1)),
+                "CV=100%" = qlnorm(pstar, log(1), log(1.00 + 1)),
+                "CV=150%" = qlnorm(pstar, log(1), log(1.50 + 1))) |>
+  tidyr::pivot_longer(-c(Bfrac, pstar), names_to = "CVlevel")
+                       
+
+p2 <- ggplot2::ggplot(ABCprop, ggplot2::aes(x=Bfrac, y=value, colour=CVlevel)) +
+  ggplot2::geom_line()+  
+  ggplot2::theme_minimal() +
+  ggplot2::xlab("B/Bmsy") +
+  ggplot2::ylab("ABC/OFL proportion") +
+  ggplot2::labs(colour = "OFL CV") #+
+  #theme(legend.position="bottom")
+
+p2
+#print(p2, vp=grid::viewport(gp=grid::gpar(cex=1.5)))
+  
+```
+
+## Direction from the Mini Workshop
+
+Approach: adjustment to current processes with indicators, not invention of new processes. Maintain a general (rather than species tailored) approach for the risk policy, and maintain the current simplicity.
+
+Socioeconomic indicators were identified as a promising area for development, particularly for risk policy, given that the current framework relies almost exclusively on biological indicators. 
+
+**Guiding question:** What is the range of acceptable tradeoffs between social/economic considerations and stock status at a given level of overfishing risk? Can the use of multiple indicators increase stability in advice?
+
+**Initial needs**  
+
+*  Documentation for each time Council has suspended the risk policy. 
+
+The Council suspended the risk policy for spiny dogfish in 2025, setting ABC=OFL (the maximum legal ABC) due to concerns related to MSA National Standard 8. From October 2024 Council Report: "industry provided input that the resulting lower quotas could collapse the spiny dogfish fishery by forcing the last processor out of business." In 2025, the Council set spiny dogfish 2026-2027 ABC equal to 2025 ABC, slightly less than the projected OFL for those years. 
+
+*  Request code from Weidenmann for 2019 risk policy MSE. (done)
+
+**Focus on social and economic indicators**
+
+*  Integrate concerns that caused risk policy suspension. 
+*  Review current SOE, Risk Assessment, SSB Performance. 
+*  Draw dataset from Fishery Performance reports. 
+
+## A potential indicator-based framework
+
+### Identify the decision
+
+Risk policy: Council decides whether to apply the standard biology-based risk policy, or modify with social and economic factors? How much weight should social and economic factors get?
+
+### Identify key information 
+
+#### Which are the most important two factors to consider for the decision? Combined socioeconomic and biological?
+
+My reading of the Council action on spiny dogfish is that the goal is maintaining fishery viability, and the mechanism was preventing the loss of essential fishery infrastructure resulting from volumes to low for the single processor. 
+
+The fishery is reliant on a single processor and has no other options for landing dogfish catch. 
+
+#### What indicators do we have for the factors?
+
+For the dogfish case, specific indicators would be number of processors available for a particular species (1), and volume required for the processor to stay open (we don't have that).
+
+To generalize this, we suggest looking at existing regional socioeconomic indicators specifying the landings/revenue by species at each port to find the set of ports most reliant on the species in question. Or we could ask how many ports have more than X% of revenue from this species. Or what is the maximum proportion of revenue for this species in any port? 
+
+The new commercial fishing port activity indicator could be used--what proportion is this species of all activity at this port? Find the top X ports.
+
+Then, for this subset of ports, evaluate the diversity of options for revenue--how many other species generate revenue in those ports? What other options are there for these ports to generate revenue?
+
+### Identify clear decision criteria
+
+What threshold values move us between decisions?
+
+Brainstorm: Some are identified above as Xs. The bottom line is don't let the last processor go away but what is above that? We could use history (lowest revenue observed from the species in any port? quantiles of revenue?) and maybe the biodiversity lit has some ideas on minimum or optimal values of diversity?
+
+### Conceptual model for decisions
+
+The "square" approach uses a pair of indicators and identifies how decisions change across their joint range. In one quadrant, the joint indicators have good status, in the opposite quadrant both have poor status. The other two quadrants have a mix of good and poor status across the indicators. Each quadrant leads to a different decision. The thresholds are then the values of each indicator dividing good from poor. 
+
+For risk policy, a square representing fishery viability could include one indicator for the reliance of the fishery on the species (represented as aggregated ports with high landings of the species), and the other could be the diversity of landings in the same ports, representing other economic options for dependent ports. 
+
+
+```{r square, out.width="100%"}
+
+knitr::include_graphics("https://github.com/sgaichas/HSpresentations/raw/main/docs/images/RiskPolSquareEx.png")
+
+```
+
+What we would test is how these different decisions based on indicators might tradeoff with stock status in the case of the risk policy, since these decisions have the potential to override the standard risk policy. 
+
+What does it mean to "suspend" the risk policy? Essentially it means allowing the maximum risk tolerance regardless of stock status; setting ABC = OFL. This is what has happened for spiny dogfish for the 2025 specifications. However, the current spiny dogfish specifications have ABC slightly less than the projected OFL to temper the risk of overfishing while maintaining enough catch to retain regional processing capacity. 
+
+With the use of indicators of fishery viability, the risk policy could instead be adjusted to increase risk tolerance at lower stock status than currently prescribed to balance socioeconomic objectives with stock status objectives.
+
+```{r newriskpol2, out.width="100%"}
+
+knitr::include_graphics("https://github.com/MAFMC/indicators-project-docs/raw/main/onepagers/RiskPolInds_2.png")
+```
+
+
+
+In particular, the time dimension will be important. Suspending the risk policy for a single year may not have a big impact on stock status but over multiple years it could, compromising the Council's future options if the stock status reaches the overfished threshold and a rebuilding plan is required. Low stock status has further implications for the social and economic outcomes measured by the indicators. 
+
+What level of catch is required to meet the social and economic objectives? If it is above the legal limit (can't exceed OFL) then what?
+
+## Simulation ideas
+
+We have a [food web](https://sgaichas.github.io/MAB-Rpath/MAB_MSE_test.html) and a [single species simulation framework](https://sgaichas.github.io/spasam-mse-test/ButterfishTest_MAFMC_HCR.html) with the MAFMC risk policy implemented.
+
+A simple test in the absence of indicators would be to test various levels of risk policy suspension with various durations to see whether and when stock status drops to levels requiring rebuilding. This could identify the safe space for making policy calls to prioritize socioeconomic objectives in the short term. Once a stock is at the level requiring rebuilding there are fewer management options and likely fishery restrictions counterproductive to socioeconomic objectives. So low stock status still needs to be avoided. 
+
+The [commercial performance measures](https://apps-nefsc.fisheries.noaa.gov/pm/index.php) give economic perforamnce indicators at the FMP and prices at the species level over time so we could bracket revenues for a given amount of catch. In the food web model we could do this for all species so we could know what proportion of total revenue each species has and also get an overall revenue diversity metric. This could be done by fleet. 
+
+In the single species model we would need to have scenarios of high and low reliance and other options for fleets just built in.
+
+
+
