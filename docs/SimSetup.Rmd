@@ -1,0 +1,149 @@
+---
+title: "Simulation Setup"
+author: "Sarah Gaichas"
+date: "`r Sys.Date()`"
+output:
+  bookdown::html_document2:
+    code_fold: hide
+    df_print: paged
+    toc: true
+    toc_float: true
+csl: ../reports/plos.csl
+bibliography: ../reports/operationalSOE.bib
+link-citations: true
+urlcolor: blue
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
+```
+
+## Introduction
+
+Can we setup our Rpath Mid Atlantic model to do both Risk Policy and ABC sims? What would need to be done in single species SPASM.MSE models?
+
+Testing of the Mid Rpath was done [here](https://sgaichas.github.io/MAB-Rpath/MAB_MSE_test.html), including adding the MAFMC Risk Policy and implementing it in the MSE loop.
+
+Testing of the SPASAM.MSE is [here in general](https://sgaichas.github.io/spasam-mse-test/TestInstallation.html) with the [MAFMC risk policy implemented](https://sgaichas.github.io/spasam-mse-test/TestMAFMC_HCR.html), here a start on [summer flounder](https://sgaichas.github.io/spasam-mse-test/SummerFlounderTest.html), here a start on [butterfish](https://sgaichas.github.io/spasam-mse-test/ButterfishTest_MAFMC_HCR.html) using the actual assessment
+
+SPASAM.MSE needs:  
+
+1.  simplify the OMs, use output of summer flounder test as input 
+1.  butterfish needs more work on the HCR because the SSC subs in 2/3 M as FOFL and the model running internally estimated FOFL makes it clear that this is a good idea--FOFL is so high that you crash the stock and the EMs can't converge. also we don't really need the actual stock assessment to condition the OM for this 
+ 
+Rpath Needs: 
+
+1.  internally consistent reference points. estimating them from production model for Rpath is probably is best but perturbing with stock specific F may be more effective than trying the effort based forcing done originally to get time series for parameter estimation. alternatively: examine the catch by fleet to back out how much effort to apply across fleets to get better estiamtes 
+1.  add drivers for ABC indicator testing (and to push the model away from its equilibrium). drivers can be bottom up at first, model productivity trends or step changes 
+1.  ensure fleets are operating reasonably 
+1.  what level of parameter uncertainty should we use? full ecosense may be useful, then I need to estimate ref pts from each kept system 
+
+What does the simulation need to do
+
+1. Adjust risk policy parameters selectively by stock
+1. Adjust ABC selectively by stock
+1. Allocate to fleets? commercial vs rec?
+1. Output stock levels
+1. Output catch levels (which are our only proxy for revenue)
+1. Compare stock, "F" and catch with target and threshold level
+1. Compare fleet performance
+1. What is catch composition? feeds back into what other options fleets have
+1. Are there system level issues (Sarah W's resilience)
+
+
+How often should we adjust reference points (do an "assessment") -- not sure I want to focus on this
+
+How far away from the assessment are reference points still good -- we will get this without re-estimating them
+
+Are there indicator based reference points if you dont have an assessment -- here try the favorable-neutral-unfavorable approach in Pacific?
+See ABC Setting
+The simplest process is start with current ABC and adjust based on indicators
+
+## Rpath
+
+This model is used in S. [Weisberg et al 2026](https://esajournals.onlinelibrary.wiley.com/doi/10.1002/eap.70303), comparing all three NEUS Rpaths.
+
+This model does include discards, despite its name.
+
+
+```{r}
+
+# no discards model? has nonzero discards
+load(url("https://github.com/sgaichas/MAB-Rpath/raw/main/outputs/MAB_params_Rpath_no_disc.RData"))
+load(url("https://github.com/sgaichas/MAB-Rpath/raw/main/outputs/MAB_Rpath_no_disc.RData"))
+
+MAB <- Rpath::rpath(MAB.rpath.params) # gives same object as MAB.rpath loaded above
+```
+
+
+Which species are caught in which fleets?
+
+Visualize catches; landings first
+
+```{r, fig.asp=2}
+#plot(MAB$Landings[,1])
+
+MABlandings <- tibble::as_tibble(MAB$Landings, rownames = "Group") |>
+  tidyr::pivot_longer(cols = -Group, names_to = "Fleet", values_to = "Landings")
+
+MABdiscards <- tibble::as_tibble(MAB$Discards, rownames = "Group") |>
+  tidyr::pivot_longer(cols = -Group, names_to = "Fleet", values_to = "Discards")
+
+ggplot2::ggplot(MABlandings, ggplot2::aes(x = Fleet, y = Landings)) +
+  ggplot2::geom_bar(stat = "identity") +
+  ggplot2::facet_wrap(~Group) +
+  ggplot2::coord_flip()
+  
+```
+
+Bluefish rec landings are probably not almost as much as menhaden purse seine landings? Perhaps an order of magnitude is missing somewhere... check on this. Bluefish EE is very high, perhaps due to this. Any changes to the rec fishery will hammer them. 
+
+Now discards
+
+```{r, fig.asp=2}
+ggplot2::ggplot(MABdiscards, ggplot2::aes(x = Fleet, y = Discards)) +
+  ggplot2::geom_bar(stat = "identity") +
+  ggplot2::facet_wrap(~Group) +
+  ggplot2::coord_flip()
+
+```
+
+
+Maybe some adjustments to discards? There were not discard estimates for the early 1980s; these are from observer data which may be sparse. Maybe a patch would be to add discards for spiny dogfish to reflect the higher fishing mortality? EEs are low for them. EEs are very high for other predators in this model (summer flounder, sharks, odontocetes). 
+
+Dead discards of spiny dogfish were estimated for the years 1981-1985 in [this document](https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/54174a1ce4b06556b71702cf/1410812444015/2014+Status+Report+for+spiny+dogfish_final.pdf). They were 2-3 times the landings. Subbing in mean dead discards for otter trawls in these years may be reasonable, as [discards are still roughly equal to catch for spiny dogfish--see Fig 4](https://www.mafmc.org/s/e1_2023-Spiny-Dogfish-MT-assessment-report.pdf).
+
+```{r}
+
+
+
+```
+
+This is the model structure, including fleets.
+One strange thing is the HMS Fleet has 0 catch so it breaks the plotting function.
+We should either take the HMS Fleet out or add real catch of HMS.
+For this figure, HMS catch totalling 10% of HMS biomass was added. We are not using this model for analysis
+
+```{r, fig.asp=1}
+#visualize a group
+# the all-0 HMS Fleet breaks this plotting function
+# add small HMS Fleet catch for HMS
+hms_catch<-c(rep(0,14),0.003,rep(0,39),rep(NA,12))
+MAB.rpath.params$model[,"HMS Fleet":=hms_catch]
+
+MAB2 <- Rpath::rpath(MAB.rpath.params)
+
+Rpath::webplot(MAB2, labels=T, fleets=T, highlight = 'SummerFlounder') #fleets not working in MAB plot
+
+#Rpath::ggwebplot(MAB, labels=T, fleets=T)
+
+```
+
+
+
+
+
