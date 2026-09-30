@@ -100,7 +100,41 @@ ggplot2::ggplot(MABlandings, ggplot2::aes(x = Fleet, y = Landings)) +
   
 ```
 
-Bluefish rec landings are probably not almost as much as menhaden purse seine landings? Perhaps an order of magnitude is missing somewhere... check on this. Bluefish EE is very high, perhaps due to this. Any changes to the rec fishery will hammer them. 
+Bluefish rec landings are probably not almost as much as menhaden purse seine landings? check on this. Bluefish EE is very high, perhaps due to this. Any changes to the rec fishery will hammer them. 
+
+The most recent management track assessments show [summer flounder](https://www.mafmc.org/s/e_Draft-2025-Summer-Flounder-MT-assessment-report-dn54.pdf) rec landings about 15000 t in the 1980s and [bluefish](https://www.mafmc.org/s/e1_Draft-2025-Bluefish-MT-assessment-report-7eyc.pdf) rec landings around 50000 - 75000 t. 
+
+Running the [MAB_rec_catch.R](https://github.com/sgaichas/MAB-Rpath/blob/main/MAB_rec_catch.R) script with the [MRIP dataset](https://github.com/sgaichas/MAB-Rpath/blob/main/data/mrip_data.RData) in the MAB Rpath repo gets the following (before scaling to MAB area), with bluefish nearly an order of magnitude higher
+
+```
+MAB.mrip_summary |> print(n=Inf)
+# A tibble: 23 × 2
+   RPATH                 catch
+   <chr>                 <dbl>
+ 1 AtlCroaker          345251.
+ 2 AtlMackerel        1540585.
+ 3 BlackSeaBass       1737885.
+ 4 Bluefish          34452648.
+ 5 Butterfish             458.
+ 6 Cod                4580805.
+ 7 Goosefish             9774.
+ 8 Mesopelagics          1102.
+ 9 OtherDemersals     2579641.
+10 OtherPelagics      1597042.
+11 OtherSkates         354956.
+12 RedHake             298367.
+13 RiverHerring          4815.
+14 Scup                435295.
+15 Sharks             3100631.
+16 SilverHake           73532.
+17 SmPelagics               0 
+18 SmoothDogfish       112891.
+19 SouthernDemersals  3546106.
+20 SpinyDogfish        785724.
+21 SummerFlounder     4600535.
+22 Weakfish           3356023.
+23 Windowpane           41383.
+```
 
 Now discards
 
@@ -113,7 +147,7 @@ ggplot2::ggplot(MABdiscards, ggplot2::aes(x = Fleet, y = Discards)) +
 ```
 
 
-Maybe some adjustments to discards? There were not discard estimates for the early 1980s; these are from observer data which may be sparse. Maybe a patch would be to add discards for spiny dogfish to reflect the higher fishing mortality? EEs are low for them. EEs are very high for other predators in this model (summer flounder, sharks, odontocetes). 
+Maybe we also need some adjustments to discards? There were not discard estimates for the early 1980s; these are from observer data which may be sparse. Maybe a patch would be to add discards for spiny dogfish to reflect the higher fishing mortality? EEs are low for them. EEs are very high for other predators in this model (summer flounder, sharks, odontocetes). 
 
 Dead discards of spiny dogfish were estimated for the years 1981-1985 in [this document](https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/54174a1ce4b06556b71702cf/1410812444015/2014+Status+Report+for+spiny+dogfish_final.pdf). They were 2-3 times the landings. Subbing in mean dead discards for otter trawls in these years may be reasonable, as [discards are still roughly equal to catch for spiny dogfish--see Fig 4](https://www.mafmc.org/s/e1_2023-Spiny-Dogfish-MT-assessment-report.pdf).
 
