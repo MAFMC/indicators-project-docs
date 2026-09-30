@@ -189,13 +189,14 @@ MABcomdat <- ecodata::comdat |>
   dplyr::filter(EPU=="MAB",
                 Time>1980)
 ```
-with groupings 
+
+The groupings 
 
 ```{r}
 flextable::flextable(MAFMCland |> dplyr::group_by(Guild, Group) |> dplyr::summarise())
 ```
 
-
+So are rec landings of all piscivores > than commercial landings of both clams?
 
 ### Now discards
 
@@ -209,6 +210,27 @@ ggplot2::ggplot(MABdiscards, ggplot2::aes(x = Fleet, y = Discards)) +
 
 
 Maybe we also need some adjustments to discards? There were not discard estimates for the early 1980s; these are from observer data which may be sparse. 
+
+MAFMC managed discards by guild. Very small and primarily from small mesh?
+
+```{r}
+
+MAFMCdisc <- MABdiscards |>
+  dplyr::filter(Group %in% c('SummerFlounder', 'Scup', 'Butterfish', 'SpinyDogfish',
+                                     'BlackSeaBass', 'Bluefish', 'AtlMackerel', 'Loligo',
+                                     'Illex', 'SurfClam', 'OceanQuahog')) |>
+  dplyr::mutate(Guild = dplyr::case_when(Group %in% c('SurfClam', 'OceanQuahog') ~ "Benthos",
+                                         Group %in% c('Scup','BlackSeaBass') ~ "Benthivore",
+                                         Group %in% c('AtlMackerel','Butterfish') ~ "Planktivore",
+                                         Group %in% c('SummerFlounder','SpinyDogfish','Bluefish',
+                                                      'Loligo','Illex') ~ "Piscivore",
+                                         TRUE ~ "Other"))
+
+ggplot2::ggplot(MAFMCdisc, ggplot2::aes(x = Fleet, y = Discards)) +
+  ggplot2::geom_bar(stat = "identity") +
+  ggplot2::facet_wrap(~Guild) +
+  ggplot2::coord_flip()
+```
 
 Maybe a patch would be to add discards for spiny dogfish to reflect the higher fishing mortality? EEs are low for them. EEs are very high for other predators in this model (summer flounder, sharks, odontocetes). 
 
