@@ -57,7 +57,7 @@ What does the simulation need to do
 
 How often should we adjust reference points (do an "assessment") -- not sure I want to focus on this
 
-How far away from the assessment are reference points still good -- we will get this without re-estimating them
+How far away from the assessment are reference points still good -- could estimate after intervals to see
 
 Are there indicator based reference points if you dont have an assessment -- here try the favorable-neutral-unfavorable approach in Pacific?
 See ABC Setting
@@ -80,9 +80,11 @@ MAB <- Rpath::rpath(MAB.rpath.params) # gives same object as MAB.rpath loaded ab
 ```
 
 
-Which species are caught in which fleets?
+Which species are caught in which fleets? The point is to determine which fleets to manipulate to create time series for simple reference point estimation. A stronger fishing signal with heavy fishing followed by recovery makes the production model more likely to converge with decent parameters. 
 
-Visualize catches; landings first
+Also this is a basic test of model setup. Do the fleets look similar enough to "real" ones for testing? The main focus is on the MAFMC managed species. Fleet setup affects all simulations and also affects how we interpret social and economic indicators and impacts. 
+
+### Visualize catches; landings first
 
 ```{r, fig.asp=2}
 #plot(MAB$Landings[,1])
@@ -102,9 +104,9 @@ ggplot2::ggplot(MABlandings, ggplot2::aes(x = Fleet, y = Landings)) +
 
 Bluefish rec landings are probably not almost as much as menhaden purse seine landings? check on this. Bluefish EE is very high, perhaps due to this. Any changes to the rec fishery will hammer them. 
 
-The most recent management track assessments show [summer flounder](https://www.mafmc.org/s/e_Draft-2025-Summer-Flounder-MT-assessment-report-dn54.pdf) rec landings about 15000 t in the 1980s and [bluefish](https://www.mafmc.org/s/e1_Draft-2025-Bluefish-MT-assessment-report-7eyc.pdf) rec landings around 50000 - 75000 t. 
+The most recent management track assessments show [summer flounder](https://www.mafmc.org/s/e_Draft-2025-Summer-Flounder-MT-assessment-report-dn54.pdf) rec landings about 15000 t in the 1980s and [bluefish](https://www.mafmc.org/s/e1_Draft-2025-Bluefish-MT-assessment-report-7eyc.pdf) rec landings around 50000 - 75000 t. So possibly 5 times higher than summer flounder. 
 
-Running the [MAB_rec_catch.R](https://github.com/sgaichas/MAB-Rpath/blob/main/MAB_rec_catch.R) script with the [MRIP dataset](https://github.com/sgaichas/MAB-Rpath/blob/main/data/mrip_data.RData) in the MAB Rpath repo gets the following (before scaling to MAB area), with bluefish nearly an order of magnitude higher
+Running the [MAB_rec_catch.R](https://github.com/sgaichas/MAB-Rpath/blob/main/MAB_rec_catch.R) script with the [MRIP dataset](https://github.com/sgaichas/MAB-Rpath/blob/main/data/mrip_data.RData) in the MAB Rpath repo gets the following (before scaling to MAB area), with bluefish nearly an order of magnitude higher. This should be kg? 
 
 ```
 MAB.mrip_summary |> print(n=Inf)
@@ -136,7 +138,66 @@ MAB.mrip_summary |> print(n=Inf)
 23 Windowpane           41383.
 ```
 
-Now discards
+Bluefish may be overestimated, menhaden may be underestimated, or both. Coastwide catches of [menhaden were 350000 t in the early 1980s](https://asmfc.org/species/atlantic-menhaden/), an order of magnitude more than the bluefish rec catch above.  
+
+A fix might be to scale bluefish rec catch to 5x summer flounder, although perhaps the MRIP catch above is feasible. 
+Menhaden could be scaled up 10x? 
+
+We are looking at a subset of the range of some of these stock assessments though.
+
+Looking at landings data for the MAB from `ecodata` may help diagnose the model. It is aggregated but breaks out MAFMC managed species in each functional group.
+
+This is from the ecodata commercial landings and revenue dataset. The standard plot shows the dominance of non-Council non-seafood in landings, which is menhaden
+
+```{r}
+ecodata::plot_comdat()
+```
+
+We can zoom in on the guilds for total and MAFMC managed (seafood) landings. This reinforces that we should have an order of magnitude higher landings for menhaden (total planktivore) than other species in the MAB. Mackerel may also be high in the 80s but nothing close to menhaden. Mackerel would only be in the red line if it were landed as seafood. 
+
+Next highest landings should be combined benthos (surfclam and ocean quahog with smaller amounts of scallops in the total). 
+
+Piscivores get complicated as total landings is commercial only and doesn't include the substantial recreational landings in the region, or the substantial discards of the jointly managed spiny dogfish. Still combined commercial MAFMC piscivore landings should be about half the MAFMC benthos landings in the early 80s.
+
+```{r, fig.asp=1}
+ecodata::plot_comdat(plottype = "guild")
+```
+
+Model landings by MAFMC guild only:
+
+```{r}
+# latest version
+#pak::pak("noaa-edab/ecodata")
+
+MAFMCland <- MABlandings |>
+  dplyr::filter(Group %in% c('SummerFlounder', 'Scup', 'Butterfish', 'SpinyDogfish',
+                                     'BlackSeaBass', 'Bluefish', 'AtlMackerel', 'Loligo',
+                                     'Illex', 'SurfClam', 'OceanQuahog')) |>
+  dplyr::mutate(Guild = dplyr::case_when(Group %in% c('SurfClam', 'OceanQuahog') ~ "Benthos",
+                                         Group %in% c('Scup','BlackSeaBass') ~ "Benthivore",
+                                         Group %in% c('AtlMackerel','Butterfish') ~ "Planktivore",
+                                         Group %in% c('SummerFlounder','SpinyDogfish','Bluefish',
+                                                      'Loligo','Illex') ~ "Piscivore",
+                                         TRUE ~ "Other"))
+
+ggplot2::ggplot(MAFMCland, ggplot2::aes(x = Fleet, y = Landings)) +
+  ggplot2::geom_bar(stat = "identity") +
+  ggplot2::facet_wrap(~Guild) +
+  ggplot2::coord_flip()
+
+MABcomdat <- ecodata::comdat |>
+  dplyr::filter(EPU=="MAB",
+                Time>1980)
+```
+with groupings 
+
+```{r}
+flextable::flextable(MAFMCland |> dplyr::group_by(Guild, Group) |> dplyr::summarise())
+```
+
+
+
+### Now discards
 
 ```{r, fig.asp=2}
 ggplot2::ggplot(MABdiscards, ggplot2::aes(x = Fleet, y = Discards)) +
@@ -147,15 +208,32 @@ ggplot2::ggplot(MABdiscards, ggplot2::aes(x = Fleet, y = Discards)) +
 ```
 
 
-Maybe we also need some adjustments to discards? There were not discard estimates for the early 1980s; these are from observer data which may be sparse. Maybe a patch would be to add discards for spiny dogfish to reflect the higher fishing mortality? EEs are low for them. EEs are very high for other predators in this model (summer flounder, sharks, odontocetes). 
+Maybe we also need some adjustments to discards? There were not discard estimates for the early 1980s; these are from observer data which may be sparse. 
+
+Maybe a patch would be to add discards for spiny dogfish to reflect the higher fishing mortality? EEs are low for them. EEs are very high for other predators in this model (summer flounder, sharks, odontocetes). 
+
+Model landings and discards for spiny dogfish also make me question whether the scale of rec landings and commercial landings are comparable. Rec landings are higher in the model than commercial gear landings but they have never been higher than any other component of catch according to the latest MT assessment.
+
+```{r}
+dogcatch <- dplyr::filter(MABlandings, Group == "SpinyDogfish") |>
+  dplyr::left_join(dplyr::filter(MABdiscards, Group == "SpinyDogfish"))
+
+flextable::flextable(dogcatch)
+```
 
 Dead discards of spiny dogfish were estimated for the years 1981-1985 in [this document](https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/54174a1ce4b06556b71702cf/1410812444015/2014+Status+Report+for+spiny+dogfish_final.pdf). They were 2-3 times the landings. Subbing in mean dead discards for otter trawls in these years may be reasonable, as [discards are still roughly equal to catch for spiny dogfish--see Fig 4](https://www.mafmc.org/s/e1_2023-Spiny-Dogfish-MT-assessment-report.pdf).
+
+The current model construction methods in [MAB_discards.R](https://github.com/sgaichas/MAB-Rpath/blob/main/MAB_discards.R) to derive a discard:landings ratio from observer data and apply it to landings to get the discards matrix. A discard rate is also used to establish quotas. We could try a discard:landings ratio based on the early 1980s estimates (2.5) or a discard rate based on [current management estimates (see Table 1)](https://www.mafmc.org/s/a_2026-Staff_ABC_Memo-spinys.pdf). The current percent discard applied to total catch is 43%, so the split is landings 4,284 t and discards 3,338 t for a discard:landings ratio of 0.78
 
 ```{r}
 
 
 
 ```
+
+
+
+
 
 This is the model structure, including fleets.
 One strange thing is the HMS Fleet has 0 catch so it breaks the plotting function.
