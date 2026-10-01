@@ -170,5 +170,31 @@ The [commercial performance measures](https://apps-nefsc.fisheries.noaa.gov/pm/i
 
 In the single species model we would need to have scenarios of high and low reliance and other options for fleets just built in.
 
+## Approach
+
+The first step informs thresholds for decision making, when to depart from standard risk policy based on socioeconomic factors. The second informs how much to depart from the risk policy and for how long before stock status is compromised, removing flexibility. When do we depart from standard risk policy and what is the safe operating space?
+
+1.  Develop indicators based on data for use in the square:
+
+Ask Tarsila for data underlying the current [Community Risk Indicators](https://noaa-edab.github.io/catalog/community_risks.html)
+    +  Need port (community?) specific landings and revenue by species: use this data to get indicators for how important a species is to the top ports (reliance) and what other options they have (diversity), see if there are natural breakpoints for thresholds by species
+    +  Secondary [social vulnerability](https://noaa-edab.github.io/catalog/engagement.html) indicators for use in the yellow squares to decide whether to alter risk policy or keep standard from Bobby: high gentrification risk could imply loss of coastal infrastructure that exacerbates socioeconomic risk and may lead to higher risk tolerance
+
+1.  Use MAB Rpath to test consequences of different levels and durations of departures from standard risk policy for target species and other managed species and fleets:
+
+(Initial work to ensure fleets are scaled properly for MAFMC species and have discards for dogfish)
+
+MSE with ecosense, following the test example [here](https://sgaichas.github.io/MAB-Rpath/MAB_MSE_test.html)
+
+Generate an ensemble of feasible MAB Rpath parameterizations; in each:
+    +  Simulate a strong fishing signal (none, heavy, recovery) and collect biomass and catch "data" for MAFMC species
+    +  Fit each MAFMC species to a production model (Gavin to supply code)
+    +  Production model parameters --> single species reference points for use in the MAFMC risk policy
+    +  Base simulation is 20 years under standard risk policy *but test different ways to allocate effort to achieve TAC*
+    +  Alternative simulations lower the B/Bmsy ratio where max p* is applied by species individually. Our series of p* = 0.49 could be at 10% intervals around Bmsy, but that is a lot of runs. If we do this for 20 years we can find the number of years applied before the stock crashed? Ideally would want to see if the stock can recover from risk policy suspension. So maybe apply relaxed risk policy for 3 years then revert, 5 years then revert, 10 years then revert in the full 20 year projection
+    
+Now each sense run has a base simulation and many alternatives for relative comparisons
+
+
 
 

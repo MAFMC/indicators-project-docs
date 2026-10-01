@@ -11,7 +11,7 @@
 
 <meta name="author" content="Sarah Gaichas" />
 
-<meta name="date" content="2026-09-29" />
+<meta name="date" content="2026-10-01" />
 
 <title>Risk Policy</title>
 
@@ -2827,7 +2827,7 @@ border-radius: 0px;
 
 <h1 class="title toc-ignore">Risk Policy</h1>
 <h4 class="author">Sarah Gaichas</h4>
-<h4 class="date">2026-09-29</h4>
+<h4 class="date">2026-10-01</h4>
 
 </div>
 
@@ -2905,6 +2905,28 @@ border-radius: 0px;
 <p>A simple test in the absence of indicators would be to test various levels of risk policy suspension with various durations to see whether and when stock status drops to levels requiring rebuilding. This could identify the safe space for making policy calls to prioritize socioeconomic objectives in the short term. Once a stock is at the level requiring rebuilding there are fewer management options combined with fishery restrictions counterproductive to socioeconomic objectives. So low stock status still needs to be avoided.</p>
 <p>The <a href="https://apps-nefsc.fisheries.noaa.gov/pm/index.php">commercial performance measures</a> give economic performance indicators at the FMP and prices at the species level over time so we could bracket revenues for a given amount of catch. In the food web model we could do this for all species so we could know what proportion of total revenue each species has and also get an overall revenue diversity metric. This could be done by fleet.</p>
 <p>In the single species model we would need to have scenarios of high and low reliance and other options for fleets just built in.</p>
+</div>
+<div id="approach" class="section level2" number="5">
+<h2><span class="header-section-number">5</span> Approach</h2>
+<p>The first step informs thresholds for decision making, when to depart from standard risk policy based on socioeconomic factors. The second informs how much to depart from the risk policy and for how long before stock status is compromised, removing flexibility. When do we depart from standard risk policy and what is the safe operating space?</p>
+<ol style="list-style-type: decimal">
+<li>Develop indicators based on data for use in the square:</li>
+</ol>
+<p>Ask Tarsila for data underlying the current <a href="https://noaa-edab.github.io/catalog/community_risks.html">Community Risk Indicators</a>
++ Need port (community?) specific landings and revenue by species: use this data to get indicators for how important a species is to the top ports (reliance) and what other options they have (diversity), see if there are natural breakpoints for thresholds by species
++ Secondary <a href="https://noaa-edab.github.io/catalog/engagement.html">social vulnerability</a> indicators for use in the yellow squares to decide whether to alter risk policy or keep standard from Bobby: high gentrification risk could imply loss of coastal infrastructure that exacerbates socioeconomic risk and may lead to higher risk tolerance</p>
+<ol style="list-style-type: decimal">
+<li>Use MAB Rpath to test consequences of different levels and durations of departures from standard risk policy for target species and other managed species and fleets:</li>
+</ol>
+<p>(Initial work to ensure fleets are scaled properly for MAFMC species and have discards for dogfish)</p>
+<p>MSE with ecosense, following the test example <a href="https://sgaichas.github.io/MAB-Rpath/MAB_MSE_test.html">here</a></p>
+<p>Generate an ensemble of feasible MAB Rpath parameterizations; in each:
++ Simulate a strong fishing signal (none, heavy, recovery) and collect biomass and catch “data” for MAFMC species
++ Fit each MAFMC species to a production model (Gavin to supply code)
++ Production model parameters –&gt; single species reference points for use in the MAFMC risk policy
++ Base simulation is 20 years under standard risk policy <em>but test different ways to allocate effort to achieve TAC</em>
++ Alternative simulations lower the B/Bmsy ratio where max p* is applied by species individually. Our series of p* = 0.49 could be at 10% intervals around Bmsy, but that is a lot of runs. If we do this for 20 years we can find the number of years applied before the stock crashed? Ideally would want to see if the stock can recover from risk policy suspension. So maybe apply relaxed risk policy for 3 years then revert, 5 years then revert, 10 years then revert in the full 20 year projection</p>
+<p>Now each sense run has a base simulation and many alternatives for relative comparisons</p>
 </div>
 
 
