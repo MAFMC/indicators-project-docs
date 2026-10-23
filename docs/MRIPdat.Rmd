@@ -1,0 +1,41 @@
+---
+title: "MRIP Data for Indicators Project"
+author: "Sarah Gaichas"
+date: "`r Sys.Date()`"
+output:
+  bookdown::html_document2:
+    code_fold: hide
+    df_print: paged
+    toc: true
+    toc_float: true
+csl: ../reports/plos.csl
+bibliography: ../reports/operationalSOE.bib
+link-citations: true
+urlcolor: blue
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
+```
+
+## Introduction
+
+We need to look at recreational data for at least two reasons in the Indicators Project. 
+
+First, we want to groundtruth and possible update recreational catches in the MAB Rpath model for simulation analyses. (MRIP effort and landings have also been rescaled since the model was finalized in 2023.)
+
+Second, to the extent we can include recreational fishery information in the risk policy indicator analysis, the POT would like us to do so.
+
+Here I am downloading existing MRIP data with posting dates 31 August 2026 and evaluating the catches and corresponding uncertainty estimates for MAFMC managed species at the coastwide, Mid-Atlantic, and state (or finer scale) level.
+
+
+## Methods
+
+Data were downloaded from this website: https://apps-st.fisheries.noaa.gov/st1/recreational/MRIP_Survey_Data/CSV/ and each zipped file was saved to a folder in the [indicators-project-data repository](https://github.com/MAFMC/indicators-project-data). MRIP data is all public, I'm storing it here so we know exactly what version of source data we are working with. 
+
+I am referring to the [MRIP handbook](https://www.fisheries.noaa.gov/s3/2025-03/MRIP-Data-User-Handbook_March_2025_update.pdf.pdf) and the [MRIP Readme](https://apps-st.fisheries.noaa.gov/st1/recreational/MRIP_Survey_Data/MRIP-Read-Me.pdf) for usage instructions.
+
