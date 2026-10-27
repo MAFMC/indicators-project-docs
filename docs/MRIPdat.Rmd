@@ -39,3 +39,39 @@ Data were downloaded from this website: https://apps-st.fisheries.noaa.gov/st1/r
 
 I am referring to the [MRIP handbook](https://www.fisheries.noaa.gov/s3/2025-03/MRIP-Data-User-Handbook_March_2025_update.pdf.pdf) and the [MRIP Readme](https://apps-st.fisheries.noaa.gov/st1/recreational/MRIP_Survey_Data/MRIP-Read-Me.pdf) for usage instructions.
 
+I don't feel confident using these estimates as the columns aren't fully labeled and there are duplicates.
+
+There are template programs here https://www.fisheries.noaa.gov/recreational-fishing-data/recreational-fishing-data-downloads#template-programs And several in R here
+https://media.fisheries.noaa.gov/2020-04/mrip_catch_estimation_program_template_in_r.zip for catch and here https://media.fisheries.noaa.gov/2020-04/mrip_direct_angler_trip_estimation_template_program_in_r.zip for effort and here
+https://media.fisheries.noaa.gov/2022-03/mrip-length-frequencies-template-program-in-r.zip for length frequencies which I hope not to need
+
+There is an R function supplied to do custom estimates from these files (I think) but it is missing a dependency. It may be in the R survey package https://cran.r-project.org/web/packages/survey/survey.pdf 
+
+We need to separate landings and discards for the recreational fleet for the MAB Rpath model. We need these in weight. 
+
+In a new repository called [indicators-project-data](https://github.com/MAFMC/indicators-project-data) I'm building some code to reproduce how this gets from downloaded csv to model input. Datasets are currently in the `data-raw` folder with the majority of downloaded zip files in an ignored local folder called `ignore_zips` for now. Functions, including the one from the MRIP website, are in the `R` folder. 
+
+As a start I will instead download using the query tool that gives a catch series for the included MAFMC managed species, Atlantic mackerel, black sea bass, bluefish, scup, and summer flounder. I'm trying two downloads, one is total harvest in kg for the Mid-Atlantic [geographic area](https://www.fisheries.noaa.gov/recreational-fishing-data/recreational-fishing-data-glossary#geographical-area) (defined as New York, New Jersey, Delaware, Maryland, and Virginia), which is A+B1 and the only series available in total weight. These files are named `mrip_SPECIES_catch_series.csv`and are found in the `data-raw/MRIP` folder of the repository.
+
+The second query gets at the discards as well (released alive, B1) but is available only in numbers of fish. These files are named `mrip_SPECIES_catch_series_N.csv`and are also found in the `data-raw/MRIP` folder of the repository.  For the MAB Rpath model we would require an average weight to use discards in weight in the model, and also a discard mortality rate. Maybe more effort than is needed just for these simulations? But there are a lot of rec releases to consider.... an approximation may be ok.
+
+There is now a function `read_mrip_csv` to read in the catch_series csvs downloaded from the MRIP website that preserves the query options as metadata. It should work on both of these file types.
+
+I've also worked with the provided mrip catch esitmation program template in R, called `MRIP.catch` along with the original data downloaded from https://apps-st.fisheries.noaa.gov/st1/recreational/MRIP_Survey_Data/CSV/ to get catch estimates. 
+
+Also there are other downloads, apparently with wave level catch estimates. Here. https://apps-st.fisheries.noaa.gov/st1/recreational/MRIP_Estimate_Data/CSV/Wave%20Level%20Estimate%20Downloads/
+
+These look more similar to what is in the original MAB Rpath repo in formatting so perhaps I can reconstruct the full dataset from these.
+
+We'll compare results across these datasets to see if we get the same answers.
+
+## Results
+
+
+
+
+
+
+
+
+
