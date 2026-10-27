@@ -18,3 +18,5 @@ output: html_document
 <a href="https://mafmc.github.io/indicators-project-docs/RiskPolicy.html" target="_blank"> Risk Policy options outline, September 2026 </a>
 
 <a href="https://mafmc.github.io/indicators-project-docs/SimSetup.html" target="_blank"> Simulation setup outline, September 2026 </a>
+
+<a href="https://mafmc.github.io/indicators-project-docs/MRIPdat.html" target="_blank"> Working with MRIP data to update Rpath, October 2026 </a>

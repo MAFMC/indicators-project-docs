@@ -17,7 +17,7 @@ editor_options:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE,
+knitr::opts_chunk$set(echo = TRUE,
                       message = FALSE,
                       warning = FALSE)
 ```
@@ -67,11 +67,128 @@ We'll compare results across these datasets to see if we get the same answers.
 
 ## Results
 
+This is a half-baked package with functions and some data, still in development. `IndicatorsProjectData`
 
+The function `IndicatorsProjectData::read_mrip_csv` reads in the bluefish catch series file downloaded directly from the MRIP website. 
 
+```{r}
+bluerec <- IndicatorsProjectData::read_mrip_csv("/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/mrip_BLUEFISH_catch_series.csv")
+```
 
+The metadata from the query is available from `bluerec$params`:
 
+```{r}
+bluerec$params
+```
 
+We can use the MRIP supplied code to estimate bluefish rec catch for the Mid-Atlantic states using the function `IndicatorsProjectData::MRIP.catch` modified to explicitly call the functions in the R [`survey`](https://cran.r-project.org/web/packages/survey/survey.pdf) package. I've unzipped the files ps_2023_csv.zip, ps_2024_csv.zip, and ps_2025_csv.zip, and renamed their folders to work with the code. The required folder name is `intYYYY` where YYYY is the year. So the folders are called `int2023`, `int2024`, and `int2025`, and are local on my computer at the moment in an ignored folder. 
+
+Then I rearranged the rest of the downloaded files into folders for the `MRIP.catc`h function using code because they were grouped into 10 year blocks in the zip files. See the function `annualfolders` in `indicators-project-data/R`. 
+
+The `MRIP.catch` function is not robust to missing waves, it breaks on 1981, this can be corrected. Trying from 1982-2025.
+
+It is also inadvisable to try it for all the years at once because it is reading them all into a huge dataframe and taking forever. If this finishes (it didnt!) I will save it and if not maybe 5 year blocks are better for this function. This is only one species and I will want to do many.
+
+```{r, eval=FALSE}
+test2325 <-  IndicatorsProjectData::MRIP.catch(intdir="/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/ignore_zips",
+                                               common="BLUEFISH",
+                                               st=c(10, 24, 34, 36, 51), #Mid Atlantic states
+                                               styr=2023,
+                                               endyr=2025,
+                                               dom=NULL) # not specifying gives standard output
+
+test8285 <-  IndicatorsProjectData::MRIP.catch(intdir="/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/ignore_zips",
+                                               common="BLUEFISH",
+                                               st=c(10, 24, 34, 36, 51), #Mid Atlantic states
+                                               styr=1982,
+                                               endyr=1985,
+                                               dom=NULL) # not specifying gives standard output
+
+test8690 <-  IndicatorsProjectData::MRIP.catch(intdir="/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/ignore_zips",
+                                               common="BLUEFISH",
+                                               st=c(10, 24, 34, 36, 51), #Mid Atlantic states
+                                               styr=1986,
+                                               endyr=1990,
+                                               dom=NULL) # not specifying gives standard output
+
+test9195 <-  IndicatorsProjectData::MRIP.catch(intdir="/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/ignore_zips",
+                                               common="BLUEFISH",
+                                               st=c(10, 24, 34, 36, 51), #Mid Atlantic states
+                                               styr=1991,
+                                               endyr=1995,
+                                               dom=NULL) # not specifying gives standard output
+
+test9600 <-  IndicatorsProjectData::MRIP.catch(intdir="/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/ignore_zips",
+                                               common="BLUEFISH",
+                                               st=c(10, 24, 34, 36, 51), #Mid Atlantic states
+                                               styr=1996,
+                                               endyr=2000,
+                                               dom=NULL) # not specifying gives standard output
+
+test0105 <-  IndicatorsProjectData::MRIP.catch(intdir="/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/ignore_zips",
+                                               common="BLUEFISH",
+                                               st=c(10, 24, 34, 36, 51), #Mid Atlantic states
+                                               styr=2001,
+                                               endyr=2005,
+                                               dom=NULL) # not specifying gives standard output
+
+test0610 <-  IndicatorsProjectData::MRIP.catch(intdir="/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/ignore_zips",
+                                               common="BLUEFISH",
+                                               st=c(10, 24, 34, 36, 51), #Mid Atlantic states
+                                               styr=2006,
+                                               endyr=2010,
+                                               dom=NULL) # not specifying gives standard output
+
+test1115 <-  IndicatorsProjectData::MRIP.catch(intdir="/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/ignore_zips",
+                                               common="BLUEFISH",
+                                               st=c(10, 24, 34, 36, 51), #Mid Atlantic states
+                                               styr=2011,
+                                               endyr=2015,
+                                               dom=NULL) # not specifying gives standard output
+
+test1620 <-  IndicatorsProjectData::MRIP.catch(intdir="/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/ignore_zips",
+                                               common="BLUEFISH",
+                                               st=c(10, 24, 34, 36, 51), #Mid Atlantic states
+                                               styr=2016,
+                                               endyr=2020,
+                                               dom=NULL) # not specifying gives standard output
+
+test2122 <-  IndicatorsProjectData::MRIP.catch(intdir="/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/ignore_zips",
+                                               common="BLUEFISH",
+                                               st=c(10, 24, 34, 36, 51), #Mid Atlantic states
+                                               styr=2021,
+                                               endyr=2022,
+                                               dom=NULL) # not specifying gives standard output
+
+testall <- dplyr::bind_rows(test8285, test8690, test9195, test9600, test0105, test0610, test1115, test1620, test2122, test2325)
+
+saveRDS(testall, here::here("docs/bluefishrec_testall.rds"))
+
+```
+
+Lets see if the bluefish totals match for 2023-2025. Note that this calculation sums across all harvest weight values estimated for bluefish by `MRIP.catch`.
+
+They do so try for the whole time series. Eureka.
+
+```{r}
+testall <- readRDS(here::here("docs/bluefishrec_testall.rds"))
+
+webquerybluerec <- bluerec$data |>
+  dplyr::select(Year, `Harvest (A+B1) Total Weight (kg)`) |>
+  dplyr::mutate(Year = as.character(Year))
+
+catchcaldbluerec <- testall |> dplyr::group_by(year) |> 
+  dplyr::summarise(harvwtkg = sum(weight)) |> 
+  dplyr::select(Year = year, MRIP.catch.weight = harvwtkg) #|>
+  #dplyr::mutate(Year = as.numeric(Year))
+
+compblue <- dplyr::left_join(webquerybluerec, catchcaldbluerec)
+
+flextable::flextable(compblue)
+
+```
+
+This suggests I can reproduce the full Mid-Atlantic recreational dataset from the source csvs for the MAB Rpath
 
 
 
