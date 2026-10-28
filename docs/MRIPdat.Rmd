@@ -168,7 +168,7 @@ saveRDS(testall, here::here("docs/bluefishrec_testall.rds"))
 
 Lets see if the bluefish totals match for 2023-2025. Note that this calculation sums across all harvest weight values estimated for bluefish by `MRIP.catch`.
 
-They do so try for the whole time series. Eureka.
+They do so try for the whole time series. Eureka (mostly, they are off in 2013-2015).
 
 ```{r}
 testall <- readRDS(here::here("docs/bluefishrec_testall.rds"))
@@ -182,7 +182,8 @@ catchcaldbluerec <- testall |> dplyr::group_by(year) |>
   dplyr::select(Year = year, MRIP.catch.weight = harvwtkg) #|>
   #dplyr::mutate(Year = as.numeric(Year))
 
-compblue <- dplyr::left_join(webquerybluerec, catchcaldbluerec)
+compblue <- dplyr::left_join(webquerybluerec, catchcaldbluerec) |>
+  dplyr::mutate(diff = round(`Harvest (A+B1) Total Weight (kg)` - MRIP.catch.weight))
 
 flextable::flextable(compblue)
 
@@ -194,23 +195,25 @@ What about summing the wave specific catch estimate files? If this gives the sam
 
 There are some complications with the wave specific catch estimates. The sums are off by a few kg in either direction for bluefish in the spot checks below. This is not a big deal for the MAB Rpath model because single digit kg differences will not even show up once converted to weight per area, but it would be nicer if results were identical.
 
-```{r}
+```{r, eval=FALSE}
 
-test <- readr::read_csv("/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/ignore_zips/mrip_catch_bywave_2025.csv")
+test <- readr::read_csv("/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/ignore_zips/mrip_catch_bywave_csvs/mrip_catch_bywave_2025.csv")
 
-test20 <- readr::read_csv("/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/ignore_zips/mrip_catch_bywave_2020.csv")
+test20 <- readr::read_csv("/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/ignore_zips/mrip_catch_bywave_csvs/mrip_catch_bywave_2020.csv")
 
-test1981 <- readr::read_csv("/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/ignore_zips/mrip_catch_bywave_1981_1989_csv/mrip_catch_bywave_1981.csv")
+test2014 <- readr::read_csv("/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/ignore_zips/mrip_catch_bywave_csvs/mrip_catch_bywave_2014.csv")
 
-test1985 <- readr::read_csv("/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/ignore_zips/mrip_catch_bywave_1981_1989_csv/mrip_catch_bywave_1985.csv")
+test1981 <- readr::read_csv("/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/ignore_zips/mrip_catch_bywave_csvs/mrip_catch_bywave_1981.csv")
 
-test1989 <- readr::read_csv("/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/ignore_zips/mrip_catch_bywave_1981_1989_csv/mrip_catch_bywave_1989.csv")
+test1985 <- readr::read_csv("/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/ignore_zips/mrip_catch_bywave_csvs/mrip_catch_bywave_1985.csv")
 
-testcatchbywave <- dplyr::bind_rows(test, test20, test1981, test1985, test1989) |>
+test1989 <- readr::read_csv("/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/ignore_zips/mrip_catch_bywave_csvs/mrip_catch_bywave_1989.csv")
+
+testcatchbywave <- dplyr::bind_rows(test, test20, test2014, test1981, test1985, test1989) |>
   dplyr::filter(COMMON == "BLUEFISH",
                 ST %in% c(10, 24, 34, 36, 51)) |>
   dplyr::group_by(YEAR) |>
-  dplyr::summarise(harvwtkg = sum(WGT_AB1)) |>
+  dplyr::summarise(harvwtkg = sum(WGT_AB1, na.rm = TRUE)) |>
   dplyr::select(Year = YEAR, MRIP_bywave = harvwtkg)|>
   dplyr::mutate(Year = as.character(Year))
   
@@ -222,6 +225,28 @@ flextable::flextable(compblue2)
 
 ```
 
+Here is the full dataset, read in using code in https://github.com/MAFMC/indicators-project-data/blob/main/R/read_mrip_catch_bywave.R which is not an exported function but a quick check. The dataset is saved at https://github.com/MAFMC/indicators-project-data/blob/main/data-raw/MRIP/allbywave19812025.rds
+
+How far off are all the bluefish? Something bad happened in 2013, 2014, and 2015
+
+```{r}
+
+allbywave <- readRDS("/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/allbywave19812025.rds")
+
+allbywavebf <- allbywave |>
+  dplyr::filter(COMMON == "BLUEFISH",
+                ST %in% c(10, 24, 34, 36, 51)) |>
+  dplyr::group_by(YEAR) |>
+  dplyr::summarise(harvwtkg = sum(WGT_AB1, na.rm = TRUE)) |>
+  dplyr::select(Year = YEAR, MRIP_bywave = harvwtkg)|>
+  dplyr::mutate(Year = as.character(Year))
+
+compblue3 <- dplyr::left_join(compblue, allbywavebf) |>
+  dplyr::mutate(diff2 = round(MRIP.catch.weight - MRIP_bywave))
+
+flextable::flextable(compblue3)
+
+```
 
 
 
