@@ -183,7 +183,7 @@ catchcaldbluerec <- testall |> dplyr::group_by(year) |>
   #dplyr::mutate(Year = as.numeric(Year))
 
 compblue <- dplyr::left_join(webquerybluerec, catchcaldbluerec) |>
-  dplyr::mutate(diff = round(`Harvest (A+B1) Total Weight (kg)` - MRIP.catch.weight))
+  dplyr::mutate(diff = round(MRIP.catch.weight -`Harvest (A+B1) Total Weight (kg)`))
 
 flextable::flextable(compblue)
 
@@ -229,6 +229,8 @@ Here is the full dataset, read in using code in https://github.com/MAFMC/indicat
 
 How far off are all the bluefish? Something bad happened in 2013, 2014, and 2015
 
+Differences assume the numbers from the website time series query `Harvest (A+B1) Total Weight (kg)` are correct. 
+
 ```{r}
 
 allbywave <- readRDS("/Users/sarahgaichas/Documents/Work/MAFMCindicators/Code/indicators-project-data/data-raw/MRIP/allbywave19812025.rds")
@@ -242,7 +244,7 @@ allbywavebf <- allbywave |>
   dplyr::mutate(Year = as.character(Year))
 
 compblue3 <- dplyr::left_join(compblue, allbywavebf) |>
-  dplyr::mutate(diff2 = round(MRIP.catch.weight - MRIP_bywave))
+  dplyr::mutate(diff2 = round(MRIP_bywave -`Harvest (A+B1) Total Weight (kg)`))
 
 flextable::flextable(compblue3)
 
