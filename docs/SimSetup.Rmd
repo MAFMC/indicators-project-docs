@@ -253,6 +253,123 @@ The current model construction methods in [MAB_discards.R](https://github.com/sg
 
 ```
 
+### Update Recreational Landings
+
+The full rec landings dataset was updated to account for the 2026 recalibration. 
+
+See notes [here](https://mafmc.github.io/indicators-project-docs/MRIPdat.html) on MRIP datasets and test comparisons.
+
+At present, the dataset derived from assembling `mrip_catch_bywave_YYYY.csv` for all YYYY 1981-2025 is used as the basis for model recreational landings, as it appears most similar to the source data used previously. I have one email out asking about some discrepancies in posted MRIP catch data, so this may get updated later if I need to do the catch estimation myself.
+
+Individual csv files were downloaded from here: https://apps-st.fisheries.noaa.gov/st1/recreational/MRIP_Estimate_Data/CSV/Wave%20Level%20Estimate%20Downloads/ 
+Code that derived the [dataset used here](https://github.com/MAFMC/indicators-project-data/blob/main/data-raw/MRIP/allbywave19812025.rds) is posted [here](https://github.com/MAFMC/indicators-project-data/blob/main/R/read_mrip_catch_bywave.R). 
+
+Keeping the estimation code the same aside from the input dataset, we have these estimated recreational landings in kg:
+
+```
+>> MAB.mrip_summary |> print(n=Inf)
+# A tibble: 23 × 3
+   RPATH                 catch   Per_Area
+   <chr>                 <dbl>   [1/km^2]
+ 1 AtlCroaker          206804. 0.00185   
+ 2 AtlMackerel        1337799. 0.0120    
+ 3 BlackSeaBass       1566485  0.0140    
+ 4 Bluefish          28076467. 0.251     
+ 5 Butterfish             196. 0.00000175
+ 6 Cod                4142376. 0.0370    
+ 7 Goosefish             9677  0.0000865 
+ 8 Mesopelagics           337  0.00000301
+ 9 OtherDemersals     1320919. 0.0118    
+10 OtherPelagics      1091325. 0.00975   
+11 OtherSkates         186402. 0.00167   
+12 RedHake             285478. 0.00255   
+13 RiverHerring          2438  0.0000218 
+14 Scup                302471. 0.00270   
+15 Sharks             2495675. 0.0223    
+16 SilverHake           59873. 0.000535  
+17 SmPelagics               0  0         
+18 SmoothDogfish        72073. 0.000644  
+19 SouthernDemersals  2301793  0.0206    
+20 SpinyDogfish        625037. 0.00559   
+21 SummerFlounder     2657502. 0.0238    
+22 Weakfish           2041603  0.0182    
+23 Windowpane           22969. 0.000205 
+```
+
+The recalibrated MRIP time series generally results in lower landings in the 1980s. Bluefish is still highest. The high recreational landings of bluefish are reflected across all other MRIP data including the official web query, so this number stays here. 
+
+I'll replace the recreational landings in the model with this full set. This will be a whole new model building script in MAB Rpath: `MAB_Rpath_2026.R`
+
+```{r, eval=FALSE}
+
+# code from MAB_fleets.R
+## Load libraries, packages and functions
+library(data.table)
+
+## Load commercial landings from Sean and MAB basic inputs
+load(url('https://github.com/NOAA-EDAB/Rpathdata/blob/dd034d1573f79ce011c01054bdc017e241e7857e/data/mean_landings_mab_80_85.RData?raw=true'))
+#source(here("MAB_basic_inputs.R"))
+
+MAB.groups<-as.data.table(c('AmLobster','RiverHerring','AtlCroaker','AtlMackerel',
+                            'AtlScallop','Bacteria','BaleenWhales','BlackSeaBass',
+                            'Bluefish','Butterfish','Cod','Fourspot','GelZooplankton',
+                            'Goosefish','HMS','Illex','LgCopepods','LittleSkate','Loligo',
+                            'Macrobenthos','Megabenthos','Mesopelagics','Micronekton',
+                            'Microzooplankton','OceanPout','OceanQuahog','Odontocetes',
+                            'OtherCephalopods','OtherDemersals','OtherPelagics','OtherShrimps',
+                            'OtherSkates','Phytoplankton','RedHake','Scup','SeaBirds','Sharks',
+                            'SilverHake','SmCopepods','SmFlatfishes','SmoothDogfish',
+                            'SmPelagics','SouthernDemersals','SpinyDogfish',
+                            'SummerFlounder','SurfClam', 'Weakfish','Windowpane',
+                            'WinterFlounder','WinterSkate','YTFlounder','Krill','AtlMenhaden'))
+setnames(MAB.groups,'V1','RPATH')
+MAB.strata<-c(1010:1080, 1100:1120, 1600:1750, 3010:3450, 3470, 3500, 3510)
+MAB.stareas<-c(537, 539, 600, 612:616, 621, 622, 625, 626, 631, 632)
+
+## Rename HMS to HMS Fleet
+mean.land[FLEET == "HMS",FLEET := "HMS Fleet"]
+
+## Add columns for discards and detritus
+dis_det_cols<-as.data.table(rbind("Detritus","Discards"))
+colnames(dis_det_cols)<-"RPATH"
+groups_fleets<-rbind(MAB.groups,dis_det_cols)
+
+## Pull unique fleets
+MAB.fleets<-as.data.table(unique(mean.land$FLEET))
+colnames(MAB.fleets)<-"RPATH"
+
+## Add rec & purse seine fleets
+rec_men<-data.frame(rbind("Recreational","PurseSeine"))
+names(rec_men)<-c("RPATH")
+groups_fleets<-rbind(groups_fleets,MAB.fleets,rec_men)
+
+
+
+# code from MAB_Rpath_no_disc.R
+source("MAB_rec_catch.R")
+rec_catch<-left_join(groups_fleets,MAB.mrip_summary,by="RPATH")
+rec_catch<-as.vector(rec_catch$Per_Area)
+rec_catch[is.na(rec_catch)]<-0
+# rec_catch[52]<-0
+rec_catch[55:66]<-NA
+MAB.rpath.params$model[,"Recreational":=rec_catch]
+
+
+
+
+```
+
+### Update menhaden landings
+
+The question now for landings is less was bluefish really that high and more why is menhaden so low? ASMFC lists catch of Atlantic menhaden as 350,000 t in the early 1980s. [The Fisheries of the US from 1980](https://repository.library.noaa.gov/view/noaa/17068/noaa_17068_DS1.pdf) also lists menhaden landings. They are not split to Mid-Atlantic but coastwide Atlantic was about 430,000 t and Chesapeake Bay total landings (of all species) were 325,000 metric tons. I think it would be safe to set menhaden landings for the Mid-Atlantic (which includes the stock caught in the Chesapeake Bay) in the 300,000 t range for the early 1980s. With an area of 111,886 square km this would be a density of 2.6813 t/sq km. We'll use that for now until I can get a better estimate. 
+
+
+### Update discards
+
+The published model reduced dogfish biomass for balance. Here we will add in dogfish discards 
+
+The MAB Rpath model did not previously consider dead recreational releases, which would be included under discards. 
+
 
 
 
