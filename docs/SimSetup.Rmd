@@ -361,34 +361,268 @@ MAB.rpath.params$model[,"Recreational":=rec_catch]
 
 ### Update menhaden landings
 
-The question now for landings is less was bluefish really that high and more why is menhaden so low? ASMFC lists catch of Atlantic menhaden as 350,000 t in the early 1980s. [The Fisheries of the US from 1980](https://repository.library.noaa.gov/view/noaa/17068/noaa_17068_DS1.pdf) also lists menhaden landings. They are not split to Mid-Atlantic but coastwide Atlantic was about 430,000 t and Chesapeake Bay total landings (of all species) were 325,000 metric tons. I think it would be safe to set menhaden landings for the Mid-Atlantic (which includes the stock caught in the Chesapeake Bay) in the 300,000 t range for the early 1980s. With an area of 111,886 square km this would be a density of 2.6813 t/sq km. We'll use that for now until I can get a better estimate. 
+The question now for landings is less was bluefish really that high and more why is menhaden so low? ASMFC lists catch of Atlantic menhaden as 350,000 t in the early 1980s. [The Fisheries of the US from 1980](https://repository.library.noaa.gov/view/noaa/17068/noaa_17068_DS1.pdf) also lists menhaden landings. They are not split to Mid-Atlantic but coastwide Atlantic was about 430,000 t and Chesapeake Bay total landings (of all species) were 325,000 metric tons. I think it would be safe to set menhaden landings for the Mid-Atlantic (which includes the stock caught in the Chesapeake Bay) in the 300,000 t range for the early 1980s. With an area of 111,886 square km this would be a density of 2.6813 t/sq km.
+
+Alternatively, we can use the estimate currently in `ecodata` for the MAB below. Menhaden are Other managed species in `ecodata`, and we will use total landings in the MAB rather than just US landings. Mean 1980-1985 Planktivore - Other managed species Landings weight is 259,637 t so the density is 2.3205 t/sq km. Slightly lower which will help with the current menhaden imbalance. 
+
+### Check commercial landings
+
+We can run the `MAB_landings.R` script to get landings in tons by species in the MAB, then compare that with what is in ecodata for MAFMC managed or all species in the MAB. We skip the line that removes landings in tons.
+
+```{r}
+## Load libraries, packages and functions ---------------------------------------------------
+library(here);library(tidyr);library(dplyr);library(survdat)
+
+## Load landings, species codes, survdat and basic inputs, 
+load(url('https://github.com/NOAA-EDAB/Rpathdata/blob/dd034d1573f79ce011c01054bdc017e241e7857e/data/mean_landings_mab_80_85.RData?raw=true'))
+load(url('https://github.com/NOAA-EDAB/Rpathdata/blob/dd034d1573f79ce011c01054bdc017e241e7857e/data/Species_codes.RData?raw=true'))
+load(url("https://github.com/NOAA-EDAB/Rpathdata/blob/dd034d1573f79ce011c01054bdc017e241e7857e/data/Survdat.RData?raw=true"))
+#source(here("MAB_basic_inputs.R"))
+
+
+## Change "HMS" to "HMS Fleet"
+mean.land[FLEET == "HMS",FLEET := "HMS Fleet"] #TYPO CHANGED HERE from HMS FLEET
+
+## Calculate area within MAB
+# strata<-readOGR('data/strata','strata')
+# strat.area<-getarea(strata, 'STRATA')
+# setnames(strat.area,'STRATA','STRATUM')
+# MAB.strat.area<-strat.area[STRATUM %in% MAB.strata,sum(Area)]
+
+## Filter species codes for NESPP3 and RPATH
+spp<-select(spp, one_of(c("NESPP3","RPATH")))
+spp<-unique(na.exclude(spp))
+spp<-distinct(spp,NESPP3,.keep_all=TRUE)
+
+## Merge landings data and clean up species code columns
+mean.land<-left_join(mean.land,spp,by = "NESPP3")
+mean.land<-na.exclude(mean.land[,-1])
+
+## Sum landings for functional groups
+mean.land<-mean.land %>% group_by(FLEET,RPATH) %>% summarise(SPPLIVMT=sum(SPPLIVMT))
+
+## Convert to t/km^2 and remove SPPLIVMT (skipped)
+#mean.land$landings<-mean.land$SPPLIVMT/MAB.area
+#mean.land<-mean.land[,-3]
+
+## Organize fleets into data frames
+fixed<-filter(mean.land,FLEET == "Fixed Gear")
+lg_mesh<-filter(mean.land,FLEET == "LG Mesh")
+other<-filter(mean.land,FLEET == "Other")
+sm_mesh<-filter(mean.land,FLEET == "SM Mesh")
+scallop<-filter(mean.land,FLEET == "Scallop Dredge")
+trap<-filter(mean.land,FLEET == "Trap")
+hms<-filter(mean.land,FLEET == "HMS Fleet")
+pelagic<-filter(mean.land,FLEET == "Pelagic")
+other_dredge<-filter(mean.land,FLEET == "Other Dredge")
+clam<-filter(mean.land,FLEET == "Clam Dredge")
+
+# ## Combine groups and fill in gaps
+# ## Fixed gear
+# fixed<-left_join(MAB.groups,fixed,by="RPATH")
+# fixed$FLEET<-"Fixed Gear"
+# fixed[is.na(fixed)]<-0
+# 
+# #Large mesh
+# lg_mesh<-left_join(MAB.groups,lg_mesh,by="RPATH")
+# lg_mesh$FLEET<-"LG Mesh"
+# lg_mesh[is.na(lg_mesh)]<-0
+# 
+# #Other
+# other<-left_join(MAB.groups,other,by="RPATH")
+# other$FLEET<-"Other"
+# other[is.na(other)]<-0
+# 
+# #Small mesh
+# sm_mesh<-left_join(MAB.groups,sm_mesh,by="RPATH")
+# sm_mesh$FLEET<-"SM Mesh"
+# sm_mesh[is.na(sm_mesh)]<-0
+# 
+# #Scallop
+# scallop<-left_join(MAB.groups,scallop,by="RPATH")
+# scallop$FLEET<-"Scallop"
+# scallop[is.na(scallop)]<-0
+# 
+# #Trap
+# trap<-left_join(MAB.groups,trap,by="RPATH")
+# trap$FLEET<-"Trap"
+# trap[is.na(trap)]<-0
+# 
+# #HMS
+# hms<-left_join(MAB.groups,hms,by="RPATH")
+# hms$FLEET<-"HMS Fleet"
+# hms[is.na(hms)]<-0
+# 
+# #Pelagic
+# pelagic<-left_join(MAB.groups,pelagic,by="RPATH")
+# pelagic$FLEET<-"Pelagic"
+# pelagic[is.na(pelagic)]<-0
+# 
+# #Other dredge
+# other_dredge<-left_join(MAB.groups,other_dredge,by="RPATH")
+# other_dredge$FLEET<-"Other Dredge"
+# other_dredge[is.na(other_dredge)]<-0
+# 
+# #Clam
+# clam<-left_join(MAB.groups,clam,by="RPATH")
+# clam$FLEET<-"Clam Dredge"
+# clam[is.na(clam)]<-0
+
+
+```
+
+Commercial Landings in Rpath with categories
+
+Note, American Plaice, which get dropped because they are not an MAB group, have over 700000 t of trap catch in this dataset. Worrying. 
+
+In fact there is a huge amount of trap fishery catch in the landings data which really has to be a mistake. Over a million metric tons of other pelagics for example.
+
+```{r}
+trap$SPPLIVMT <- round(trap$SPPLIVMT)
+flextable::flextable(trap) |> flextable::autofit()
+```
+
+
+The model simply balances most of the trap fishery to 0. 
+
+I think we need a new data pull but we'll carry on with the comparisons. 
+
+This is the sum of commercial landings by species
+
+
+```{r}
+
+totland <- mean.land  |> 
+  #dplyr::right_join(MAB.groups) |>
+  dplyr::group_by(RPATH) |> 
+  dplyr::summarise(sumtons = round(sum(SPPLIVMT))) 
+
+
+flextable::flextable(totland) |> flextable::autofit()
+
+
+```
+
+ecodata species groupings for MAFMC only for now
+
+```{r}
+
+MAFMCspp <-   totland |>
+  dplyr::mutate(Guild = dplyr::case_when(RPATH %in% c('SurfClam', 'OceanQuahog') ~ "Benthos",
+                                         RPATH %in% c('Scup','BlackSeaBass', 'Tilefish') ~ "Benthivore",
+                                         RPATH %in% c('AtlMackerel','Butterfish') ~ "Planktivore",
+                                         RPATH %in% c('SummerFlounder','SpinyDogfish','Bluefish',
+                                                      'Loligo','Illex') ~ "Piscivore",
+                                         TRUE ~ "Other"),
+                Managed = dplyr::case_when(RPATH %in% c('SurfClam', 'OceanQuahog', 'Scup','BlackSeaBass', 'AtlMackerel','Butterfish',
+                                                        'SummerFlounder','SpinyDogfish','Bluefish','Loligo','Illex') ~ "MAFMC",
+                                         TRUE ~ "Other"))
+
+MAFMCsums <- MAFMCspp |>
+  dplyr::group_by(Guild, Managed) |>
+  dplyr::summarise(grouptons = sum(sumtons))
+
+flextable::flextable(MAFMCsums) |>
+  flextable::autofit()
+```
+
+
+
+Mapping spp codes to categories check. There are duplicate NESPP3 codes but the max landings in them is 1458 t other dredge going to macrobenthos (hard clams), 185 t trap also mapping to that category. 
+
+```{r}
+## Load landings, species codes, survdat and basic inputs, 
+load(url('https://github.com/NOAA-EDAB/Rpathdata/blob/dd034d1573f79ce011c01054bdc017e241e7857e/data/mean_landings_mab_80_85.RData?raw=true'))
+load(url('https://github.com/NOAA-EDAB/Rpathdata/blob/dd034d1573f79ce011c01054bdc017e241e7857e/data/Species_codes.RData?raw=true'))
+
+## Change "HMS" to "HMS Fleet"
+mean.land[FLEET == "HMS",FLEET := "HMS Fleet"] #TYPO CHANGED HERE from HMS FLEET
+
+landspp <- data.frame(NESPP3 = unique(mean.land$NESPP3))
+
+landspplist <- dplyr::left_join(landspp, spp)
+
+dupcodes <- landspplist |> dplyr::group_by(NESPP3) |> dplyr::summarise(nspp = n()) |> dplyr::filter(nspp>1)
+
+land526 <- mean.land |> dplyr::filter(NESPP3 == 526)
+
+land126 <- mean.land |> dplyr::filter(NESPP3 == 126)
+
+dupspplist <- dplyr::left_join(dupcodes, landspplist)
+
+landdups <- mean.land |> dplyr::filter(NESPP3 %in% c(dupspplist$NESPP3)) |> dplyr::arrange(desc(SPPLIVMT))
+
+```
+
+
+
+Now summarize landings into functional groups for comparison with `ecodata::comland` landings
+
+```{r}
+ecoland <- ecodata::comdat |> dplyr::filter(EPU == "MAB", grepl('MAFMC managed species - Landings', Var), Time > 1979 & Time < 1986)
+
+ecolandtot <- ecodata::comdat |> dplyr::filter(EPU == "MAB", grepl('Landings', Var), Time > 1979 & Time < 1986)
+
+meanecoland <- ecolandtot |> dplyr::group_by(Var) |> dplyr::summarise(meanland = round(mean(Value)))
+
+flextable::flextable(meanecoland) |> 
+  flextable::autofit() |>
+  flextable::set_caption("Mean 1980-1985 MAB landings from ecodata, tons")
+```
+
+### Landings comparisons with Ecodata
+
+These comparisons are just for MAFMC managed species which are most important for us to have correct.
+
+Overall the benthos are fine, surflam and ocean quahog sum to almost the same thing as in ecodata for MAFMC managed benthos.
+
+Benthivores are the right order of magnitude but maybe a bit high compared to ecodata MAFMC managed benthivores. Also tilefish aren't modeled separately and are showing up as other benthivores.
+
+Piscivore landings (18615) are too low compared to ecodata (27905). I've included the dogfish landings in MAFMC for Rpath but they are listed as JOINT in ecodata so its even lower in the model The US only landings in ecodata are lower than what is in the model (11482), so it isn't just NAFO got left out of the Rpath pull. 
+
+Planktivore landings in Rpath (9562) are closer to US landings in ecodata (7163) than total MAFMC managed landings (15115).
+
+I don't think this is getting garbled when the Rpath codes are added, I checked that below.
+
+I think the original pull needs checking but I don't have the code for that. It was likely in an olderversion of comlandr.
+
 
 
 ### Update discards
 
-The published model reduced dogfish biomass for balance. Here we will add in dogfish discards 
+The published model reduced dogfish biomass for balance. Here we will add in dogfish discards.
 
-The MAB Rpath model did not previously consider dead recreational releases, which would be included under discards. 
+Discard addition was done during the balancing phase, all input discards to the model are retained. This code added to `MAB_Rpath_2026.R`
+
+```
+## SKG: Lets scale up the discards here first.
+# 1980-1985 discards were 2-3 times landings, lets call it 2.5
+# will do for both LG and SM Mesh
+# MAB.rpath.params$model[Group == 'SpinyDogfish', Biomass := Biomass * 0.7]
+MAB.rpath.params$model[Group == 'SpinyDogfish', `LG Mesh.disc` := `LG Mesh` * 2.5]
+MAB.rpath.params$model[Group == 'SpinyDogfish', `SM Mesh.disc` := `SM Mesh` * 2.5]
+```
+
+The MAB Rpath model did not previously consider dead recreational releases, which would be included under discards. Not yet done.
 
 
 
 
 
 This is the model structure, including fleets.
-One strange thing is the HMS Fleet has 0 catch so it breaks the plotting function.
-We should either take the HMS Fleet out or add real catch of HMS.
-For this figure, HMS catch totalling 10% of HMS biomass was added. We are not using this model for analysis
+
+One strange thing is the HMS Fleet has 0 catch so it breaks the plotting function--THIS WAS DUE TO A BUG in `MAB_landings.R`, NOW FIXED.
 
 ```{r, fig.asp=1}
 #visualize a group
 # the all-0 HMS Fleet breaks this plotting function
 # add small HMS Fleet catch for HMS
-hms_catch<-c(rep(0,14),0.003,rep(0,39),rep(NA,12))
-MAB.rpath.params$model[,"HMS Fleet":=hms_catch]
+#hms_catch<-c(rep(0,14),0.003,rep(0,39),rep(NA,12))
+#MAB.rpath.params$model[,"HMS Fleet":=hms_catch]
 
-MAB2 <- Rpath::rpath(MAB.rpath.params)
+#MAB2 <- Rpath::rpath(MAB.rpath.params)
 
-Rpath::webplot(MAB2, labels=T, fleets=T, highlight = 'SummerFlounder') #fleets not working in MAB plot
+#Rpath::webplot(MAB, labels=T, fleets=T, highlight = 'SummerFlounder') #fleets not working in MAB plot
 
 #Rpath::ggwebplot(MAB, labels=T, fleets=T)
 
