@@ -554,12 +554,13 @@ landdups <- mean.land |> dplyr::filter(NESPP3 %in% c(dupspplist$NESPP3)) |> dply
 
 ```
 
+### Updated commercial pull
 
 Try with new data pull
 
 ```{r}
 ## Load libraries, packages and functions ---------------------------------------------------
-library(here);library(tidyr);library(dplyr);library(survdat)
+library(here);library(tidyr);library(dplyr);library(survdat); library(data.table)
 
 ## Load landings, species codes, survdat and basic inputs, 
 #load(url('https://github.com/NOAA-EDAB/Rpathdata/blob/dd034d1573f79ce011c01054bdc017e241e7857e/data/mean_landings_mab_80_85.RData?raw=true'))
@@ -685,6 +686,23 @@ flextable::flextable(totland) |> flextable::autofit()
 
 
 ecodata species groupings for MAFMC only for now
+
+how do ecodata and rpath species lists compare? 
+
+
+```{r}
+ecodatspp <- ecodata::species_groupings |> dplyr::select(SVSPP, COMNAME, NESPP3, Fed.Managed, RPATH, SOE.24) |> dplyr::distinct() 
+
+# |> dplyr::filter(!is.na(Fed.Managed)) |> print(n=Inf)
+
+rpathspp <- spp |> dplyr::select(SVSPP, COMNAME, NESPP3, MANAGE, Rpath = RPATH, Feeding.guild) |> dplyr::distinct() 
+
+sppcomp <- merge(ecodatspp, rpathspp) |> dplyr::filter(Fed.Managed %in% c("JOINT", "MAFMC"))
+
+flextable::flextable(sppcomp) |> flextable::autofit()
+
+```
+
 
 ```{r}
 
